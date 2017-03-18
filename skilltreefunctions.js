@@ -223,7 +223,9 @@ function SetToolTipUp(obj) {
             var elem = $('div#tooltip');
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
-                var eff = get = fffffff.SkillEffect;
+                var eff = "";
+                if (fffffff)
+                    eff = get = fffffff.SkillEffect;
                 if (!desc && !eff) {
                     elem.stop(false, true).fadeOut('fast');
                     return;
@@ -259,7 +261,8 @@ function SetToolTipDown(obj) {
             var elem = $('div#tooltip');
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
-                var eff = get = fffffff.SkillEffect;
+                var eff = "";
+                if (fffffff) eff = get = fffffff.SkillEffect;
                 if (!desc && !eff) {
                     elem.stop(false, true).fadeOut('fast');
                     return;
