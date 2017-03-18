@@ -1,9 +1,10 @@
 {
     "CharacterName": "Erwin Arclight",
+    "CharacterWikiURL": "http://wiki.soulworkerhq.com/w/Erwin_Arclight",
     "Skills": {
         "SkyHigh": {
-            "Visible": true,
             "Name": "Sky High",
+            "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/f/fa/E1-1.png",
             "Levels": {
                 "1": {
@@ -75,6 +76,7 @@
         },
         "RapidFire": {
             "Name": "Rapid Fire",
+            "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/1/1b/E1-2.png",
             "Levels": {
                 "1": {
@@ -107,6 +109,7 @@
         },
         "GunCombination": {
             "Name": "Gun Combination",
+            "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/4/40/E1-3.png",
             "Levels": {
                 "1": {

@@ -4,18 +4,26 @@ SkillTreeCore.prototype.ReadTree = function() {
     this.PassiveSkillList = {};
     this.SkillCount = 0;
     this.loadedSkillCount = 0;
-    $.getJSON("skilltreeinfo.json", function(json) {
-        $("td#charName").text(json.CharacterName);
-        window.document.title = "Skill Simulator - " + json.CharacterName;
-        for (var ssk in json.Skills) {
-            window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
-            if (get = window.SkillCore.SkillList[ssk].IsPassive)
-                window.SkillCore.PassiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
+    $.ajax({
+        cache: false,
+        url: "skilltreeinfo.json",
+        dataType: "json",
+        success: function(json) {
+            if (json.CharacterWikiURL)
+                $("td#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
             else
-                window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk]
-        };
-        window.SkillCore.SkillCount = Object.keys(window.SkillCore.SkillList).length;
-        window.SkillCore.RenderTree();
+                $("td#charName").text(json.CharacterName);
+            window.document.title = "Skill Simulator - " + json.CharacterName;
+            for (var ssk in json.Skills) {
+                window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
+                if (get = window.SkillCore.SkillList[ssk].IsPassive)
+                    window.SkillCore.PassiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
+                else
+                    window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk]
+            };
+            window.SkillCore.SkillCount = Object.keys(window.SkillCore.SkillList).length;
+            window.SkillCore.RenderTree();
+        }
     });
 }
 

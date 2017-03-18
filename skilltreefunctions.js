@@ -129,6 +129,19 @@ class SkillTreeCore {
                 return 2;
         }
     }
+
+    GenerateLink() {
+        var arrayString = [];
+        for (var skillid in this.SkillList) {
+            var levelasd = (get = this.SkillList[skillid].CurrentSkillLevel);
+            if (levelasd != (get = this.SkillList[skillid].GetDefaultLevel))
+                arrayString.push(skillid + "=" + levelasd);
+        }
+        var param = location.protocol + '//' + location.host + location.pathname + "?lv=" + this._currentlevel;
+        if (arrayString.length > 0)
+            param = param + "&" + arrayString.join("&");
+        return param;
+    }
 }
 
 var SkillCore = new SkillTreeCore();
@@ -144,6 +157,19 @@ $(function() {
     window.SkillCore.ReadTree();
     var clevel = GetUrlParam("lv", 55);
     if (clevel == 55) clevel = GetUrlParam("level", 55);
+    if (!isNaN(clevel))
+        clevel = 55;
     $("select#selectLevelBox").val(clevel);
     window.SkillCore.SetLevelFromElement();
+
+    $("a#copyURL").click(function() {
+        var link = window.SkillCore.GenerateLink();
+        var asdDiv = $("<div>").addClass("hiddendiv");
+        var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", link);
+        asdDiv.append(asdButton);
+        $("body").append(asdDiv);
+        new Clipboard(".btncopymagicclass");
+        asdButton.trigger("click");
+        asdDiv.remove();
+    });
 });
