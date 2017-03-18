@@ -1,0 +1,736 @@
+{
+    "CharacterName": "Haru Estia",
+    "Skills": {
+        "FirstStrike ": {
+            "Visible": true,
+            "Name": "First Strike",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/c7/H1-1.png",
+            "Levels": {
+                "1": {
+                    "Description": "Perform a series of slashes while advancing forward. An additional strike can be used [Right-click] at the end of the skill.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 4,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 7,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "FirstStrike-RangeIncrease"
+            ]
+        },
+        "FirstStrike-RangeIncrease": {
+            "Visible": false,
+            "Name": "Range Increase",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/1c/H1-1A.png",
+            "Levels": {
+                "1": {
+                    "Description": "The Extension strike radius becomes bigger.",
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 18,
+                    "RequiredSP": 2
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 23,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "PierceStep": {
+            "Name": "Pierce Step",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/48/H1-2.png",
+            "Levels": {
+                "1": {
+                    "Description": "Perform a series of slashes while advancing forward. An additional strike can be used with an additional input.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 6,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 11,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 16,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "PierceStep-SpinningSlash", "PierceStep-RisingSlash"
+            ]
+        },
+        "PierceStep-SpinningSlash": {
+            "Visible": false,
+            "Name": "Pierce Step - Spinning Slash",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/41/H1-2A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Push away the enemies with a spinning slash after Pierce Step.",
+                    "Effect": "",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 26,
+                    "RequiredSP": 1
+                }
+            }
+        },
+        "PierceStep-RisingSlash": {
+            "Visible": false,
+            "Name": "Pierce Step - Rising Slash",
+            "Icon": "http://wiki.soulworkerhq.com/images/9/98/H1-2B.png",
+            "Levels": {
+                "1": {
+                    "Description": "Launch the enemies to the air after Pierce Step with a rising slash.",
+                    "Effect": "",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 1
+                }
+            }
+        },
+        "SpinCutter": {
+            "Name": "Spin Cutter",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/42/H1-3.png",
+            "Levels": {
+                "1": {
+                    "Description": "Push enemies away by performing a spinning slash.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 5,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 9,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "BlowUp": {
+            "Name": "Blow Up",
+            "Icon": "http://wiki.soulworkerhq.com/images/7/70/H1-4.png",
+            "Levels": {
+                "1": {
+                    "Description": "Push enemies away by performing a spinning slash.",
+                    "Effect": "",
+                    "RequiredLevel": 4,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 8,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 12,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 16,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "BladeQuake": {
+            "Name": "Blade Quake",
+            "Icon": "http://wiki.soulworkerhq.com/images/7/75/H1-5.png",
+            "Levels": {
+                "1": {
+                    "Description": "Push the sword through the ground, summoning multiple swords to deal damage.",
+                    "Effect": "",
+                    "RequiredLevel": 6,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 14,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 18,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 22,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "BladeQuake-KnockOut"
+            ]
+        },
+        "BladeQuake-KnockOut": {
+            "Visible": false,
+            "Name": "Knock Out",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/42/H1-5A.png",
+            "Levels": {
+                "1": {
+                    "Description": "All enemies hit by the skill will be stunned.",
+                    "Effect": "",
+                    "RequiredLevel": 22,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 27,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 32,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "BladeWall": {
+            "Name": "Blade Wall",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/bb/H1-6.png",
+            "Levels": {
+                "1": {
+                    "Description": "Summoned swords will damage enemies and pull them towards the player.",
+                    "Effect": "",
+                    "RequiredLevel": 8,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 12,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 16,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 24,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "PowerSlash": {
+            "Name": "Power Slash",
+            "Icon": "http://wiki.soulworkerhq.com/images/9/9f/H1-7.png",
+            "Levels": {
+                "1": {
+                    "Description": "Slashes frontward with great power.",
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 25,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "LeapAttack": {
+            "Name": "Leap Attack",
+            "Icon": "http://wiki.soulworkerhq.com/images/7/78/H1-8.png",
+            "Levels": {
+                "1": {
+                    "Description": "Leap forward and slam the ground, launching the enemies into the air. Hold the skill button to charge the skill and leap further.",
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 18,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 23,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 28,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 33,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "LeapAttack-ExtraAttack", "LeapAttack-RangeIncrease"
+            ]
+        },
+        "LeapAttack-ExtraAttack": {
+            "Visible": false,
+            "Name": "Extra Attack",
+            "Icon": "http://wiki.soulworkerhq.com/images/6/6a/H1-8A.png",
+            "Levels": {
+                "1": {
+                    "Description": "There will be more attacks, increasing hitcount.",
+                    "Effect": "",
+                    "RequiredLevel": 33,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 38,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 43,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "LeapAttack-RangeIncrease": {
+            "Visible": false,
+            "Name": "Range Increase",
+            "Icon": "http://wiki.soulworkerhq.com/images/2/22/H1-8B.png",
+            "Levels": {
+                "1": {
+                    "Description": "Attack range is increased. Slam impact attack range increased.",
+                    "Effect": "",
+                    "RequiredLevel": 33,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 38,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 43,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "ArenaRush": {
+            "Name": "Arena Rush",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/48/H1-9.png",
+            "Levels": {
+                "1": {
+                    "Description": "Create an enhancing field in a set radius. All party members within the area will have increased damage.",
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 22,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 27,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 32,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 37,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "ArenaRush-DurationIncrease", "ArenaRush-KnockOut"
+            ]
+        },
+        "ArenaRush-DurationIncrease": {
+            "Visible": false,
+            "Name": "Duration Increase",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/49/H1-9A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Area duration increased.",
+                    "Effect": "",
+                    "RequiredLevel": 37,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 42,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 47,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "ArenaRush-KnockOut": {
+            "Visible": false,
+            "Name": "Knock Out",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/bc/H1-9B.png",
+            "Levels": {
+                "1": {
+                    "Description": "All hit enemies will be stunned for a brief moment.",
+                    "Effect": "",
+                    "RequiredLevel": 37,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 43,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 47,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "FlashStep": {
+            "Name": "Flash Step",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/c6/H1-10.png",
+            "Levels": {
+                "1": {
+                    "Description": "Swiftly leap backwards, summoning a sword imbued with supernatural powers and firing it frontward.",
+                    "Effect": "",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 26,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 31,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 36,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 41,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "CrossStrike": {
+            "Name": "Cross Strike",
+            "Icon": "http://wiki.soulworkerhq.com/images/0/0f/H1-11.png",
+            "Levels": {
+                "1": {
+                    "Description": "Slash in a X pattern mid-air and fire strong sword energy. The sword energy will explode on the ground and deal additional damage.",
+                    "Effect": "",
+                    "RequiredLevel": 28,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 32,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 36,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 40,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 44,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "CrossStrike-Blaze"
+            ]
+        },
+        "CrossStrike-Blaze": {
+            "Visible": false,
+            "Name": "Blaze",
+            "Icon": "http://wiki.soulworkerhq.com/images/f/f4/H1-11A.png",
+            "Levels": {
+                "1": {
+                    "Description": "A burning zone will appear when the sword energy explodes on the ground.",
+                    "Effect": "",
+                    "RequiredLevel": 44,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 49,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 54,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "WindBreak": {
+            "Name": "Wind Break",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/bb/H1-12.png",
+            "Levels": {
+                "1": {
+                    "Description": "Charge your sword with energy behind your back , then release it. The sword energy flies in a straight line while penetrating enemies.",
+                    "Effect": "",
+                    "RequiredLevel": 34,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 38,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 42,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 46,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 50,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "WindBreak-Charge"
+            ]
+        },
+        "WindBreak-Charge": {
+            "Visible": false,
+            "Name": "Charge",
+            "Icon": "http://wiki.soulworkerhq.com/images/8/8a/H1-12A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Fires multiple charged energy waves. Fires 2 waves with 0.7x the power of an original slash.",
+                    "Effect": "",
+                    "RequiredLevel": 50,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 55,
+                    "RequiredSP": 1
+                }
+            }
+        },
+        "BladeShower": {
+            "Name": "Blade Shower",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/49/H1-13.png",
+            "Levels": {
+                "1": {
+                    "Description": "Throw your sword upwards, summoning a torrential rain of energy swords. Very large AoE.",
+                    "Effect": "",
+                    "RequiredLevel": 42,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 45,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 48,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 51,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 54,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "BasicAttackMastery": {
+            "Passive": true,
+            "Name": "Basic Attack Mastery",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
+            "Levels": {
+                "1": {
+                    "Description": "Just as the name",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Description": "Just as the name",
+                    "Effect": "",
+                    "RequiredLevel": 5,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Description": "Just as the name",
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 1
+                },
+                "4": {
+                    "Description": "Just as the name",
+                    "Effect": "",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Description": "Just as the name",
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "SpecialAbilityMastery": {
+            "Passive": true,
+            "Name": "Special Ability Mastery",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/47/Sh-2h.png",
+            "Levels": {
+                "1": {
+                    "Description": " Use your power to lift the enemies up to the air.\n(Air) Quickly descend by landing and attacking with your feet.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "RisingRoll": {
+            "Passive": true,
+            "Name": "Rising Roll",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
+            "Levels": {
+                "1": {
+                    "Description": " Use your power to lift the enemies up to the air.\n(Air) Quickly descend by landing and attacking with your feet.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Faster Rolling Speed",
+                    "RequiredLevel": 34,
+                    "RequiredSP": 2
+                }
+            }
+        }
+    }
+}

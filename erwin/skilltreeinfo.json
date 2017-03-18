@@ -1,0 +1,637 @@
+{
+    "CharacterName": "Erwin Arclight",
+    "Skills": {
+        "SkyHigh": {
+            "Visible": true,
+            "Name": "Sky High",
+            "Icon": "http://wiki.soulworkerhq.com/images/f/fa/E1-1.png",
+            "Levels": {
+                "1": {
+                    "Description": "Kick the enemies ahead of you, launching them to the air.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 4,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 7,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "SkyHigh-ImpactBullets", "SkyHigh-AerialShots"
+            ]
+        },
+        "SkyHigh-ImpactBullets": {
+            "Visible": false,
+            "Name": "Impact Bullets",
+            "Icon": "http://wiki.soulworkerhq.com/images/a/a2/E1-1A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Shoot a powerful energy bullet that attacks the enemies in front.",
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 1
+                }
+            }
+        },
+        "SkyHigh-AerialShots": {
+            "Visible": false,
+            "Name": "Aerial Shots",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/cb/E1-1B.png",
+            "Levels": {
+                "1": {
+                    "Description": "Shoot continuously at enemies knocked into the air.",
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 18,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 23,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "RapidFire": {
+            "Name": "Rapid Fire",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/1b/E1-2.png",
+            "Levels": {
+                "1": {
+                    "Description": "Quickly fire with both guns. Can move while using this skill.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 6,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 11,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 16,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "GunCombination": {
+            "Name": "Gun Combination",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/40/E1-3.png",
+            "Levels": {
+                "1": {
+                    "Description": "Approach the enemies with great speed, and then fire at enemies close range.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 5,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 9,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "GunCombination-Penetration"
+            ]
+        },
+        "GunCombination-Penetration": {
+            "Visible": false,
+            "Name": "Penetration",
+            "Icon": "http://wiki.soulworkerhq.com/images/5/57/E1-3A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Attacks done by the guns go through enemies.",
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 22,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 27,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "SlideStep": {
+            "Name": "Slide Step",
+            "Icon": "http://wiki.soulworkerhq.com/images/3/31/E1-4.png",
+            "Levels": {
+                "1": {
+                    "Description": "Rapidly slide back and avoid incoming attacks.",
+                    "Effect": "",
+                    "RequiredLevel": 4,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 8,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 12,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 16,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "SlideStep-SmokeGrenade", "SlideStep-PoisonGasGrenade"
+            ]
+        },
+        "SlideStep-SmokeGrenade": {
+            "Visible": false,
+            "Name": "Smoke Grenade",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/c8/E1-4A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Throws a smoke screen in an area. Enemies in the smoke will be slowed.",
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 25,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "SlideStep-PoisonGasGrenade": {
+            "Visible": false,
+            "Name": "Poison Gas Grenade",
+            "Icon": "http://wiki.soulworkerhq.com/images/f/fe/E1-4B.png",
+            "Levels": {
+                "1": {
+                    "Description": "Throws a poisonous gas grenade in an area. Enemies in the smoke will be poisoned.",
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 25,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "TakeAim": {
+            "Name": "Take Aim",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/19/E1-5.png",
+            "Levels": {
+                "1": {
+                    "Description": "Improve concentration to aim at the enemy's weak points.",
+                    "Effect": "",
+                    "RequiredLevel": 6,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 11,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 16,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 26,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "FocusShot": {
+            "Name": "Focus Shot",
+            "Icon": "http://wiki.soulworkerhq.com/images/e/ee/E1-6.png",
+            "Levels": {
+                "1": {
+                    "Description": "Convert the guns into a machine gun, firing rapidly at enemies. The fire duration increases as the skill level increases.",
+                    "Effect": "",
+                    "RequiredLevel": 8,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 12,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 16,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 24,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "FocusShot-ParalyzingShot", "FocusShot-BlackHole"
+            ]
+        },
+        "FocusShot-ParalyzingShot": {
+            "Visible": false,
+            "Name": "Paralyzing Shot",
+            "Icon": "http://wiki.soulworkerhq.com/images/5/52/E1-6A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Fires a powerful energy at the end of the attack. Inflicts paralysis at the affected area.",
+                    "Effect": "",
+                    "RequiredLevel": 24,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 29,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 34,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "FocusShot-BlackHole": {
+            "Visible": false,
+            "Name": "Black Hole",
+            "Icon": "http://wiki.soulworkerhq.com/images/e/ec/E1-6B.png",
+            "Levels": {
+                "1": {
+                    "Description": "Fires a powerful energy at the end of the attack. Enemies will be pulled to the center of the affected area.",
+                    "Effect": "",
+                    "RequiredLevel": 24,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 29,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 34,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "CombatMaster": {
+            "Name": "Combat Master",
+            "Icon": "http://wiki.soulworkerhq.com/images/8/8c/E1-7.png",
+            "Levels": {
+                "1": {
+                    "Description": "Fastly move forward and fire at enemies close range.",
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 25,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "GuidedShot": {
+            "Name": "Guided Shot",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/ca/E1-8.png",
+            "Levels": {
+                "1": {
+                    "Description": "Convert the guns into a sniper rifle, shooting a powerful shot that penetrates through enemies in a straight line.",
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 18,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 23,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 28,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 33,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "GuidedShot-DefensePenetration"
+            ]
+        },
+        "GuidedShot-DefensePenetration": {
+            "Visible": false,
+            "Name": "Defense Penetration",
+            "Icon": "http://wiki.soulworkerhq.com/images/e/ed/E1-8A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Attacks done to the enemy ignore enemy's defense.",
+                    "Effect": "",
+                    "RequiredLevel": 33,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 38,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 43,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "ElectricShot": {
+            "Name": "Electric Shot",
+            "Icon": "http://wiki.soulworkerhq.com/images/a/ae/E1-9.png",
+            "Levels": {
+                "1": {
+                    "Description": "Convert the guns into a grenade launcher, which fires a powerful grenade that explodes and deal damage to the enemies.",
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 22,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 27,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 32,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 37,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "NapalmBomb": {
+            "Name": "Napalm Bomb",
+            "Icon": "http://wiki.soulworkerhq.com/images/0/0d/E1-10.png",
+            "Levels": {
+                "1": {
+                    "Description": "Fire many grenades by converting the guns into a grenade launcher in the air, dealing damage over a large area.",
+                    "Effect": "",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 26,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 31,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 36,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 41,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "Sprinter": {
+            "Name": "Sprinter",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/b2/E1-11.png",
+            "Levels": {
+                "1": {
+                    "Description": "Fire a bullet in the air that temporarily increases movement speed of all party members.",
+                    "Effect": "",
+                    "RequiredLevel": 28,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 32,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 36,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 40,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 44,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "Sprinter-SGRecovery"
+            ]
+        },
+        "Sprinter-SGRecovery": {
+            "Visible": false,
+            "Name": "SG Recovery",
+            "Icon": "http://wiki.soulworkerhq.com/images/a/ab/E1-11A.png",
+            "Levels": {
+                "1": {
+                    "Description": "Gives a buff that recovers allies SG.",
+                    "Effect": "",
+                    "RequiredLevel": 44,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 49,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 54,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "Hide&Seek": {
+            "Name": "Hide & Seek",
+            "Icon": "http://wiki.soulworkerhq.com/images/4/46/E1-12.png",
+            "Levels": {
+                "1": {
+                    "Description": "Charge up a barrier, while charging you are invincible. After the barrier actives, you will gain Super Armor and all damage will be avoided.",
+                    "Effect": "",
+                    "RequiredLevel": 34,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 39,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 44,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 49,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 54,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "SoulLauncher": {
+            "Name": "Soul Launcher",
+            "Icon": "http://wiki.soulworkerhq.com/images/5/50/E1-13.png",
+            "Levels": {
+                "1": {
+                    "Description": "By turning guns into grenade launchers, fire a barrage of artillery up to 10 meters. Hit enemies will be pushed back.",
+                    "Effect": "",
+                    "RequiredLevel": 42,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 45,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 48,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 51,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 54,
+                    "RequiredSP": 3
+                }
+            }
+        }
+    }
+}

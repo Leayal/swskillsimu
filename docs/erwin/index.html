@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Skill simulator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+    <script src="../jquery-3.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../skilltreefunctions.js"></script>
+    <script src="../skillinfos.js"></script>
+    <script src="../skilltree.js"></script>
+</head>
+
+<body>
+    <div class="well skilltree">
+        <div class="well character">
+            <div>
+                <h2>Character Info</h2>
+            </div>
+            <div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Character</th>
+                            <td colspan="2" id="charName" class="charactername"></td>
+                            <td><span id="levelBoxtd" class="levellable">Level:</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Skill Point</th>
+                            <td><span>Total: </span><span id="e_totalSP"></span></td>
+                            <td><span>Invested: </span><span id="e_investedSP"></span></td>
+                            <td><span>Remaining: </span><span id="e_remainingSP"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="well" id="skilltree">
+            <ul class="tablelike">
+                <li id="activeskill" class="activeskill"></li>
+                <li id="passiveskill" class="passiveskill"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
