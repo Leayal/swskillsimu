@@ -1042,17 +1042,17 @@
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "SG Regrenerate Rate: +10%",
+                    "Effect": "SG Capacity Rate: +10%",
                     "RequiredLevel": 10,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "SG Regrenerate Rate: +15%",
+                    "Effect": "SG Capacity Rate: +15%",
                     "RequiredLevel": 20,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "SG Regrenerate Rate: +20%",
+                    "Effect": "SG Capacity Rate: +20%",
                     "RequiredLevel": 30,
                     "RequiredSP": 2
                 }
