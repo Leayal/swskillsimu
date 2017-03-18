@@ -287,7 +287,6 @@ $(function() {
     for (var i = 1; i <= window.c_maxlevel; i++)
         selecting.append($("<option>").val(i).text(i));
     selecting.insertAfter($("span#levelBoxtd"));
-    window.SkillCore.ReadTree();
     var clevel = GetUrlParam("lv", 55);
     if (clevel == 55) clevel = GetUrlParam("level", 55);
     if (!isNaN(clevel))
@@ -305,4 +304,6 @@ $(function() {
         asdButton.trigger("click");
         asdDiv.remove();
     });
+
+    window.SkillCore.ReadTree();
 });
