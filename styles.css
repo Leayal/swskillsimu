@@ -4,6 +4,21 @@ div.character {
     min-width: 300px;
 }
 
+div.skilltree1class {
+    position: relative;
+    top: 200px;
+    left: 0px;
+    /*transform: translate(-50%, 0);*/
+}
+
+div.skilltreeclass {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: 0px;
+}
+
 div.hiddendiv {
     opacity: 0;
     position: fixed;
@@ -13,6 +28,10 @@ div.hiddendiv {
 }
 
 div.controlpanel {}
+
+span.alert {
+    color: red;
+}
 
 div.skilltree {
     min-width: 900px;
@@ -34,6 +53,12 @@ span.levellable {
 
 ul.tablelike {
     list-style: none outside none;
+}
+
+li.titletablelike {
+    float: left;
+    display: block;
+    margin: 7px;
 }
 
 li.tablelike {

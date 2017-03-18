@@ -47,10 +47,7 @@ class SkillInfo {
     get Visible() { return this._visible; }
 
     UnlearnSkill() {
-        var min = Math.min(0, this._defaultLevel);
-        for (var ii = this._currentskilllevel; ii > min; ii--) {
-            this.SkillDown();
-        }
+        this.SetCurrentSkillLevel(Math.max(0, this._defaultLevel));
     }
 
     readInfos(ob) {

@@ -26,44 +26,41 @@
 <body>
     <div class="bganim"></div>
     <div class="well skilltree">
-        <div>
+        <div class="well skilltreeclass">
             <ul class="tablelike">
-                <li>
-                    <div class="well character">
+                <li class="titletablelike character">
+                    <div class="well">
                         <div>
                             <h2>Character Info</h2>
                         </div>
                         <div>
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Character</th>
-                                        <td colspan="2" id="charName" class="charactername"></td>
-                                        <td><span id="levelBoxtd" class="levellable">Level:</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Skill Point</th>
-                                        <td><span>Total: </span><span id="e_totalSP"></span></td>
-                                        <td><span>Invested: </span><span id="e_investedSP"></span></td>
-                                        <td><span>Remaining: </span><span id="e_remainingSP"></span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <ul class="tablelike">
+                                <li class="titletablelike"><span class="levellable">Character</span></li>
+                                <li id="charName" class="titletablelike charactername"></li>
+                                <li class="titletablelike"><span id="levelBoxtd" class="levellable">Level:</span></li>
+                            </ul>
+                            <ul class="tablelike">
+                                <li class="titletablelike"><span class="levellable">Skill Point</span></li>
+                                <li class="titletablelike"><span>Total: </span><span id="e_totalSP"></span></li>
+                                <li class="titletablelike"><span>Remaining: </span><span id="e_remainingSP"></span></li>
+                            </ul>
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="titletablelike">
                     <div class="controlpanel">
                         <a id="copyURL" data-clipboard-target="#copymagic" href="javascript:void(0);">Copy Link</a>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="well" id="skilltree">
-            <ul class="tablelike">
-                <li id="activeskill" class="activeskill"></li>
-                <li id="passiveskill" class="passiveskill"></li>
-            </ul>
+        <div class="skilltree1class">
+            <div class="well skilltreeclass" id="skilltree">
+                <ul class="tablelike">
+                    <li id="activeskill" class="activeskill"></li>
+                    <li id="passiveskill" class="passiveskill"></li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

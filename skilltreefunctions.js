@@ -65,11 +65,21 @@ class SkillTreeCore {
 
     UpdateAllSPs() {
         this._spleft = this._totalsp - this._investedsp;
+        $("#e_totalSP").text(this._totalsp);
+        this.CheckAllSkills();
         if (this._spleft < 0)
             this.UnlearnAllSkills();
-        $("#e_totalSP").text(this._totalsp);
         $("#e_investedSP").text(this._investedsp);
         $("#e_remainingSP").text(this._spleft);
+    }
+
+    CheckAllSkills() {
+        var asdasdfafa;
+        for (var skillid in this.SkillList) {
+            asdasdfafa = this.SkillList[skillid].CurrentLevelInfo();
+            if ((get = asdasdfafa.RequiredLevel) > this._currentlevel)
+                this.SkillList[skillid].UnlearnSkill();
+        }
     }
 
     UnlearnAllSkills() {
@@ -87,6 +97,8 @@ class SkillTreeCore {
 
     inner_gettotalspex(_level) {
         switch (_level) {
+            case 0:
+                return 0;
             case 1:
                 return 0;
             case 2:
