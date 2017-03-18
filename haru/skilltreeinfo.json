@@ -9,12 +9,12 @@
             "Levels": {
                 "1": {
                     "Description": "Perform a series of slashes while advancing forward. An additional strike can be used [Right-click] at the end of the skill.",
-                    "Effect": "",
+                    "Effect": "Damage:1%\nSA Damage:2%",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "2": {
-                    "Effect": "",
+                    "Effect": "Damage:2%\nSA Damage:4%",
                     "RequiredLevel": 4,
                     "RequiredSP": 1
                 },

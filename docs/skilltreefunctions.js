@@ -59,18 +59,26 @@ class SkillTreeCore {
 
     UpdateSP() {
         this._spleft = this._totalsp - this._investedsp;
+        if (this._spleft < 5)
+            $("#e_remainingSP").addClass("alertlow");
+        else
+            $("#e_remainingSP").removeClass("alertlow");
         $("#e_investedSP").text(this._investedsp);
         $("#e_remainingSP").text(this._spleft);
     }
 
     UpdateAllSPs() {
-        this._spleft = this._totalsp - this._investedsp;
         $("#e_totalSP").text(this._totalsp);
-        this.CheckAllSkills();
-        if (this._spleft < 0)
-            this.UnlearnAllSkills();
         $("#e_investedSP").text(this._investedsp);
+        this._spleft = this._totalsp - this._investedsp;
         $("#e_remainingSP").text(this._spleft);
+        if (this._totalsp < this._investedsp)
+            this.UnlearnAllSkills();
+        this.CheckAllSkills();
+        if (this._spleft < 5)
+            $("#e_remainingSP").addClass("alertlow");
+        else
+            $("#e_remainingSP").removeClass("alertlow");
     }
 
     CheckAllSkills() {
@@ -157,6 +165,105 @@ class SkillTreeCore {
 }
 
 var SkillCore = new SkillTreeCore();
+var mouseX;
+var mouseY;
+
+$(document).mousemove(function(e) {
+    window.mouseX = e.pageX;
+    window.mouseY = e.pageY;
+});
+
+function SetToolTip(obj) {
+    obj.mouseover(function() {
+        var key = $(this).attr("insight");
+        if (key) {
+            var skillinfoooo = window.SkillCore.GetSkill(key);
+            var ddddddd = skillinfoooo.CurrentLevelInfo();
+            if (ddddddd) {
+                var desc = get = ddddddd.SkillDescription;
+                var eff = get = ddddddd.SkillEffect;
+                if (!desc && !eff) return;
+                if (desc)
+                    $('div#tooltip pre:first').text("[Description]\n" + htmlEncode(desc));
+                else
+                    $('div#tooltip pre:first').empty();
+                if (eff)
+                    $('div#tooltip pre:last').text("[Effect]\n" + htmlEncode(eff));
+                else
+                    $('div#tooltip pre:last').empty();
+                $('div#tooltip').stop(false, true).fadeIn('fast');
+                obj.mousemove(function() {
+                    $('div#tooltip').css({ 'top': mouseY - 10, 'left': mouseX + 5 });
+                });
+            }
+        }
+    }).mouseout(function() {
+        $('div#tooltip').stop(false, true).fadeOut('fast');
+    });
+    return obj;
+}
+
+function SetToolTipUp(obj) {
+    obj.mouseover(function() {
+        var key = $(this).attr("insight");
+        if (key) {
+            var skillinfoooo = window.SkillCore.GetSkill(key);
+            var ddddddd = skillinfoooo.CurrentLevelInfo();
+            var fffffff = skillinfoooo.NextLevelInfo();
+            if (ddddddd || fffffff) {
+                var desc = get = ddddddd.SkillEffect;
+                var eff = get = fffffff.SkillEffect;
+                if (!desc && !eff) return;
+                if (desc)
+                    $('div#tooltip pre:first').text("[Current]\n" + htmlEncode(desc));
+                else
+                    $('div#tooltip pre:first').empty();
+                if (eff)
+                    $('div#tooltip pre:last').text("[After]\n" + htmlEncode(eff));
+                else
+                    $('div#tooltip pre:last').empty();
+                $('div#tooltip').stop(false, true).fadeIn('fast');
+                obj.mousemove(function() {
+                    $('div#tooltip').css({ 'top': mouseY - 10, 'left': mouseX + 5 });
+                });
+            }
+        }
+    }).mouseout(function() {
+        $('div#tooltip').stop(false, true).fadeOut('fast');
+    });
+    return obj;
+}
+
+function SetToolTipDown(obj) {
+    obj.mouseover(function() {
+        var key = $(this).attr("insight");
+        if (key) {
+            var skillinfoooo = window.SkillCore.GetSkill(key);
+            var ddddddd = skillinfoooo.CurrentLevelInfo();
+            var fffffff = skillinfoooo.PreviousLevelInfo();
+            if (ddddddd || fffffff) {
+                var desc = get = ddddddd.SkillEffect;
+                var eff = get = fffffff.SkillEffect;
+                if (!desc && !eff) return;
+                if (desc)
+                    $('div#tooltip pre:first').text("[Current]\n" + htmlEncode(desc));
+                else
+                    $('div#tooltip pre:first').empty();
+                if (eff)
+                    $('div#tooltip pre:last').text("[After]\n" + htmlEncode(eff));
+                else
+                    $('div#tooltip pre:last').empty();
+                $('div#tooltip').stop(false, true).fadeIn('fast');
+                obj.mousemove(function() {
+                    $('div#tooltip').css({ 'top': mouseY - 10, 'left': mouseX + 5 });
+                });
+            }
+        }
+    }).mouseout(function() {
+        $('div#tooltip').stop(false, true).fadeOut('fast');
+    });
+    return obj;
+}
 
 $(function() {
     SetLoading($("body"));
@@ -173,7 +280,7 @@ $(function() {
         clevel = 55;
     $("select#selectLevelBox").val(clevel);
     window.SkillCore.SetLevelFromElement();
-
+    //$(document).tooltip();
     $("a#copyURL").click(function() {
         var link = window.SkillCore.GenerateLink();
         var asdDiv = $("<div>").addClass("hiddendiv");

@@ -81,37 +81,41 @@ function imagesLoadedCallback(element) {
     if (window.SkillCore.SkillCount == window.SkillCore.loadedSkillCount) {
         //Finished Everything
         RemoveLoading($("body"));
+        //title="That&apos;s what this widget is"
     }
     //LoadtheSharedLinkHere
     var currentskill = window.SkillCore.GetSkill(element.attr("insight"));
     currentskill.SetCurrentSkillLevel(GetUrlParam(element.attr("insight"), get = currentskill.GetDefaultLevel));
+    SetToolTip(element);
 }
 
 SkillInfo.prototype.GetSkillPanel = function(ex) {
     if (this.Panel) return this.Panel;
     if (ex) {
         var skillInfoPanel = $("<div>").addClass("skillExinfopanel").addClass("fadeinAppear");
+        skillInfoPanel.attr("insight", this._id);
         var img = $("<img>").addClass("skillExIcon").attr("insight", this._id).attr("src", get = this.IconURL);
         skillInfoPanel.append(img.imagesLoaded(function() {
             imagesLoadedCallback(img);
         }));
-        var mybutton = $("<button skillup type=\"button\" class=\"btn-success skillexup\" target=\"" + this._id + "\">");
+        SetToolTip(img);
+        var mybutton = $("<button skillup type=\"button\" class=\"btn-success skillexup\" insight=\"" + this._id + "\">");
         if (this._currentskilllevel === this._skillmaxlevel)
             mybutton.addClass("disabled");
+        SetToolTipUp(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
             if (!$(this).hasClass("disabled"))
-                window.SkillCore.GetSkill($(this).attr("target")).SkillUp();
+                window.SkillCore.GetSkill($(this).attr("insight")).SkillUp();
         }));
-        mybutton = $("<button skilldown type=\"button\" class=\"btn-danger skillexdown\" target=\"" + this._id + "\">");
+        mybutton = $("<button skilldown type=\"button\" class=\"btn-danger skillexdown\" insight=\"" + this._id + "\">");
         if (this._currentskilllevel === 0)
             mybutton.addClass("disabled");
+        SetToolTipDown(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
             if (!$(this).hasClass("disabled"))
-                window.SkillCore.GetSkill($(this).attr("target")).SkillDown();
+                window.SkillCore.GetSkill($(this).attr("insight")).SkillDown();
         }));
-        skillInfoPanel.append($("<p insight=\"skilllevel\">").addClass("skillExLevel").text(this._currentskilllevel + "/" + this._skillmaxlevel));
-
-        //Set Skill Extensions
+        skillInfoPanel.append($("<p insight=\"skilllexevel\">").addClass("skillExLevel").text(this._currentskilllevel + "" + this._skillmaxlevel));
         var exts = get = this.Extensions;
         if (exts !== undefined && Object.keys(exts).length > 0) {
             var extItem;
@@ -123,21 +127,25 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         this.Panel = skillInfoPanel;
     } else {
         var skillInfoPanel = $("<div>").addClass("skillinfopanel").addClass("fadeinAppear");
+        skillInfoPanel.attr("insight", this._id);
         var img = $("<img>").addClass("skillIcon").attr("insight", this._id).attr("src", get = this.IconURL);
         skillInfoPanel.append(img.imagesLoaded(function() {
             imagesLoadedCallback(img);
         }));
-        var mybutton = $("<button skillup type=\"button\" class=\"btn btn-success skillup\" target=\"" + this._id + "\">");
+        SetToolTip(img);
+        var mybutton = $("<button skillup type=\"button\" class=\"btn btn-success skillup\" insight=\"" + this._id + "\">");
         if (this._currentskilllevel === this._skillmaxlevel)
             mybutton.addClass("disabled");
+        SetToolTipUp(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
-            window.SkillCore.GetSkill($(this).attr("target")).SkillUp();
+            window.SkillCore.GetSkill($(this).attr("insight")).SkillUp();
         }));
-        mybutton = $("<button skilldown type=\"button\" class=\"btn btn-danger skilldown\" target=\"" + this._id + "\">");
+        mybutton = $("<button skilldown type=\"button\" class=\"btn btn-danger skilldown\" insight=\"" + this._id + "\">");
         if (this._currentskilllevel === 0)
             mybutton.addClass("disabled");
+        SetToolTipDown(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
-            window.SkillCore.GetSkill($(this).attr("target")).SkillDown();
+            window.SkillCore.GetSkill($(this).attr("insight")).SkillDown();
         }));
         skillInfoPanel.append($("<p insight=\"skilllevel\">").addClass("skillLevel").text(this._currentskilllevel + "/" + this._skillmaxlevel));
         //skillInfoPanel.append($("<p>").addClass("skillName").text(get = this.Name));
@@ -180,6 +188,7 @@ SkillInfo.prototype.UpdateSkill = function() {
     if (!this.Panel) return;
     var panel = this.Panel;
     panel.children("p[insight=\"skilllevel\"]:first").text(this._currentskilllevel + "/" + this._skillmaxlevel);
+    panel.children("p[insight=\"skilllexevel\"]:first").text(this._currentskilllevel + "" + this._skillmaxlevel);
     if (this._currentskilllevel == 0) {
         panel.children("button[skilldown]:first").addClass("disabled");
         var pa = this._parent;

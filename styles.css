@@ -4,6 +4,33 @@ div.character {
     min-width: 300px;
 }
 
+div#tooltip {
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    display: none;
+    border: 1px solid black;
+    background: black;
+    opacity: 0.85;
+    text-align: left;
+    transform: translate(0, -100%);
+}
+
+pre.tooltipcontent {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    border-bottom: 1px black;
+    letter-spacing: 0px;
+    font-size: 13px;
+    color: white;
+    opacity: 1;
+    margin: 4px;
+}
+
 div.skilltree1class {
     position: relative;
     top: 200px;
@@ -29,7 +56,7 @@ div.hiddendiv {
 
 div.controlpanel {}
 
-span.alert {
+span.alertlow {
     color: red;
 }
 
@@ -51,8 +78,20 @@ span.levellable {
     font-weight: bold;
 }
 
+.center {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
 ul.tablelike {
     list-style: none outside none;
+}
+
+ul.sptable {
+    position: absolute;
+    left: 0px;
+    top: 100px;
 }
 
 li.titletablelike {
@@ -173,10 +212,14 @@ button.skillexdown {
 }
 
 p.skillExLevel {
-    font-size: 8px;
+    word-wrap: break-word;
+    height: auto;
+    width: 1px;
+    font-size: 9px;
     position: absolute;
     left: 31px;
-    top: 7px;
+    top: 2px;
+    margin-left: 2px;
 }
 
 div.bganim {
