@@ -110,7 +110,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
             }
         }));
         mybutton = $("<button skilldown type=\"button\" class=\"btn-danger skillexdown\" insight=\"" + this._id + "\">");
-        if (this._currentskilllevel === 0)
+        if (this._currentskilllevel === this._defaultLevel)
             mybutton.addClass("disabled");
         SetToolTipDown(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
@@ -146,7 +146,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
             $(this).trigger("mouseover");
         }));
         mybutton = $("<button skilldown type=\"button\" class=\"btn btn-danger skilldown\" insight=\"" + this._id + "\">");
-        if (this._currentskilllevel === 0)
+        if (this._currentskilllevel === this._defaultLevel)
             mybutton.addClass("disabled");
         SetToolTipDown(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
@@ -195,7 +195,7 @@ SkillInfo.prototype.UpdateSkill = function() {
     var panel = this.Panel;
     panel.children("p[insight=\"skilllevel\"]:first").text(this._currentskilllevel + "/" + this._skillmaxlevel);
     panel.children("p[insight=\"skilllexevel\"]:first").text(this._currentskilllevel + "" + this._skillmaxlevel);
-    if (this._currentskilllevel == 0) {
+    if (this._currentskilllevel <= this._defaultLevel) {
         panel.children("button[skilldown]:first").addClass("disabled");
         var pa = this._parent;
         if (pa && !(pa.NextLevelInfo()))
@@ -246,6 +246,7 @@ SkillInfo.prototype.SkillUp = function() {
 SkillInfo.prototype.SkillDown = function() {
     var prev = this.PreviousLevelInfo();
     if (prev) {
+        if (this._defaultLevel === this._currentskilllevel) return;
         window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
         this._currentskilllevel--;
         this.UpdateSkill();
