@@ -1,4 +1,12 @@
 @charset "UTF-8";
+body {
+    color: white;
+}
+
+a {
+    color: #d9d900;
+}
+
 div.character {
     max-width: 50%;
     min-width: 300px;
@@ -232,7 +240,7 @@ div.bganim {
     top: 0px;
     left: 0px;
     position: fixed;
-    background: linear-gradient(219deg, gray, #8b8d8d);
+    background: linear-gradient(219deg, #6f6f6f, #757575);
     background-size: 400% 400%;
     -webkit-animation: gradientbganim 11s ease infinite;
     -moz-animation: gradientbganim 11s ease infinite;

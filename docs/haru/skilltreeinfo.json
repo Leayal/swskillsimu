@@ -885,7 +885,6 @@
         "RisingAttack": {
             "Passive": true,
             "Name": "Rising Attack",
-            "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
             "Levels": {
                 "0": {
