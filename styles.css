@@ -14,7 +14,6 @@ div#tooltip {
     background: black;
     opacity: 0.85;
     text-align: left;
-    transform: translate(0, -100%);
 }
 
 pre.tooltipcontent {
@@ -106,6 +105,10 @@ li.tablelike {
     width: 120px;
     height: 88px;
     margin: 7px;
+}
+
+li.passiveskilltree {
+    float: right;
 }
 
 li.activeskill {

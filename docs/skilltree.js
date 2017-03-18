@@ -66,7 +66,7 @@ SkillTreeCore.prototype.RenderTree = function() {
                         eTree.append(passiveRow);
                     passiveRow = $("<ul>").addClass("tablelike");
                 }
-                passiveRow.append($("<li>").addClass("tablelike").append(this.PassiveSkillList[sl].GetSkillPanel()));
+                passiveRow.append($("<li>").addClass("tablelike").addClass("passiveskilltree").append(this.PassiveSkillList[sl].GetSkillPanel()));
                 if (passiveCount >= 2) passiveCount = 0;
             }
         }

@@ -65,7 +65,7 @@ class SkillInfo {
         this._iconURL = ob.Icon;
         if (ob.Visible == false)
             this._visible = ob.Visible;
-        this._availablelevel = this.Levels[0].RequiredLevel;
+        this._availablelevel = this.Levels[1].RequiredLevel;
         this._skillmaxlevel = this.Levels.length - 1;
         if (ob.DefaultLevel > 0)
             this._defaultLevel = ob.DefaultLevel;

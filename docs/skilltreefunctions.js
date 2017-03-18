@@ -183,21 +183,22 @@ function SetToolTip(obj) {
             if (ddddddd) {
                 var desc = get = ddddddd.SkillDescription;
                 var eff = get = ddddddd.SkillEffect;
+                var elem = $('div#tooltip');
                 if (!desc && !eff) {
-                    $('div#tooltip').stop(false, true).fadeOut('fast');
+                    elem.stop(false, true).fadeOut('fast');
                     return;
                 }
                 if (desc)
-                    $('div#tooltip pre:first').text("[Description]\n" + htmlEncode(desc));
+                    $('div#tooltip pre:first').text((get = skillinfoooo.Name) + "\n[Description]\n" + htmlEncode(desc));
                 else
                     $('div#tooltip pre:first').empty();
                 if (eff)
                     $('div#tooltip pre:last').text("[Effect]\n" + htmlEncode(eff));
                 else
                     $('div#tooltip pre:last').empty();
-                $('div#tooltip').stop(false, true).fadeIn('fast');
+                elem.stop(false, true).fadeIn('fast');
                 obj.mousemove(function() {
-                    $('div#tooltip').css({ 'top': mouseY - 10, 'left': mouseX + 5 });
+                    elem.css({ 'top': Math.min(window.mouseY + 10, $(document).height() - elem.outerHeight(true)), 'left': window.mouseX + 5 });
                 });
             }
         }
@@ -214,11 +215,12 @@ function SetToolTipUp(obj) {
             var skillinfoooo = window.SkillCore.GetSkill(key);
             var ddddddd = skillinfoooo.CurrentLevelInfo();
             var fffffff = skillinfoooo.NextLevelInfo();
+            var elem = $('div#tooltip');
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
                 var eff = get = fffffff.SkillEffect;
                 if (!desc && !eff) {
-                    $('div#tooltip').stop(false, true).fadeOut('fast');
+                    elem.stop(false, true).fadeOut('fast');
                     return;
                 }
                 if (desc)
@@ -229,9 +231,10 @@ function SetToolTipUp(obj) {
                     $('div#tooltip pre:last').text("[After]\n" + htmlEncode(eff));
                 else
                     $('div#tooltip pre:last').empty();
-                $('div#tooltip').stop(false, true).fadeIn('fast');
+                elem.stop(false, true).fadeIn('fast');
                 obj.mousemove(function() {
-                    $('div#tooltip').css({ 'top': mouseY - 10, 'left': mouseX + 5 });
+                    //elem.outerHeight(true)
+                    elem.css({ 'top': Math.min(window.mouseY + 10, $(window).height() - elem.outerHeight(true)), 'left': window.mouseX + 5 });
                 });
             }
         }
@@ -248,11 +251,12 @@ function SetToolTipDown(obj) {
             var skillinfoooo = window.SkillCore.GetSkill(key);
             var ddddddd = skillinfoooo.CurrentLevelInfo();
             var fffffff = skillinfoooo.PreviousLevelInfo();
+            var elem = $('div#tooltip');
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
                 var eff = get = fffffff.SkillEffect;
                 if (!desc && !eff) {
-                    $('div#tooltip').stop(false, true).fadeOut('fast');
+                    elem.stop(false, true).fadeOut('fast');
                     return;
                 }
                 if (desc)
@@ -263,9 +267,9 @@ function SetToolTipDown(obj) {
                     $('div#tooltip pre:last').text("[After]\n" + htmlEncode(eff));
                 else
                     $('div#tooltip pre:last').text("[After]\nNone.");
-                $('div#tooltip').stop(false, true).fadeIn('fast');
+                elem.stop(false, true).fadeIn('fast');
                 obj.mousemove(function() {
-                    $('div#tooltip').css({ 'top': mouseY - 10, 'left': mouseX + 5 });
+                    elem.css({ 'top': Math.min(window.mouseY + 10, $(document).height() - elem.outerHeight(true)), 'left': window.mouseX + 5 });
                 });
             }
         }
