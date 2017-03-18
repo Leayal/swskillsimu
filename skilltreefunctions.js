@@ -158,10 +158,15 @@ class SkillTreeCore {
             if (levelasd != (get = this.SkillList[skillid].GetDefaultLevel))
                 arrayString.push(skillid + "=" + levelasd);
         }
-        var param = location.protocol + '//' + location.host + location.pathname + "?lv=" + this._currentlevel;
+        var link = location.protocol + '//' + location.host + location.pathname;
+        var param = "";
+        if (this._currentlevel !== window.c_maxlevel)
+            param = param + "lv=" + this._currentlevel;
         if (arrayString.length > 0)
             param = param + "&" + arrayString.join("&");
-        return param;
+        if (param)
+            link = link + "?" + param;
+        return link;
     }
 }
 
