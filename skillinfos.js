@@ -5,10 +5,16 @@ class SkillInfo {
         this._currentskilllevel = 0;
         this._name = skillName;
         this._passive = false;
+        this._parent = null;
         this._visible = true;
         this.readInfos(infos);
     }
 
+    SetParent(obj) {
+        this._parent = obj;
+    }
+
+    get Parent() { return this._parent; }
     get ID() { return this._id; }
     get Name() { return this._name; }
     get AvailableLevel() { return this._availablelevel; }
@@ -27,10 +33,12 @@ class SkillInfo {
     get Extensions() {
         if (!this._extensions) {
             this._extensions = {};
-            var extName;
+            var extName, exteItem;
             for (var extIndex in this._string_extensions) {
                 extName = this._string_extensions[extIndex];
-                this._extensions[extName] = window.SkillCore.GetSkill(extName);
+                exteItem = window.SkillCore.GetSkill(extName);
+                this._extensions[extName] = exteItem;
+                exteItem.SetParent(this);
             }
         }
         return this._extensions;

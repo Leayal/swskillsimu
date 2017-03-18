@@ -143,17 +143,37 @@ SkillInfo.prototype.UpdateSkill = function() {
     panel.children("p[insight=\"skilllevel\"]").text(this._currentskilllevel + "/" + this._skillmaxlevel);
     if (this._currentskilllevel == 0) {
         panel.find($("button[skilldown]")[0]).addClass("disabled");
+        var pa = this._parent;
+        if (pa)
+            for (var ske in pa.Extensions)
+                pa.Extensions[ske].Disabled(false);
     } else if (this._currentskilllevel == this._skillmaxlevel) {
         panel.find($("button[skillup]")[0]).addClass("disabled");
-        for (var ske in this.Extensions) {
-            this.Extensions[ske].Disabled(false);
+        var pa = this._parent;
+        if (pa) {
+            var asdsss;
+            for (var ske in pa.Extensions) {
+                asdsss = pa.Extensions[ske];
+                if ((get = asdsss.ID) !== this._id)
+                    asdsss.Disabled(true);
+            }
         }
+        for (var ske in this.Extensions)
+            this.Extensions[ske].Disabled(false);
     } else {
         panel.find($("button.disabled[skilldown]")).removeClass("disabled");
         panel.find($("button.disabled[skillup]")).removeClass("disabled");
-        for (var ske in this.Extensions) {
-            this.Extensions[ske].Disabled(true);
+        var pa = this._parent;
+        if (pa) {
+            var asdsss;
+            for (var ske in pa.Extensions) {
+                asdsss = pa.Extensions[ske];
+                if ((get = asdsss.ID) !== this._id)
+                    asdsss.Disabled(true);
+            }
         }
+        for (var ske in this.Extensions)
+            this.Extensions[ske].Disabled(true);
     }
 }
 
