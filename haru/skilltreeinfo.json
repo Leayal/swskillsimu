@@ -2,8 +2,8 @@
     "CharacterName": "Haru Estia",
     "Skills": {
         "FirstStrike": {
-            "Visible": true,
             "Name": "First Strike",
+            "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/c/c7/H1-1.png",
             "Levels": {
                 "1": {
@@ -62,6 +62,7 @@
         },
         "PierceStep": {
             "Name": "Pierce Step",
+            "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/4/48/H1-2.png",
             "Levels": {
                 "1": {
@@ -128,6 +129,7 @@
         },
         "SpinCutter": {
             "Name": "Spin Cutter",
+            "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/4/42/H1-3.png",
             "Levels": {
                 "1": {

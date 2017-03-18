@@ -1,5 +1,6 @@
 class SkillInfo {
     constructor(__id, skillName, infos) {
+        this._defaultLevel = 0;
         this._id = __id;
         this._availablelevel = window.c_maxlevel + 1;
         this._currentskilllevel = 0;
@@ -23,6 +24,7 @@ class SkillInfo {
     CurrentLevelInfo() { return this.Levels[this._currentskilllevel - 1]; }
     get IconURL() { return this._iconURL; }
     get IsPassive() { return this._passive; }
+    get GetDefaultLevel() { return this._defaultLevel; }
     NextLevelInfo() {
         return this.Levels[this._currentskilllevel];
     }
@@ -36,8 +38,8 @@ class SkillInfo {
             for (var extIndex in this._string_extensions) {
                 extName = this._string_extensions[extIndex];
                 exteItem = window.SkillCore.GetSkill(extName);
-                this._extensions[extName] = exteItem;
                 exteItem.SetParent(this);
+                this._extensions[extName] = exteItem;
             }
         }
         return this._extensions;
@@ -45,8 +47,10 @@ class SkillInfo {
     get Visible() { return this._visible; }
 
     UnlearnSkill() {
-        for (var ii = this._currentskilllevel; ii > 0; ii--)
+        var min = Math.min(0, this._defaultLevel);
+        for (var ii = this._currentskilllevel; ii > min; ii--) {
             this.SkillDown();
+        }
     }
 
     readInfos(ob) {
@@ -58,6 +62,7 @@ class SkillInfo {
             this.Levels.push(new LevelInfo(ob.Levels[skinfo].RequiredLevel,
                 ob.Levels[skinfo].RequiredSP, ob.Levels[skinfo].Effect, lastDescription));
         };
+        this._string_extensions = ob.Extensions;
         if (ob.Passive)
             this._passive = ob.Passive;
         this._iconURL = ob.Icon;
@@ -65,7 +70,18 @@ class SkillInfo {
             this._visible = ob.Visible;
         this._availablelevel = this.Levels[0].RequiredLevel;
         this._skillmaxlevel = this.Levels.length;
-        this._string_extensions = ob.Extensions;
+        if (ob.DefaultLevel > 0)
+            this._defaultLevel = ob.DefaultLevel;
+        this.SetCurrentSkillLevel(this._defaultLevel);
+    }
+
+    SetCurrentSkillLevel(_level) {
+        while (this._currentskilllevel != _level) {
+            if (this._currentskilllevel > _level)
+                this.SkillDown();
+            else if (this._currentskilllevel < _level)
+                this.SkillUp();
+        }
     }
 }
 
