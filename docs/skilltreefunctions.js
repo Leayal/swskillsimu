@@ -12,6 +12,29 @@ function GetUrlParam(name, defaultvalue) {
         return defaultvalue;
 };
 
+function SetLoading(target) {
+    var found = target.find($("div[metroloading]"));
+    if (found && found.length > 0) return;
+    //target.append($("<div metroloading class=\"midcenter\"><div class=\"windows8-loading\"><b></b><b></b><b></b><b></b><b></b></div></div>"));
+    var aaasdwaf = $("<div>").addClass("stretch").addClass("windows8-loading");
+    aaasdwaf.append($("<b>"));
+    aaasdwaf.append($("<b>"));
+    aaasdwaf.append($("<b>"));
+    aaasdwaf.append($("<b>"));
+    aaasdwaf.append($("<b>"));
+    var ddd = $("<div metroloading>").addClass("midcenter").append(aaasdwaf);
+    ($("<div metroloading>")
+        .addClass("fixedDiv")
+        .addClass("stretch")
+        .addClass("disabled")
+        .addClass("opacity50")).prependTo(target);
+    target.append(ddd);
+};
+
+function RemoveLoading(target) {
+    target.children("div[metroloading]").remove();
+};
+
 class SkillTreeCore {
     constructor() {
         this._totalsp = 0;
@@ -31,7 +54,6 @@ class SkillTreeCore {
     SetLevel(_level) {
         this._currentlevel = Math.min(_level, window.c_maxlevel);
         this._totalsp = this.inner_gettotalsp(this._currentlevel);
-        this._spleft = this._totalsp - this._investedsp;
         this.UpdateAllSPs();
     }
 
@@ -43,9 +65,16 @@ class SkillTreeCore {
 
     UpdateAllSPs() {
         this._spleft = this._totalsp - this._investedsp;
+        if (this._spleft < 0)
+            this.UnlearnAllSkills();
         $("#e_totalSP").text(this._totalsp);
         $("#e_investedSP").text(this._investedsp);
         $("#e_remainingSP").text(this._spleft);
+    }
+
+    UnlearnAllSkills() {
+        for (var skillid in this.SkillList)
+            this.SkillList[skillid].UnlearnSkill();
     }
 
     inner_gettotalsp(_level) {
@@ -105,6 +134,7 @@ class SkillTreeCore {
 var SkillCore = new SkillTreeCore();
 
 $(function() {
+    SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").change(function() {
         window.SkillCore.SetLevelFromElement();
     });
@@ -112,7 +142,8 @@ $(function() {
         selecting.append($("<option>").val(i).text(i));
     selecting.insertAfter($("span#levelBoxtd"));
     window.SkillCore.ReadTree();
-    var clevel = GetUrlParam("level", 55);
+    var clevel = GetUrlParam("lv", 55);
+    if (clevel == 55) clevel = GetUrlParam("level", 55);
     $("select#selectLevelBox").val(clevel);
     window.SkillCore.SetLevelFromElement();
 });

@@ -2,15 +2,19 @@ SkillTreeCore.prototype.ReadTree = function() {
     this.SkillList = {};
     this.ActiveSkillList = {};
     this.PassiveSkillList = {};
+    this.SkillCount = 0;
+    this.loadedSkillCount = 0;
     $.getJSON("skilltreeinfo.json", function(json) {
         $("td#charName").text(json.CharacterName);
+        window.document.title = "Skill Simulator - " + json.CharacterName;
         for (var ssk in json.Skills) {
             window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
             if (get = window.SkillCore.SkillList[ssk].IsPassive)
                 window.SkillCore.PassiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
             else
                 window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk]
-        }
+        };
+        window.SkillCore.SkillCount = Object.keys(window.SkillCore.SkillList).length;
         window.SkillCore.RenderTree();
     });
 }
@@ -64,11 +68,24 @@ SkillTreeCore.prototype.RenderTree = function() {
     }
 }
 
+function imagesLoadedCallback(element) {
+    window.SkillCore.loadedSkillCount++;
+    if (window.SkillCore.SkillCount == window.SkillCore.loadedSkillCount) {
+        //Finished Everything
+        RemoveLoading($("body"));
+    }
+    //LoadtheSharedLinkHere
+    window.SkillCore.GetSkill(element.attr("insight")).SetCurrentSkillLevel(GetUrlParam(element.attr("insight"), 0));
+}
+
 SkillInfo.prototype.GetSkillPanel = function(ex) {
     if (this.Panel) return this.Panel;
     if (ex) {
-        var skillInfoPanel = $("<div>").addClass("skillExinfopanel");
-        skillInfoPanel.append($("<img>").addClass("skillExIcon").attr("src", get = this.IconURL));
+        var skillInfoPanel = $("<div>").addClass("skillExinfopanel").addClass("fadeinAppear");
+        var img = $("<img>").addClass("skillExIcon").attr("insight", this._id).attr("src", get = this.IconURL);
+        skillInfoPanel.append(img.imagesLoaded(function() {
+            imagesLoadedCallback(img);
+        }));
         skillInfoPanel.append($("<button skillup type=\"button\" class=\"btn-success skillexup\" target=\"" + this._id + "\"></button>").click(function() {
             if (!$(this).hasClass("disabled"))
                 window.SkillCore.GetSkill($(this).attr("target")).SkillUp();
@@ -90,8 +107,11 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         }
         this.Panel = skillInfoPanel;
     } else {
-        var skillInfoPanel = $("<div>").addClass("skillinfopanel");
-        skillInfoPanel.append($("<img>").addClass("skillIcon").attr("src", get = this.IconURL));
+        var skillInfoPanel = $("<div>").addClass("skillinfopanel").addClass("fadeinAppear");
+        var img = $("<img>").addClass("skillIcon").attr("insight", this._id).attr("src", get = this.IconURL);
+        skillInfoPanel.append(img.imagesLoaded(function() {
+            imagesLoadedCallback(img);
+        }));
         skillInfoPanel.append($("<button skillup type=\"button\" class=\"btn btn-success skillup\" target=\"" + this._id + "\"></button>").click(function() {
             window.SkillCore.GetSkill($(this).attr("target")).SkillUp();
         }));
@@ -109,9 +129,6 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
                 extItem = window.SkillCore.GetSkill(sle);
                 extItem.GetSkillPanel(true).addClass("disabled").appendTo(skillInfoPanel);
                 extItem.GetSkillPanel(true).children().addClass("disabled");
-                /*var skillExInfoPanel = $("<div>").addClass("skillExinfopanel").addClass("disabled");
-                skillExInfoPanel.append($("<img>").addClass("skillExIcon").attr("src", get = extItem.IconURL));
-                skillExInfoPanel.appendTo(skillInfoPanel);//*/
             }
         }
         this.Panel = skillInfoPanel;
@@ -195,6 +212,16 @@ SkillInfo.prototype.SkillDown = function() {
         window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
         this._currentskilllevel--;
         this.UpdateSkill();
+    }
+}
+
+SkillInfo.prototype.SetCurrentSkillLevel = function(_level) {
+    if (_level === 0) return;
+    while (this._currentskilllevel != _level) {
+        if (this._currentskilllevel > _level)
+            this.SkillDown();
+        else if (this._currentskilllevel < _level)
+            this.SkillUp();
     }
 }
 

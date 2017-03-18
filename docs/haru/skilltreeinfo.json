@@ -1,7 +1,7 @@
 {
     "CharacterName": "Haru Estia",
     "Skills": {
-        "FirstStrike ": {
+        "FirstStrike": {
             "Visible": true,
             "Name": "First Strike",
             "Icon": "http://wiki.soulworkerhq.com/images/c/c7/H1-1.png",

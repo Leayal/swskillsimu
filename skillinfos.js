@@ -19,7 +19,6 @@ class SkillInfo {
     get Name() { return this._name; }
     get AvailableLevel() { return this._availablelevel; }
     get CurrentSkillLevel() { return this._currentskilllevel; }
-    SetCurrentSkillLevel(_level) { this._currentskilllevel = _level; }
     get MaxLevel() { return this._skillmaxlevel; }
     CurrentLevelInfo() { return this.Levels[this._currentskilllevel - 1]; }
     get IconURL() { return this._iconURL; }
