@@ -86,7 +86,6 @@ function imagesLoadedCallback(element) {
     //LoadtheSharedLinkHere
     var currentskill = window.SkillCore.GetSkill(element.attr("insight"));
     currentskill.SetCurrentSkillLevel(GetUrlParam(element.attr("insight"), get = currentskill.GetDefaultLevel));
-    SetToolTip(element);
 }
 
 SkillInfo.prototype.GetSkillPanel = function(ex) {
