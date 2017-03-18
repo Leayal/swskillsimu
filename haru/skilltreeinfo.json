@@ -7,8 +7,13 @@
             "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/c/c7/H1-1.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Perform a series of slashes while advancing forward. An additional strike can be used [Right-click] at the end of the skill.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "Damage:1%\nSA Damage:2%",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -43,8 +48,13 @@
             "Name": "Range Increase",
             "Icon": "http://wiki.soulworkerhq.com/images/1/1c/H1-1A.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "The Extension strike radius becomes bigger.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 13,
                     "RequiredSP": 1
@@ -66,8 +76,13 @@
             "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/4/48/H1-2.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Perform a series of slashes while advancing forward. An additional strike can be used with an additional input.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -102,8 +117,13 @@
             "Name": "Pierce Step - Spinning Slash",
             "Icon": "http://wiki.soulworkerhq.com/images/4/41/H1-2A.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Push away the enemies with a spinning slash after Pierce Step.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 21,
                     "RequiredSP": 1
@@ -120,8 +140,13 @@
             "Name": "Pierce Step - Rising Slash",
             "Icon": "http://wiki.soulworkerhq.com/images/9/98/H1-2B.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Launch the enemies to the air after Pierce Step with a rising slash.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 21,
                     "RequiredSP": 1
@@ -133,8 +158,12 @@
             "DefaultLevel": 1,
             "Icon": "http://wiki.soulworkerhq.com/images/4/42/H1-3.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Push enemies away by performing a spinning slash.",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -165,8 +194,13 @@
             "Name": "Blow Up",
             "Icon": "http://wiki.soulworkerhq.com/images/7/70/H1-4.png",
             "Levels": {
+                "0": {
+                    "Description": "Launch the enemies to the air after Pierce Step with a rising slash.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
                 "1": {
-                    "Description": "Push enemies away by performing a spinning slash.",
                     "Effect": "",
                     "RequiredLevel": 4,
                     "RequiredSP": 1

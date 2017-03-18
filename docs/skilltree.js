@@ -104,16 +104,20 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
             mybutton.addClass("disabled");
         SetToolTipUp(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
-            if (!$(this).hasClass("disabled"))
+            if (!$(this).hasClass("disabled")) {
                 window.SkillCore.GetSkill($(this).attr("insight")).SkillUp();
+                $(this).trigger("mouseover");
+            }
         }));
         mybutton = $("<button skilldown type=\"button\" class=\"btn-danger skillexdown\" insight=\"" + this._id + "\">");
         if (this._currentskilllevel === 0)
             mybutton.addClass("disabled");
         SetToolTipDown(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
-            if (!$(this).hasClass("disabled"))
+            if (!$(this).hasClass("disabled")) {
                 window.SkillCore.GetSkill($(this).attr("insight")).SkillDown();
+                $(this).trigger("mouseover");
+            }
         }));
         skillInfoPanel.append($("<p insight=\"skilllexevel\">").addClass("skillExLevel").text(this._currentskilllevel + "" + this._skillmaxlevel));
         var exts = get = this.Extensions;
@@ -139,6 +143,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         SetToolTipUp(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
             window.SkillCore.GetSkill($(this).attr("insight")).SkillUp();
+            $(this).trigger("mouseover");
         }));
         mybutton = $("<button skilldown type=\"button\" class=\"btn btn-danger skilldown\" insight=\"" + this._id + "\">");
         if (this._currentskilllevel === 0)
@@ -146,6 +151,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         SetToolTipDown(mybutton);
         skillInfoPanel.append(mybutton.click(function() {
             window.SkillCore.GetSkill($(this).attr("insight")).SkillDown();
+            $(this).trigger("mouseover");
         }));
         skillInfoPanel.append($("<p insight=\"skilllevel\">").addClass("skillLevel").text(this._currentskilllevel + "/" + this._skillmaxlevel));
         //skillInfoPanel.append($("<p>").addClass("skillName").text(get = this.Name));

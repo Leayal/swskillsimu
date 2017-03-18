@@ -21,12 +21,12 @@ class SkillInfo {
     get AvailableLevel() { return this._availablelevel; }
     get CurrentSkillLevel() { return this._currentskilllevel; }
     get MaxLevel() { return this._skillmaxlevel; }
-    CurrentLevelInfo() { return this.Levels[this._currentskilllevel - 1]; }
+    CurrentLevelInfo() { return this.Levels[this._currentskilllevel]; }
     get IconURL() { return this._iconURL; }
     get IsPassive() { return this._passive; }
     get GetDefaultLevel() { return this._defaultLevel; }
     NextLevelInfo() {
-        return this.Levels[this._currentskilllevel];
+        return this.Levels[this._currentskilllevel + 1];
     }
     PreviousLevelInfo() {
         return this.Levels[this._currentskilllevel - 1];
@@ -66,7 +66,7 @@ class SkillInfo {
         if (ob.Visible == false)
             this._visible = ob.Visible;
         this._availablelevel = this.Levels[0].RequiredLevel;
-        this._skillmaxlevel = this.Levels.length;
+        this._skillmaxlevel = this.Levels.length - 1;
         if (ob.DefaultLevel > 0)
             this._defaultLevel = ob.DefaultLevel;
         this.SetCurrentSkillLevel(this._defaultLevel);

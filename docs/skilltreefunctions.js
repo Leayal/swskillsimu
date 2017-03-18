@@ -74,7 +74,8 @@ class SkillTreeCore {
         $("#e_remainingSP").text(this._spleft);
         if (this._totalsp < this._investedsp)
             this.UnlearnAllSkills();
-        this.CheckAllSkills();
+        else
+            this.CheckAllSkills();
         if (this._spleft < 5)
             $("#e_remainingSP").addClass("alertlow");
         else
@@ -182,7 +183,10 @@ function SetToolTip(obj) {
             if (ddddddd) {
                 var desc = get = ddddddd.SkillDescription;
                 var eff = get = ddddddd.SkillEffect;
-                if (!desc && !eff) return;
+                if (!desc && !eff) {
+                    $('div#tooltip').stop(false, true).fadeOut('fast');
+                    return;
+                }
                 if (desc)
                     $('div#tooltip pre:first').text("[Description]\n" + htmlEncode(desc));
                 else
@@ -213,7 +217,10 @@ function SetToolTipUp(obj) {
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
                 var eff = get = fffffff.SkillEffect;
-                if (!desc && !eff) return;
+                if (!desc && !eff) {
+                    $('div#tooltip').stop(false, true).fadeOut('fast');
+                    return;
+                }
                 if (desc)
                     $('div#tooltip pre:first').text("[Current]\n" + htmlEncode(desc));
                 else
@@ -244,7 +251,10 @@ function SetToolTipDown(obj) {
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
                 var eff = get = fffffff.SkillEffect;
-                if (!desc && !eff) return;
+                if (!desc && !eff) {
+                    $('div#tooltip').stop(false, true).fadeOut('fast');
+                    return;
+                }
                 if (desc)
                     $('div#tooltip pre:first').text("[Current]\n" + htmlEncode(desc));
                 else
@@ -252,7 +262,7 @@ function SetToolTipDown(obj) {
                 if (eff)
                     $('div#tooltip pre:last').text("[After]\n" + htmlEncode(eff));
                 else
-                    $('div#tooltip pre:last').empty();
+                    $('div#tooltip pre:last').text("[After]\nNone.");
                 $('div#tooltip').stop(false, true).fadeIn('fast');
                 obj.mousemove(function() {
                     $('div#tooltip').css({ 'top': mouseY - 10, 'left': mouseX + 5 });
