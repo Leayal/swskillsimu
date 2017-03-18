@@ -84,8 +84,8 @@ function imagesLoadedCallback(element) {
         //title="That&apos;s what this widget is"
     }
     //LoadtheSharedLinkHere
-    var currentskill = window.SkillCore.GetSkill(element.attr("insight"));
-    currentskill.SetCurrentSkillLevel(GetUrlParam(element.attr("insight"), get = currentskill.GetDefaultLevel));
+    //var currentskill = window.SkillCore.GetSkill(element.attr("insight"));
+    //currentskill.SetCurrentSkillLevel(GetUrlParam(element.attr("insight"), get = currentskill.GetDefaultLevel));
 }
 
 SkillInfo.prototype.GetSkillPanel = function(ex) {

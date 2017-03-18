@@ -69,7 +69,7 @@ class SkillInfo {
         this._skillmaxlevel = this.Levels.length - 1;
         if (ob.DefaultLevel > 0)
             this._defaultLevel = ob.DefaultLevel;
-        this.SetCurrentSkillLevel(this._defaultLevel);
+        this.SetCurrentSkillLevel(GetUrlParam(this._id, this._defaultLevel));
     }
 
     SetCurrentSkillLevel(_level) {
