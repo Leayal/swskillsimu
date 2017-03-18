@@ -136,7 +136,7 @@
                 }
             },
             "Extensions": [
-                "TroublePass-RangeIncrease","TroublePass-Strengthen"
+                "TroublePass-RangeIncrease", "TroublePass-Strengthen"
             ]
         },
         "TroublePass-RangeIncrease": {
@@ -199,7 +199,7 @@
             "Name": "Hysterical Shock",
             "Icon": "http://wiki.soulworkerhq.com/images/0/06/S1-4.png",
             "Levels": {
-		"0": {
+                "0": {
                     "Description": "Create cracks on the ground by playing the guitar, and then cause an explosion.",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -239,7 +239,7 @@
             "Name": "Extra Attack",
             "Icon": "http://wiki.soulworkerhq.com/images/5/55/S1-4A.png",
             "Levels": {
-		        "0": {
+                "0": {
                     "Description": "Number of attacks increase.",
                     "Effect": "",
                     "RequiredLevel": 0,
@@ -261,7 +261,7 @@
             "Name": "Beast Parade",
             "Icon": "http://wiki.soulworkerhq.com/images/3/3e/S1-5.png",
             "Levels": {
-		        "0": {
+                "0": {
                     "Description": "Summon the ghosts and charge forward by riding on their backs.",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -297,8 +297,13 @@
             "Name": "Beads Play",
             "Icon": "http://wiki.soulworkerhq.com/images/f/ff/S1-6.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Creates beads which will explode when hitting enemies. In support mode, the beads will restore HP and increase attack.\nCharging will increase number of beads. Push away enemies when charging completes.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 8,
                     "RequiredSP": 1
@@ -325,7 +330,7 @@
                 }
             },
             "Extensions": [
-                "BeadsPlay-Paralyze","BeadsPlay-Strengthen"
+                "BeadsPlay-Paralyze", "BeadsPlay-Strengthen"
             ]
         },
         "BeadsPlay-Paralyze": {
@@ -333,7 +338,7 @@
             "Name": "Paralyze",
             "Icon": "http://wiki.soulworkerhq.com/images/5/56/S1-6A.png",
             "Levels": {
-		        "0": {
+                "0": {
                     "Description": "Beads go through enemies and paralyze them.",
                     "Effect": "",
                     "RequiredLevel": 0,
@@ -361,7 +366,7 @@
             "Name": "Strengthen",
             "Icon": "http://wiki.soulworkerhq.com/images/d/d6/S1-6B.png",
             "Levels": {
-		        "0": {
+                "0": {
                     "Description": "The beads effect is strengthened.",
                     "Effect": "",
                     "RequiredLevel": 0,
@@ -388,8 +393,13 @@
             "Name": "Decade Pulse",
             "Icon": "http://wiki.soulworkerhq.com/images/c/c3/S1-7.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Using the guitar, you release a pulse that attacks enemies. When switching modes, it paralyzes enemies and steals HP.\nThe lifesteal effect(100% lifesteal) is applied to a maximum of 3 targets.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 10,
                     "RequiredSP": 1
@@ -416,7 +426,7 @@
                 }
             },
             "Extensions": [
-                "DecadePulse-DurationIncrease","DecadePulse-RadiusIncrease"
+                "DecadePulse-DurationIncrease", "DecadePulse-RadiusIncrease"
             ]
         },
         "DecadePulse-DurationIncrease": {
@@ -479,8 +489,13 @@
             "Name": "Soul Scream",
             "Icon": "http://wiki.soulworkerhq.com/images/7/74/S1-8.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Make souls go rampant, creating a barrier around the caster. Invincibility will be granted on skill cast. The barrier will damage and paralyze all nearby enemies.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 13,
                     "RequiredSP": 1
@@ -511,8 +526,13 @@
             "Name": "Twist Pull",
             "Icon": "http://wiki.soulworkerhq.com/images/5/5d/S1-9.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Create a black hole formed by ghosts, which pulls in enemies and then explodes.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 17,
                     "RequiredSP": 1
@@ -547,8 +567,13 @@
             "Name": "Range Increase",
             "Icon": "http://wiki.soulworkerhq.com/images/2/26/S1-9A.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Increases the Attack Range by ghosts.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 37,
                     "RequiredSP": 1
@@ -564,8 +589,13 @@
             "Name": "Beast Party",
             "Icon": "http://wiki.soulworkerhq.com/images/a/a8/S1-10.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Summons a pack of ghosts that charge forward. Enemies that are hit by the ghosts will be pushed back.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 21,
                     "RequiredSP": 1
@@ -596,8 +626,13 @@
             "Name": "Black Morass",
             "Icon": "http://wiki.soulworkerhq.com/images/f/fa/S1-11.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Create a marsh of ghosts by playing the guitar. The final attack differs depending on which input is made at the end.\n( LMB = Pull enemies in the center / RMB = Launch the enemies in the air )",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 28,
                     "RequiredSP": 1
@@ -632,8 +667,13 @@
             "Name": "Duration Increase",
             "Icon": "http://wiki.soulworkerhq.com/images/1/1c/S1-11A.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": " Increase the maximum attack duration.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 44,
                     "RequiredSP": 1
@@ -654,8 +694,13 @@
             "Name": "Best Tempo",
             "Icon": "http://wiki.soulworkerhq.com/images/3/37/S1-12.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Playing the guitar inspires your allies. In support mode, it restores the HP of allies instantly.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 34,
                     "RequiredSP": 1
@@ -686,8 +731,13 @@
             "Name": "Bass Attack",
             "Icon": "http://wiki.soulworkerhq.com/images/e/ed/S1-13.png",
             "Levels": {
-                "1": {
+                "0": {
                     "Description": "Summon Stella's speakers and create a stage. Speakers violently shake to attack the enemies within its range.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
                     "Effect": "",
                     "RequiredLevel": 42,
                     "RequiredSP": 1
@@ -711,6 +761,300 @@
                     "Effect": "",
                     "RequiredLevel": 54,
                     "RequiredSP": 3
+                }
+            }
+        },
+        "MelodyofSorrow": {
+            "Passive": true,
+            "DefaultLevel": 1,
+            "Name": "Melody of Sorrow",
+            "Icon": "http://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
+            "Levels": {
+                "0": {
+                    "Description": "...",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "BasicAttackMastery": {
+            "Passive": true,
+            "Name": "Basic Attack Mastery",
+            "DefaultLevel": 1,
+            "Icon": "http://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
+            "Levels": {
+                "0": {
+                    "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "SG Gain +20%.\nUnlock alternative attack “A”",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "SG Gain +70%.\nUnlock additional basic attack",
+                    "RequiredLevel": 5,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 1
+                },
+                "4": {
+                    "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "RisingRoll": {
+            "Passive": true,
+            "Name": "Rising Roll",
+            "DefaultLevel": 1,
+            "Icon": "http://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
+            "Levels": {
+                "0": {
+                    "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Stamina Cost: 25",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "Stamina Cost: 15",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Stamina Cost: 15\nFaster Rolling Speed",
+                    "RequiredLevel": 34,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "EmergencyDodge": {
+            "Passive": true,
+            "Name": "Emergency Dodge",
+            "DefaultLevel": 1,
+            "Icon": "http://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
+            "Levels": {
+                "0": {
+                    "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Stamina Cost: 20",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                }
+            }
+        },
+        "RisingAttack": {
+            "Passive": true,
+            "Name": "Rising Attack",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
+            "Levels": {
+                "0": {
+                    "Description": "While downed, get up while damaging surrounding enemies",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
+                    "RequiredLevel": 18,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Stamina Cost: 20\nInvincibility Duration: 3 seconds",
+                    "RequiredLevel": 36,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "Dash": {
+            "Passive": true,
+            "Name": "Dash",
+            "DefaultLevel": 1,
+            "Icon": "http://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
+            "Levels": {
+                "0": {
+                    "Description": "Swiftly dash forward",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "Faster Dashing Speed",
+                    "RequiredLevel": 25,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "SpecialDodge": {
+            "Passive": true,
+            "Name": "Special Dodge",
+            "Icon": "http://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
+            "Levels": {
+                "0": {
+                    "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Stamina Cost: 40\nCooldown: 60 seconds",
+                    "RequiredLevel": 4,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Stamina Cost: 40\nCooldown: 50 seconds",
+                    "RequiredLevel": 21,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Stamina Cost: 40\nCooldown: 40 seconds",
+                    "RequiredLevel": 38,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "DashAttack": {
+            "Passive": true,
+            "Name": "Dash Attack",
+            "DefaultLevel": 1,
+            "Icon": "http://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
+            "Levels": {
+                "0": {
+                    "Description": "Perform an attack while dashing. Different character does different attacks. ",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 115%\nSA Damage: 38%",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                }
+            }
+        },
+        "StaminaMastery": {
+            "Passive": true,
+            "Name": "Stamina Mastery",
+            "Icon": "http://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
+            "Levels": {
+                "0": {
+                    "Description": "Increases stamina recovery rate",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Stamina Recovery Rate: +10%",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Stamina Recovery Rate: +20%",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Stamina Recovery Rate: +30%",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Stamina Recovery Rate: +40%",
+                    "RequiredLevel": 25,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Stamina Recovery Rate: +50%",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "SpecialDashAttack": {
+            "Passive": true,
+            "Name": "Special Dash Attack",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
+            "Levels": {
+                "0": {
+                    "Description": "Performs a special attack while dashing. Different characters do different special attacks",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 206%\nSA Damage: 92%\nCooldown: 5 seconds",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 1
+                }
+            }
+        },
+        "SoundWave": {
+            "Passive": true,
+            "Name": "Sound Wave",
+            "Icon": "http://wiki.soulworkerhq.com/images/6/67/SP1-2.png",
+            "Levels": {
+                "0": {
+                    "Description": "Maximum SG increase",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "SG Regrenerate Rate: +10%",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "SG Regrenerate Rate: +15%",
+                    "RequiredLevel": 20,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "SG Regrenerate Rate: +20%",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 2
                 }
             }
         }
