@@ -78,10 +78,10 @@
                 }
             },
             "Extensions": [
-                "Phantom Release-ExtraAttack"
+                "PhantomRelease-ExtraAttack"
             ]
         },
-        "Phantom Release-ExtraAttack": {
+        "PhantomRelease-ExtraAttack": {
             "Visible": false,
             "Name": "ExtraAttack",
             "Icon": "http://wiki.soulworkerhq.com/images/d/d0/S1-2A.png",
