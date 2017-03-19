@@ -764,6 +764,35 @@
                 }
             }
         },
+        "SpecialAbilityMastery": {
+            "Passive": true,
+            "Name": "Special Ability Mastery",
+            "DefaultLevel": 1,
+            "Icon": "http://wiki.soulworkerhq.com/images/6/6f/Sh-2s.png",
+            "Levels": {
+                "0": {
+                    "Description": "(Ground) Changes modes and the effects of your skills. Activates Sorrowful Note.\n(Air) Do a musical performance on your special guitar to change your mode. Using this skill in the air will make your ghost attack with a fist and pushes you backwards",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 15,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 30,
+                    "RequiredSP": 2
+                }
+            }
+        },
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",
@@ -1004,6 +1033,7 @@
         "SoundWave": {
             "Passive": true,
             "Name": "Sound Wave",
+            "RowSpan": 2,
             "Icon": "http://wiki.soulworkerhq.com/images/6/67/SP1-2.png",
             "Levels": {
                 "0": {
@@ -1032,6 +1062,7 @@
         "Sorrowful Note": {
             "Passive": true,
             "DefaultLevel": 1,
+            "RowSpan": 2,
             "Name": "Sorrowful Note",
             "Icon": "http://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
             "Levels": {
