@@ -894,10 +894,15 @@
                 },
                 "1": {
                     "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "Stamina Cost: 20\nInvincibility Duration: 1 seconds",
                     "RequiredLevel": 18,
                     "RequiredSP": 1
                 },
-                "2": {
+                "3": {
                     "Effect": "Stamina Cost: 20\nInvincibility Duration: 3 seconds",
                     "RequiredLevel": 36,
                     "RequiredSP": 2
