@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Skill simulator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+    <script src="../jquery-3.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles.css?v=1" />
+    <script src="../skilltreefunctions.js"></script>
+    <script src="../skillinfos.js"></script>
+    <script src="../skilltree.js"></script>
+    <script src="../imagesLoaded.js"></script>
+    <script src="../bootstrap-notify.min.js"></script>
+    <script src="../clipboard.min.js"></script>
+    <script src="../htmlencode.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=1" />
+    <link rel="icon" type="image/png" href="../favicon-32x32.png?v=1" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicon-16x16.png?v=1" sizes="16x16" />
+    <link rel="manifest" href="../manifest.json?v=2" />
+    <link rel="mask-icon" href="../safari-pinned-tab.svg?v=1" color="#5bbad5" />
+    <link rel="shortcut icon" href="../favicon.ico?v=1" />
+</head>
+
+<body>
+    <div class="bganim"></div>
+    <div class="well skilltree">
+        <div class="well skilltreeclass">
+            <ul class="tablelike">
+                <li class="titletablelike character">
+                    <div class="well">
+                        <h2 class="center">Character Info</h2>
+                        <div>
+                            <ul class="tablelike">
+                                <li class="titletablelike"><span class="levellable">Character</span></li>
+                                <li id="charName" class="titletablelike charactername"></li>
+                                <li class="titletablelike"><span id="levelBoxtd" class="levellable">Level:</span></li>
+                            </ul>
+                            <ul class="tablelike sptable">
+                                <li class="titletablelike"><span class="levellable">Skill Point</span></li>
+                                <li class="titletablelike"><span>Total: </span><span id="e_totalSP"></span></li>
+                                <li class="titletablelike"><span>Invested: </span><span id="e_investedSP"></span></li>
+                                <li class="titletablelike"><span>Remaining: </span><span id="e_remainingSP"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="titletablelike">
+                    <div class="controlpanel">
+                        <a id="copyURL" data-clipboard-target="#copymagic" href="javascript:void(0);">Copy Link</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="skilltree1class">
+            <div class="well skilltreeclass" id="skilltree">
+                <ul class="tablelike">
+                    <li id="activeskill" class="activeskill"></li>
+                    <li id="passiveskill" class="passiveskill"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="tooltip">
+        <pre class="tooltipcontent"></pre>
+        <br/>
+        <pre class="tooltipcontent"></pre>
+    </div>
+</body>
+
+</html>
