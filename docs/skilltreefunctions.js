@@ -12,6 +12,16 @@ function GetUrlParam(name, defaultvalue) {
         return defaultvalue;
 };
 
+function copyLink(_url) {
+    var asdDiv = $("<div>").addClass("hiddendiv");
+    var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", _url);
+    asdDiv.append(asdButton);
+    $("body").append(asdDiv);
+    //new Clipboard(".btncopymagicclass");
+    asdButton.trigger("click");
+    asdDiv.remove();
+}
+
 function SetLoading(target) {
     var found = target.find($("div[metroloading]"));
     if (found && found.length > 0) return;
@@ -100,6 +110,8 @@ class SkillTreeCore {
             if (sk.GetAvailableLevel() > this._currentlevel) {
                 sk.UnlearnSkill();
             } else {
+                if ((get = sk.CurrentSkillLevel) < (get = sk.GetDefaultLevel))
+                    sk.UnlearnSkill();
                 skinfo = sk.CurrentLevelInfo();
                 if ((get = skinfo.RequiredLevel) > this._currentlevel)
                     sk.UnlearnSkill();
@@ -300,6 +312,7 @@ function SetToolTipDown(obj) {
 }
 
 $(function() {
+    new Clipboard(".btncopymagicclass");
     SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").change(function() {
         window.SkillCore.SetLevel($(this).val());
@@ -317,13 +330,8 @@ $(function() {
     //$(document).tooltip();
     $("a#copyURL").click(function() {
         var link = window.SkillCore.GenerateLink();
-        var asdDiv = $("<div>").addClass("hiddendiv");
-        var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", link);
-        asdDiv.append(asdButton);
-        $("body").append(asdDiv);
-        new Clipboard(".btncopymagicclass");
-        asdButton.trigger("click");
-        asdDiv.remove();
+        if (link)
+            copyLink(link);
     });
 
     window.SkillCore.ReadTree();
