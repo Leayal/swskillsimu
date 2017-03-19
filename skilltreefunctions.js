@@ -165,6 +165,8 @@ class SkillTreeCore {
 
     GenerateLink() {
         var arrayString = [];
+        if (this._currentlevel !== window.c_maxlevel)
+            arrayString.push("lv=" + this._currentlevel);
         for (var skillid in this.SkillList) {
             var levelasd = (get = this.SkillList[skillid].CurrentSkillLevel);
             if (levelasd != (get = this.SkillList[skillid].GetDefaultLevel))
@@ -172,10 +174,8 @@ class SkillTreeCore {
         }
         var link = location.protocol + '//' + location.host + location.pathname;
         var param = "";
-        if (this._currentlevel !== window.c_maxlevel)
-            param = param + "lv=" + this._currentlevel;
         if (arrayString.length > 0)
-            param = param + (param ? "&" : "") + arrayString.join("&");
+            param = arrayString.join("&");
         if (param)
             link = link + "?" + param;
         return link;

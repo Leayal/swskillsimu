@@ -88,6 +88,9 @@ function imagesLoadedCallback(element) {
         //Finished Everything
         RemoveLoading($("body"));
         //title="That&apos;s what this widget is"
+        return;
+        for (var key in window.SkillCore.SkillList)
+            window.SkillCore.SkillList[key].UpdateSkill();
     }
     //LoadtheSharedLinkHere
     //var currentskill = window.SkillCore.GetSkill(element.attr("insight"));
@@ -164,12 +167,24 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         //Set Skill Extensions
         var exts = get = this.Extensions;
         if (exts !== undefined && Object.keys(exts).length > 0) {
-            var extItem;
+            var extItem, foundExt = false;
             for (var sle in exts) {
                 extItem = window.SkillCore.GetSkill(sle);
-                extItem.GetSkillPanel(true).addClass("disabled").appendTo(skillInfoPanel);
-                extItem.GetSkillPanel(true).children().addClass("disabled");
+                extItem.GetSkillPanel(true).appendTo(skillInfoPanel);
+                if (this._currentskilllevel < this._skillmaxlevel)
+                    extItem.Disabled(true);
+                else {
+                    if ((get = extItem.CurrentSkillLevel) > 0) {
+                        extItem.Disabled(false);
+                        foundExt = true;
+                    } else
+                        extItem.Disabled(true);
+                }
+                //extItem.GetSkillPanel(true).children().addClass("disabled");
             }
+            if (!foundExt && (this._currentskilllevel == this._skillmaxlevel))
+                for (var sle in exts)
+                    window.SkillCore.GetSkill(sle).Disabled(false);
         }
         this.Panel = skillInfoPanel;
     }

@@ -81,6 +81,7 @@ class SkillInfo {
         this._availablelevel = this.Levels[1].RequiredLevel;
         if (ob.RowSpan > 0)
             this._rowspan = ob.RowSpan;
+        this.SetCurrentSkillLevel(this._defaultLevel);
         if (this._availablelevel <= window.SkillCore.GetCurrentLevel())
             this.SetCurrentSkillLevel(GetUrlParam(this._id, this._defaultLevel));
         else
