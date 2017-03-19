@@ -764,35 +764,6 @@
                 }
             }
         },
-        "MelodyofSorrow": {
-            "Passive": true,
-            "DefaultLevel": 1,
-            "Name": "Melody of Sorrow",
-            "Icon": "http://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
-            "Levels": {
-                "0": {
-                    "Description": "...",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 15,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 2
-                }
-            }
-        },
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",
@@ -1055,6 +1026,25 @@
                     "Effect": "SG Capacity Rate: +20%",
                     "RequiredLevel": 30,
                     "RequiredSP": 2
+                }
+            }
+        },
+        "Sorrowful Note": {
+            "Passive": true,
+            "DefaultLevel": 1,
+            "Name": "Sorrowful Note",
+            "Icon": "http://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
+            "Levels": {
+                "0": {
+                    "Description": "...",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 0
                 }
             }
         }

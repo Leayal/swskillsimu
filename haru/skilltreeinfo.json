@@ -1035,6 +1035,7 @@
         "EndlessStruggle": {
             "Passive": true,
             "Name": "Endless Struggle",
+            "RowSpan": 2,
             "Icon": "http://wiki.soulworkerhq.com/images/d/d2/HP1-2.png",
             "Levels": {
                 "0": {
@@ -1057,6 +1058,26 @@
                     "Effect": "Damage Increase: +15%",
                     "RequiredLevel": 30,
                     "RequiredSP": 2
+                }
+            }
+        },
+        "VengefulSword": {
+            "Passive": true,
+            "Name": "Vengeful Sword",
+            "DefaultLevel": 1,
+            "RowSpan": 2,
+            "Icon": "http://wiki.soulworkerhq.com/images/2/23/EP1-1.png",
+            "Levels": {
+                "0": {
+                    "Description": "Gain SG when hitting an enemy. Passively gain SG in set intervals",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 10,
+                    "RequiredSP": 0
                 }
             }
         }

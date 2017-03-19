@@ -34,19 +34,22 @@ SkillTreeCore.prototype.GetSkill = function(id) {
 SkillTreeCore.prototype.RenderTree = function() {
     var eTree = $("li#activeskill");
     if (eTree) {
-        var activeRow;
+        var activeRow = $("<ul>").addClass("tableactiveskill");
         eTree.empty();
         var activeCount = 0;
         for (var sl in this.ActiveSkillList) {
             if (get = this.ActiveSkillList[sl].Visible) {
-                activeCount++;
-                if (activeCount === 1) {
+                if (this.ActiveSkillList[sl].GetRowSpan() > 1) {
+                    activeCount += this.ActiveSkillList[sl].GetRowSpan();
+                } else
+                    activeCount++;
+                activeRow.append($("<li>").addClass("tablelike").append(this.ActiveSkillList[sl].GetSkillPanel()));
+                if (activeCount >= 3) {
                     if (activeRow)
                         eTree.append(activeRow);
-                    activeRow = $("<ul>").addClass("tablelike");
+                    activeRow = $("<ul>").addClass("tableactiveskill");
+                    activeCount = 0;
                 }
-                activeRow.append($("<li>").addClass("tablelike").append(this.ActiveSkillList[sl].GetSkillPanel()));
-                if (activeCount >= 3) activeCount = 0;
             }
         }
         if (activeCount > 0)
@@ -55,19 +58,22 @@ SkillTreeCore.prototype.RenderTree = function() {
     }
     eTree = $("li#passiveskill");
     if (eTree) {
-        var passiveRow;
+        var passiveRow = $("<ul>").addClass("tablepassiveskill");
         eTree.empty();
         var passiveCount = 0;
         for (var sl in this.PassiveSkillList) {
             if (get = this.PassiveSkillList[sl].Visible) {
-                passiveCount++;
-                if (passiveCount === 1) {
+                if (this.PassiveSkillList[sl].GetRowSpan() > 1) {
+                    passiveCount += this.PassiveSkillList[sl].GetRowSpan();
+                } else
+                    passiveCount++;
+                passiveRow.append($("<li>").addClass("tablelike").addClass("passiveskilltree").append(this.PassiveSkillList[sl].GetSkillPanel()));
+                if (passiveCount >= 2) {
                     if (passiveRow)
                         eTree.append(passiveRow);
-                    passiveRow = $("<ul>").addClass("tablelike");
+                    passiveRow = $("<ul>").addClass("tablepassiveskill");
+                    passiveCount = 0;
                 }
-                passiveRow.append($("<li>").addClass("tablelike").addClass("passiveskilltree").append(this.PassiveSkillList[sl].GetSkillPanel()));
-                if (passiveCount >= 2) passiveCount = 0;
             }
         }
         if (passiveCount > 0)
@@ -237,15 +243,25 @@ SkillInfo.prototype.SkillUp = function() {
         var reqSP = get = next.RequiredSP;
         if ((get = window.SkillCore.SPLeft) < reqSP) return;
         this._currentskilllevel++;
-        this.UpdateSkill();
         window.SkillCore.InvestedSPIncrease(reqSP);
+        this.UpdateSkill();
     }
 }
 
 SkillInfo.prototype.SkillDown = function() {
     var prev = this.PreviousLevelInfo();
     if (prev) {
-        if (this._defaultLevel === this._currentskilllevel) return;
+        if (this._defaultLevel === this._currentskilllevel)
+            return;
+        window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
+        this._currentskilllevel--;
+        this.UpdateSkill();
+    }
+}
+
+SkillInfo.prototype.SkillDownEx = function() {
+    var prev = this.PreviousLevelInfo();
+    if (prev) {
         window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
         this._currentskilllevel--;
         this.UpdateSkill();

@@ -91,7 +91,14 @@ span.levellable {
     align-items: center;
 }
 
-ul.tablelike {
+ul.tableactiveskill {
+    width: 442px;
+    list-style: none outside none;
+}
+
+ul.tablepassiveskill {
+    float: right;
+    width: 308px;
     list-style: none outside none;
 }
 
@@ -421,7 +428,7 @@ div.stretch {
     left: 50%;
     margin-left: -.17em;
     bottom: -.46em;
-    font: x-large bold sans-serif !important;
+    font: xx-large bold sans-serif !important;
     color: red;
 }
 

@@ -46,6 +46,7 @@ class SkillTreeCore {
     get CurrentLevel() { return this._currentlevel; }
     get InvestedSP() { return this._investedsp; }
     get SPLeft() { return this._spleft; }
+    GetCurrentLevel() { return this._currentlevel; }
 
     SetLevelFromElement() {
         this.SetLevel(parseInt($("#selectLevelBox").val()));
@@ -70,30 +71,41 @@ class SkillTreeCore {
     UpdateAllSPs() {
         $("#e_totalSP").text(this._totalsp);
         $("#e_investedSP").text(this._investedsp);
-        this._spleft = this._totalsp - this._investedsp;
-        $("#e_remainingSP").text(this._spleft);
-        if (this._totalsp < this._investedsp)
-            this.UnlearnAllSkills();
-        else
+        if (this.CheckAllSkills()) {
+            this._spleft = this._totalsp - this._investedsp;
+            $("#e_remainingSP").text(this._spleft);
             this.CheckAllSkills();
-        if (this._spleft < 5)
-            $("#e_remainingSP").addClass("alertlow");
-        else
-            $("#e_remainingSP").removeClass("alertlow");
-    }
-
-    CheckAllSkills() {
-        var asdasdfafa;
-        for (var skillid in this.SkillList) {
-            asdasdfafa = this.SkillList[skillid].CurrentLevelInfo();
-            if ((get = asdasdfafa.RequiredLevel) > this._currentlevel)
-                this.SkillList[skillid].UnlearnSkill();
+            if (this._spleft < 5)
+                $("#e_remainingSP").addClass("alertlow");
+            else
+                $("#e_remainingSP").removeClass("alertlow");
         }
     }
 
     UnlearnAllSkills() {
         for (var skillid in this.SkillList)
             this.SkillList[skillid].UnlearnSkill();
+    }
+
+    CheckAllSkills() {
+        if (this._totalsp < this._investedsp) {
+            for (var skillid in this.SkillList)
+                this.SkillList[skillid].UnlearnSkill();
+            return false;
+        }
+        if (!this.SkillList) return false;
+        var sk, skinfo;
+        for (var skillid in this.SkillList) {
+            sk = this.SkillList[skillid];
+            if (sk.GetAvailableLevel() > this._currentlevel) {
+                sk.UnlearnSkill();
+            } else {
+                skinfo = sk.CurrentLevelInfo();
+                if ((get = skinfo.RequiredLevel) > this._currentlevel)
+                    sk.UnlearnSkill();
+            }
+        }
+        return true
     }
 
     inner_gettotalsp(_level) {
@@ -163,7 +175,7 @@ class SkillTreeCore {
         if (this._currentlevel !== window.c_maxlevel)
             param = param + "lv=" + this._currentlevel;
         if (arrayString.length > 0)
-            param = param + "&" + arrayString.join("&");
+            param = param + (param ? "&" : "") + arrayString.join("&");
         if (param)
             link = link + "?" + param;
         return link;
@@ -290,17 +302,18 @@ function SetToolTipDown(obj) {
 $(function() {
     SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").change(function() {
-        window.SkillCore.SetLevelFromElement();
+        window.SkillCore.SetLevel($(this).val());
     });
     for (var i = 1; i <= window.c_maxlevel; i++)
         selecting.append($("<option>").val(i).text(i));
     selecting.insertAfter($("span#levelBoxtd"));
     var clevel = GetUrlParam("lv", 55);
     if (clevel == 55) clevel = GetUrlParam("level", 55);
-    if (!isNaN(clevel))
+    if (isNaN(clevel))
         clevel = 55;
-    $("select#selectLevelBox").val(clevel);
-    window.SkillCore.SetLevelFromElement();
+    selecting.val(clevel);
+    selecting.trigger("change");
+    //window.SkillCore.SetLevelFromElement();
     //$(document).tooltip();
     $("a#copyURL").click(function() {
         var link = window.SkillCore.GenerateLink();
