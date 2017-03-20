@@ -266,10 +266,61 @@ function SetToolTipDown(obj) {
     return obj;
 }
 
+function ShowDangerDialog(msg, yesCallback, noCallback) {
+    BootstrapDialog.show({
+        label: BootstrapDialog.TYPE_WARNING,
+        title: 'Warning',
+        message: msg,
+        cssClass: 'bootstrap3-dialog',
+        buttons: [{
+            label: 'Yes',
+            cssClass: 'btn btn-warning',
+            action: function(dialogItself) {
+                dialogItself.close();
+                if (yesCallback)
+                    yesCallback();
+            }
+        }, {
+            label: 'No',
+            cssClass: 'btn btn-primary',
+            action: function(dialogItself) {
+                dialogItself.close();
+                if (noCallback)
+                    noCallback();
+            }
+        }]
+    });
+}
+
+function ShowConfirmDialog(msg, yesCallback, noCallback) {
+    BootstrapDialog.show({
+        title: 'Double confirm',
+        message: msg,
+        cssClass: 'bootstrap3-dialog',
+        buttons: [{
+            label: 'Yes',
+            cssClass: 'btn btn-primary',
+            action: function(dialogItself) {
+                dialogItself.close();
+                if (yesCallback)
+                    yesCallback();
+            }
+        }, {
+            label: 'No',
+            cssClass: 'btn btn-default',
+            action: function(dialogItself) {
+                dialogItself.close();
+                if (noCallback)
+                    noCallback();
+            }
+        }]
+    });
+}
+
 $(function() {
     new Clipboard(".btncopymagicclass");
     SetLoading($("body"));
-    var selecting = $("<select id=\"selectLevelBox\">").change(function() {
+    var selecting = $("<select id=\"selectLevelBox\">").addClass("bootstrap3-dialog").change(function() {
         window.SkillCore.SetLevel($(this).val());
     });
     for (var i = 1; i <= window.c_maxlevel; i++)
@@ -287,6 +338,11 @@ $(function() {
         var link = window.SkillCore.GenerateLink();
         if (link)
             copyLink(link);
+    });
+    $("button#resetAllSkill").click(function() {
+        ShowDangerDialog('Are you sure you want to unlearn all skills?', function() {
+            window.SkillCore.UnlearnAllSkills();
+        });
     });
 
     window.SkillCore.ReadTree();

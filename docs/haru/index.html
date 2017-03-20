@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Skill simulator</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
     <script src="../jquery-3.2.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../bootstrap-dialog.min.css" />
     <link rel="stylesheet" href="../styles.css?v=1" />
     <script src="../common.js"></script>
     <script src="../skilltreefunctions.js"></script>
@@ -15,6 +16,7 @@
     <script src="../skilltree.js"></script>
     <script src="../imagesLoaded.js"></script>
     <script src="../bootstrap-notify.min.js"></script>
+    <script src="../bootstrap-dialog.min.js"></script>
     <script src="../clipboard.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=1" />
     <link rel="icon" type="image/png" href="../favicon-32x32.png?v=1" sizes="32x32" />
@@ -26,19 +28,20 @@
 
 <body>
     <div class="bganim"></div>
-    <div class="well skilltree">
-        <div class="well skilltreeclass">
-            <ul class="tablelike">
-                <li class="titletablelike character">
-                    <div class="well">
+    <div class="skilltree">
+        <div class="overwell skilltreeclass">
+            <ul>
+                <li class="titletablelike">
+                    <div class="character">
                         <h2 class="center">Character Info</h2>
                         <div>
-                            <ul class="tablelike">
+                            <ul class="charInfo">
                                 <li class="titletablelike"><span class="levellable">Character</span></li>
                                 <li id="charName" class="titletablelike charactername"></li>
                                 <li class="titletablelike"><span id="levelBoxtd" class="levellable">Level:</span></li>
                             </ul>
-                            <ul class="tablelike sptable">
+                            <br/>
+                            <ul class="sptable">
                                 <li class="titletablelike"><span class="levellable">Skill Point</span></li>
                                 <li class="titletablelike"><span>Total: </span><span id="e_totalSP"></span></li>
                                 <li class="titletablelike"><span>Invested: </span><span id="e_investedSP"></span></li>
@@ -49,18 +52,22 @@
                 </li>
                 <li class="titletablelike">
                     <div class="controlpanel">
-                        <a id="copyURL" data-clipboard-target="#copymagic" href="javascript:void(0);">Copy Link</a>
+                        <h2 class="center">Control Panel</h2>
+                        <div class="controlpanel">
+                            <span>Share current build: <a id="copyURL" class="nomousechange" data-clipboard-target="#copymagic" href="javascript:void(0);">Copy Link</a></span><br/>
+                            <button id="resetAllSkill" class="btn btn-primary">Reset All Skills</button>
+                        </div>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="skilltree1class">
-            <div class="well skilltreeclass" id="skilltree">
-                <ul class="tablelike">
-                    <li id="activeskill" class="activeskill"></li>
-                    <li id="passiveskill" class="passiveskill"></li>
-                </ul>
-            </div>
+    </div>
+    <div class="skilltree1class">
+        <div class="overwell skilltreeclass" id="skilltree">
+            <ul>
+                <li id="activeskill" class="activeskill"></li>
+                <li id="passiveskill" class="passiveskill"></li>
+            </ul>
         </div>
     </div>
     <div id="tooltip">

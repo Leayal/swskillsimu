@@ -87,10 +87,6 @@ function imagesLoadedCallback(element) {
     if (window.SkillCore.SkillCount == window.SkillCore.loadedSkillCount) {
         //Finished Everything
         RemoveLoading($("body"));
-        //title="That&apos;s what this widget is"
-        return;
-        for (var key in window.SkillCore.SkillList)
-            window.SkillCore.SkillList[key].UpdateSkill();
     }
     //LoadtheSharedLinkHere
     //var currentskill = window.SkillCore.GetSkill(element.attr("insight"));
