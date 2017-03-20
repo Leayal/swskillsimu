@@ -12,12 +12,13 @@ function GetUrlParam(name, defaultvalue) {
 
 function copyLink(_url) {
     var asdDiv = $("<div>").addClass("hiddendiv");
-    var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", _url);
+    var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", encodeURI(_url));
     asdDiv.append(asdButton);
     $("body").append(asdDiv);
     //new Clipboard(".btncopymagicclass");
     asdButton.trigger("click");
     asdDiv.remove();
+    $.notify({ message: 'The link to this skill tree has been copied to clipboard.' }, { type: 'success' });
 }
 
 function SetLoading(target) {

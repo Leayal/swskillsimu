@@ -250,9 +250,15 @@ SkillInfo.prototype.UpdateSkill = function() {
 SkillInfo.prototype.SkillUp = function() {
     var next = this.NextLevelInfo();
     if (next) {
-        if ((get = next.RequiredLevel) > (get = window.SkillCore.CurrentLevel)) return;
+        if ((get = next.RequiredLevel) > (get = window.SkillCore.CurrentLevel)) {
+            $.notify({ message: 'Character level is not enough to learn further.' }, { type: 'info' });
+            return;
+        }
         var reqSP = get = next.RequiredSP;
-        if ((get = window.SkillCore.SPLeft) < reqSP) return;
+        if ((get = window.SkillCore.SPLeft) < reqSP) {
+            $.notify({ message: 'Insufficient skill point.' }, { type: 'info' });
+            return;
+        }
         this._currentskilllevel++;
         window.SkillCore.InvestedSPIncrease(reqSP);
         this.UpdateSkill();
@@ -262,8 +268,10 @@ SkillInfo.prototype.SkillUp = function() {
 SkillInfo.prototype.SkillDown = function() {
     var prev = this.PreviousLevelInfo();
     if (prev) {
-        if (this._defaultLevel === this._currentskilllevel)
+        if (this._defaultLevel === this._currentskilllevel) {
+            $.notify({ message: "Can not go lower than skill's default level." }, { type: 'warning' });
             return;
+        }
         window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
         this._currentskilllevel--;
         this.UpdateSkill();
