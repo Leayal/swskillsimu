@@ -9,10 +9,10 @@ SkillTreeCore.prototype.ReadTree = function() {
         url: "skilltreeinfo.json",
         dataType: "json",
         success: function(json) {
-            if (json.CharacterWikiURL)
-                $("li#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
-            else
-                $("li#charName").text(json.CharacterName);
+            if (json.CharacterWikiURL) {
+                $("#charName").text(json.CharacterName);
+            }
+            //$("li#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
             window.document.title = "Skill Simulator - " + json.CharacterName;
             for (var ssk in json.Skills) {
                 window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
@@ -251,12 +251,12 @@ SkillInfo.prototype.SkillUp = function() {
     var next = this.NextLevelInfo();
     if (next) {
         if ((get = next.RequiredLevel) > (get = window.SkillCore.CurrentLevel)) {
-            $.notify({ message: 'Character level is not enough to learn further.' }, { type: 'info' });
+            shownotify("Character level is not enough to learn further.", 'info');
             return;
         }
         var reqSP = get = next.RequiredSP;
         if ((get = window.SkillCore.SPLeft) < reqSP) {
-            $.notify({ message: 'Insufficient skill point.' }, { type: 'info' });
+            shownotify("Insufficient skill point.", 'info');
             return;
         }
         this._currentskilllevel++;
@@ -269,7 +269,7 @@ SkillInfo.prototype.SkillDown = function() {
     var prev = this.PreviousLevelInfo();
     if (prev) {
         if (this._defaultLevel === this._currentskilllevel) {
-            $.notify({ message: "Can not go lower than skill's default level." }, { type: 'warning' });
+            shownotify("Can not go lower than skill's default level.", 'warning');
             return;
         }
         window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);

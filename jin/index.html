@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Skill simulator</title>
     <script src="../jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" href="animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -28,46 +29,51 @@
 
 <body>
     <div class="bganim"></div>
-    <div class="skilltree">
-        <div class="overwell skilltreeclass">
-            <ul>
-                <li class="titletablelike">
-                    <div class="character">
-                        <h2 class="center">Character Info</h2>
-                        <div>
-                            <ul class="charInfo">
-                                <li class="titletablelike"><span class="levellable">Character</span></li>
-                                <li id="charName" class="titletablelike charactername"></li>
-                                <li class="titletablelike"><span id="levelBoxtd" class="levellable">Level:</span></li>
-                            </ul>
-                            <br/>
-                            <ul class="sptable">
-                                <li class="titletablelike"><span class="levellable">Skill Point</span></li>
-                                <li class="titletablelike"><span>Total: </span><span id="e_totalSP"></span></li>
-                                <li class="titletablelike"><span>Invested: </span><span id="e_investedSP"></span></li>
-                                <li class="titletablelike"><span>Remaining: </span><span id="e_remainingSP"></span></li>
-                            </ul>
-                        </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default bootstrap3-dialog" role="navigation">
+                    <div class="navbar-header">
+                        <span class="navbar-brand">
+                            <a class="dropdown-toggle" data-toggle="dropdown"><span id="charName"></span><strong class="caret"></strong></a>
+                        <ul id="charList" class="dropdown-menu">
+                            <li> <a href="../haru">Haru Estia</a> </li>
+                            <li> <a href="../erwin">Erwin Arclight</a> </li>
+                            <li> <a href="../lily">Lily Bloomerchen</a> </li>
+                            <li> <a href="../stella">Stella Unibell</a> </li>
+                            <li> <a href="../jin">Jin Seipatsu</a> </li>
+                            <li> <a href="../iris">Iris Yuma</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="..">Home</a> </li>
+                        </ul>
+                        </span>
                     </div>
-                </li>
-                <li class="titletablelike">
-                    <div class="controlpanel">
-                        <h2 class="center">Control Panel</h2>
-                        <div class="controlpanel">
-                            <span>Share current build: <a id="copyURL" class="nomousechange" data-clipboard-target="#copymagic" href="javascript:void(0);">Copy Link</a></span><br/>
-                            <button id="resetAllSkill" class="btn btn-primary">Reset All Skills</button>
-                        </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a id="levelBoxtd" class="levellable">Level:</a></li>
+                            <li><a id="e_totalSP">Total: </a></li>
+                            <li><a id="e_investedSP">Invested: </a></li>
+                            <li><a id="e_remainingSP">Remaining: </a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <button id="resetAllSkill" class="btn btn-primary">Reset All Skills</button>
+                            </li>
+                            <li>
+                                <button id="copyURL" class="btn btn-success" data-clipboard-target="#copymagic">Copy Link to current build</button>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="skilltree1class">
-        <div class="overwell skilltreeclass" id="skilltree">
-            <ul>
-                <li id="activeskill" class="activeskill"></li>
-                <li id="passiveskill" class="passiveskill"></li>
-            </ul>
+                </nav>
+                <div class="overjumbotron">
+                    <div class="overwell skilltreeclass" id="skilltree">
+                        <ul>
+                            <li id="activeskill" class="activeskill"></li>
+                            <li id="passiveskill" class="passiveskill"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="tooltip">

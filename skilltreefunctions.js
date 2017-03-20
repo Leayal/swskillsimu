@@ -29,16 +29,16 @@ class SkillTreeCore {
             $("#e_remainingSP").addClass("alertlow");
         else
             $("#e_remainingSP").removeClass("alertlow");
-        $("#e_investedSP").text(this._investedsp);
-        $("#e_remainingSP").text(this._spleft);
+        $("#e_investedSP").text("Invested SP: " + this._investedsp);
+        $("#e_remainingSP").text("Remaining SP: " + this._spleft);
     }
 
     UpdateAllSPs() {
-        $("#e_totalSP").text(this._totalsp);
-        $("#e_investedSP").text(this._investedsp);
+        $("#e_totalSP").text("Total SP: " + this._totalsp);
+        $("#e_investedSP").text("Invested SP: " + this._investedsp);
         if (this.CheckAllSkills()) {
             this._spleft = this._totalsp - this._investedsp;
-            $("#e_remainingSP").text(this._spleft);
+            $("#e_remainingSP").text("Remaining SP: " + this._spleft);
             this.CheckAllSkills();
             if (this._spleft < 5)
                 $("#e_remainingSP").addClass("alertlow");
@@ -318,14 +318,14 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
 }
 
 $(function() {
-    new Clipboard(".btncopymagicclass");
     SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").addClass("bootstrap3-dialog").change(function() {
         window.SkillCore.SetLevel($(this).val());
     });
     for (var i = 1; i <= window.c_maxlevel; i++)
         selecting.append($("<option>").val(i).text(i));
-    selecting.insertAfter($("span#levelBoxtd"));
+    $("#levelBoxtd").append(selecting);
+    //selecting.insertAfter($("#levelBoxtd"));
     var clevel = GetUrlParam("lv", 55);
     if (clevel == 55) clevel = GetUrlParam("level", 55);
     if (isNaN(clevel))
@@ -333,13 +333,14 @@ $(function() {
     selecting.val(clevel);
     selecting.trigger("change");
     //window.SkillCore.SetLevelFromElement();
-    //$(document).tooltip();
-    $("a#copyURL").click(function() {
+    $("#charList li a[href]")
+    $('a[href^="../' + GetCurrentFolderUrl() + '"]').parent().closest('li').remove();
+    $("#copyURL").click(function() {
         var link = window.SkillCore.GenerateLink();
         if (link)
             copyLink(link);
     });
-    $("button#resetAllSkill").click(function() {
+    $("#resetAllSkill").click(function() {
         ShowDangerDialog('Are you sure you want to unlearn all skills?', function() {
             window.SkillCore.UnlearnAllSkills();
         });

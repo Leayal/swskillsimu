@@ -10,15 +10,28 @@ function GetUrlParam(name, defaultvalue) {
         return defaultvalue;
 };
 
+function shownotify(msg, _type) {
+    $.notify({ message: msg }, {
+        type: _type,
+        placement: {
+            from: "bottom",
+            align: "right"
+        },
+        animate: {
+            enter: 'animated fadeInDown',
+            exit: 'animated fadeOutUp'
+        },
+    });
+}
+
 function copyLink(_url) {
     var asdDiv = $("<div>").addClass("hiddendiv");
     var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", encodeURI(_url));
     asdDiv.append(asdButton);
     $("body").append(asdDiv);
-    //new Clipboard(".btncopymagicclass");
     asdButton.trigger("click");
     asdDiv.remove();
-    $.notify({ message: 'The link to this skill tree has been copied to clipboard.' }, { type: 'success' });
+    shownotify("The link to this skill tree has been copied to clipboard.", 'success');
 }
 
 function SetLoading(target) {
@@ -43,3 +56,17 @@ function SetLoading(target) {
 function RemoveLoading(target) {
     target.children("div[metroloading]").remove();
 };
+
+String.prototype.ctrim = function(charlist) {
+    if (charlist === undefined)
+        charlist = "\s";
+    return this.replace(new RegExp("^[" + charlist + "]+"), "").replace(new RegExp("[" + charlist + "]+$"), "");
+};
+
+function GetCurrentFolderUrl() {
+    return location.pathname.ctrim("/");
+}
+
+$(function() {
+    new Clipboard(".btncopymagicclass");
+});

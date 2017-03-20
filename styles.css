@@ -54,9 +54,13 @@ pre.tooltipcontent {
 
 div.skilltree1class {
     position: absolute;
-    top: 130px;
+    top: 70px;
     width: 100%;
     left: 5%;
+}
+
+.overjumbotron .jumbotron {
+    background-color: transparent;
 }
 
 div.skilltreeclass {
