@@ -64,8 +64,19 @@ String.prototype.ctrim = function(charlist) {
 };
 
 function GetCurrentFolderUrl() {
-    console.log(location.pathname);
-    return location.pathname.ctrim("/");
+    var sas = location.pathname.split("/");
+    if (sas[sas.length - 1].indexOf(".") != -1)
+        sas.pop();
+    console.log(sas[sas.length - 1]);
+    return sas[sas.length - 1];
+}
+
+function removefilename(str) {
+    function RemoveLastDirectoryPartOf(the_url) {
+        var the_arr = the_url.split('/');
+        the_arr.pop();
+        return (the_arr.join('/'));
+    }
 }
 
 $(function() {
