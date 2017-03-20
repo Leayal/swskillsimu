@@ -64,6 +64,7 @@ String.prototype.ctrim = function(charlist) {
 };
 
 function GetCurrentFolderUrl() {
+    console.log(location.pathname);
     return location.pathname.ctrim("/");
 }
 
