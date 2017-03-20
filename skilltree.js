@@ -9,9 +9,17 @@ SkillTreeCore.prototype.ReadTree = function() {
         url: "skilltreeinfo.json",
         dataType: "json",
         success: function(json) {
-            if (json.CharacterWikiURL) {
+            if (json.CharacterName)
                 $("#charName").text(json.CharacterName);
-            }
+            else
+                $("#charName").text(GetCurrentFolderUrl());
+            if (json.CharacterWikiURL) {
+                if (json.CharacterName)
+                    $("#morecharacterinfo").attr("href", json.CharacterWikiURL).attr("target", "_blank").text("More info about " + json.CharacterName);
+                else
+                    $("#morecharacterinfo").attr("href", json.CharacterWikiURL).attr("target", "_blank").text("More info about " + GetCurrentFolderUrl());
+            } else
+                $("#morecharacterinfo").remove();
             //$("li#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
             window.document.title = "Skill Simulator - " + json.CharacterName;
             for (var ssk in json.Skills) {
