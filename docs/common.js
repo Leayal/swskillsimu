@@ -65,9 +65,10 @@ String.prototype.ctrim = function(charlist) {
 
 function GetCurrentFolderUrl() {
     var sas = location.pathname.split("/");
-    if (sas[sas.length - 1].indexOf(".") != -1)
+    if (!sas[sas.length - 1])
         sas.pop();
-    console.log(sas[sas.length - 1]);
+    else if (sas[sas.length - 1].indexOf(".") != -1)
+        sas.pop();
     return sas[sas.length - 1];
 }
 
