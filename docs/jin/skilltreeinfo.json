@@ -322,17 +322,17 @@
                 },
                 "1": {
                     "Effect": "",
-                    "RequiredLevel": 42,
+                    "RequiredLevel": 22,
                     "RequiredSP": 1
                 },
                 "2": {
                     "Effect": "",
-                    "RequiredLevel": 45,
+                    "RequiredLevel": 27,
                     "RequiredSP": 1
                 },
                 "3": {
                     "Effect": "",
-                    "RequiredLevel": 48,
+                    "RequiredLevel": 32,
                     "RequiredSP": 2
                 }
             }
@@ -349,27 +349,27 @@
                 },
                 "1": {
                     "Effect": "",
-                    "RequiredLevel": 42,
+                    "RequiredLevel": 8,
                     "RequiredSP": 1
                 },
                 "2": {
                     "Effect": "",
-                    "RequiredLevel": 45,
+                    "RequiredLevel": 12,
                     "RequiredSP": 1
                 },
                 "3": {
                     "Effect": "",
-                    "RequiredLevel": 48,
+                    "RequiredLevel": 16,
                     "RequiredSP": 2
                 },
                 "4": {
                     "Effect": "",
-                    "RequiredLevel": 51,
+                    "RequiredLevel": 20,
                     "RequiredSP": 2
                 },
                 "5": {
                     "Effect": "",
-                    "RequiredLevel": 54,
+                    "RequiredLevel": 24,
                     "RequiredSP": 3
                 }
             },
@@ -486,17 +486,17 @@
                 },
                 "1": {
                     "Effect": "",
-                    "RequiredLevel": 42,
+                    "RequiredLevel": 30,
                     "RequiredSP": 1
                 },
                 "2": {
                     "Effect": "",
-                    "RequiredLevel": 45,
+                    "RequiredLevel": 35,
                     "RequiredSP": 1
                 },
                 "3": {
                     "Effect": "",
-                    "RequiredLevel": 48,
+                    "RequiredLevel": 40,
                     "RequiredSP": 2
                 }
             }
@@ -659,17 +659,17 @@
                 },
                 "1": {
                     "Effect": "",
-                    "RequiredLevel": 42,
+                    "RequiredLevel": 41,
                     "RequiredSP": 1
                 },
                 "2": {
                     "Effect": "",
-                    "RequiredLevel": 45,
+                    "RequiredLevel": 46,
                     "RequiredSP": 1
                 },
                 "3": {
                     "Effect": "",
-                    "RequiredLevel": 48,
+                    "RequiredLevel": 51,
                     "RequiredSP": 2
                 }
             }
@@ -686,27 +686,27 @@
                 },
                 "1": {
                     "Effect": "",
-                    "RequiredLevel": 42,
+                    "RequiredLevel": 28,
                     "RequiredSP": 1
                 },
                 "2": {
                     "Effect": "",
-                    "RequiredLevel": 45,
+                    "RequiredLevel": 32,
                     "RequiredSP": 1
                 },
                 "3": {
                     "Effect": "",
-                    "RequiredLevel": 48,
+                    "RequiredLevel": 38,
                     "RequiredSP": 2
                 },
                 "4": {
                     "Effect": "",
-                    "RequiredLevel": 51,
+                    "RequiredLevel": 42,
                     "RequiredSP": 2
                 },
                 "5": {
                     "Effect": "",
-                    "RequiredLevel": 54,
+                    "RequiredLevel": 48,
                     "RequiredSP": 3
                 }
             }

@@ -1,14 +1,14 @@
 {
-    "CharacterName": "Jin Seipatsu",
-    "CharacterWikiURL": "http://wiki.soulworkerhq.com/w/Jin_Seipatsu",
+    "CharacterName": "Iris Yuma",
+    "CharacterWikiURL": "http://wiki.soulworkerhq.com/w/Iris_Yuma",
     "Skills": {
-        "GloryUpper": {
-            "Name": "Glory Upper",
+        "HammerCrash": {
+            "Name": "Hammer Crash",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/6/61/J1-1.png",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/1c/I1-1.png",
             "Levels": {
                 "0": {
-                    "Description": "Approach and knock-up enemies with an upper attack. Afterwards, launches additional consecutive attacks. When this skill is strengthen , it increases the performance by 1.5x",
+                    "Description": "Swings the hammer to attack",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -40,16 +40,16 @@
                 }
             },
             "Extensions": [
-                "GloryUpper-Knockdown", "GloryUpper-Upper"
+                "HammerCrash-ContinuousExplosion", "HammerCrash-FullSwing"
             ]
         },
-        "GloryUpper-Knockdown": {
+        "HammerCrash-ContinuousExplosion": {
             "Visible": false,
-            "Name": "Knockdown",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c2/J1-1A.png",
+            "Name": "Continuous Explosion",
+            "Icon": "http://wiki.soulworkerhq.com/images/e/e1/I1-1A.png",
             "Levels": {
                 "0": {
-                    "Description": "Activated after Glory Upper's additional attack. Follow up with a powerful blow on the enemy",
+                    "Description": "Adds an additional explosion on the ground",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -71,13 +71,13 @@
                 }
             }
         },
-        "GloryUpper-Upper": {
+        "HammerCrash-FullSwing": {
             "Visible": false,
-            "Name": "Upper",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/cd/J1-1B.png",
+            "Name": "Full Swing",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/c3/I1-1B.png",
             "Levels": {
                 "0": {
-                    "Description": "Activated after Glory Upper's additional attack. Attacks facing enemies with tremendous power",
+                    "Description": "Launch an additional attack after the last attack",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -99,50 +99,13 @@
                 }
             }
         },
-        "PerfectCombination": {
-            "Name": "Perfect Combination",
+        "CamelSpin": {
+            "Name": "Camel Spin",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/7/72/J1-2.png",
+            "Icon": "http://wiki.soulworkerhq.com/images/c/c2/I1-2.png",
             "Levels": {
                 "0": {
-                    "Description": "Quickly rush and tackle the enemy. Afterwards, launches additional consecutive attacks",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 5,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 9,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 13,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 17,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "HammerKick": {
-            "Name": "Hammer Kick",
-            "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/a/ad/J1-3.png",
-            "Levels": {
-                "0": {
-                    "Description": " After jumping forwards, spin your body in the air and launch a kick. Attack enemies are knocked up. When this skill is strengthen increases the performance by 1.5x",
+                    "Description": "Take a short leap forward and then strike with a 360° rotation",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -174,12 +137,109 @@
                 }
             }
         },
-        "CounterAttack": {
-            "Name": "Counter Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/e/e4/J1-4.png",
+        "AssaultDive": {
+            "Name": "Assault Dive",
+            "DefaultLevel": 1,
+            "Icon": "http://wiki.soulworkerhq.com/images/a/a0/I1-3.png",
             "Levels": {
                 "0": {
-                    "Description": "Can only counter short-ranged attacks, if it's successful, a part of the skill will be strengthened for 5 seconds",
+                    "Description": "Quickly leap forward and push with your weapon, 2 additional rapid-fire explosion attacks",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 5,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 9,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 13,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "AssaultDive-Shatter", "AssaultDive-Emission"
+            ]
+        },
+        "AssaultDive-Shatter": {
+            "Visible": false,
+            "Name": "Shatter",
+            "Icon": "http://wiki.soulworkerhq.com/images/9/9d/I1-3A.png",
+            "Levels": {
+                "0": {
+                    "Description": "Replaces the additional attack with an additional consecutive attack",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 22,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 27,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "AssaultDive-Emission": {
+            "Visible": false,
+            "Name": "Emission",
+            "Icon": "http://wiki.soulworkerhq.com/images/0/00/I1-3B.png",
+            "Levels": {
+                "0": {
+                    "Description": "Increases the range of the last attack",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 17,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 22,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 27,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "FireSomersault": {
+            "Name": "Fire Somersault",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/b8/I1-4.png",
+            "Levels": {
+                "0": {
+                    "Description": "Fires towards the ground and does a backwards somersault, quickly retreating using the recoil from the rotation",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -207,48 +267,20 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 20,
-                    "RequiredSP": 3
+                    "RequiredSP": 2
                 }
             },
             "Extensions": [
-                "CounterAttack-KnockOut", "CounterAttack-SADestruction"
+                "FireSomersault-HellFire"
             ]
-
         },
-        "CounterAttack-KnockOut": {
-            "Name": "Knock Out",
+        "FireSomersault-HellFire": {
             "Visible": false,
-            "Icon": "http://wiki.soulworkerhq.com/images/8/82/J1-4A.png",
+            "Name": "Hell Fire",
+            "Icon": "http://wiki.soulworkerhq.com/images/5/5a/I1-4A.png",
             "Levels": {
                 "0": {
-                    "Description": "Stuns attacked enemies",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 25,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "CounterAttack-SADestruction": {
-            "Visible": false,
-            "Name": "SA Destruction",
-            "Icon": "http://wiki.soulworkerhq.com/images/f/fb/J1-4B.png",
-            "Levels": {
-                "0": {
-                    "Description": "Increases SA Destruction",
+                    "Description": "Adds attack zones in front of the base one",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -270,12 +302,13 @@
                 }
             }
         },
-        "SpiritSurge": {
-            "Name": "Spirit Surge",
-            "Icon": "http://wiki.soulworkerhq.com/images/1/10/J1-5.png",
+        "SpiralPierce": {
+            "Name": "Spiral Pierce",
+            "Icon": "http://wiki.soulworkerhq.com/images/7/75/I1-5.png",
             "Levels": {
                 "0": {
-                    "Description": "After releasing tremendous power, intimidate enemies while protecting allies",
+                    "Description": "Projects a drill which continuously attacks at gun point. Shock waves are released at the end",
+                    "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
@@ -306,16 +339,16 @@
                 }
             },
             "Extensions": [
-                "SpiritSurge-Strengthen"
+                "SpiralPierce-Gale"
             ]
         },
-        "SpiritSurge-Strengthen": {
-            "Name": "Strengthen",
+        "SpiralPierce-Gale": {
             "Visible": false,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/cf/J1-5A.png",
+            "Name": "Gale",
+            "Icon": "http://wiki.soulworkerhq.com/images/9/9f/I1-5A.png",
             "Levels": {
                 "0": {
-                    "Description": "Taunted enemies become excited causing their evasion to decrease",
+                    "Description": "A whirlwind with a pulling effect is added",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -337,12 +370,12 @@
                 }
             }
         },
-        "GravityTwister": {
-            "Name": "Gravity Twister",
-            "Icon": "http://wiki.soulworkerhq.com/images/5/55/J1-6.png",
+        "PulseFire": {
+            "Name": "Pulse Fire",
+            "Icon": "http://wiki.soulworkerhq.com/images/3/34/I1-6.png",
             "Levels": {
                 "0": {
-                    "Description": "Unleash tremendous power before the enemy. When the skill is strengthen increases the pulling range performance by 1.5x",
+                    "Description": "Take a firing stance and launch very powerful energy spheres for a fixed amount of time or attacks",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -374,16 +407,16 @@
                 }
             },
             "Extensions": [
-                "GravityTwister-ShockWaves"
+                "PulseFire-RapidShot", "PulseFire-PowerShot"
             ]
         },
-        "GravityTwister-ShockWaves": {
+        "PulseFire-RapidShot": {
             "Visible": false,
-            "Name": "Shock Waves",
-            "Icon": "http://wiki.soulworkerhq.com/images/5/50/J1-6A.png",
+            "Name": "Rapid Shot",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/12/I1-6A.png",
             "Levels": {
                 "0": {
-                    "Description": "Existing skill is changed into a multi-hit shock wave",
+                    "Description": "Increases the number of shots",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -405,12 +438,40 @@
                 }
             }
         },
-        "SpiritExplosion": {
-            "Name": "Spirit Explosion",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/4f/J1-7.png",
+        "PulseFire-PowerShot": {
+            "Visible": false,
+            "Name": "Power Shot",
+            "Icon": "http://wiki.soulworkerhq.com/images/0/0c/I1-6B.png",
             "Levels": {
                 "0": {
-                    "Description": "Store energy in the gauntlet, unleash a powerful blow forwards. While charging , it increases the performance by 1.4x, up to 2.0x.\nWhen the skill is strengthen , a 3-stage charge attack will be unleashed immediately without charging",
+                    "Description": "Fire long-range bullets",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 24,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 29,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 34,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "LimitBreak": {
+            "Name": "Limit Break",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/be/I1-7.png",
+            "Levels": {
+                "0": {
+                    "Description": "Releases soul energy within the body to amplify the damage of the next attack",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -440,73 +501,14 @@
                     "RequiredLevel": 30,
                     "RequiredSP": 3
                 }
-            },
-            "Extensions": [
-                "SpiritExplosion-ImpactBullets", "SpiritExplosion-RangeIncrease"
-            ]
-        },
-        "SpiritExplosion-ImpactBullets": {
-            "Visible": false,
-            "Name": "Impact Bullets",
-            "Icon": "http://wiki.soulworkerhq.com/images/e/e0/J1-7A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Removes existing skill effect , charges energy and fires it forwards",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 35,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 40,
-                    "RequiredSP": 2
-                }
             }
         },
-        "SpiritExplosion-RangeIncrease": {
-            "Visible": false,
-            "Name": "Range Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/7a/J1-7B.png",
+        "BulletStorm": {
+            "Name": "Bullet Storm",
+            "Icon": "http://wiki.soulworkerhq.com/images/0/0e/I1-8.png",
             "Levels": {
                 "0": {
-                    "Description": "Charge energy to create a big wave to attack the enemies",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 35,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 40,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "SpiritShooter": {
-            "Name": "Spirit Shooter",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/71/J1-8.png",
-            "Levels": {
-                "0": {
-                    "Description": " Generates a shockwave that instantly paralyzes enemies. Retreats using the recoil",
+                    "Description": "Shoots a powerful shell upwards. The fired shells separates mid-air into several small shells that will explode when reaching the ground",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -534,16 +536,75 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 33,
-                    "RequiredSP": 3
+                    "RequiredSP": 2
+                }
+            },
+            "Extensions": [
+                "BulletStorm-RangeIncrease", "BulletStorm-MeteorFall"
+            ]
+        },
+        "BulletStorm-RangeIncrease": {
+            "Visible": false,
+            "Name": "Range Increase",
+            "Icon": "http://wiki.soulworkerhq.com/images/0/0e/I1-8A.png",
+            "Levels": {
+                "0": {
+                    "Description": "Extends the attack range",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 33,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 38,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 43,
+                    "RequiredSP": 2
                 }
             }
         },
-        "QuadraBlow": {
-            "Name": "Quadra Blow",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c4/J1-9.png",
+        "BulletStorm-MeteorFall": {
+            "Visible": false,
+            "Name": "Meteor Fall",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/bf/I1-8B.png",
             "Levels": {
                 "0": {
-                    "Description": "Fire a powerful sphere at the enemy. The fired sphere explodes , damaging its surroundings. When the skill is strengthen, it increases the performance by 1.5x",
+                    "Description": "Attack with series of exploding meteorites . Deals continuous damage in the area",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 33,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 38,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 43,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "FullBurst": {
+            "Name": "Full Burst",
+            "Icon": "http://wiki.soulworkerhq.com/images/0/0b/I1-9.png",
+            "Levels": {
+                "0": {
+                    "Description": "Hold the weapon with both hands and swing it like a laser beam sword and attack the enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -573,45 +634,14 @@
                     "RequiredLevel": 37,
                     "RequiredSP": 3
                 }
-            },
-            "Extensions": [
-                "QuadraBlow-QuantityIncrease"
-            ]
-        },
-        "QuadraBlow-QuantityIncrease": {
-            "Visible": false,
-            "Name": "Quantity Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/85/J1-9A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Fires additional tiny spheres",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 37,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 42,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 47,
-                    "RequiredSP": 2
-                }
             }
         },
-        "HeavyDrop": {
-            "Name": "Heavy Drop",
-            "Icon": "http://wiki.soulworkerhq.com/images/b/ba/J1-10.png",
+        "EternalAbyss": {
+            "Name": "Eternal Abyss",
+            "Icon": "http://wiki.soulworkerhq.com/images/5/52/I1-10.png",
             "Levels": {
                 "0": {
-                    "Description": "Gather up tremendous power in the air to create a gigantic sphere. The sphere generates a big explosion when touching the ground , damaging all nearby enemies",
+                    "Description": "While in mid-air, throw a weapon towards the ground to create a black hole that pulls enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -641,45 +671,14 @@
                     "RequiredLevel": 41,
                     "RequiredSP": 3
                 }
-            },
-            "Extensions": [
-                "HeavyDrop-ExtraAttack"
-            ]
-        },
-        "HeavyDrop-ExtraAttack": {
-            "Visible": false,
-            "Name": "Extra Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/f/f3/J1-10A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Sphere speed will decrease , becomes continuous attack , grants debuff",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 41,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 46,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 51,
-                    "RequiredSP": 2
-                }
             }
         },
-        "FusionArmor": {
-            "Name": "Fusion Armor",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/8e/J1-11.png",
+        "Earthquake": {
+            "Name": "Earthquake",
+            "Icon": "http://wiki.soulworkerhq.com/images/a/a4/I1-11.png",
             "Levels": {
                 "0": {
-                    "Description": "Collect Soul Energy to grant a barrier to allies",
+                    "Description": "Insert the weapon into the ground then shoot towards the ground to create several shock waves",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -696,27 +695,86 @@
                 },
                 "3": {
                     "Effect": "",
-                    "RequiredLevel": 38,
+                    "RequiredLevel": 36,
                     "RequiredSP": 2
                 },
                 "4": {
                     "Effect": "",
-                    "RequiredLevel": 42,
+                    "RequiredLevel": 40,
                     "RequiredSP": 2
                 },
                 "5": {
                     "Effect": "",
-                    "RequiredLevel": 48,
+                    "RequiredLevel": 44,
                     "RequiredSP": 3
+                }
+            },
+            "Extensions": [
+                "Earthquake-Volcano", "Earthquake-FirePillar"
+            ]
+        },
+        "Earthquake-Volcano": {
+            "Visible": false,
+            "Name": "Volcano",
+            "Icon": "http://wiki.soulworkerhq.com/images/f/f9/I1-11A.png",
+            "Levels": {
+                "0": {
+                    "Description": "Generates a volcano after the last attack",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 44,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 49,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 54,
+                    "RequiredSP": 2
                 }
             }
         },
-        "RapidPuncher": {
-            "Name": "Rapid Puncher",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c0/J1-12.png",
+        "Earthquake-FirePillar": {
+            "Visible": false,
+            "Name": "Fire Pillar",
+            "Icon": "http://wiki.soulworkerhq.com/images/7/74/I1-11B.png",
             "Levels": {
                 "0": {
-                    "Description": "Pushes the Gauntlets to their maximum output power to strike with the fists left and right alternatively. Afterwards adds a powerful finishing attack at any time",
+                    "Description": "Generates a volcano after the last attack",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 44,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 49,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 54,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "ElectricCannon": {
+            "Name": "Electric Cannon",
+            "Icon": "http://wiki.soulworkerhq.com/images/8/8c/I1-12.png",
+            "Levels": {
+                "0": {
+                    "Description": "Make the weapons float and ride on it facing forwards. Afterwards, fire a laser beam forwards. Can move while the skill is in use",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -728,32 +786,32 @@
                 },
                 "2": {
                     "Effect": "",
-                    "RequiredLevel": 39,
+                    "RequiredLevel": 38,
                     "RequiredSP": 1
                 },
                 "3": {
                     "Effect": "",
-                    "RequiredLevel": 44,
+                    "RequiredLevel": 42,
                     "RequiredSP": 2
                 },
                 "4": {
                     "Effect": "",
-                    "RequiredLevel": 49,
+                    "RequiredLevel": 46,
                     "RequiredSP": 2
                 },
                 "5": {
                     "Effect": "",
-                    "RequiredLevel": 54,
+                    "RequiredLevel": 50,
                     "RequiredSP": 3
                 }
             }
         },
-        "FinalFist": {
-            "Name": "Final Fist",
-            "Icon": "http://wiki.soulworkerhq.com/images/e/eb/J1-13.png",
+        "ExceedDriver": {
+            "Name": "Exceed Driver",
+            "Icon": "http://wiki.soulworkerhq.com/images/1/13/I1-13.png",
             "Levels": {
                 "0": {
-                    "Description": "Pushes the Gauntlets to their maximum output power to hit the ground. Causes a wide explosion every time it hits the ground",
+                    "Description": "Disassemble the soul weapon and absorbs it in your hand. Afterwards, countless energy portals appear firing powerful energy simultaneously",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -789,10 +847,10 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/d/d1/Sh-2j.png",
+            "Icon": "http://wiki.soulworkerhq.com/images/b/b3/Sh-2I.png",
             "Levels": {
                 "0": {
-                    "Description": " (Ground) Smash the ground with your foot, stunning nearby enemies.\n(Air) Swing the fist towards the ground",
+                    "Description": "(Ground) Instantly recovers SG and acquire a fire buff\n(Air) Hit the hammer on the ground. Gain SG on hit. SG gain varies on attack and monster-type",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -1057,44 +1115,44 @@
                 }
             }
         },
-        "StrongBody": {
+        "RapidAttack": {
             "Passive": true,
-            "Name": "Strong Body",
+            "Name": "Rapid Attack",
             "RowSpan": 2,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/cc/JP1-2.png",
+            "Icon": "http://wiki.soulworkerhq.com/images/d/db/IP1-2.png",
             "Levels": {
                 "0": {
-                    "Description": "Reduces the damage taken by enemies",
+                    "Description": "Reduces SG Cost of skills",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "Damage taken: -10%",
+                    "Effect": "SG Cost Rate: -5%",
                     "RequiredLevel": 10,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "Damage taken: -15%",
+                    "Effect": "SG Cost Rate: -8%",
                     "RequiredLevel": 20,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "Damage taken: -20%",
+                    "Effect": "SG Cost Rate: -10%",
                     "RequiredLevel": 30,
                     "RequiredSP": 2
                 }
             }
         },
-        "WillofPassion": {
+        "FuryStrike": {
             "Passive": true,
             "DefaultLevel": 1,
             "RowSpan": 2,
-            "Name": "Will of Passion",
-            "Icon": "http://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
+            "Name": "Fury Strike",
+            "Icon": "http://wiki.soulworkerhq.com/images/f/fb/HP1-1.png",
             "Levels": {
                 "0": {
-                    "Description": "Recover SG on successful. Recover SG automatically while out of combat.\nRecover significantly more SG when out of combat for a longer time. On successful counter, recovers additional SG",
+                    "Description": "Recovers SG on successful basic attacks. Automatically restore SG at regular time intervals",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -1102,7 +1160,7 @@
                 "1": {
                     "Effect": "",
                     "RequiredLevel": 10,
-                    "RequiredSP": 0
+                    "RequiredSP": 1
                 }
             }
         }
