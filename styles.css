@@ -65,10 +65,11 @@ div.skilltree1class {
 
 div.skilltreeclass {
     position: absolute;
-    width: 100%;
+    margin: 0 auto;
+    min-width: 770px;
+    width: auto;
     height: auto;
     top: auto;
-    left: 0px;
 }
 
 div.hiddendiv {
