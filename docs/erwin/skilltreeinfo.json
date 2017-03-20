@@ -1063,7 +1063,7 @@
                 "1": {
                     "Effect": "",
                     "RequiredLevel": 10,
-                    "RequiredSP": 1
+                    "RequiredSP": 0
                 }
             }
         }

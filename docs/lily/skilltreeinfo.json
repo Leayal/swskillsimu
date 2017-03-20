@@ -1060,7 +1060,7 @@
                 "1": {
                     "Effect": "Attack Power +5%\nCritical Rate +5%",
                     "RequiredLevel": 10,
-                    "RequiredSP": 1
+                    "RequiredSP": 0
                 }
             }
         }
