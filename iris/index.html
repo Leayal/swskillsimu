@@ -34,11 +34,27 @@
     <meta property="og:author" content="Dramiel Leayal" />
     <meta name="description" content="SoulWorker Skill Simulator">
     <meta name="author" content="Dramiel Leayal">
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84812163-3', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 
 <body>
     <div class="bganim"></div>
-    <div class="container-fluid">
+    <div class="container-fluid minsize">
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-default bootstrap3-dialog" role="navigation">
@@ -77,8 +93,8 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="overjumbotron">
-                    <div class="skilltreeclass" id="skilltree">
+                <div class="overjumbotron skilltreeclass">
+                    <div class="" id="skilltree">
                         <ul>
                             <li id="activeskill" class="activeskill"></li>
                             <li id="passiveskill" class="passiveskill"></li>

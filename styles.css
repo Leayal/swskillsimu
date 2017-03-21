@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+.minsize {
+    min-width: 780px !important;
+}
+
 a {
     color: #d9d900;
 }
