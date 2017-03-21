@@ -17,7 +17,7 @@ a:hover {
 
 .characterselect:hover {
     opacity: 1 !important;
-    transform: scale(1.1) !important;
+    transform: scale(1.1) translateY(-5%) !important;
 }
 
 .characterselect {
