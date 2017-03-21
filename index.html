@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="animate.min.css" />
+    <link rel="stylesheet" href="sakura/jquery-sakura.min.css" />
+    <link rel="stylesheet" href="home.styles.css" />
     <script src="common.js"></script>
     <script src="imagesLoaded.js"></script>
+    <script src="sakura/jquery-sakura.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1">
     <link rel="icon" type="image/png" href="/favicon-32x32.png?v=1" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon-16x16.png?v=1" sizes="16x16">
@@ -19,148 +23,58 @@
 </head>
 
 <body>
-    <div class="bganim"></div>
+    <div id="sakura"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="navbar-header">
-                        <span class="navbar-brand">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                <span id="charName"></span>
-                        <strong class="caret"></strong>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Action</a>
-                            </li>
-                            <li>
-                                <a href="#">Another action</a>
-                            </li>
-                            <li>
-                                <a href="#">Something else here</a>
-                            </li>
-                            <li class="divider">
-                            </li>
-                            <li>
-                                <a href="#">Separated link</a>
-                            </li>
-                            <li class="divider">
-                            </li>
-                            <li>
-                                <a href="#">One more separated link</a>
-                            </li>
-                        </ul>
-                        </span>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href="#">Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Link</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">Action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Something else here</a>
-                                    </li>
-                                    <li class="divider">
-                                    </li>
-                                    <li>
-                                        <a href="#">Separated link</a>
-                                    </li>
-                                    <li class="divider">
-                                    </li>
-                                    <li>
-                                        <a href="#">One more separated link</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input class="form-control" type="text" />
-                            </div>
-                            <button type="submit" class="btn btn-default">
-							Submit
-						</button>
-                        </form>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#">Link</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">Action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Something else here</a>
-                                    </li>
-                                    <li class="divider">
-                                    </li>
-                                    <li>
-                                        <a href="#">Separated link</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="jumbotron">
-                    <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-rounded" />
+                <div class="well">
+                    <h1 class="text-center">SoulWorker Skill Simulator</h1>
+                    <span>This skill simulator require javascript turned on.<br/>This skill simulator work on:</span>
+                    <ul>
+                        <li>Microsoft Edge (v13 or later)</li>
+                        <li>Mozilla Firefox (v45 or higher)</li>
+                        <li>Google Chrome (v57 or higher)</li>
+                        <li>Safari (v10 or higher)</li>
+                    </ul>
+                    <span>For browsers which is not mentioned above: If the browser support ES6 (or ECMA 2015), it should work. Otherwise, it won't. For an example: IE11 does not support ES6, the page may show nothing if you use IE11.</span>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h2>
-                    Heading
-                </h2>
-                <p>
-                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                </p>
-                <p>
-                    <a class="btn" href="#">View details »</a>
-                </p>
+        <div class="row whitetext">
+            <div class="col-md-12">
+                <h2 class="text-center">Please select the character</h2>
             </div>
-            <div class="col-md-4">
-                <h2>
-                    Heading
-                </h2>
-                <p>
-                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                </p>
-                <p>
-                    <a class="btn" href="#">View details »</a>
-                </p>
+            <div class="col-md-2">
+                <img href="haru" alt="Haru Estia" src="images/HaruSelect.png" class="center-block characterselect" />
             </div>
-            <div class="col-md-4">
-                <h2>
-                    Heading
-                </h2>
-                <p>
-                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                </p>
-                <p>
-                    <a class="btn" href="#">View details »</a>
-                </p>
+            <div class="col-md-2">
+                <img href="erwin" alt="Erwin Arclight" src="images/ErwinSelect.png" class="center-block characterselect" />
+            </div>
+            <div class="col-md-2">
+                <img href="lily" alt="Lily Bloomerchen" src="images/LilySelect.png" class="center-block characterselect" />
+            </div>
+            <div class="col-md-2">
+                <img href="stella" alt="Stella Unibell" src="images/StellaSelect.png" class="center-block characterselect" />
+            </div>
+            <div class="col-md-2">
+                <img href="jin" alt="Jin Seipatsu" src="images/JinSelect.png" class="center-block characterselect" />
+            </div>
+            <div class="col-md-2">
+                <img href="iris" alt="Iris Yuma" src="images/IrisSelect.png" class="center-block characterselect" />
             </div>
         </div>
     </div>
+    <script>
+        $(function() {
+            $('div#sakura').sakura();
+            $('img.characterselect').click(function() {
+                var url = $(this).attr('href');
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

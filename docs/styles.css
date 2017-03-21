@@ -222,7 +222,7 @@ p.skillLevel {
 }
 
 div.skillExinfopanel {
-    position: relative;
+    position: absolute;
     border: 1px solid black;
     width: 54px;
     height: 31px;

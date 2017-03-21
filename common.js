@@ -81,5 +81,9 @@ function removefilename(str) {
 }
 
 $(function() {
-    new Clipboard(".btncopymagicclass");
+    try {
+        new Clipboard(".btncopymagicclass");
+    } catch (error) {
+
+    }
 });
