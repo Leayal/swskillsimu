@@ -106,6 +106,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
     if (ex) {
         var skillInfoPanel = $("<div>").addClass("skillExinfopanel").addClass("fadeinAppear");
         skillInfoPanel.attr("insight", this._id);
+        skillInfoPanel.css({ 'top': '' });
         var img = $("<img>").addClass("skillExIcon").attr("insight", this._id).attr("src", get = this.IconURL);
         skillInfoPanel.append(img.imagesLoaded(function() {
             imagesLoadedCallback(img);
@@ -171,10 +172,11 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         //Set Skill Extensions
         var exts = get = this.Extensions;
         if (exts !== undefined && Object.keys(exts).length > 0) {
+            var extensionPanel = $('<div>').addClass('extensioninfopanel');
             var extItem, foundExt = false;
             for (var sle in exts) {
                 extItem = window.SkillCore.GetSkill(sle);
-                extItem.GetSkillPanel(true).appendTo(skillInfoPanel);
+                extItem.GetSkillPanel(true).appendTo(extensionPanel);
                 if (this._currentskilllevel < this._skillmaxlevel)
                     extItem.Disabled(true);
                 else {
@@ -189,6 +191,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
             if (!foundExt && (this._currentskilllevel == this._skillmaxlevel))
                 for (var sle in exts)
                     window.SkillCore.GetSkill(sle).Disabled(false);
+            extensionPanel.appendTo(skillInfoPanel);
         }
         this.Panel = skillInfoPanel;
     }

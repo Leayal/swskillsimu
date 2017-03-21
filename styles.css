@@ -221,13 +221,21 @@ p.skillLevel {
     top: 56px;
 }
 
-div.skillExinfopanel {
+div.extensioninfopanel {
     position: absolute;
+    width: 54px;
+    height: auto;
+    left: 65px;
+    top: -1px;
+}
+
+div.skillExinfopanel {
+    position: relative;
     border: 1px solid black;
     width: 54px;
     height: 31px;
-    left: 65px;
-    top: -1px;
+    /*left: 65px;
+    top: -1px;*/
 }
 
 img.skillExIcon {
