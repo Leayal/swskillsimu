@@ -30,6 +30,7 @@ div#tooltip {
     background: black;
     opacity: 0.85;
     text-align: left;
+    pointer-events: none;
 }
 
 pre.tooltipcontent {
