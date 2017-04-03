@@ -5,7 +5,7 @@
         "HammerCrash": {
             "Name": "Hammer Crash",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/1/1c/I1-1.png",
+            "Icon": "../skillicons/I1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Swings the hammer to attack",
@@ -46,7 +46,7 @@
         "HammerCrash-ContinuousExplosion": {
             "Visible": false,
             "Name": "Continuous Explosion",
-            "Icon": "https://wiki.soulworkerhq.com/images/e/e1/I1-1A.png",
+            "Icon": "../skillicons/I1-1A.png",
             "Levels": {
                 "0": {
                     "Description": "Adds an additional explosion on the ground",
@@ -74,7 +74,7 @@
         "HammerCrash-FullSwing": {
             "Visible": false,
             "Name": "Full Swing",
-            "Icon": "https://wiki.soulworkerhq.com/images/c/c3/I1-1B.png",
+            "Icon": "../skillicons/I1-1B.png",
             "Levels": {
                 "0": {
                     "Description": "Launch an additional attack after the last attack",
@@ -102,7 +102,7 @@
         "CamelSpin": {
             "Name": "Camel Spin",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/c/c2/I1-2.png",
+            "Icon": "../skillicons/I1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Take a short leap forward and then strike with a 360° rotation",
@@ -140,7 +140,7 @@
         "AssaultDive": {
             "Name": "Assault Dive",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/a/a0/I1-3.png",
+            "Icon": "../skillicons/I1-3.png",
             "Levels": {
                 "0": {
                     "Description": "Quickly leap forward and push with your weapon, 2 additional rapid-fire explosion attacks",
@@ -181,7 +181,7 @@
         "AssaultDive-Shatter": {
             "Visible": false,
             "Name": "Shatter",
-            "Icon": "https://wiki.soulworkerhq.com/images/9/9d/I1-3A.png",
+            "Icon": "../skillicons/I1-3A.png",
             "Levels": {
                 "0": {
                     "Description": "Replaces the additional attack with an additional consecutive attack",
@@ -209,7 +209,7 @@
         "AssaultDive-Emission": {
             "Visible": false,
             "Name": "Emission",
-            "Icon": "https://wiki.soulworkerhq.com/images/0/00/I1-3B.png",
+            "Icon": "../skillicons/I1-3B.png",
             "Levels": {
                 "0": {
                     "Description": "Increases the range of the last attack",
@@ -236,7 +236,7 @@
         },
         "FireSomersault": {
             "Name": "Fire Somersault",
-            "Icon": "https://wiki.soulworkerhq.com/images/b/b8/I1-4.png",
+            "Icon": "../skillicons/I1-4.png",
             "Levels": {
                 "0": {
                     "Description": "Fires towards the ground and does a backwards somersault, quickly retreating using the recoil from the rotation",
@@ -277,7 +277,7 @@
         "FireSomersault-HellFire": {
             "Visible": false,
             "Name": "Hell Fire",
-            "Icon": "https://wiki.soulworkerhq.com/images/5/5a/I1-4A.png",
+            "Icon": "../skillicons/I1-4A.png",
             "Levels": {
                 "0": {
                     "Description": "Adds attack zones in front of the base one",
@@ -304,7 +304,7 @@
         },
         "SpiralPierce": {
             "Name": "Spiral Pierce",
-            "Icon": "https://wiki.soulworkerhq.com/images/7/75/I1-5.png",
+            "Icon": "../skillicons/I1-5.png",
             "Levels": {
                 "0": {
                     "Description": "Projects a drill which continuously attacks at gun point. Shock waves are released at the end",
@@ -345,7 +345,7 @@
         "SpiralPierce-Gale": {
             "Visible": false,
             "Name": "Gale",
-            "Icon": "https://wiki.soulworkerhq.com/images/9/9f/I1-5A.png",
+            "Icon": "../skillicons/I1-5A.png",
             "Levels": {
                 "0": {
                     "Description": "A whirlwind with a pulling effect is added",
@@ -372,7 +372,7 @@
         },
         "PulseFire": {
             "Name": "Pulse Fire",
-            "Icon": "https://wiki.soulworkerhq.com/images/3/34/I1-6.png",
+            "Icon": "../skillicons/I1-6.png",
             "Levels": {
                 "0": {
                     "Description": "Take a firing stance and launch very powerful energy spheres for a fixed amount of time or attacks",
@@ -413,7 +413,7 @@
         "PulseFire-RapidShot": {
             "Visible": false,
             "Name": "Rapid Shot",
-            "Icon": "https://wiki.soulworkerhq.com/images/1/12/I1-6A.png",
+            "Icon": "../skillicons/I1-6A.png",
             "Levels": {
                 "0": {
                     "Description": "Increases the number of shots",
@@ -441,7 +441,7 @@
         "PulseFire-PowerShot": {
             "Visible": false,
             "Name": "Power Shot",
-            "Icon": "https://wiki.soulworkerhq.com/images/0/0c/I1-6B.png",
+            "Icon": "../skillicons/I1-6B.png",
             "Levels": {
                 "0": {
                     "Description": "Fire long-range bullets",
@@ -468,7 +468,7 @@
         },
         "LimitBreak": {
             "Name": "Limit Break",
-            "Icon": "https://wiki.soulworkerhq.com/images/b/be/I1-7.png",
+            "Icon": "../skillicons/I1-7.png",
             "Levels": {
                 "0": {
                     "Description": "Releases soul energy within the body to amplify the damage of the next attack",
@@ -505,7 +505,7 @@
         },
         "BulletStorm": {
             "Name": "Bullet Storm",
-            "Icon": "https://wiki.soulworkerhq.com/images/0/0e/I1-8.png",
+            "Icon": "../skillicons/I1-8.png",
             "Levels": {
                 "0": {
                     "Description": "Shoots a powerful shell upwards. The fired shells separates mid-air into several small shells that will explode when reaching the ground",
@@ -546,7 +546,7 @@
         "BulletStorm-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
-            "Icon": "https://wiki.soulworkerhq.com/images/0/0e/I1-8A.png",
+            "Icon": "../skillicons/I1-8A.png",
             "Levels": {
                 "0": {
                     "Description": "Extends the attack range",
@@ -574,7 +574,7 @@
         "BulletStorm-MeteorFall": {
             "Visible": false,
             "Name": "Meteor Fall",
-            "Icon": "https://wiki.soulworkerhq.com/images/b/bf/I1-8B.png",
+            "Icon": "../skillicons/I1-8B.png",
             "Levels": {
                 "0": {
                     "Description": "Attack with series of exploding meteorites . Deals continuous damage in the area",
@@ -601,7 +601,7 @@
         },
         "FullBurst": {
             "Name": "Full Burst",
-            "Icon": "https://wiki.soulworkerhq.com/images/0/0b/I1-9.png",
+            "Icon": "../skillicons/I1-9.png",
             "Levels": {
                 "0": {
                     "Description": "Hold the weapon with both hands and swing it like a laser beam sword and attack the enemies",
@@ -638,7 +638,7 @@
         },
         "EternalAbyss": {
             "Name": "Eternal Abyss",
-            "Icon": "https://wiki.soulworkerhq.com/images/5/52/I1-10.png",
+            "Icon": "../skillicons/I1-10.png",
             "Levels": {
                 "0": {
                     "Description": "While in mid-air, throw a weapon towards the ground to create a black hole that pulls enemies",
@@ -675,7 +675,7 @@
         },
         "Earthquake": {
             "Name": "Earthquake",
-            "Icon": "https://wiki.soulworkerhq.com/images/a/a4/I1-11.png",
+            "Icon": "../skillicons/I1-11.png",
             "Levels": {
                 "0": {
                     "Description": "Insert the weapon into the ground then shoot towards the ground to create several shock waves",
@@ -716,7 +716,7 @@
         "Earthquake-Volcano": {
             "Visible": false,
             "Name": "Volcano",
-            "Icon": "https://wiki.soulworkerhq.com/images/f/f9/I1-11A.png",
+            "Icon": "../skillicons/I1-11A.png",
             "Levels": {
                 "0": {
                     "Description": "Generates a volcano after the last attack",
@@ -744,7 +744,7 @@
         "Earthquake-FirePillar": {
             "Visible": false,
             "Name": "Fire Pillar",
-            "Icon": "https://wiki.soulworkerhq.com/images/7/74/I1-11B.png",
+            "Icon": "../skillicons/I1-11B.png",
             "Levels": {
                 "0": {
                     "Description": "Generates a volcano after the last attack",
@@ -771,7 +771,7 @@
         },
         "ElectricCannon": {
             "Name": "Electric Cannon",
-            "Icon": "https://wiki.soulworkerhq.com/images/8/8c/I1-12.png",
+            "Icon": "../skillicons/I1-12.png",
             "Levels": {
                 "0": {
                     "Description": "Make the weapons float and ride on it facing forwards. Afterwards, fire a laser beam forwards. Can move while the skill is in use",
@@ -808,7 +808,7 @@
         },
         "ExceedDriver": {
             "Name": "Exceed Driver",
-            "Icon": "https://wiki.soulworkerhq.com/images/1/13/I1-13.png",
+            "Icon": "../skillicons/I1-13.png",
             "Levels": {
                 "0": {
                     "Description": "Disassemble the soul weapon and absorbs it in your hand. Afterwards, countless energy portals appear firing powerful energy simultaneously",
@@ -847,7 +847,7 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/b/b3/Sh-2I.png",
+            "Icon": "../skillicons/Sh-2I.png",
             "Levels": {
                 "0": {
                     "Description": "(Ground) Instantly recovers SG and acquire a fire buff\n(Air) Hit the hammer on the ground. Gain SG on hit. SG gain varies on attack and monster-type",
@@ -876,7 +876,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
+            "Icon": "../skillicons/Sh-1.png",
             "Levels": {
                 "0": {
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -915,7 +915,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
+            "Icon": "../skillicons/Sh-4.png",
             "Levels": {
                 "0": {
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -944,7 +944,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
+            "Icon": "../skillicons/Sh-3.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -963,7 +963,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
+            "Icon": "../skillicons/Sh-6.png",
             "Levels": {
                 "0": {
                     "Description": "While downed, get up while damaging surrounding enemies",
@@ -992,7 +992,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
+            "Icon": "../skillicons/Sh-5.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dash forward",
@@ -1015,7 +1015,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
-            "Icon": "https://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
+            "Icon": "../skillicons/Sh-8.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -1044,7 +1044,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
+            "Icon": "../skillicons/Sh-7.png",
             "Levels": {
                 "0": {
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -1062,7 +1062,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
-            "Icon": "https://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
+            "Icon": "../skillicons/Sh-10.png",
             "Levels": {
                 "0": {
                     "Description": "Increases stamina recovery rate",
@@ -1100,7 +1100,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
-            "Icon": "https://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
+            "Icon": "../skillicons/Sh-9.png",
             "Levels": {
                 "0": {
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1119,7 +1119,7 @@
             "Passive": true,
             "Name": "Rapid Attack",
             "RowSpan": 2,
-            "Icon": "https://wiki.soulworkerhq.com/images/d/db/IP1-2.png",
+            "Icon": "../skillicons/IP1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Reduces SG Cost of skills",
@@ -1149,7 +1149,7 @@
             "DefaultLevel": 1,
             "RowSpan": 2,
             "Name": "Fury Strike",
-            "Icon": "https://wiki.soulworkerhq.com/images/f/fb/HP1-1.png",
+            "Icon": "../skillicons/HP1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Recovers SG on successful basic attacks. Automatically restore SG at regular time intervals",

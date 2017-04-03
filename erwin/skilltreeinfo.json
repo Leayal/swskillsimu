@@ -5,7 +5,7 @@
         "SkyHigh": {
             "Name": "Sky High",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/f/fa/E1-1.png",
+            "Icon": "../skillicons/E1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Kick the enemies ahead of you, launching them to the air.",
@@ -46,7 +46,7 @@
         "SkyHigh-ImpactBullets": {
             "Visible": false,
             "Name": "Impact Bullets",
-            "Icon": "https://wiki.soulworkerhq.com/images/a/a2/E1-1A.png",
+            "Icon": "../skillicons/E1-1A.png",
             "Levels": {
                 "0": {
                     "Description": "Shoot a powerful energy bullet that attacks the enemies in front.",
@@ -64,7 +64,7 @@
         "SkyHigh-AerialShots": {
             "Visible": false,
             "Name": "Aerial Shots",
-            "Icon": "https://wiki.soulworkerhq.com/images/c/cb/E1-1B.png",
+            "Icon": "../skillicons/E1-1B.png",
             "Levels": {
                 "0": {
                     "Description": "Shoot continuously at enemies knocked into the air.",
@@ -92,7 +92,7 @@
         "RapidFire": {
             "Name": "Rapid Fire",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/1/1b/E1-2.png",
+            "Icon": "../skillicons/E1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Quickly fire with both guns. Can move while using this skill.",
@@ -130,7 +130,7 @@
         "GunCombination": {
             "Name": "Gun Combination",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/4/40/E1-3.png",
+            "Icon": "../skillicons/E1-3.png",
             "Levels": {
                 "0": {
                     "Description": "Approach the enemies with great speed, and then fire at enemies close range.",
@@ -171,7 +171,7 @@
         "GunCombination-Penetration": {
             "Visible": false,
             "Name": "Penetration",
-            "Icon": "https://wiki.soulworkerhq.com/images/5/57/E1-3A.png",
+            "Icon": "../skillicons/E1-3A.png",
             "Levels": {
                 "0": {
                     "Description": "Attacks done by the guns go through enemies.",
@@ -198,7 +198,7 @@
         },
         "SlideStep": {
             "Name": "Slide Step",
-            "Icon": "https://wiki.soulworkerhq.com/images/3/31/E1-4.png",
+            "Icon": "../skillicons/E1-4.png",
             "Levels": {
                 "0": {
                     "Description": "Rapidly slide back and avoid incoming attacks.",
@@ -239,7 +239,7 @@
         "SlideStep-SmokeGrenade": {
             "Visible": false,
             "Name": "Smoke Grenade",
-            "Icon": "https://wiki.soulworkerhq.com/images/c/c8/E1-4A.png",
+            "Icon": "../skillicons/E1-4A.png",
             "Levels": {
                 "0": {
                     "Description": "Throws a smoke screen in an area. Enemies in the smoke will be slowed.",
@@ -267,7 +267,7 @@
         "SlideStep-PoisonGasGrenade": {
             "Visible": false,
             "Name": "Poison Gas Grenade",
-            "Icon": "https://wiki.soulworkerhq.com/images/f/fe/E1-4B.png",
+            "Icon": "../skillicons/E1-4B.png",
             "Levels": {
                 "0": {
                     "Description": "Throws a poisonous gas grenade in an area. Enemies in the smoke will be poisoned.",
@@ -294,7 +294,7 @@
         },
         "TakeAim": {
             "Name": "Take Aim",
-            "Icon": "https://wiki.soulworkerhq.com/images/1/19/E1-5.png",
+            "Icon": "../skillicons/E1-5.png",
             "Levels": {
                 "0": {
                     "Description": "Improve concentration to aim at the enemy's weak points.",
@@ -331,7 +331,7 @@
         },
         "FocusShot": {
             "Name": "Focus Shot",
-            "Icon": "https://wiki.soulworkerhq.com/images/e/ee/E1-6.png",
+            "Icon": "../skillicons/E1-6.png",
             "Levels": {
                 "0": {
                     "Description": "Convert the guns into a machine gun, firing rapidly at enemies. The fire duration increases as the skill level increases.",
@@ -372,7 +372,7 @@
         "FocusShot-ParalyzingShot": {
             "Visible": false,
             "Name": "Paralyzing Shot",
-            "Icon": "https://wiki.soulworkerhq.com/images/5/52/E1-6A.png",
+            "Icon": "../skillicons/E1-6A.png",
             "Levels": {
                 "0": {
                     "Description": "Fires a powerful energy at the end of the attack. Inflicts paralysis at the affected area.",
@@ -400,7 +400,7 @@
         "FocusShot-BlackHole": {
             "Visible": false,
             "Name": "Black Hole",
-            "Icon": "https://wiki.soulworkerhq.com/images/e/ec/E1-6B.png",
+            "Icon": "../skillicons/E1-6B.png",
             "Levels": {
                 "0": {
                     "Description": "Fires a powerful energy at the end of the attack. Enemies will be pulled to the center of the affected area.",
@@ -427,7 +427,7 @@
         },
         "CombatMaster": {
             "Name": "Combat Master",
-            "Icon": "https://wiki.soulworkerhq.com/images/8/8c/E1-7.png",
+            "Icon": "../skillicons/E1-7.png",
             "Levels": {
                 "0": {
                     "Description": "Fastly move forward and fire at enemies close range.",
@@ -464,7 +464,7 @@
         },
         "GuidedShot": {
             "Name": "Guided Shot",
-            "Icon": "https://wiki.soulworkerhq.com/images/c/ca/E1-8.png",
+            "Icon": "../skillicons/E1-8.png",
             "Levels": {
                 "0": {
                     "Description": "Convert the guns into a sniper rifle, shooting a powerful shot that penetrates through enemies in a straight line.",
@@ -505,7 +505,7 @@
         "GuidedShot-DefensePenetration": {
             "Visible": false,
             "Name": "Defense Penetration",
-            "Icon": "https://wiki.soulworkerhq.com/images/e/ed/E1-8A.png",
+            "Icon": "../skillicons/E1-8A.png",
             "Levels": {
                 "0": {
                     "Description": "Attacks done to the enemy ignore enemy's defense.",
@@ -532,7 +532,7 @@
         },
         "ElectricShot": {
             "Name": "Electric Shot",
-            "Icon": "https://wiki.soulworkerhq.com/images/a/ae/E1-9.png",
+            "Icon": "../skillicons/E1-9.png",
             "Levels": {
                 "0": {
                     "Description": "Convert the guns into a grenade launcher, which fires a powerful grenade that explodes and deal damage to the enemies.",
@@ -569,7 +569,7 @@
         },
         "NapalmBomb": {
             "Name": "Napalm Bomb",
-            "Icon": "https://wiki.soulworkerhq.com/images/0/0d/E1-10.png",
+            "Icon": "../skillicons/E1-10.png",
             "Levels": {
                 "0": {
                     "Description": "Fire many grenades by converting the guns into a grenade launcher in the air, dealing damage over a large area.",
@@ -606,7 +606,7 @@
         },
         "Sprinter": {
             "Name": "Sprinter",
-            "Icon": "https://wiki.soulworkerhq.com/images/b/b2/E1-11.png",
+            "Icon": "../skillicons/E1-11.png",
             "Levels": {
                 "0": {
                     "Description": "Fire a bullet in the air that temporarily increases movement speed of all party members.",
@@ -647,7 +647,7 @@
         "Sprinter-SGRecovery": {
             "Visible": false,
             "Name": "SG Recovery",
-            "Icon": "https://wiki.soulworkerhq.com/images/a/ab/E1-11A.png",
+            "Icon": "../skillicons/E1-11A.png",
             "Levels": {
                 "0": {
                     "Description": "Gives a buff that recovers allies SG.",
@@ -674,7 +674,7 @@
         },
         "Hide&Seek": {
             "Name": "Hide & Seek",
-            "Icon": "https://wiki.soulworkerhq.com/images/4/46/E1-12.png",
+            "Icon": "../skillicons/E1-12.png",
             "Levels": {
                 "0": {
                     "Description": "Charge up a barrier, while charging you are invincible. After the barrier actives, you will gain Super Armor and all damage will be avoided.",
@@ -711,7 +711,7 @@
         },
         "SoulLauncher": {
             "Name": "Soul Launcher",
-            "Icon": "https://wiki.soulworkerhq.com/images/5/50/E1-13.png",
+            "Icon": "../skillicons/E1-13.png",
             "Levels": {
                 "0": {
                     "Description": "By turning guns into grenade launchers, fire a barrage of artillery up to 10 meters. Hit enemies will be pushed back.",
@@ -750,7 +750,7 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/0/00/Sh-2e.png",
+            "Icon": "../skillicons/Sh-2e.png",
             "Levels": {
                 "0": {
                     "Description": "Throw a slowing trap forward. When used mid-air, you will shoot an electric wave at the ground to inflict paralysis.\nTwo mines can be placed. Gain SG on hit. SG gain varies by monster-type.",
@@ -779,7 +779,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
+            "Icon": "../skillicons/Sh-1.png",
             "Levels": {
                 "0": {
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -818,7 +818,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
+            "Icon": "../skillicons/Sh-4.png",
             "Levels": {
                 "0": {
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -847,7 +847,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
+            "Icon": "../skillicons/Sh-3.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -866,7 +866,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
+            "Icon": "../skillicons/Sh-6.png",
             "Levels": {
                 "0": {
                     "Description": "While downed, get up while damaging surrounding enemies",
@@ -895,7 +895,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
+            "Icon": "../skillicons/Sh-5.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dash forward",
@@ -918,7 +918,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
-            "Icon": "https://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
+            "Icon": "../skillicons/Sh-8.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -947,7 +947,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
-            "Icon": "https://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
+            "Icon": "../skillicons/Sh-7.png",
             "Levels": {
                 "0": {
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -965,7 +965,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
-            "Icon": "https://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
+            "Icon": "../skillicons/Sh-10.png",
             "Levels": {
                 "0": {
                     "Description": "Increases stamina recovery rate",
@@ -1003,7 +1003,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
-            "Icon": "https://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
+            "Icon": "../skillicons/Sh-9.png",
             "Levels": {
                 "0": {
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1022,7 +1022,7 @@
             "Passive": true,
             "Name": "Unexpected Luck",
             "RowSpan": 2,
-            "Icon": "https://wiki.soulworkerhq.com/images/4/41/EP1-2.png",
+            "Icon": "../skillicons/EP1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Increases your evasion",
@@ -1052,7 +1052,7 @@
             "DefaultLevel": 1,
             "RowSpan": 2,
             "Name": "Bullet of Pleasure",
-            "Icon": "https://wiki.soulworkerhq.com/images/2/23/EP1-1.png",
+            "Icon": "../skillicons/EP1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Gain SG when hitting an enemy. Passively gain SG in set intervals. Using a different skills within 5 seconds will grant 1 stack. Gain 3 SG upon reaching 3 stacks",
