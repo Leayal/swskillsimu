@@ -1,11 +1,11 @@
 {
     "CharacterName": "Jin Seipatsu",
-    "CharacterWikiURL": "http://wiki.soulworkerhq.com/w/Jin_Seipatsu",
+    "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Jin_Seipatsu",
     "Skills": {
         "GloryUpper": {
             "Name": "Glory Upper",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/6/61/J1-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/6/61/J1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Approach and knock-up enemies with an upper attack. Afterwards, launches additional consecutive attacks. When this skill is strengthen , it increases the performance by 1.5x",
@@ -46,7 +46,7 @@
         "GloryUpper-Knockdown": {
             "Visible": false,
             "Name": "Knockdown",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c2/J1-1A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c2/J1-1A.png",
             "Levels": {
                 "0": {
                     "Description": "Activated after Glory Upper's additional attack. Follow up with a powerful blow on the enemy",
@@ -74,7 +74,7 @@
         "GloryUpper-Upper": {
             "Visible": false,
             "Name": "Upper",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/cd/J1-1B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/cd/J1-1B.png",
             "Levels": {
                 "0": {
                     "Description": "Activated after Glory Upper's additional attack. Attacks facing enemies with tremendous power",
@@ -102,7 +102,7 @@
         "PerfectCombination": {
             "Name": "Perfect Combination",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/7/72/J1-2.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/72/J1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Quickly rush and tackle the enemy. Afterwards, launches additional consecutive attacks",
@@ -139,7 +139,7 @@
         "HammerKick": {
             "Name": "Hammer Kick",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/a/ad/J1-3.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/a/ad/J1-3.png",
             "Levels": {
                 "0": {
                     "Description": " After jumping forwards, spin your body in the air and launch a kick. Attack enemies are knocked up. When this skill is strengthen increases the performance by 1.5x",
@@ -176,7 +176,7 @@
         },
         "CounterAttack": {
             "Name": "Counter Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/e/e4/J1-4.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/e/e4/J1-4.png",
             "Levels": {
                 "0": {
                     "Description": "Can only counter short-ranged attacks, if it's successful, a part of the skill will be strengthened for 5 seconds",
@@ -218,7 +218,7 @@
         "CounterAttack-KnockOut": {
             "Name": "Knock Out",
             "Visible": false,
-            "Icon": "http://wiki.soulworkerhq.com/images/8/82/J1-4A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/8/82/J1-4A.png",
             "Levels": {
                 "0": {
                     "Description": "Stuns attacked enemies",
@@ -245,7 +245,7 @@
         "CounterAttack-SADestruction": {
             "Visible": false,
             "Name": "SA Destruction",
-            "Icon": "http://wiki.soulworkerhq.com/images/f/fb/J1-4B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/f/fb/J1-4B.png",
             "Levels": {
                 "0": {
                     "Description": "Increases SA Destruction",
@@ -272,7 +272,7 @@
         },
         "SpiritSurge": {
             "Name": "Spirit Surge",
-            "Icon": "http://wiki.soulworkerhq.com/images/1/10/J1-5.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/10/J1-5.png",
             "Levels": {
                 "0": {
                     "Description": "After releasing tremendous power, intimidate enemies while protecting allies",
@@ -312,7 +312,7 @@
         "SpiritSurge-Strengthen": {
             "Name": "Strengthen",
             "Visible": false,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/cf/J1-5A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/cf/J1-5A.png",
             "Levels": {
                 "0": {
                     "Description": "Taunted enemies become excited causing their evasion to decrease",
@@ -339,7 +339,7 @@
         },
         "GravityTwister": {
             "Name": "Gravity Twister",
-            "Icon": "http://wiki.soulworkerhq.com/images/5/55/J1-6.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/5/55/J1-6.png",
             "Levels": {
                 "0": {
                     "Description": "Unleash tremendous power before the enemy. When the skill is strengthen increases the pulling range performance by 1.5x",
@@ -380,7 +380,7 @@
         "GravityTwister-ShockWaves": {
             "Visible": false,
             "Name": "Shock Waves",
-            "Icon": "http://wiki.soulworkerhq.com/images/5/50/J1-6A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/5/50/J1-6A.png",
             "Levels": {
                 "0": {
                     "Description": "Existing skill is changed into a multi-hit shock wave",
@@ -407,7 +407,7 @@
         },
         "SpiritExplosion": {
             "Name": "Spirit Explosion",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/4f/J1-7.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/4f/J1-7.png",
             "Levels": {
                 "0": {
                     "Description": "Store energy in the gauntlet, unleash a powerful blow forwards. While charging , it increases the performance by 1.4x, up to 2.0x.\nWhen the skill is strengthen , a 3-stage charge attack will be unleashed immediately without charging",
@@ -448,7 +448,7 @@
         "SpiritExplosion-ImpactBullets": {
             "Visible": false,
             "Name": "Impact Bullets",
-            "Icon": "http://wiki.soulworkerhq.com/images/e/e0/J1-7A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/e/e0/J1-7A.png",
             "Levels": {
                 "0": {
                     "Description": "Removes existing skill effect , charges energy and fires it forwards",
@@ -476,7 +476,7 @@
         "SpiritExplosion-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/7a/J1-7B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/7a/J1-7B.png",
             "Levels": {
                 "0": {
                     "Description": "Charge energy to create a big wave to attack the enemies",
@@ -503,7 +503,7 @@
         },
         "SpiritShooter": {
             "Name": "Spirit Shooter",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/71/J1-8.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/71/J1-8.png",
             "Levels": {
                 "0": {
                     "Description": " Generates a shockwave that instantly paralyzes enemies. Retreats using the recoil",
@@ -540,7 +540,7 @@
         },
         "QuadraBlow": {
             "Name": "Quadra Blow",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c4/J1-9.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c4/J1-9.png",
             "Levels": {
                 "0": {
                     "Description": "Fire a powerful sphere at the enemy. The fired sphere explodes , damaging its surroundings. When the skill is strengthen, it increases the performance by 1.5x",
@@ -581,7 +581,7 @@
         "QuadraBlow-QuantityIncrease": {
             "Visible": false,
             "Name": "Quantity Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/85/J1-9A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/8/85/J1-9A.png",
             "Levels": {
                 "0": {
                     "Description": "Fires additional tiny spheres",
@@ -608,7 +608,7 @@
         },
         "HeavyDrop": {
             "Name": "Heavy Drop",
-            "Icon": "http://wiki.soulworkerhq.com/images/b/ba/J1-10.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/b/ba/J1-10.png",
             "Levels": {
                 "0": {
                     "Description": "Gather up tremendous power in the air to create a gigantic sphere. The sphere generates a big explosion when touching the ground , damaging all nearby enemies",
@@ -649,7 +649,7 @@
         "HeavyDrop-ExtraAttack": {
             "Visible": false,
             "Name": "Extra Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/f/f3/J1-10A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/f/f3/J1-10A.png",
             "Levels": {
                 "0": {
                     "Description": "Sphere speed will decrease , becomes continuous attack , grants debuff",
@@ -676,7 +676,7 @@
         },
         "FusionArmor": {
             "Name": "Fusion Armor",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/8e/J1-11.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/8/8e/J1-11.png",
             "Levels": {
                 "0": {
                     "Description": "Collect Soul Energy to grant a barrier to allies",
@@ -713,7 +713,7 @@
         },
         "RapidPuncher": {
             "Name": "Rapid Puncher",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c0/J1-12.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c0/J1-12.png",
             "Levels": {
                 "0": {
                     "Description": "Pushes the Gauntlets to their maximum output power to strike with the fists left and right alternatively. Afterwards adds a powerful finishing attack at any time",
@@ -750,7 +750,7 @@
         },
         "FinalFist": {
             "Name": "Final Fist",
-            "Icon": "http://wiki.soulworkerhq.com/images/e/eb/J1-13.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/e/eb/J1-13.png",
             "Levels": {
                 "0": {
                     "Description": "Pushes the Gauntlets to their maximum output power to hit the ground. Causes a wide explosion every time it hits the ground",
@@ -789,7 +789,7 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/d/d1/Sh-2j.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/d/d1/Sh-2j.png",
             "Levels": {
                 "0": {
                     "Description": " (Ground) Smash the ground with your foot, stunning nearby enemies.\n(Air) Swing the fist towards the ground",
@@ -818,7 +818,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
             "Levels": {
                 "0": {
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -857,7 +857,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
             "Levels": {
                 "0": {
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -886,7 +886,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -905,7 +905,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
             "Levels": {
                 "0": {
                     "Description": "While downed, get up while damaging surrounding enemies",
@@ -934,7 +934,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dash forward",
@@ -957,7 +957,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -986,7 +986,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
             "Levels": {
                 "0": {
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -1004,7 +1004,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
-            "Icon": "http://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
             "Levels": {
                 "0": {
                     "Description": "Increases stamina recovery rate",
@@ -1042,7 +1042,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
             "Levels": {
                 "0": {
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1061,7 +1061,7 @@
             "Passive": true,
             "Name": "Strong Body",
             "RowSpan": 2,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/cc/JP1-2.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/cc/JP1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Reduces the damage taken by enemies",
@@ -1091,7 +1091,7 @@
             "DefaultLevel": 1,
             "RowSpan": 2,
             "Name": "Will of Passion",
-            "Icon": "http://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Recover SG on successful. Recover SG automatically while out of combat.\nRecover significantly more SG when out of combat for a longer time. On successful counter, recovers additional SG",

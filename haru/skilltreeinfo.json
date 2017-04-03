@@ -1,11 +1,11 @@
 {
     "CharacterName": "Haru Estia",
-    "CharacterWikiURL": "http://wiki.soulworkerhq.com/w/Haru_Estia",
+    "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Haru_Estia",
     "Skills": {
         "FirstStrike": {
             "Name": "First Strike",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c7/H1-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c7/H1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Perform a series of slashes while advancing forward. An additional strike can be used [Right-click] at the end of the skill.",
@@ -46,7 +46,7 @@
         "FirstStrike-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/1/1c/H1-1A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/1c/H1-1A.png",
             "Levels": {
                 "0": {
                     "Description": "The Extension strike radius becomes bigger.",
@@ -74,7 +74,7 @@
         "PierceStep": {
             "Name": "Pierce Step",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/4/48/H1-2.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/48/H1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Perform a series of slashes while advancing forward. An additional strike can be used with an additional input.",
@@ -115,7 +115,7 @@
         "PierceStep-SpinningSlash": {
             "Visible": false,
             "Name": "Pierce Step - Spinning Slash",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/41/H1-2A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/41/H1-2A.png",
             "Levels": {
                 "0": {
                     "Description": "Push away the enemies with a spinning slash after Pierce Step.",
@@ -138,7 +138,7 @@
         "PierceStep-RisingSlash": {
             "Visible": false,
             "Name": "Pierce Step - Rising Slash",
-            "Icon": "http://wiki.soulworkerhq.com/images/9/98/H1-2B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/9/98/H1-2B.png",
             "Levels": {
                 "0": {
                     "Description": "Launch the enemies to the air after Pierce Step with a rising slash.",
@@ -156,7 +156,7 @@
         "SpinCutter": {
             "Name": "Spin Cutter",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/4/42/H1-3.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/42/H1-3.png",
             "Levels": {
                 "0": {
                     "Description": "Push enemies away by performing a spinning slash.",
@@ -192,7 +192,7 @@
         },
         "BlowUp": {
             "Name": "Blow Up",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/70/H1-4.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/70/H1-4.png",
             "Levels": {
                 "0": {
                     "Description": "Use your special power to enhance your SG acquisition rate. All attacks that hit will be able to give additional SG.\nThe amount of SG gained will increase with monster grade/rank and the effect is applicable on up to 5 hits.",
@@ -229,7 +229,7 @@
         },
         "BladeQuake": {
             "Name": "Blade Quake",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/75/H1-5.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/75/H1-5.png",
             "Levels": {
                 "0": {
                     "Description": "Push the sword through the ground, summoning multiple swords to deal damage.",
@@ -270,7 +270,7 @@
         "BladeQuake-KnockOut": {
             "Visible": false,
             "Name": "Knock Out",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/42/H1-5A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/42/H1-5A.png",
             "Levels": {
                 "0": {
                     "Description": "All enemies hit by the skill will be stunned.",
@@ -297,7 +297,7 @@
         },
         "BladeWall": {
             "Name": "Blade Wall",
-            "Icon": "http://wiki.soulworkerhq.com/images/b/bb/H1-6.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/b/bb/H1-6.png",
             "Levels": {
                 "0": {
                     "Description": "Summoned swords will damage enemies and pull them towards the player.",
@@ -334,7 +334,7 @@
         },
         "PowerSlash": {
             "Name": "Power Slash",
-            "Icon": "http://wiki.soulworkerhq.com/images/9/9f/H1-7.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/9/9f/H1-7.png",
             "Levels": {
                 "0": {
                     "Description": "Slashes frontward with great power.",
@@ -371,7 +371,7 @@
         },
         "LeapAttack": {
             "Name": "Leap Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/78/H1-8.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/78/H1-8.png",
             "Levels": {
                 "0": {
                     "Description": "Leap forward and slam the ground, launching the enemies into the air. Hold the skill button to charge the skill and leap further.",
@@ -412,7 +412,7 @@
         "LeapAttack-ExtraAttack": {
             "Visible": false,
             "Name": "Extra Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/6/6a/H1-8A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/6/6a/H1-8A.png",
             "Levels": {
                 "0": {
                     "Description": "There will be more attacks, increasing hitcount.",
@@ -440,7 +440,7 @@
         "LeapAttack-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/2/22/H1-8B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/2/22/H1-8B.png",
             "Levels": {
                 "0": {
                     "Description": "Attack range is increased. Slam impact attack range increased.",
@@ -467,7 +467,7 @@
         },
         "ArenaRush": {
             "Name": "Arena Rush",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/48/H1-9.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/48/H1-9.png",
             "Levels": {
                 "0": {
                     "Description": "Create an enhancing field in a set radius. All party members within the area will have increased damage.",
@@ -508,7 +508,7 @@
         "ArenaRush-DurationIncrease": {
             "Visible": false,
             "Name": "Duration Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/49/H1-9A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/49/H1-9A.png",
             "Levels": {
                 "0": {
                     "Description": "Area duration increased.",
@@ -536,7 +536,7 @@
         "ArenaRush-KnockOut": {
             "Visible": false,
             "Name": "Knock Out",
-            "Icon": "http://wiki.soulworkerhq.com/images/b/bc/H1-9B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/b/bc/H1-9B.png",
             "Levels": {
                 "0": {
                     "Description": "All hit enemies will be stunned for a brief moment.",
@@ -563,7 +563,7 @@
         },
         "FlashStep": {
             "Name": "Flash Step",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c6/H1-10.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c6/H1-10.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly leap backwards, summoning a sword imbued with supernatural powers and firing it frontward.",
@@ -600,7 +600,7 @@
         },
         "CrossStrike": {
             "Name": "Cross Strike",
-            "Icon": "http://wiki.soulworkerhq.com/images/0/0f/H1-11.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/0/0f/H1-11.png",
             "Levels": {
                 "0": {
                     "Description": "Slash in a X pattern mid-air and fire strong sword energy. The sword energy will explode on the ground and deal additional damage.",
@@ -641,7 +641,7 @@
         "CrossStrike-Blaze": {
             "Visible": false,
             "Name": "Blaze",
-            "Icon": "http://wiki.soulworkerhq.com/images/f/f4/H1-11A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/f/f4/H1-11A.png",
             "Levels": {
                 "0": {
                     "Description": "A burning zone will appear when the sword energy explodes on the ground.",
@@ -668,7 +668,7 @@
         },
         "WindBreak": {
             "Name": "Wind Break",
-            "Icon": "http://wiki.soulworkerhq.com/images/b/bb/H1-12.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/b/bb/H1-12.png",
             "Levels": {
                 "0": {
                     "Description": "Charge your sword with energy behind your back , then release it. The sword energy flies in a straight line while penetrating enemies.",
@@ -709,7 +709,7 @@
         "WindBreak-Charge": {
             "Visible": false,
             "Name": "Charge",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/8a/H1-12A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/8/8a/H1-12A.png",
             "Levels": {
                 "0": {
                     "Description": "Fires multiple charged energy waves. Fires 2 waves with 0.7x the power of an original slash.",
@@ -731,7 +731,7 @@
         },
         "BladeShower": {
             "Name": "Blade Shower",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/49/H1-13.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/49/H1-13.png",
             "Levels": {
                 "0": {
                     "Description": "Throw your sword upwards, summoning a torrential rain of energy swords. Very large AoE.",
@@ -770,7 +770,7 @@
             "Passive": true,
             "DefaultLevel": 1,
             "Name": "Special Ability Mastery",
-            "Icon": "http://wiki.soulworkerhq.com/images/4/47/Sh-2h.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/4/47/Sh-2h.png",
             "Levels": {
                 "0": {
                     "Description": "Use your power to lift the enemies up to the air.\n(Air) Quickly descend by landing and attacking with your feet.",
@@ -799,7 +799,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
             "Levels": {
                 "0": {
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -838,7 +838,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
             "Levels": {
                 "0": {
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -867,7 +867,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -886,7 +886,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
             "Levels": {
                 "0": {
                     "Description": "While downed, get up while damaging surrounding enemies",
@@ -915,7 +915,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dash forward",
@@ -938,7 +938,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -967,7 +967,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
             "Levels": {
                 "0": {
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -985,7 +985,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
-            "Icon": "http://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
             "Levels": {
                 "0": {
                     "Description": "Increases stamina recovery rate",
@@ -1023,7 +1023,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
             "Levels": {
                 "0": {
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1042,7 +1042,7 @@
             "Passive": true,
             "Name": "Endless Struggle",
             "RowSpan": 2,
-            "Icon": "http://wiki.soulworkerhq.com/images/d/d2/HP1-2.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/d/d2/HP1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Strengthen your attacks",
@@ -1072,7 +1072,7 @@
             "Name": "Vengeful Sword",
             "DefaultLevel": 1,
             "RowSpan": 2,
-            "Icon": "http://wiki.soulworkerhq.com/images/2/23/EP1-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/2/23/EP1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Gain SG when hitting an enemy. Passively gain SG in set intervals",

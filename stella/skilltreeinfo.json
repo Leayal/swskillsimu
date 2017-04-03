@@ -1,11 +1,11 @@
 {
     "CharacterName": "Stella Unibell",
-    "CharacterWikiURL": "http://wiki.soulworkerhq.com/w/Stella_Unibell",
+    "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Stella_Unibell",
     "Skills": {
         "WhirlDance": {
             "Name": "Whirl Dance",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/0/06/S1-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/0/06/S1-1.png",
             "Levels": {
                 "0": {
                     "Description": "Possess the guitar with ghosts, and swing it around to deal damage. The final slam launches enemies to the air.",
@@ -43,7 +43,7 @@
         "PhantomRelease": {
             "Name": "Phantom Release",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/6/6c/S1-2.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/6/6c/S1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Release ghosts by playing the guitar at the current location.",
@@ -84,7 +84,7 @@
         "PhantomRelease-ExtraAttack": {
             "Visible": false,
             "Name": "ExtraAttack",
-            "Icon": "http://wiki.soulworkerhq.com/images/d/d0/S1-2A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/d/d0/S1-2A.png",
             "Levels": {
                 "0": {
                     "Description": "Number of attacks increase.",
@@ -102,7 +102,7 @@
         "TroublePass": {
             "Name": "Trouble Pass",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/e/ea/S1-3.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/e/ea/S1-3.png",
             "Levels": {
                 "0": {
                     "Description": "Release guiding-type ghosts to damage enemies. While in support mode, ghosts will heal allies.",
@@ -142,7 +142,7 @@
         "TroublePass-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/0/07/S1-3A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/0/07/S1-3A.png",
             "Levels": {
                 "0": {
                     "Description": "Increase the range of exploding ghosts.",
@@ -170,7 +170,7 @@
         "TroublePass-Strengthen": {
             "Visible": false,
             "Name": "Strengthen",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c7/S1-3B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c7/S1-3B.png",
             "Levels": {
                 "0": {
                     "Description": "Ghosts will grant a defense-boosting buff.",
@@ -197,7 +197,7 @@
         },
         "HystericalShock": {
             "Name": "Hysterical Shock",
-            "Icon": "http://wiki.soulworkerhq.com/images/0/06/S1-4.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/0/06/S1-4.png",
             "Levels": {
                 "0": {
                     "Description": "Create cracks on the ground by playing the guitar, and then cause an explosion.",
@@ -237,7 +237,7 @@
         "HystericalShock-ExtraAttack": {
             "Visible": false,
             "Name": "Extra Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/5/55/S1-4A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/5/55/S1-4A.png",
             "Levels": {
                 "0": {
                     "Description": "Number of attacks increase.",
@@ -259,7 +259,7 @@
         },
         "BeastParade": {
             "Name": "Beast Parade",
-            "Icon": "http://wiki.soulworkerhq.com/images/3/3e/S1-5.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/3e/S1-5.png",
             "Levels": {
                 "0": {
                     "Description": "Summon the ghosts and charge forward by riding on their backs.",
@@ -295,7 +295,7 @@
         },
         "BeadsPlay": {
             "Name": "Beads Play",
-            "Icon": "http://wiki.soulworkerhq.com/images/f/ff/S1-6.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/f/ff/S1-6.png",
             "Levels": {
                 "0": {
                     "Description": "Creates beads which will explode when hitting enemies. In support mode, the beads will restore HP and increase attack.\nCharging will increase number of beads. Push away enemies when charging completes.",
@@ -336,7 +336,7 @@
         "BeadsPlay-Paralyze": {
             "Visible": false,
             "Name": "Paralyze",
-            "Icon": "http://wiki.soulworkerhq.com/images/5/56/S1-6A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/5/56/S1-6A.png",
             "Levels": {
                 "0": {
                     "Description": "Beads go through enemies and paralyze them.",
@@ -364,7 +364,7 @@
         "BeadsPlay-Strengthen": {
             "Visible": false,
             "Name": "Strengthen",
-            "Icon": "http://wiki.soulworkerhq.com/images/d/d6/S1-6B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/d/d6/S1-6B.png",
             "Levels": {
                 "0": {
                     "Description": "The beads effect is strengthened.",
@@ -391,7 +391,7 @@
         },
         "DecadePulse": {
             "Name": "Decade Pulse",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c3/S1-7.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c3/S1-7.png",
             "Levels": {
                 "0": {
                     "Description": "Using the guitar, you release a pulse that attacks enemies. When switching modes, it paralyzes enemies and steals HP.\nThe lifesteal effect(100% lifesteal) is applied to a maximum of 3 targets.",
@@ -432,7 +432,7 @@
         "DecadePulse-DurationIncrease": {
             "Visible": false,
             "Name": "Duration Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/79/S1-7A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/79/S1-7A.png",
             "Levels": {
                 "0": {
                     "Description": "Increases the duration of pulse.",
@@ -460,7 +460,7 @@
         "DecadePulse-RadiusIncrease": {
             "Visible": false,
             "Name": "Radius Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/9/9d/S1-7B.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/9/9d/S1-7B.png",
             "Levels": {
                 "0": {
                     "Description": "Pulse range increase to allow more target to be hit.",
@@ -487,7 +487,7 @@
         },
         "SoulScream": {
             "Name": "Soul Scream",
-            "Icon": "http://wiki.soulworkerhq.com/images/7/74/S1-8.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/7/74/S1-8.png",
             "Levels": {
                 "0": {
                     "Description": "Make souls go rampant, creating a barrier around the caster. Invincibility will be granted on skill cast. The barrier will damage and paralyze all nearby enemies.",
@@ -524,7 +524,7 @@
         },
         "TwistPull": {
             "Name": "Twist Pull",
-            "Icon": "http://wiki.soulworkerhq.com/images/5/5d/S1-9.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/5/5d/S1-9.png",
             "Levels": {
                 "0": {
                     "Description": "Create a black hole formed by ghosts, which pulls in enemies and then explodes.",
@@ -565,7 +565,7 @@
         "TwistPull-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/2/26/S1-9A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/2/26/S1-9A.png",
             "Levels": {
                 "0": {
                     "Description": "Increases the Attack Range by ghosts.",
@@ -587,7 +587,7 @@
         },
         "BeastParty": {
             "Name": "Beast Party",
-            "Icon": "http://wiki.soulworkerhq.com/images/a/a8/S1-10.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/a/a8/S1-10.png",
             "Levels": {
                 "0": {
                     "Description": "Summons a pack of ghosts that charge forward. Enemies that are hit by the ghosts will be pushed back.",
@@ -624,7 +624,7 @@
         },
         "BlackMorass": {
             "Name": "Black Morass",
-            "Icon": "http://wiki.soulworkerhq.com/images/f/fa/S1-11.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/f/fa/S1-11.png",
             "Levels": {
                 "0": {
                     "Description": "Create a marsh of ghosts by playing the guitar. The final attack differs depending on which input is made at the end.\n( LMB = Pull enemies in the center / RMB = Launch the enemies in the air )",
@@ -665,7 +665,7 @@
         "BlackMorass-DurationIncrease": {
             "Visible": false,
             "Name": "Duration Increase",
-            "Icon": "http://wiki.soulworkerhq.com/images/1/1c/S1-11A.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/1c/S1-11A.png",
             "Levels": {
                 "0": {
                     "Description": " Increase the maximum attack duration.",
@@ -692,7 +692,7 @@
         },
         "BestTempo": {
             "Name": "Best Tempo",
-            "Icon": "http://wiki.soulworkerhq.com/images/3/37/S1-12.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/37/S1-12.png",
             "Levels": {
                 "0": {
                     "Description": "Playing the guitar inspires your allies. In support mode, it restores the HP of allies instantly.",
@@ -729,7 +729,7 @@
         },
         "BassAttack": {
             "Name": "Bass Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/e/ed/S1-13.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/e/ed/S1-13.png",
             "Levels": {
                 "0": {
                     "Description": "Summon Stella's speakers and create a stage. Speakers violently shake to attack the enemies within its range.",
@@ -768,7 +768,7 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/6/6f/Sh-2s.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/6/6f/Sh-2s.png",
             "Levels": {
                 "0": {
                     "Description": "(Ground) Changes modes and the effects of your skills. Activates Sorrowful Note.\n(Air) Do a musical performance on your special guitar to change your mode. Using this skill in the air will make your ghost attack with a fist and pushes you backwards",
@@ -797,7 +797,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/15/Sh-1.png",
             "Levels": {
                 "0": {
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -836,7 +836,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/ca/Sh-4.png",
             "Levels": {
                 "0": {
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -865,7 +865,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/31/Sh-3.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -884,7 +884,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/1/16/Sh-6.png",
             "Levels": {
                 "0": {
                     "Description": "While downed, get up while damaging surrounding enemies",
@@ -913,7 +913,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/d/de/Sh-5.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dash forward",
@@ -936,7 +936,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
-            "Icon": "http://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/8/82/Sh-8.png",
             "Levels": {
                 "0": {
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -965,7 +965,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
-            "Icon": "http://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/0/0e/Sh-7.png",
             "Levels": {
                 "0": {
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -983,7 +983,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
-            "Icon": "http://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/3/3a/Sh-10.png",
             "Levels": {
                 "0": {
                     "Description": "Increases stamina recovery rate",
@@ -1021,7 +1021,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
-            "Icon": "http://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/c/c4/Sh-9.png",
             "Levels": {
                 "0": {
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1040,7 +1040,7 @@
             "Passive": true,
             "Name": "Sound Wave",
             "RowSpan": 2,
-            "Icon": "http://wiki.soulworkerhq.com/images/6/67/SP1-2.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/6/67/SP1-2.png",
             "Levels": {
                 "0": {
                     "Description": "Maximum SG increase",
@@ -1070,7 +1070,7 @@
             "DefaultLevel": 1,
             "RowSpan": 2,
             "Name": "Sorrowful Note",
-            "Icon": "http://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
+            "Icon": "https://wiki.soulworkerhq.com/images/2/2c/SP1-1.png",
             "Levels": {
                 "0": {
                     "Description": "...",
