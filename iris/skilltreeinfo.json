@@ -267,7 +267,7 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 20,
-                    "RequiredSP": 2
+                    "RequiredSP": 3
                 }
             },
             "Extensions": [
@@ -536,7 +536,7 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 33,
-                    "RequiredSP": 2
+                    "RequiredSP": 3
                 }
             },
             "Extensions": [
