@@ -79,12 +79,18 @@ class SkillInfo {
         if (ob.DefaultLevel > 0)
             this._defaultLevel = ob.DefaultLevel;
         this._availablelevel = this.Levels[1].RequiredLevel;
+        if (ob.ID)
+            this.ShortID = ob.ID;
         if (ob.RowSpan > 0)
             this._rowspan = ob.RowSpan;
         this.SetCurrentSkillLevel(this._defaultLevel);
-        if (this._availablelevel <= window.SkillCore.GetCurrentLevel())
-            this.SetCurrentSkillLevel(GetUrlParam(this._id, this._defaultLevel));
-        else
+        if (this._availablelevel <= window.SkillCore.GetCurrentLevel()) {
+            var paraminfo = GetUrlParam(this._id, null);
+            if (!paraminfo && this.ShortID)
+                paraminfo = GetUrlParam(this.ShortID, null);
+            if (!paraminfo) paraminfo = this._defaultLevel;
+            this.SetCurrentSkillLevel(paraminfo);
+        } else
             this.SetCurrentSkillLevel(0);
     }
 

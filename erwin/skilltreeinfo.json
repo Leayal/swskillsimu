@@ -5,6 +5,7 @@
         "SkyHigh": {
             "Name": "Sky High",
             "DefaultLevel": 1,
+            "ID": 1,
             "Icon": "../skillicons/E1-1.png",
             "Levels": {
                 "0": {
@@ -46,6 +47,7 @@
         "SkyHigh-ImpactBullets": {
             "Visible": false,
             "Name": "Impact Bullets",
+            "ID": 2,
             "Icon": "../skillicons/E1-1A.png",
             "Levels": {
                 "0": {
@@ -64,6 +66,7 @@
         "SkyHigh-AerialShots": {
             "Visible": false,
             "Name": "Aerial Shots",
+            "ID": 3,
             "Icon": "../skillicons/E1-1B.png",
             "Levels": {
                 "0": {
@@ -92,6 +95,7 @@
         "RapidFire": {
             "Name": "Rapid Fire",
             "DefaultLevel": 1,
+            "ID": 4,
             "Icon": "../skillicons/E1-2.png",
             "Levels": {
                 "0": {
@@ -130,6 +134,7 @@
         "GunCombination": {
             "Name": "Gun Combination",
             "DefaultLevel": 1,
+            "ID": 5,
             "Icon": "../skillicons/E1-3.png",
             "Levels": {
                 "0": {
@@ -171,6 +176,7 @@
         "GunCombination-Penetration": {
             "Visible": false,
             "Name": "Penetration",
+            "ID": 6,
             "Icon": "../skillicons/E1-3A.png",
             "Levels": {
                 "0": {
@@ -198,6 +204,7 @@
         },
         "SlideStep": {
             "Name": "Slide Step",
+            "ID": 7,
             "Icon": "../skillicons/E1-4.png",
             "Levels": {
                 "0": {
@@ -239,6 +246,7 @@
         "SlideStep-SmokeGrenade": {
             "Visible": false,
             "Name": "Smoke Grenade",
+            "ID": 8,
             "Icon": "../skillicons/E1-4A.png",
             "Levels": {
                 "0": {
@@ -267,6 +275,7 @@
         "SlideStep-PoisonGasGrenade": {
             "Visible": false,
             "Name": "Poison Gas Grenade",
+            "ID": 9,
             "Icon": "../skillicons/E1-4B.png",
             "Levels": {
                 "0": {
@@ -294,6 +303,7 @@
         },
         "TakeAim": {
             "Name": "Take Aim",
+            "ID": 10,
             "Icon": "../skillicons/E1-5.png",
             "Levels": {
                 "0": {
@@ -331,6 +341,7 @@
         },
         "FocusShot": {
             "Name": "Focus Shot",
+            "ID": 11,
             "Icon": "../skillicons/E1-6.png",
             "Levels": {
                 "0": {
@@ -372,6 +383,7 @@
         "FocusShot-ParalyzingShot": {
             "Visible": false,
             "Name": "Paralyzing Shot",
+            "ID": 12,
             "Icon": "../skillicons/E1-6A.png",
             "Levels": {
                 "0": {
@@ -400,6 +412,7 @@
         "FocusShot-BlackHole": {
             "Visible": false,
             "Name": "Black Hole",
+            "ID": 13,
             "Icon": "../skillicons/E1-6B.png",
             "Levels": {
                 "0": {
@@ -427,6 +440,7 @@
         },
         "CombatMaster": {
             "Name": "Combat Master",
+            "ID": 14,
             "Icon": "../skillicons/E1-7.png",
             "Levels": {
                 "0": {
@@ -464,6 +478,7 @@
         },
         "GuidedShot": {
             "Name": "Guided Shot",
+            "ID": 15,
             "Icon": "../skillicons/E1-8.png",
             "Levels": {
                 "0": {
@@ -505,6 +520,7 @@
         "GuidedShot-DefensePenetration": {
             "Visible": false,
             "Name": "Defense Penetration",
+            "ID": 16,
             "Icon": "../skillicons/E1-8A.png",
             "Levels": {
                 "0": {
@@ -532,6 +548,7 @@
         },
         "ElectricShot": {
             "Name": "Electric Shot",
+            "ID": 17,
             "Icon": "../skillicons/E1-9.png",
             "Levels": {
                 "0": {
@@ -569,6 +586,7 @@
         },
         "NapalmBomb": {
             "Name": "Napalm Bomb",
+            "ID": 18,
             "Icon": "../skillicons/E1-10.png",
             "Levels": {
                 "0": {
@@ -606,6 +624,7 @@
         },
         "Sprinter": {
             "Name": "Sprinter",
+            "ID": 19,
             "Icon": "../skillicons/E1-11.png",
             "Levels": {
                 "0": {
@@ -647,6 +666,7 @@
         "Sprinter-SGRecovery": {
             "Visible": false,
             "Name": "SG Recovery",
+            "ID": 20,
             "Icon": "../skillicons/E1-11A.png",
             "Levels": {
                 "0": {
@@ -674,6 +694,7 @@
         },
         "Hide&Seek": {
             "Name": "Hide & Seek",
+            "ID": 21,
             "Icon": "../skillicons/E1-12.png",
             "Levels": {
                 "0": {
@@ -711,6 +732,7 @@
         },
         "SoulLauncher": {
             "Name": "Soul Launcher",
+            "ID": 22,
             "Icon": "../skillicons/E1-13.png",
             "Levels": {
                 "0": {
@@ -750,6 +772,7 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
+            "ID": 1001,
             "Icon": "../skillicons/Sh-2e.png",
             "Levels": {
                 "0": {
@@ -779,6 +802,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
+            "ID": 1002,
             "Icon": "../skillicons/Sh-1.png",
             "Levels": {
                 "0": {
@@ -818,6 +842,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
+            "ID": 1003,
             "Icon": "../skillicons/Sh-4.png",
             "Levels": {
                 "0": {
@@ -847,6 +872,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
+            "ID": 1004,
             "Icon": "../skillicons/Sh-3.png",
             "Levels": {
                 "0": {
@@ -866,6 +892,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
+            "ID": 1005,
             "Icon": "../skillicons/Sh-6.png",
             "Levels": {
                 "0": {
@@ -895,6 +922,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
+            "ID": 1006,
             "Icon": "../skillicons/Sh-5.png",
             "Levels": {
                 "0": {
@@ -918,6 +946,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
+            "ID": 1007,
             "Icon": "../skillicons/Sh-8.png",
             "Levels": {
                 "0": {
@@ -947,6 +976,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
+            "ID": 1008,
             "Icon": "../skillicons/Sh-7.png",
             "Levels": {
                 "0": {
@@ -965,6 +995,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
+            "ID": 1009,
             "Icon": "../skillicons/Sh-10.png",
             "Levels": {
                 "0": {
@@ -1003,6 +1034,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
+            "ID": 10010,
             "Icon": "../skillicons/Sh-9.png",
             "Levels": {
                 "0": {
@@ -1021,6 +1053,7 @@
         "UnexpectedLuck": {
             "Passive": true,
             "Name": "Unexpected Luck",
+            "ID": 1011,
             "RowSpan": 2,
             "Icon": "../skillicons/EP1-2.png",
             "Levels": {
@@ -1050,6 +1083,7 @@
         "BulletofPleasure": {
             "Passive": true,
             "DefaultLevel": 1,
+            "ID": 1012,
             "RowSpan": 2,
             "Name": "Bullet of Pleasure",
             "Icon": "../skillicons/EP1-1.png",

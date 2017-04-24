@@ -130,14 +130,19 @@ class SkillTreeCore {
         }
     }
 
-    GenerateLink() {
+    GenerateLink(isShortLink) {
         var arrayString = [];
         if (this._currentlevel !== window.c_maxlevel)
             arrayString.push("lv=" + this._currentlevel);
         for (var skillid in this.SkillList) {
             var levelasd = (get = this.SkillList[skillid].CurrentSkillLevel);
-            if (levelasd != (get = this.SkillList[skillid].GetDefaultLevel))
-                arrayString.push(skillid + "=" + levelasd);
+            if (levelasd != (get = this.SkillList[skillid].GetDefaultLevel)) {
+                if (isShortLink && this.SkillList[skillid].ShortID) {
+                    arrayString.push(this.SkillList[skillid].ShortID + "=" + levelasd);
+                } else {
+                    arrayString.push(skillid + "=" + levelasd);
+                }
+            }
         }
         var link = location.protocol + '//' + location.host + location.pathname;
         var param = "";
@@ -336,9 +341,18 @@ $(function() {
     $("#charList li a[href]")
     $('a[href^="../' + GetCurrentFolderUrl() + '"]').parent().closest('li').remove();
     $("#copyURL").click(function() {
-        var link = window.SkillCore.GenerateLink();
-        if (link)
+        var link = window.SkillCore.GenerateLink(false);
+        if (link) {
             copyLink(link);
+            shownotify("The link to this skill tree has been copied to clipboard.", 'success');
+        }
+    });
+    $("#copyShortURL").click(function() {
+        var link = window.SkillCore.GenerateLink(true);
+        if (link) {
+            copyLink(link);
+            shownotify("The link to this skill tree has been copied to clipboard.<br/>This short link may break if the skill tree has breaking changes in the future.", 'success');
+        }
     });
     $("#resetAllSkill").click(function() {
         ShowDangerDialog('Are you sure you want to unlearn all skills?', function() {

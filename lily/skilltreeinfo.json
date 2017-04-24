@@ -5,6 +5,7 @@
         "EvilSlash": {
             "Name": "Evil Slash",
             "DefaultLevel": 1,
+            "ID": 1,
             "Icon": "../skillicons/L1-1.png",
             "Levels": {
                 "0": {
@@ -43,6 +44,7 @@
         "SpinningDevil": {
             "Name": "Spinning Devil",
             "DefaultLevel": 1,
+            "ID": 2,
             "Icon": "../skillicons/L1-2.png",
             "Levels": {
                 "0": {
@@ -81,6 +83,7 @@
         "ScytheCutter": {
             "Name": "Scythe Cutter",
             "DefaultLevel": 1,
+            "ID": 3,
             "Icon": "../skillicons/L1-3.png",
             "Levels": {
                 "0": {
@@ -121,6 +124,7 @@
         "ScytheCutter-ChargeAttack": {
             "Visible": false,
             "Name": "Charge Attack",
+            "ID": 4,
             "Icon": "../skillicons/L1-3A.png",
             "Levels": {
                 "0": {
@@ -138,6 +142,7 @@
         },
         "GrimCountdown": {
             "Name": "Grim Countdown",
+            "ID": 5,
             "Icon": "../skillicons/L1-4.png",
             "Levels": {
                 "0": {
@@ -178,6 +183,7 @@
         "GrimCountdown-Lifesteal": {
             "Visible": false,
             "Name": "Lifesteal",
+            "ID": 6,
             "Icon": "../skillicons/L1-4A.png",
             "Levels": {
                 "0": {
@@ -205,6 +211,7 @@
         },
         "FearChain": {
             "Name": "Fear Chain",
+            "ID": 7,
             "Icon": "../skillicons/L1-5.png",
             "Levels": {
                 "0": {
@@ -245,6 +252,7 @@
         "FearChain-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
+            "ID": 8,
             "Icon": "../skillicons/L1-5A.png",
             "Levels": {
                 "0": {
@@ -272,6 +280,7 @@
         },
         "DeathGrinder": {
             "Name": "Death Grinder",
+            "ID": 9,
             "Icon": "../skillicons/L1-6.png",
             "Levels": {
                 "0": {
@@ -313,6 +322,7 @@
         "DeathGrinder-SummonGrimReaper": {
             "Visible": false,
             "Name": "Summon Grim Reaper",
+            "ID": 10,
             "Icon": "../skillicons/L1-6A.png",
             "Levels": {
                 "0": {
@@ -341,6 +351,7 @@
         "DeathGrinder-Whirlwind": {
             "Visible": false,
             "Name": "Whirlwind",
+            "ID": 11,
             "Icon": "../skillicons/L1-6B.png",
             "Levels": {
                 "0": {
@@ -368,6 +379,7 @@
         },
         "DeathScythe": {
             "Name": "Death Scythe",
+            "ID": 12,
             "Icon": "../skillicons/L1-7.png",
             "Levels": {
                 "0": {
@@ -405,6 +417,7 @@
         },
         "CruelSlash": {
             "Name": "Cruel Slash",
+            "ID": 13,
             "Icon": "../skillicons/L1-8.png",
             "Levels": {
                 "0": {
@@ -446,6 +459,7 @@
         "CruelSlash-DefensePenetration": {
             "Visible": false,
             "Name": "Defense Penetration",
+            "ID": 14,
             "Icon": "../skillicons/L1-8A.png",
             "Levels": {
                 "0": {
@@ -474,6 +488,7 @@
         "CruelSlash-CriticalRateIncrease": {
             "Visible": false,
             "Name": "Critical Rate Increase",
+            "ID": 15,
             "Icon": "../skillicons/L1-8B.png",
             "Levels": {
                 "0": {
@@ -501,6 +516,7 @@
         },
         "GrimReaper": {
             "Name": "Grim Reaper",
+            "ID": 16,
             "Icon": "../skillicons/L1-9.png",
             "Levels": {
                 "0": {
@@ -538,6 +554,7 @@
         },
         "ForceRegion": {
             "Name": "Force Region",
+            "ID": 17,
             "Icon": "../skillicons/L1-10.png",
             "Levels": {
                 "0": {
@@ -575,6 +592,7 @@
         },
         "DeathTornado": {
             "Name": "Death Tornado",
+            "ID": 18,
             "Icon": "../skillicons/L1-11.png",
             "Levels": {
                 "0": {
@@ -616,6 +634,7 @@
         "DeathTornado-Induction": {
             "Visible": false,
             "Name": "Induction",
+            "ID": 19,
             "Icon": "../skillicons/L1-11A.png",
             "Levels": {
                 "0": {
@@ -644,6 +663,7 @@
         "DeathTornado-AreaWidener": {
             "Visible": false,
             "Name": "Area Widener",
+            "ID": 20,
             "Icon": "../skillicons/L1-11B.png",
             "Levels": {
                 "0": {
@@ -671,6 +691,7 @@
         },
         "EvilTrinity": {
             "Name": "Evil Trinity",
+            "ID": 21,
             "Icon": "../skillicons/L1-12.png",
             "Levels": {
                 "0": {
@@ -708,6 +729,7 @@
         },
         "DeathGuillotine": {
             "Name": "Death Guillotine",
+            "ID": 22,
             "Icon": "../skillicons/L1-13.png",
             "Levels": {
                 "0": {
@@ -747,6 +769,7 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
+            "ID": 1001,
             "Icon": "../skillicons/Sh-2l.png",
             "Levels": {
                 "0": {
@@ -776,6 +799,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
+            "ID": 1002,
             "Icon": "../skillicons/Sh-1.png",
             "Levels": {
                 "0": {
@@ -815,6 +839,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
+            "ID": 1003,
             "Icon": "../skillicons/Sh-4.png",
             "Levels": {
                 "0": {
@@ -844,6 +869,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
+            "ID": 1004,
             "Icon": "../skillicons/Sh-3.png",
             "Levels": {
                 "0": {
@@ -863,6 +889,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
+            "ID": 1005,
             "Icon": "../skillicons/Sh-6.png",
             "Levels": {
                 "0": {
@@ -892,6 +919,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
+            "ID": 1006,
             "Icon": "../skillicons/Sh-5.png",
             "Levels": {
                 "0": {
@@ -915,6 +943,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
+            "ID": 1007,
             "Icon": "../skillicons/Sh-8.png",
             "Levels": {
                 "0": {
@@ -944,6 +973,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
+            "ID": 1008,
             "Icon": "../skillicons/Sh-7.png",
             "Levels": {
                 "0": {
@@ -962,6 +992,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
+            "ID": 1009,
             "Icon": "../skillicons/Sh-10.png",
             "Levels": {
                 "0": {
@@ -1000,6 +1031,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
+            "ID": 1010,
             "Icon": "../skillicons/Sh-9.png",
             "Levels": {
                 "0": {
@@ -1018,6 +1050,7 @@
         "IntensifyingMadness": {
             "Passive": true,
             "Name": "Intensifying Madness",
+            "ID": 1011,
             "RowSpan": 2,
             "Icon": "../skillicons/LP1-2.png",
             "Levels": {
@@ -1047,6 +1080,7 @@
         "MadScythe": {
             "Passive": true,
             "DefaultLevel": 1,
+            "ID": 1012,
             "RowSpan": 2,
             "Name": "Mad Scythe",
             "Icon": "../skillicons/LP1-1.png",

@@ -5,6 +5,7 @@
         "HammerCrash": {
             "Name": "Hammer Crash",
             "DefaultLevel": 1,
+            "ID": 1,
             "Icon": "../skillicons/I1-1.png",
             "Levels": {
                 "0": {
@@ -46,6 +47,7 @@
         "HammerCrash-ContinuousExplosion": {
             "Visible": false,
             "Name": "Continuous Explosion",
+            "ID": 2,
             "Icon": "../skillicons/I1-1A.png",
             "Levels": {
                 "0": {
@@ -74,6 +76,7 @@
         "HammerCrash-FullSwing": {
             "Visible": false,
             "Name": "Full Swing",
+            "ID": 3,
             "Icon": "../skillicons/I1-1B.png",
             "Levels": {
                 "0": {
@@ -102,6 +105,7 @@
         "CamelSpin": {
             "Name": "Camel Spin",
             "DefaultLevel": 1,
+            "ID": 4,
             "Icon": "../skillicons/I1-2.png",
             "Levels": {
                 "0": {
@@ -140,6 +144,7 @@
         "AssaultDive": {
             "Name": "Assault Dive",
             "DefaultLevel": 1,
+            "ID": 5,
             "Icon": "../skillicons/I1-3.png",
             "Levels": {
                 "0": {
@@ -181,6 +186,7 @@
         "AssaultDive-Shatter": {
             "Visible": false,
             "Name": "Shatter",
+            "ID": 6,
             "Icon": "../skillicons/I1-3A.png",
             "Levels": {
                 "0": {
@@ -209,6 +215,7 @@
         "AssaultDive-Emission": {
             "Visible": false,
             "Name": "Emission",
+            "ID": 7,
             "Icon": "../skillicons/I1-3B.png",
             "Levels": {
                 "0": {
@@ -236,6 +243,7 @@
         },
         "FireSomersault": {
             "Name": "Fire Somersault",
+            "ID": 8,
             "Icon": "../skillicons/I1-4.png",
             "Levels": {
                 "0": {
@@ -277,6 +285,7 @@
         "FireSomersault-HellFire": {
             "Visible": false,
             "Name": "Hell Fire",
+            "ID": 9,
             "Icon": "../skillicons/I1-4A.png",
             "Levels": {
                 "0": {
@@ -304,6 +313,7 @@
         },
         "SpiralPierce": {
             "Name": "Spiral Pierce",
+            "ID": 10,
             "Icon": "../skillicons/I1-5.png",
             "Levels": {
                 "0": {
@@ -345,6 +355,7 @@
         "SpiralPierce-Gale": {
             "Visible": false,
             "Name": "Gale",
+            "ID": 11,
             "Icon": "../skillicons/I1-5A.png",
             "Levels": {
                 "0": {
@@ -372,6 +383,7 @@
         },
         "PulseFire": {
             "Name": "Pulse Fire",
+            "ID": 12,
             "Icon": "../skillicons/I1-6.png",
             "Levels": {
                 "0": {
@@ -413,6 +425,7 @@
         "PulseFire-RapidShot": {
             "Visible": false,
             "Name": "Rapid Shot",
+            "ID": 13,
             "Icon": "../skillicons/I1-6A.png",
             "Levels": {
                 "0": {
@@ -441,6 +454,7 @@
         "PulseFire-PowerShot": {
             "Visible": false,
             "Name": "Power Shot",
+            "ID": 14,
             "Icon": "../skillicons/I1-6B.png",
             "Levels": {
                 "0": {
@@ -468,6 +482,7 @@
         },
         "LimitBreak": {
             "Name": "Limit Break",
+            "ID": 15,
             "Icon": "../skillicons/I1-7.png",
             "Levels": {
                 "0": {
@@ -505,6 +520,7 @@
         },
         "BulletStorm": {
             "Name": "Bullet Storm",
+            "ID": 16,
             "Icon": "../skillicons/I1-8.png",
             "Levels": {
                 "0": {
@@ -546,6 +562,7 @@
         "BulletStorm-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
+            "ID": 17,
             "Icon": "../skillicons/I1-8A.png",
             "Levels": {
                 "0": {
@@ -574,6 +591,7 @@
         "BulletStorm-MeteorFall": {
             "Visible": false,
             "Name": "Meteor Fall",
+            "ID": 18,
             "Icon": "../skillicons/I1-8B.png",
             "Levels": {
                 "0": {
@@ -601,6 +619,7 @@
         },
         "FullBurst": {
             "Name": "Full Burst",
+            "ID": 19,
             "Icon": "../skillicons/I1-9.png",
             "Levels": {
                 "0": {
@@ -638,6 +657,7 @@
         },
         "EternalAbyss": {
             "Name": "Eternal Abyss",
+            "ID": 20,
             "Icon": "../skillicons/I1-10.png",
             "Levels": {
                 "0": {
@@ -675,6 +695,7 @@
         },
         "Earthquake": {
             "Name": "Earthquake",
+            "ID": 21,
             "Icon": "../skillicons/I1-11.png",
             "Levels": {
                 "0": {
@@ -716,6 +737,7 @@
         "Earthquake-Volcano": {
             "Visible": false,
             "Name": "Volcano",
+            "ID": 22,
             "Icon": "../skillicons/I1-11A.png",
             "Levels": {
                 "0": {
@@ -744,6 +766,7 @@
         "Earthquake-FirePillar": {
             "Visible": false,
             "Name": "Fire Pillar",
+            "ID": 23,
             "Icon": "../skillicons/I1-11B.png",
             "Levels": {
                 "0": {
@@ -771,6 +794,7 @@
         },
         "ElectricCannon": {
             "Name": "Electric Cannon",
+            "ID": 24,
             "Icon": "../skillicons/I1-12.png",
             "Levels": {
                 "0": {
@@ -808,6 +832,7 @@
         },
         "ExceedDriver": {
             "Name": "Exceed Driver",
+            "ID": 25,
             "Icon": "../skillicons/I1-13.png",
             "Levels": {
                 "0": {
@@ -847,6 +872,7 @@
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
+            "ID": 1001,
             "Icon": "../skillicons/Sh-2I.png",
             "Levels": {
                 "0": {
@@ -876,6 +902,7 @@
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
+            "ID": 1002,
             "Icon": "../skillicons/Sh-1.png",
             "Levels": {
                 "0": {
@@ -915,6 +942,7 @@
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
+            "ID": 1003,
             "Icon": "../skillicons/Sh-4.png",
             "Levels": {
                 "0": {
@@ -944,6 +972,7 @@
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
+            "ID": 1004,
             "Icon": "../skillicons/Sh-3.png",
             "Levels": {
                 "0": {
@@ -963,6 +992,7 @@
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
+            "ID": 1005,
             "Icon": "../skillicons/Sh-6.png",
             "Levels": {
                 "0": {
@@ -992,6 +1022,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
+            "ID": 1006,
             "Icon": "../skillicons/Sh-5.png",
             "Levels": {
                 "0": {
@@ -1015,6 +1046,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
+            "ID": 1007,
             "Icon": "../skillicons/Sh-8.png",
             "Levels": {
                 "0": {
@@ -1044,6 +1076,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
+            "ID": 1008,
             "Icon": "../skillicons/Sh-7.png",
             "Levels": {
                 "0": {
@@ -1062,6 +1095,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
+            "ID": 1009,
             "Icon": "../skillicons/Sh-10.png",
             "Levels": {
                 "0": {
@@ -1100,6 +1134,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
+            "ID": 1010,
             "Icon": "../skillicons/Sh-9.png",
             "Levels": {
                 "0": {
@@ -1118,6 +1153,7 @@
         "RapidAttack": {
             "Passive": true,
             "Name": "Rapid Attack",
+            "ID": 1011,
             "RowSpan": 2,
             "Icon": "../skillicons/IP1-2.png",
             "Levels": {
@@ -1147,6 +1183,7 @@
         "FuryStrike": {
             "Passive": true,
             "DefaultLevel": 1,
+            "ID": 1012,
             "RowSpan": 2,
             "Name": "Fury Strike",
             "Icon": "../skillicons/HP1-1.png",

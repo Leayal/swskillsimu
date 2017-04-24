@@ -5,6 +5,7 @@
         "WhirlDance": {
             "Name": "Whirl Dance",
             "DefaultLevel": 1,
+            "ID": 1,
             "Icon": "../skillicons/S1-1.png",
             "Levels": {
                 "0": {
@@ -43,6 +44,7 @@
         "PhantomRelease": {
             "Name": "Phantom Release",
             "DefaultLevel": 1,
+            "ID": 2,
             "Icon": "../skillicons/S1-2.png",
             "Levels": {
                 "0": {
@@ -83,6 +85,7 @@
         },
         "PhantomRelease-ExtraAttack": {
             "Visible": false,
+            "ID": 3,
             "Name": "ExtraAttack",
             "Icon": "../skillicons/S1-2A.png",
             "Levels": {
@@ -102,6 +105,7 @@
         "TroublePass": {
             "Name": "Trouble Pass",
             "DefaultLevel": 1,
+            "ID": 4,
             "Icon": "../skillicons/S1-3.png",
             "Levels": {
                 "0": {
@@ -141,6 +145,7 @@
         },
         "TroublePass-RangeIncrease": {
             "Visible": false,
+            "ID": 5,
             "Name": "Range Increase",
             "Icon": "../skillicons/S1-3A.png",
             "Levels": {
@@ -169,6 +174,7 @@
         },
         "TroublePass-Strengthen": {
             "Visible": false,
+            "ID": 6,
             "Name": "Strengthen",
             "Icon": "../skillicons/S1-3B.png",
             "Levels": {
@@ -197,6 +203,7 @@
         },
         "HystericalShock": {
             "Name": "Hysterical Shock",
+            "ID": 7,
             "Icon": "../skillicons/S1-4.png",
             "Levels": {
                 "0": {
@@ -236,6 +243,7 @@
         },
         "HystericalShock-ExtraAttack": {
             "Visible": false,
+            "ID": 8,
             "Name": "Extra Attack",
             "Icon": "../skillicons/S1-4A.png",
             "Levels": {
@@ -258,6 +266,7 @@
             }
         },
         "BeastParade": {
+            "ID": 9,
             "Name": "Beast Parade",
             "Icon": "../skillicons/S1-5.png",
             "Levels": {
@@ -294,6 +303,7 @@
             }
         },
         "BeadsPlay": {
+            "ID": 10,
             "Name": "Beads Play",
             "Icon": "../skillicons/S1-6.png",
             "Levels": {
@@ -334,6 +344,7 @@
             ]
         },
         "BeadsPlay-Paralyze": {
+            "ID": 11,
             "Visible": false,
             "Name": "Paralyze",
             "Icon": "../skillicons/S1-6A.png",
@@ -362,6 +373,7 @@
             }
         },
         "BeadsPlay-Strengthen": {
+            "ID": 12,
             "Visible": false,
             "Name": "Strengthen",
             "Icon": "../skillicons/S1-6B.png",
@@ -390,6 +402,7 @@
             }
         },
         "DecadePulse": {
+            "ID": 13,
             "Name": "Decade Pulse",
             "Icon": "../skillicons/S1-7.png",
             "Levels": {
@@ -430,6 +443,7 @@
             ]
         },
         "DecadePulse-DurationIncrease": {
+            "ID": 14,
             "Visible": false,
             "Name": "Duration Increase",
             "Icon": "../skillicons/S1-7A.png",
@@ -458,6 +472,7 @@
             }
         },
         "DecadePulse-RadiusIncrease": {
+            "ID": 15,
             "Visible": false,
             "Name": "Radius Increase",
             "Icon": "../skillicons/S1-7B.png",
@@ -486,6 +501,7 @@
             }
         },
         "SoulScream": {
+            "ID": 16,
             "Name": "Soul Scream",
             "Icon": "../skillicons/S1-8.png",
             "Levels": {
@@ -523,6 +539,7 @@
             }
         },
         "TwistPull": {
+            "ID": 17,
             "Name": "Twist Pull",
             "Icon": "../skillicons/S1-9.png",
             "Levels": {
@@ -563,6 +580,7 @@
             ]
         },
         "TwistPull-RangeIncrease": {
+            "ID": 18,
             "Visible": false,
             "Name": "Range Increase",
             "Icon": "../skillicons/S1-9A.png",
@@ -586,6 +604,7 @@
             }
         },
         "BeastParty": {
+            "ID": 19,
             "Name": "Beast Party",
             "Icon": "../skillicons/S1-10.png",
             "Levels": {
@@ -623,6 +642,7 @@
             }
         },
         "BlackMorass": {
+            "ID": 20,
             "Name": "Black Morass",
             "Icon": "../skillicons/S1-11.png",
             "Levels": {
@@ -663,6 +683,7 @@
             ]
         },
         "BlackMorass-DurationIncrease": {
+            "ID": 21,
             "Visible": false,
             "Name": "Duration Increase",
             "Icon": "../skillicons/S1-11A.png",
@@ -691,6 +712,7 @@
             }
         },
         "BestTempo": {
+            "ID": 22,
             "Name": "Best Tempo",
             "Icon": "../skillicons/S1-12.png",
             "Levels": {
@@ -728,6 +750,7 @@
             }
         },
         "BassAttack": {
+            "ID": 23,
             "Name": "Bass Attack",
             "Icon": "../skillicons/S1-13.png",
             "Levels": {
@@ -765,6 +788,7 @@
             }
         },
         "SpecialAbilityMastery": {
+            "ID": 1001,
             "Passive": true,
             "Name": "Special Ability Mastery",
             "DefaultLevel": 1,
@@ -794,6 +818,7 @@
             }
         },
         "BasicAttackMastery": {
+            "ID": 1002,
             "Passive": true,
             "Name": "Basic Attack Mastery",
             "DefaultLevel": 1,
@@ -833,6 +858,7 @@
             }
         },
         "RisingRoll": {
+            "ID": 1003,
             "Passive": true,
             "Name": "Rising Roll",
             "DefaultLevel": 1,
@@ -862,6 +888,7 @@
             }
         },
         "EmergencyDodge": {
+            "ID": 1004,
             "Passive": true,
             "Name": "Emergency Dodge",
             "DefaultLevel": 1,
@@ -881,6 +908,7 @@
             }
         },
         "RisingAttack": {
+            "ID": 1005,
             "Passive": true,
             "Name": "Rising Attack",
             "DefaultLevel": 1,
@@ -910,6 +938,7 @@
             }
         },
         "Dash": {
+            "ID": 1006,
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
@@ -934,6 +963,7 @@
             }
         },
         "SpecialDodge": {
+            "ID": 1007,
             "Passive": true,
             "Name": "Special Dodge",
             "Icon": "../skillicons/Sh-8.png",
@@ -962,6 +992,7 @@
             }
         },
         "DashAttack": {
+            "ID": 1008,
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
@@ -981,6 +1012,7 @@
             }
         },
         "StaminaMastery": {
+            "ID": 1009,
             "Passive": true,
             "Name": "Stamina Mastery",
             "Icon": "../skillicons/Sh-10.png",
@@ -1019,6 +1051,7 @@
             }
         },
         "SpecialDashAttack": {
+            "ID": 1010,
             "Passive": true,
             "Name": "Special Dash Attack",
             "Icon": "../skillicons/Sh-9.png",
@@ -1039,6 +1072,7 @@
         "SoundWave": {
             "Passive": true,
             "Name": "Sound Wave",
+            "ID": 1011,
             "RowSpan": 2,
             "Icon": "../skillicons/SP1-2.png",
             "Levels": {
@@ -1066,6 +1100,7 @@
             }
         },
         "SorrowfulNote": {
+            "ID": 1012,
             "Passive": true,
             "DefaultLevel": 1,
             "RowSpan": 2,

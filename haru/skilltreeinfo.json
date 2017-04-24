@@ -5,6 +5,7 @@
         "FirstStrike": {
             "Name": "First Strike",
             "DefaultLevel": 1,
+            "ID": 1,
             "Icon": "../skillicons/H1-1.png",
             "Levels": {
                 "0": {
@@ -46,6 +47,7 @@
         "FirstStrike-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
+            "ID": 2,
             "Icon": "../skillicons/H1-1A.png",
             "Levels": {
                 "0": {
@@ -74,6 +76,7 @@
         "PierceStep": {
             "Name": "Pierce Step",
             "DefaultLevel": 1,
+            "ID": 3,
             "Icon": "../skillicons/H1-2.png",
             "Levels": {
                 "0": {
@@ -115,6 +118,7 @@
         "PierceStep-SpinningSlash": {
             "Visible": false,
             "Name": "Pierce Step - Spinning Slash",
+            "ID": 4,
             "Icon": "../skillicons/H1-2A.png",
             "Levels": {
                 "0": {
@@ -138,6 +142,7 @@
         "PierceStep-RisingSlash": {
             "Visible": false,
             "Name": "Pierce Step - Rising Slash",
+            "ID": 5,
             "Icon": "../skillicons/H1-2B.png",
             "Levels": {
                 "0": {
@@ -156,6 +161,7 @@
         "SpinCutter": {
             "Name": "Spin Cutter",
             "DefaultLevel": 1,
+            "ID": 6,
             "Icon": "../skillicons/H1-3.png",
             "Levels": {
                 "0": {
@@ -192,6 +198,7 @@
         },
         "BlowUp": {
             "Name": "Blow Up",
+            "ID": 7,
             "Icon": "../skillicons/H1-4.png",
             "Levels": {
                 "0": {
@@ -229,6 +236,7 @@
         },
         "BladeQuake": {
             "Name": "Blade Quake",
+            "ID": 8,
             "Icon": "../skillicons/H1-5.png",
             "Levels": {
                 "0": {
@@ -270,6 +278,7 @@
         "BladeQuake-KnockOut": {
             "Visible": false,
             "Name": "Knock Out",
+            "ID": 9,
             "Icon": "../skillicons/H1-5A.png",
             "Levels": {
                 "0": {
@@ -297,6 +306,7 @@
         },
         "BladeWall": {
             "Name": "Blade Wall",
+            "ID": 10,
             "Icon": "../skillicons/H1-6.png",
             "Levels": {
                 "0": {
@@ -334,6 +344,7 @@
         },
         "PowerSlash": {
             "Name": "Power Slash",
+            "ID": 11,
             "Icon": "../skillicons/H1-7.png",
             "Levels": {
                 "0": {
@@ -371,6 +382,7 @@
         },
         "LeapAttack": {
             "Name": "Leap Attack",
+            "ID": 12,
             "Icon": "../skillicons/H1-8.png",
             "Levels": {
                 "0": {
@@ -412,6 +424,7 @@
         "LeapAttack-ExtraAttack": {
             "Visible": false,
             "Name": "Extra Attack",
+            "ID": 13,
             "Icon": "../skillicons/H1-8A.png",
             "Levels": {
                 "0": {
@@ -440,6 +453,7 @@
         "LeapAttack-RangeIncrease": {
             "Visible": false,
             "Name": "Range Increase",
+            "ID": 14,
             "Icon": "../skillicons/H1-8B.png",
             "Levels": {
                 "0": {
@@ -467,6 +481,7 @@
         },
         "ArenaRush": {
             "Name": "Arena Rush",
+            "ID": 15,
             "Icon": "../skillicons/H1-9.png",
             "Levels": {
                 "0": {
@@ -508,6 +523,7 @@
         "ArenaRush-DurationIncrease": {
             "Visible": false,
             "Name": "Duration Increase",
+            "ID": 16,
             "Icon": "../skillicons/H1-9A.png",
             "Levels": {
                 "0": {
@@ -536,6 +552,7 @@
         "ArenaRush-KnockOut": {
             "Visible": false,
             "Name": "Knock Out",
+            "ID": 17,
             "Icon": "../skillicons/H1-9B.png",
             "Levels": {
                 "0": {
@@ -563,6 +580,7 @@
         },
         "FlashStep": {
             "Name": "Flash Step",
+            "ID": 18,
             "Icon": "../skillicons/H1-10.png",
             "Levels": {
                 "0": {
@@ -600,6 +618,7 @@
         },
         "CrossStrike": {
             "Name": "Cross Strike",
+            "ID": 19,
             "Icon": "../skillicons/H1-11.png",
             "Levels": {
                 "0": {
@@ -641,6 +660,7 @@
         "CrossStrike-Blaze": {
             "Visible": false,
             "Name": "Blaze",
+            "ID": 20,
             "Icon": "../skillicons/H1-11A.png",
             "Levels": {
                 "0": {
@@ -668,6 +688,7 @@
         },
         "WindBreak": {
             "Name": "Wind Break",
+            "ID": 21,
             "Icon": "../skillicons/H1-12.png",
             "Levels": {
                 "0": {
@@ -709,6 +730,7 @@
         "WindBreak-Charge": {
             "Visible": false,
             "Name": "Charge",
+            "ID": 22,
             "Icon": "../skillicons/H1-12A.png",
             "Levels": {
                 "0": {
@@ -731,6 +753,7 @@
         },
         "BladeShower": {
             "Name": "Blade Shower",
+            "ID": 23,
             "Icon": "../skillicons/H1-13.png",
             "Levels": {
                 "0": {
@@ -769,6 +792,7 @@
         "SpecialAbilityMastery": {
             "Passive": true,
             "DefaultLevel": 1,
+            "ID": 1001,
             "Name": "Special Ability Mastery",
             "Icon": "../skillicons/Sh-2h.png",
             "Levels": {
@@ -798,6 +822,7 @@
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",
+            "ID": 1002,
             "DefaultLevel": 1,
             "Icon": "../skillicons/Sh-1.png",
             "Levels": {
@@ -837,6 +862,7 @@
         "RisingRoll": {
             "Passive": true,
             "Name": "Rising Roll",
+            "ID": 1003,
             "DefaultLevel": 1,
             "Icon": "../skillicons/Sh-4.png",
             "Levels": {
@@ -866,6 +892,7 @@
         "EmergencyDodge": {
             "Passive": true,
             "Name": "Emergency Dodge",
+            "ID": 1004,
             "DefaultLevel": 1,
             "Icon": "../skillicons/Sh-3.png",
             "Levels": {
@@ -885,6 +912,7 @@
         "RisingAttack": {
             "Passive": true,
             "Name": "Rising Attack",
+            "ID": 1005,
             "DefaultLevel": 1,
             "Icon": "../skillicons/Sh-6.png",
             "Levels": {
@@ -915,6 +943,7 @@
             "Passive": true,
             "Name": "Dash",
             "DefaultLevel": 1,
+            "ID": 1006,
             "Icon": "../skillicons/Sh-5.png",
             "Levels": {
                 "0": {
@@ -938,6 +967,7 @@
         "SpecialDodge": {
             "Passive": true,
             "Name": "Special Dodge",
+            "ID": 1007,
             "Icon": "../skillicons/Sh-8.png",
             "Levels": {
                 "0": {
@@ -967,6 +997,7 @@
             "Passive": true,
             "Name": "Dash Attack",
             "DefaultLevel": 1,
+            "ID": 1008,
             "Icon": "../skillicons/Sh-7.png",
             "Levels": {
                 "0": {
@@ -985,6 +1016,7 @@
         "StaminaMastery": {
             "Passive": true,
             "Name": "Stamina Mastery",
+            "ID": 1009,
             "Icon": "../skillicons/Sh-10.png",
             "Levels": {
                 "0": {
@@ -1023,6 +1055,7 @@
         "SpecialDashAttack": {
             "Passive": true,
             "Name": "Special Dash Attack",
+            "ID": 1010,
             "Icon": "../skillicons/Sh-9.png",
             "Levels": {
                 "0": {
@@ -1041,6 +1074,7 @@
         "EndlessStruggle": {
             "Passive": true,
             "Name": "Endless Struggle",
+            "ID": 1011,
             "RowSpan": 2,
             "Icon": "../skillicons/HP1-2.png",
             "Levels": {
@@ -1071,6 +1105,7 @@
             "Passive": true,
             "Name": "Vengeful Sword",
             "DefaultLevel": 1,
+            "ID": 1012,
             "RowSpan": 2,
             "Icon": "../skillicons/EP1-1.png",
             "Levels": {

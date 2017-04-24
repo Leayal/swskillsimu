@@ -31,7 +31,6 @@ function copyLink(_url) {
     $("body").append(asdDiv);
     asdButton.trigger("click");
     asdDiv.remove();
-    shownotify("The link to this skill tree has been copied to clipboard.", 'success');
 }
 
 function SetLoading(target) {
