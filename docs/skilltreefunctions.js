@@ -54,8 +54,10 @@ class SkillTreeCore {
 
     CheckAllSkills() {
         if (this._totalsp < this._investedsp) {
-            for (var skillid in this.SkillList)
-                this.SkillList[skillid].UnlearnSkill();
+            if (this.SkillList) {
+                for (var skillid in this.SkillList)
+                    this.SkillList[skillid].UnlearnSkill();
+            }
             return false;
         }
         if (!this.SkillList) return false;
