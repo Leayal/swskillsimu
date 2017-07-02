@@ -64,7 +64,7 @@
                 "2": {
                     "Effect": "{Basic Attack}\nDamage: 54%\nSA Damage: 29%\n{Final Slash}\nDamage: 33%\nSA Damage: 19%",
                     "RequiredLevel": 18,
-                    "RequiredSP": 2
+                    "RequiredSP": 1
                 },
                 "3": {
                     "Effect": "{Basic Attack}\nDamage: 162%\nSA Damage: 62%\n{Final Slash}\nDamage: 101%\nSA Damage: 87%",
