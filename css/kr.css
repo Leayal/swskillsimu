@@ -1,0 +1,142 @@
+li.titletablelike {
+    float: left;
+    display: block;
+    margin: 7px;
+}
+
+li.tablelike {
+    float: left;
+    display: block;
+    width: 120px;
+    height: 88px;
+    margin: 7px;
+}
+
+div.skillinfopanel {
+    position: relative;
+    border: 1px solid black;
+    width: 120px;
+    height: 88px;
+    /*display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;//*/
+}
+
+img.skillIcon {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%);
+}
+
+button.skillup {
+    position: absolute;
+    height: 8px;
+    width: 59px;
+    top: 72px;
+    left: 0px;
+    margin: 0;
+}
+
+li.activeskill {
+    float: left;
+    display: block;
+    width: 570px;
+}
+
+ul.tableactiveskill {
+    width: 570px;
+    list-style: none outside none;
+}
+
+li.passiveskill {
+    float: left;
+    display: block;
+    width: 390px;
+}
+
+ul.tablepassiveskill {
+    float: right;
+    width: 390px;
+    list-style: none outside none;
+}
+
+button.skilldown {
+    cursor: default;
+    position: absolute;
+    height: 8px;
+    width: 59px;
+    top: 72px;
+    left: 59px;
+    margin: 0;
+}
+
+p.skillLevel {
+    font-size: 13px;
+    position: absolute;
+    left: 20px;
+    top: 56px;
+}
+
+p.skillName {
+    font-size: 13px;
+    position: absolute;
+    left: 1px;
+    top: 56px;
+}
+
+div.extensioninfopanel {
+    position: absolute;
+    width: 54px;
+    height: auto;
+    left: 65px;
+    top: -1px;
+}
+
+div.skillExinfopanel {
+    position: relative;
+    border: 1px solid black;
+    width: 54px;
+    height: 31px;
+    /*left: 65px;
+    top: -1px;*/
+}
+
+img.skillExIcon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+button.skillexup {
+    position: absolute;
+    height: 15px;
+    width: 6px;
+    top: -1px;
+    left: 45px;
+    margin: 0;
+}
+
+button.skillexdown {
+    position: absolute;
+    height: 15px;
+    width: 6px;
+    top: 14px;
+    left: 45px;
+    margin: 0;
+}
+
+p.skillExLevel {
+    word-wrap: break-word;
+    height: auto;
+    width: 1px;
+    font-size: 9px;
+    position: absolute;
+    left: 31px;
+    top: 2px;
+    margin-left: 2px;
+}

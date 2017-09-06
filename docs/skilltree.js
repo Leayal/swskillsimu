@@ -22,6 +22,8 @@ SkillTreeCore.prototype.ReadTree = function() {
                 $("#morecharacterinfo").remove();
             //$("li#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
             window.document.title = "Skill Simulator - " + json.CharacterName;
+
+            // This for-in looks dirty but it's safe for now. Because the JSON doesn't inherit from anything.
             for (var ssk in json.Skills) {
                 window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
                 if (get = window.SkillCore.SkillList[ssk].IsPassive)

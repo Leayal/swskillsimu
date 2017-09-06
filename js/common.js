@@ -1,3 +1,5 @@
+var clipboardsupport;
+
 function readurlparam(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 };
@@ -18,19 +20,23 @@ function shownotify(msg, _type) {
             align: "right"
         },
         animate: {
-            enter: 'animated fadeInDown',
-            exit: 'animated fadeOutUp'
+            enter: 'animated fadeInRight',
+            exit: 'animated fadeOutDown'
         },
     });
 }
 
 function copyLink(_url) {
-    var asdDiv = $("<div>").addClass("hiddendiv");
-    var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", encodeURI(_url));
-    asdDiv.append(asdButton);
-    $("body").append(asdDiv);
-    asdButton.trigger("click");
-    asdDiv.remove();
+    if (window.clipboardsupport) {
+        var asdDiv = $("<div>").addClass("hiddendiv");
+        var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", encodeURI(_url));
+        asdDiv.append(asdButton);
+        $("body").append(asdDiv);
+        asdButton.trigger("click");
+        asdDiv.remove();
+        return true;
+    } else
+        return false;
 }
 
 function SetLoading(target) {
@@ -51,6 +57,13 @@ function SetLoading(target) {
         .addClass("opacity50")).prependTo(target);
     target.append(ddd);
 };
+
+function GetSvgUnavailable() {
+    return "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.0\" x=\"0px\" y=\"0px\" viewBox=\"0 0 40 40\" class=\"icon icons8-Unavailable\">" +
+        "<g id=\"surface1\">" +
+        "<path style=\"fill:#DFF0FE;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:#4788C7;stroke-opacity:1;stroke-miterlimit:10;\" d=\"M 20 1 C 9.507813 1 1 9.507813 1 20 C 1 30.492188 9.507813 39 20 39 C 30.492188 39 39 30.492188 39 20 C 39 9.507813 30.492188 1 20 1 Z M 6 20 C 6 12.269531 12.269531 6 20 6 C 22.964844 6 25.707031 6.925781 27.96875 8.496094 L 8.496094 27.96875 C 6.925781 25.707031 6 22.964844 6 20 Z M 20 34 C 17.035156 34 14.292969 33.074219 12.03125 31.503906 L 31.503906 12.03125 C 33.074219 14.292969 34 17.035156 34 20 C 34 27.730469 27.730469 34 20 34 Z\">" +
+        "</path></g></svg>";
+}
 
 function RemoveLoading(target) {
     target.children("div[metroloading]").remove();
@@ -82,7 +95,8 @@ function removefilename(str) {
 $(function() {
     try {
         new Clipboard(".btncopymagicclass");
+        window.clipboardsupport = true;
     } catch (error) {
-
+        window.clipboardsupport = false;
     }
 });

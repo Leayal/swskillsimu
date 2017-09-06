@@ -284,7 +284,7 @@ function ShowDangerDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-warning',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (yesCallback)
+                if (typeof yesCallback === "function")
                     yesCallback();
             }
         }, {
@@ -292,8 +292,25 @@ function ShowDangerDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-primary',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (noCallback)
+                if (typeof noCallback === "function")
                     noCallback();
+            }
+        }]
+    });
+}
+
+function ShowMessageDialog(jquery_format_msg, okayCallback) {
+    BootstrapDialog.show({
+        title: 'Notice',
+        message: jquery_format_msg,
+        cssClass: 'bootstrap3-dialog',
+        buttons: [{
+            label: 'OK',
+            cssClass: 'btn btn-primary',
+            action: function(dialogItself) {
+                dialogItself.close();
+                if (typeof okayCallback === "function")
+                    okayCallback();
             }
         }]
     });
@@ -309,7 +326,7 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-primary',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (yesCallback)
+                if (typeof yesCallback === "function")
                     yesCallback();
             }
         }, {
@@ -317,7 +334,7 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-default',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (noCallback)
+                if (typeof noCallback === "function")
                     noCallback();
             }
         }]
@@ -345,15 +362,27 @@ $(function() {
     $("#copyURL").click(function() {
         var link = window.SkillCore.GenerateLink(false);
         if (link) {
-            copyLink(link);
-            shownotify("The link to this skill tree has been copied to clipboard.", 'success');
+            if (copyLink(link))
+                window.shownotify("The link to this skill tree has been copied to clipboard.", 'success');
+            else {
+                var divthingie = $("<div>");
+                divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
+                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(link).click(function() { $(this).select(); }));
+                window.ShowMessageDialog(divthingie);
+            }
         }
     });
     $("#copyShortURL").click(function() {
         var link = window.SkillCore.GenerateLink(true);
         if (link) {
-            copyLink(link);
-            shownotify("The link to this skill tree has been copied to clipboard.<br/>This short link may break if the skill tree has breaking changes in the future.", 'success');
+            if (copyLink(link))
+                window.shownotify("The link to this skill tree has been copied to clipboard.<br/>This short link may break if the skill tree has breaking changes in the future.", 'success');
+            else {
+                var divthingie = $("<div>");
+                divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
+                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(link).click(function() { $(this).select(); }));
+                window.ShowMessageDialog(divthingie);
+            }
         }
     });
     $("#resetAllSkill").click(function() {
@@ -362,5 +391,7 @@ $(function() {
         });
     });
 
-    window.SkillCore.ReadTree();
+    window.SkillCore.ReadTree(function() {
+        RemoveLoading($("body"));
+    });
 });
