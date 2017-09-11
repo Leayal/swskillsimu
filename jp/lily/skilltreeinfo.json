@@ -821,7 +821,7 @@
                 "3": {
                     "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
                     "RequiredLevel": 10,
-                    "RequiredSP": 1
+                    "RequiredSP": 2
                 },
                 "4": {
                     "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
@@ -831,7 +831,7 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 20,
-                    "RequiredSP": 3
+                    "RequiredSP": 2
                 }
             }
         },
