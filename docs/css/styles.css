@@ -5,6 +5,12 @@ body {
     align-items: center;
     align-self: center;
     text-align: center;
+    background-color: rgb(17, 17, 17);
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    background-position: center center
 }
 
 .minsize {
@@ -179,15 +185,6 @@ div.bganim {
 
 .icon {
     display: inline-block;
-}
-
-.bg-image {
-    background-color: rgb(17, 17, 17);
-    background-image: url('../images/bg.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: scroll;
-    background-position: center center
 }
 
 
