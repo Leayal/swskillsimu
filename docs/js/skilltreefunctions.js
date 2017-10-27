@@ -1,4 +1,4 @@
-var c_maxlevel = 55;
+var c_maxlevel = 60;
 
 class SkillTreeCore {
     constructor() {
@@ -127,6 +127,8 @@ class SkillTreeCore {
                 return 5;
             case 55:
                 return 5;
+            case 60:
+                return 5;
             default:
                 return 2;
         }
@@ -187,12 +189,51 @@ function SetToolTip(obj) {
                     $('div#tooltip pre:last').text("[Effect]\n" + eff);
                 else
                     $('div#tooltip pre:last').empty();
+                var cssstyle = {};
+                var currentInt = window.mouseY + 10,
+                    positionY;
+                if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
+                    cssstyle['bottom'] = 0;
+                    cssstyle['top'] = "";
+                } else {
+                    cssstyle['bottom'] = "";
+                    cssstyle['top'] = currentInt;
+                }
+                currentInt = window.mouseX + 5;
+                if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
+                    cssstyle['left'] = "";
+                    cssstyle['right'] = 0;
+                } else {
+                    cssstyle['right'] = "";
+                    cssstyle['left'] = currentInt;
+                }
+
+                elem.css(cssstyle);
                 elem.stop(false, true).fadeIn('fast');
-                obj.mousemove(function() {
-                    elem.css({ 'top': Math.min(window.mouseY + 10, $(document).height() - elem.outerHeight(true)), 'left': window.mouseX + 5 });
-                });
             }
         }
+    }).mousemove(function() {
+        var elem = $('div#tooltip');
+        var cssstyle = {};
+        var currentInt = window.mouseY + 10,
+            positionY;
+        if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
+            cssstyle['bottom'] = 0;
+            cssstyle['top'] = "";
+        } else {
+            cssstyle['bottom'] = "";
+            cssstyle['top'] = currentInt;
+        }
+        currentInt = window.mouseX + 5;
+        if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
+            cssstyle['left'] = "";
+            cssstyle['right'] = 0;
+        } else {
+            cssstyle['right'] = "";
+            cssstyle['left'] = currentInt;
+        }
+
+        elem.css(cssstyle);
     }).mouseout(function() {
         $('div#tooltip').stop(false, true).fadeOut('fast');
     });
@@ -224,13 +265,51 @@ function SetToolTipUp(obj) {
                     $('div#tooltip pre:last').text("[After]\n" + eff);
                 else
                     $('div#tooltip pre:last').empty();
+                var cssstyle = {};
+                var currentInt = window.mouseY + 10,
+                    positionY;
+                if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
+                    cssstyle['bottom'] = 0;
+                    cssstyle['top'] = "";
+                } else {
+                    cssstyle['bottom'] = "";
+                    cssstyle['top'] = currentInt;
+                }
+                currentInt = window.mouseX + 5;
+                if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
+                    cssstyle['left'] = "";
+                    cssstyle['right'] = 0;
+                } else {
+                    cssstyle['right'] = "";
+                    cssstyle['left'] = currentInt;
+                }
+
+                elem.css(cssstyle);
                 elem.stop(false, true).fadeIn('fast');
-                obj.mousemove(function() {
-                    //elem.outerHeight(true)
-                    elem.css({ 'top': Math.min(window.mouseY + 10, $(window).height() - elem.outerHeight(true)), 'left': window.mouseX + 5 });
-                });
             }
         }
+    }).mousemove(function() {
+        var elem = $('div#tooltip');
+        var cssstyle = {};
+        var currentInt = window.mouseY + 10,
+            positionY;
+        if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
+            cssstyle['bottom'] = 0;
+            cssstyle['top'] = "";
+        } else {
+            cssstyle['bottom'] = "";
+            cssstyle['top'] = currentInt;
+        }
+        currentInt = window.mouseX + 5;
+        if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
+            cssstyle['left'] = "";
+            cssstyle['right'] = 0;
+        } else {
+            cssstyle['right'] = "";
+            cssstyle['left'] = currentInt;
+        }
+
+        elem.css(cssstyle);
     }).mouseout(function() {
         $('div#tooltip').stop(false, true).fadeOut('fast');
     });
@@ -261,12 +340,51 @@ function SetToolTipDown(obj) {
                     $('div#tooltip pre:last').text("[After]\n" + eff);
                 else
                     $('div#tooltip pre:last').text("[After]\nNone.");
+                var cssstyle = {};
+                var currentInt = window.mouseY + 10,
+                    positionY;
+                if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
+                    cssstyle['bottom'] = 0;
+                    cssstyle['top'] = "";
+                } else {
+                    cssstyle['bottom'] = "";
+                    cssstyle['top'] = currentInt;
+                }
+                currentInt = window.mouseX + 5;
+                if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
+                    cssstyle['left'] = "";
+                    cssstyle['right'] = 0;
+                } else {
+                    cssstyle['right'] = "";
+                    cssstyle['left'] = currentInt;
+                }
+
+                elem.css(cssstyle);
                 elem.stop(false, true).fadeIn('fast');
-                obj.mousemove(function() {
-                    elem.css({ 'top': Math.min(window.mouseY + 10, $(document).height() - elem.outerHeight(true)), 'left': window.mouseX + 5 });
-                });
             }
         }
+    }).mousemove(function() {
+        var elem = $('div#tooltip');
+        var cssstyle = {};
+        var currentInt = window.mouseY + 10,
+            positionY;
+        if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
+            cssstyle['bottom'] = 0;
+            cssstyle['top'] = "";
+        } else {
+            cssstyle['bottom'] = "";
+            cssstyle['top'] = currentInt;
+        }
+        currentInt = window.mouseX + 5;
+        if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
+            cssstyle['left'] = "";
+            cssstyle['right'] = 0;
+        } else {
+            cssstyle['right'] = "";
+            cssstyle['left'] = currentInt;
+        }
+
+        elem.css(cssstyle);
     }).mouseout(function() {
         $('div#tooltip').stop(false, true).fadeOut('fast');
     });
@@ -284,7 +402,7 @@ function ShowDangerDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-warning',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (yesCallback)
+                if (typeof yesCallback === "function")
                     yesCallback();
             }
         }, {
@@ -292,8 +410,25 @@ function ShowDangerDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-primary',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (noCallback)
+                if (typeof noCallback === "function")
                     noCallback();
+            }
+        }]
+    });
+}
+
+function ShowMessageDialog(jquery_format_msg, okayCallback) {
+    BootstrapDialog.show({
+        title: 'Notice',
+        message: jquery_format_msg,
+        cssClass: 'bootstrap3-dialog',
+        buttons: [{
+            label: 'OK',
+            cssClass: 'btn btn-primary',
+            action: function(dialogItself) {
+                dialogItself.close();
+                if (typeof okayCallback === "function")
+                    okayCallback();
             }
         }]
     });
@@ -309,7 +444,7 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-primary',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (yesCallback)
+                if (typeof yesCallback === "function")
                     yesCallback();
             }
         }, {
@@ -317,7 +452,7 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
             cssClass: 'btn btn-default',
             action: function(dialogItself) {
                 dialogItself.close();
-                if (noCallback)
+                if (typeof noCallback === "function")
                     noCallback();
             }
         }]
@@ -325,6 +460,7 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
 }
 
 $(function() {
+    $('div#sakura').sakura();
     SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").addClass("bootstrap3-dialog").change(function() {
         window.SkillCore.SetLevel($(this).val());
@@ -333,10 +469,10 @@ $(function() {
         selecting.append($("<option>").val(i).text(i));
     $("#levelBoxtd").append(selecting);
     //selecting.insertAfter($("#levelBoxtd"));
-    var clevel = GetUrlParam("lv", 55);
-    if (clevel == 55) clevel = GetUrlParam("level", 55);
+    var clevel = GetUrlParam("lv", 60);
+    if (clevel == 60) clevel = GetUrlParam("level", 60);
     if (isNaN(clevel))
-        clevel = 55;
+        clevel = 60;
     selecting.val(clevel);
     selecting.trigger("change");
     //window.SkillCore.SetLevelFromElement();
@@ -345,15 +481,27 @@ $(function() {
     $("#copyURL").click(function() {
         var link = window.SkillCore.GenerateLink(false);
         if (link) {
-            copyLink(link);
-            shownotify("The link to this skill tree has been copied to clipboard.", 'success');
+            if (copyLink(link))
+                window.shownotify("The link to this skill tree has been copied to clipboard.", 'success');
+            else {
+                var divthingie = $("<div>");
+                divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
+                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(link).click(function() { $(this).select(); }));
+                window.ShowMessageDialog(divthingie);
+            }
         }
     });
     $("#copyShortURL").click(function() {
         var link = window.SkillCore.GenerateLink(true);
         if (link) {
-            copyLink(link);
-            shownotify("The link to this skill tree has been copied to clipboard.<br/>This short link may break if the skill tree has breaking changes in the future.", 'success');
+            if (copyLink(link))
+                window.shownotify("The link to this skill tree has been copied to clipboard.<br/>This short link may break if the skill tree has breaking changes in the future.", 'success');
+            else {
+                var divthingie = $("<div>");
+                divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
+                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(link).click(function() { $(this).select(); }));
+                window.ShowMessageDialog(divthingie);
+            }
         }
     });
     $("#resetAllSkill").click(function() {
@@ -362,5 +510,7 @@ $(function() {
         });
     });
 
-    window.SkillCore.ReadTree();
+    window.SkillCore.ReadTree(function() {
+        RemoveLoading($("body"));
+    });
 });

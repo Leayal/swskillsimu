@@ -7,7 +7,7 @@ li.titletablelike {
 li.tablelike {
     float: left;
     display: block;
-    width: 155px;
+    width: 120px;
     height: 88px;
     margin: 7px;
 }
@@ -15,9 +15,8 @@ li.tablelike {
 div.skillinfopanel {
     position: relative;
     border: 1px solid black;
-    width: 155px;
-    height: 92px;
-    background-color: rgba(0, 0, 0, 0.2)
+    width: 120px;
+    height: 88px;
     /*display: inline-block;
     margin-right: 20px;
     margin-bottom: 20px;//*/
@@ -25,62 +24,59 @@ div.skillinfopanel {
 
 img.skillIcon {
     position: absolute;
-    left: 50%;
+    left: 5px;
     top: 5px;
     width: 50px;
     height: 50px;
-    transform: translateX(-50%);
-}
-
-button.skillup {
-    cursor: default;
-    position: absolute;
-    height: 15px;
-    width: 10px;
-    top: 5px;
-    left: 100px;
-    margin: 0;
 }
 
 li.activeskill {
     float: left;
     display: block;
-    width: 570px;
+    width: 430px;
 }
 
 ul.tableactiveskill {
-    width: 570px;
+    width: 442px;
     list-style: none outside none;
 }
 
 li.passiveskill {
     float: left;
     display: block;
-    width: 390px;
+    width: 310px;
 }
 
 ul.tablepassiveskill {
     float: right;
-    width: 390px;
+    width: 308px;
     list-style: none outside none;
+}
+
+button.skillup {
+    position: absolute;
+    height: 8px;
+    width: 59px;
+    top: 72px;
+    left: 0px;
+    margin: 0;
 }
 
 button.skilldown {
     cursor: default;
     position: absolute;
-    height: 15px;
-    width: 10px;
-    top: 20px;
-    left: 100px;
+    height: 8px;
+    width: 59px;
+    top: 72px;
+    left: 59px;
     margin: 0;
 }
 
 p.skillLevel {
     font-size: 13px;
     position: absolute;
-    left: 50%;
+    left: 20px;
     top: 56px;
-    transform: translateX(-50%);
 }
 
 p.skillName {
@@ -90,20 +86,12 @@ p.skillName {
     top: 56px;
 }
 
-div.extension1infopanel {
+div.extensioninfopanel {
     position: absolute;
     width: 54px;
     height: auto;
-    left: -1px;
-    top: 60px;
-}
-
-div.extension2infopanel {
-    position: absolute;
-    width: 54px;
-    height: auto;
-    left: 89px;
-    top: 60px;
+    left: 65px;
+    top: -1px;
 }
 
 div.skillExinfopanel {

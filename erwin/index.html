@@ -12,21 +12,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/bootstrap-dialog.min.css" />
     <link rel="stylesheet" href="../../css/styles.css?v=2" />
-    <link rel="stylesheet" href="../../css/jp.css?v=2" />
-    <script src="../../js/common.js"></script>
-    <script src="../../js/skilltreefunctions.js"></script>
-    <script src="../../js/skillinfos.js"></script>
-    <script src="../../js/skilltree.js"></script>
-    <script src="../../js/imagesLoaded.js"></script>
-    <script src="../../js/bootstrap-notify.min.js"></script>
-    <script src="../../js/bootstrap-dialog.min.js"></script>
-    <script src="../../js/clipboard.min.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=1" />
-    <link rel="icon" type="image/png" href="../../favicon-32x32.png?v=1" sizes="32x32" />
-    <link rel="icon" type="image/png" href="../../favicon-16x16.png?v=1" sizes="16x16" />
-    <link rel="manifest" href="../../manifest.json?v=2" />
-    <link rel="mask-icon" href="../../safari-pinned-tab.svg?v=1" color="#5bbad5" />
-    <link rel="shortcut icon" href="../../favicon.ico?v=1" />
+    <link rel="stylesheet" href="../../css/kr.css?v=2" />
+    <link rel="stylesheet" href="../sakura/jquery-sakura.min.css" />
+    <script src="../sakura/jquery-sakura.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/skilltreefunctions.js"></script>
+    <script src="../js/skillinfos.js"></script>
+    <script src="../js/skilltree.js"></script>
+    <script src="../js/imagesLoaded.js"></script>
+    <script src="../js/bootstrap-notify.min.js"></script>
+    <script src="../js/bootstrap-dialog.min.js"></script>
+    <script src="../js/clipboard.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=1" />
+    <link rel="icon" type="image/png" href="../favicon-32x32.png?v=1" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicon-16x16.png?v=1" sizes="16x16" />
+    <link rel="manifest" href="../manifest.json?v=2" />
+    <link rel="mask-icon" href="../safari-pinned-tab.svg?v=1" color="#5bbad5" />
+    <link rel="shortcut icon" href="../favicon.ico?v=1" />
     <meta property="og:title" content="SoulWorker Skill Simulator" />
     <meta property="og:description" content="SoulWorker Skill Simulator" />
     <meta property="og:image" content="http://i.imgur.com/rb71id8.png" />
@@ -56,7 +58,7 @@
 </head>
 
 <body>
-    <div class="bganim"></div>
+    <div id="sakura" class="sakurabg1 bg-image"></div>
     <div class="minsize">
         <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
@@ -70,10 +72,9 @@
                     <li> <a href="../jin">Jin Seipatsu</a> </li>
                     <li> <a href="../iris">Iris Yuma</a> </li>
                     <li class="divider"></li>
-                    <li>
-                        <a id="morecharacterinfo"></a>
-                    </li>
-                    <li> <a href="../..">Home</a> </li>
+                    <li> <a id="morecharacterinfo">More info</a> </li>
+                    <li> <a id="morecharacterinfo">More info</a> </li>
+                    <li> <a href="..">Home</a> </li>
                 </ul>
                 </span>
             </div>

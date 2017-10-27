@@ -5,15 +5,17 @@
     <meta charset="utf-8" />
     <title>SoulWorker Skill simulator</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <script src="jquery-3.2.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="animate.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-switch.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="sakura/jquery-sakura.min.css" />
-    <link rel="stylesheet" href="home.styles.css" />
-    <script src="common.js"></script>
-    <script src="imagesLoaded.js"></script>
+    <link rel="stylesheet" href="css/home.styles.css" />
+    <script src="js/bootstrap-switch.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/imagesLoaded.js"></script>
     <script src="sakura/jquery-sakura.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
     <link rel="icon" type="image/png" href="favicon-32x32.png?v=1" sizes="32x32">
@@ -50,7 +52,7 @@
 </head>
 
 <body>
-    <div id="sakura"></div>
+    <div id="sakura" class="sakurabg1"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -72,33 +74,30 @@
                 <h2 class="text-center">Please select the character</h2>
             </div>
             <div class="col-md-2">
-                <img href="haru" alt="Haru Estia" src="images/HaruSelect.png" class="center-block characterselect" />
+                <a character="haru"><img alt="Haru Estia" src="images/HaruSelect.png" class="center-block characterimage" /></a>
             </div>
             <div class="col-md-2">
-                <img href="erwin" alt="Erwin Arclight" src="images/ErwinSelect.png" class="center-block characterselect" />
+                <a character="erwin"><img alt="Erwin Arclight" src="images/ErwinSelect.png" class="center-block characterimage" /></a>
             </div>
             <div class="col-md-2">
-                <img href="lily" alt="Lily Bloomerchen" src="images/LilySelect.png" class="center-block characterselect" />
+                <a character="lily"><img alt="Lily Bloomerchen" src="images/LilySelect.png" class="center-block characterimage" /></a>
             </div>
             <div class="col-md-2">
-                <img href="stella" alt="Stella Unibell" src="images/StellaSelect.png" class="center-block characterselect" />
+                <a character="stella"><img alt="Stella Unibell" src="images/StellaSelect.png" class="center-block characterimage" /></a>
             </div>
             <div class="col-md-2">
-                <img href="jin" alt="Jin Seipatsu" src="images/JinSelect.png" class="center-block characterselect" />
+                <a character="jin"><img alt="Jin Seipatsu" src="images/JinSelect.png" class="center-block characterimage" /></a>
             </div>
             <div class="col-md-2">
-                <img href="iris" alt="Iris Yuma" src="images/IrisSelect.png" class="center-block characterselect" />
+                <a character="iris"><img alt="Iris Yuma" src="images/IrisSelect.png" class="center-block characterimage" /></a>
             </div>
         </div>
     </div>
     <script>
         $(function() {
             $('div#sakura').sakura();
-            $('img.characterselect').click(function() {
-                var url = $(this).attr('href');
-                if (url) {
-                    window.location.href = url;
-                }
+            $("[character]").each(function(index) {
+                $(this).attr("href", $(this).attr("character"))
             });
         });
     </script>

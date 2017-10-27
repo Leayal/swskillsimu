@@ -52,7 +52,7 @@
 </head>
 
 <body>
-    <div id="sakura"></div>
+    <div id="sakura" class="sakurabg1"></div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -70,14 +70,6 @@
             </div>
         </div>
         <div class="row whitetext">
-            <div class="col-md-12">
-                <h2 class="text-center">Please select region</h2>
-            </div>
-            <div class="col-md-12">
-                <div style="align-content: center; text-align: center">
-                    <input type="checkbox" id="regionselector" data-indeterminate="true" data-on-color="primary" data-off-color="success" data-off-text="Japan" data-on-text="Korea" data-label-text="Click to switch">
-                </div>
-            </div>
             <div class="col-md-12">
                 <h2 class="text-center">Please select the character</h2>
             </div>
@@ -104,17 +96,9 @@
     <script>
         $(function() {
             $('div#sakura').sakura();
-            $("#regionselector").bootstrapSwitch().on('switchChange.bootstrapSwitch', function(event, state) {
-                if (!state) {
-                    $("[character]").each(function(index) {
-                        $(this).attr("href", "jp/" + $(this).attr("character"))
-                    });
-                } else {
-                    $("[character]").each(function(index) {
-                        $(this).attr("href", "kr/" + $(this).attr("character"))
-                    });
-                }
-            }).bootstrapSwitch('state', true);
+            $("[character]").each(function(index) {
+                $(this).attr("href", $(this).attr("character"))
+            });
         });
     </script>
 </body>

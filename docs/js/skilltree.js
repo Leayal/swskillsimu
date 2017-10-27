@@ -1,4 +1,4 @@
-SkillTreeCore.prototype.ReadTree = function() {
+SkillTreeCore.prototype.ReadTree = function(loadedCallback) {
     this.SkillList = {};
     this.ActiveSkillList = {};
     this.PassiveSkillList = {};
@@ -22,17 +22,16 @@ SkillTreeCore.prototype.ReadTree = function() {
                 $("#morecharacterinfo").remove();
             //$("li#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
             window.document.title = "Skill Simulator - " + json.CharacterName;
-
-            // This for-in looks dirty but it's safe for now. Because the JSON doesn't inherit from anything.
-            for (var ssk in json.Skills) {
-                window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
-                if (get = window.SkillCore.SkillList[ssk].IsPassive)
-                    window.SkillCore.PassiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
-                else
-                    window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk]
-            };
+            for (var ssk in json.Skills)
+                if (json.Skills.hasOwnProperty(ssk)) {
+                    window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
+                    if (get = window.SkillCore.SkillList[ssk].IsPassive)
+                        window.SkillCore.PassiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
+                    else
+                        window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk]
+                };
             window.SkillCore.SkillCount = Object.keys(window.SkillCore.SkillList).length;
-            window.SkillCore.RenderTree();
+            window.SkillCore.RenderTree(loadedCallback);
         }
     });
 }
@@ -41,7 +40,7 @@ SkillTreeCore.prototype.GetSkill = function(id) {
     return this.SkillList[id];
 }
 
-SkillTreeCore.prototype.RenderTree = function() {
+SkillTreeCore.prototype.RenderTree = function(loadedCallback) {
     var eTree = $("li#activeskill");
     if (eTree) {
         var activeRow = $("<ul>").addClass("tableactiveskill");
@@ -90,17 +89,12 @@ SkillTreeCore.prototype.RenderTree = function() {
             if (passiveRow)
                 eTree.append(passiveRow);
     }
-}
 
-function imagesLoadedCallback(element) {
-    window.SkillCore.loadedSkillCount++;
-    if (window.SkillCore.SkillCount == window.SkillCore.loadedSkillCount) {
-        //Finished Everything
-        RemoveLoading($("body"));
+    if (typeof loadedCallback === "function") {
+        $("#skilltree").imagesLoaded().always(function() {
+            loadedCallback();
+        });
     }
-    //LoadtheSharedLinkHere
-    //var currentskill = window.SkillCore.GetSkill(element.attr("insight"));
-    //currentskill.SetCurrentSkillLevel(GetUrlParam(element.attr("insight"), get = currentskill.GetDefaultLevel));
 }
 
 SkillInfo.prototype.GetSkillPanel = function(ex) {
@@ -110,11 +104,9 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         skillInfoPanel.attr("insight", this._id);
         skillInfoPanel.css({ 'top': '' });
         var img = $("<img>").addClass("skillExIcon").attr("insight", this._id).attr("src", get = this.IconURL);
-        skillInfoPanel.append(img.imagesLoaded(function() {
-            imagesLoadedCallback(img);
-        }));
+        skillInfoPanel.append(img);
         SetToolTip(img);
-        var mybutton = $("<button skillup type=\"button\" class=\"btn-success skillexup\" insight=\"" + this._id + "\">");
+        var mybutton = $("<button type=\"button\" class=\"btn-success skillexup\" insight=\"" + this._id + "\">").attr("skillup", "1");
         if (this._currentskilllevel === this._skillmaxlevel)
             mybutton.addClass("disabled");
         SetToolTipUp(mybutton);
@@ -124,7 +116,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
                 $(this).trigger("mouseover");
             }
         }));
-        mybutton = $("<button skilldown type=\"button\" class=\"btn-danger skillexdown\" insight=\"" + this._id + "\">");
+        mybutton = $("<button type=\"button\" class=\"btn-danger skillexdown\" insight=\"" + this._id + "\">").attr("skilldown", "1");
         if (this._currentskilllevel === this._defaultLevel)
             mybutton.addClass("disabled");
         SetToolTipDown(mybutton);
@@ -148,11 +140,9 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         var skillInfoPanel = $("<div>").addClass("skillinfopanel").addClass("fadeinAppear");
         skillInfoPanel.attr("insight", this._id);
         var img = $("<img>").addClass("skillIcon").attr("insight", this._id).attr("src", get = this.IconURL);
-        skillInfoPanel.append(img.imagesLoaded(function() {
-            imagesLoadedCallback(img);
-        }));
+        skillInfoPanel.append(img);
         SetToolTip(img);
-        var mybutton = $("<button skillup type=\"button\" class=\"btn btn-success skillup\" insight=\"" + this._id + "\">");
+        var mybutton = $("<button type=\"button\" class=\"btn btn-success skillup\" insight=\"" + this._id + "\">").attr("skillup", "1");
         if (this._currentskilllevel === this._skillmaxlevel)
             mybutton.addClass("disabled");
         SetToolTipUp(mybutton);
@@ -160,7 +150,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
             window.SkillCore.GetSkill($(this).attr("insight")).SkillUp();
             $(this).trigger("mouseover");
         }));
-        mybutton = $("<button skilldown type=\"button\" class=\"btn btn-danger skilldown\" insight=\"" + this._id + "\">");
+        mybutton = $("<button type=\"button\" class=\"btn btn-danger skilldown\" insight=\"" + this._id + "\">").attr("skilldown", "1");
         if (this._currentskilllevel === this._defaultLevel)
             mybutton.addClass("disabled");
         SetToolTipDown(mybutton);
@@ -174,9 +164,11 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         //Set Skill Extensions
         var exts = get = this.Extensions;
         if (exts !== undefined && Object.keys(exts).length > 0) {
-            var extensionPanel = $('<div>').addClass('extensioninfopanel');
-            var extItem, foundExt = false;
+            var extItem, foundExt = false,
+                extIndex = 0;
             for (var sle in exts) {
+                extIndex++;
+                var extensionPanel = $('<div>').addClass("extension" + extIndex + "infopanel");
                 extItem = window.SkillCore.GetSkill(sle);
                 extItem.GetSkillPanel(true).appendTo(extensionPanel);
                 if (this._currentskilllevel < this._skillmaxlevel)
@@ -188,12 +180,12 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
                     } else
                         extItem.Disabled(true);
                 }
+                extensionPanel.appendTo(skillInfoPanel);
                 //extItem.GetSkillPanel(true).children().addClass("disabled");
             }
             if (!foundExt && (this._currentskilllevel == this._skillmaxlevel))
                 for (var sle in exts)
                     window.SkillCore.GetSkill(sle).Disabled(false);
-            extensionPanel.appendTo(skillInfoPanel);
         }
         this.Panel = skillInfoPanel;
     }
@@ -206,16 +198,16 @@ SkillInfo.prototype.Disabled = function(bool) {
         var hohoho = this.GetSkillPanel();
         if (!hohoho.hasClass("disabled"))
             hohoho.addClass("disabled");
-        hohoho.children("button[skilldown]:not(.disabled)").addClass("disabled");
-        hohoho.children("button[skillup]:not(.disabled)").addClass("disabled");
-        hohoho.children("img:not(.disabled)").addClass("disabled");
+        hohoho.find("button[skilldown]:not(.disabled)").addClass("disabled");
+        hohoho.find("button[skillup]:not(.disabled)").addClass("disabled");
+        hohoho.find("img:not(.disabled)").addClass("disabled");
     } else {
         var hohoho = this.GetSkillPanel();
         if (hohoho.hasClass("disabled"))
             hohoho.removeClass("disabled");
-        hohoho.children("img.disabled").removeClass("disabled");
-        hohoho.children("button.disabled[skilldown]").removeClass("disabled");
-        hohoho.children("button.disabled[skillup]").removeClass("disabled");
+        hohoho.find("img.disabled").removeClass("disabled");
+        hohoho.find("button.disabled[skilldown]").removeClass("disabled");
+        hohoho.find("button.disabled[skillup]").removeClass("disabled");
     }
 }
 
