@@ -98,8 +98,8 @@ function removefilename(str) {
 }
 
 $(function() {
-    if (Clipboard.isSupported()) {
-        try {
+    try {
+        if (Clipboard.isSupported()) {
             var clipboard = new Clipboard(".btncopymagicclass");
             window.clipboardsupport = true;
             clipboard.on('success', function(e) {
@@ -111,10 +111,10 @@ $(function() {
                 divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(e.text).click(function() { $(this).select(); }));
                 window.ShowMessageDialog(divthingie);
             });
-        } catch (error) {
+        } else {
             window.clipboardsupport = false;
         }
-    } else {
+    } catch (error) {
         window.clipboardsupport = false;
     }
 });
