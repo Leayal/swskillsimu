@@ -618,7 +618,10 @@
                     "RequiredLevel": 41,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "FlashStep-HeavyAttack"
+            ]
         },
         "CrossStrike": {
             "Name": "Cross Strike",
