@@ -894,7 +894,7 @@
         },
         "SlashingWarfare": {
             "Name": "Slashing Warfare",
-            "ID": 26,
+            "ID": 27,
             "Icon": "../skillicons/Icon_Ssword_Skill_Warfare.png",
             "Levels": {
                 "0": {
