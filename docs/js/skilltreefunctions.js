@@ -29,22 +29,25 @@ class SkillTreeCore {
             $("#e_remainingSP").addClass("alertlow");
         else
             $("#e_remainingSP").removeClass("alertlow");
-        $("#e_investedSP").text("Invested SP: " + this._investedsp);
-        $("#e_remainingSP").text("Remaining SP: " + this._spleft);
+        $("#e_investedSP").text("Invested SP: " + this._investedsp + "/" + this._totalsp);
+        $("#e_remainingSP").text("Remaining SP: " + this._spleft + "/" + this._totalsp);
+        $("#spusageinfo").html(this.GenerateUsageInfo());
     }
 
     UpdateAllSPs() {
-        $("#e_totalSP").text("Total SP: " + this._totalsp);
-        $("#e_investedSP").text("Invested SP: " + this._investedsp);
+        $("#e_investedSP").text("Invested SP: " + this._investedsp + "/" + this._totalsp);
         if (this.CheckAllSkills()) {
             this._spleft = this._totalsp - this._investedsp;
-            $("#e_remainingSP").text("Remaining SP: " + this._spleft);
+            $("#e_remainingSP").text("Remaining SP: " + this._spleft + "/" + this._totalsp);
             this.CheckAllSkills();
             if (this._spleft < 5)
                 $("#e_remainingSP").addClass("alertlow");
             else
                 $("#e_remainingSP").removeClass("alertlow");
         }
+
+        // Foward event here
+        $("#spusageinfo").html(this.GenerateUsageInfo());
     }
 
     UnlearnAllSkills() {
@@ -155,6 +158,40 @@ class SkillTreeCore {
         if (param)
             link = link + "?" + param;
         return link;
+    }
+
+    GenerateUsageInfo() {
+        var arrayString = {};
+
+        var parent_target, usedsp_target;
+        for (var skillid in this.SkillList)
+            if (this.SkillList.hasOwnProperty(skillid)) {
+                var levelasd = (get = this.SkillList[skillid].CurrentSkillLevel);
+                if (levelasd != (get = this.SkillList[skillid].GetDefaultLevel)) {
+                    usedsp_target = this.SkillList[skillid].GetSPUsed();
+                    parent_target = (get = this.SkillList[skillid].Parent);
+                    if (usedsp_target != 0)
+                        if (!parent_target) {
+                            arrayString[skillid] = (get = this.SkillList[skillid].Name) + ": " + usedsp_target + "SP";
+                        } else {
+                            arrayString[get = parent_target.ID] += " + " + usedsp_target + "SP";
+                        }
+                }
+            }
+
+        var result = "",
+            firstappend = true;
+        if (Object.keys(arrayString).length > 0)
+            for (var skillid in arrayString)
+                if (arrayString.hasOwnProperty(skillid)) {
+                    if (firstappend) {
+                        result += arrayString[skillid];
+                        firstappend = false;
+                    } else
+                        result += ("<br>" + arrayString[skillid]);
+                }
+
+        return result;
     }
 }
 
@@ -479,29 +516,9 @@ $(function() {
     $("#charList li a[href]")
     $('a[href^="../' + GetCurrentFolderUrl() + '"]').parent().closest('li').remove();
     $("#copyURL").click(function() {
-        var link = window.SkillCore.GenerateLink(false);
-        if (link) {
-            if (copyLink(link))
-                window.shownotify("The link to this skill tree has been copied to clipboard.", 'success');
-            else {
-                var divthingie = $("<div>");
-                divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
-                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(link).click(function() { $(this).select(); }));
-                window.ShowMessageDialog(divthingie);
-            }
-        }
-    });
-    $("#copyShortURL").click(function() {
         var link = window.SkillCore.GenerateLink(true);
         if (link) {
-            if (copyLink(link))
-                window.shownotify("The link to this skill tree has been copied to clipboard.<br/>This short link may break if the skill tree has breaking changes in the future.", 'success');
-            else {
-                var divthingie = $("<div>");
-                divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
-                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(link).click(function() { $(this).select(); }));
-                window.ShowMessageDialog(divthingie);
-            }
+            copyLink(link);
         }
     });
     $("#resetAllSkill").click(function() {

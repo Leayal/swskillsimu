@@ -35,8 +35,13 @@ function copyLink(_url) {
         asdButton.trigger("click");
         asdDiv.remove();
         return true;
-    } else
+    } else {
+        var divthingie = $("<div>");
+        divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
+        divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(_url).click(function() { $(this).select(); }));
+        window.ShowMessageDialog(divthingie);
         return false;
+    }
 }
 
 function SetLoading(target) {
@@ -93,10 +98,23 @@ function removefilename(str) {
 }
 
 $(function() {
-    try {
-        new Clipboard(".btncopymagicclass");
-        window.clipboardsupport = true;
-    } catch (error) {
+    if (Clipboard.isSupported()) {
+        try {
+            var clipboard = new Clipboard(".btncopymagicclass");
+            window.clipboardsupport = true;
+            clipboard.on('success', function(e) {
+                window.shownotify("The link to this skill tree has been copied to clipboard.", 'success');
+            });
+            clipboard.on('error', function(e) {
+                var divthingie = $("<div>");
+                divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
+                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(e.text).click(function() { $(this).select(); }));
+                window.ShowMessageDialog(divthingie);
+            });
+        } catch (error) {
+            window.clipboardsupport = false;
+        }
+    } else {
         window.clipboardsupport = false;
     }
 });

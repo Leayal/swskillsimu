@@ -9,6 +9,7 @@ class SkillInfo {
         this._passive = false;
         this._parent = null;
         this._visible = true;
+        this._spused = 0;
         this.readInfos(infos);
     }
 
@@ -21,6 +22,7 @@ class SkillInfo {
     get Name() { return this._name; }
     get AvailableLevel() { return this._availablelevel; }
     GetAvailableLevel() { return this._availablelevel; }
+    GetSPUsed() { return this._spused; }
     get CurrentSkillLevel() { return this._currentskilllevel; }
     get MaxLevel() { return this._skillmaxlevel; }
     CurrentLevelInfo() { return this.Levels[this._currentskilllevel]; }
@@ -53,7 +55,7 @@ class SkillInfo {
         if (this._availablelevel > window.SkillCore.GetCurrentLevel())
             this.SetCurrentSkillLevel(0);
         else
-            this.SetCurrentSkillLevel(Math.max(0, this._defaultLevel));
+            this.ToDefaultLevel();
     }
 
     ToDefaultLevel() {

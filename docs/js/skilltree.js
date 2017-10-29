@@ -265,6 +265,7 @@ SkillInfo.prototype.SkillUp = function() {
             return;
         }
         this._currentskilllevel++;
+        this._spused += reqSP;
         window.SkillCore.InvestedSPIncrease(reqSP);
         this.UpdateSkill();
     }
@@ -277,7 +278,9 @@ SkillInfo.prototype.SkillDown = function() {
             shownotify("Can not go lower than skill's default level.", 'warning');
             return;
         }
-        window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
+        var reqSP = get = this.CurrentLevelInfo().RequiredSP;
+        this._spused -= reqSP;
+        window.SkillCore.InvestedSPDecrease(reqSP);
         this._currentskilllevel--;
         this.UpdateSkill();
     }
