@@ -497,7 +497,8 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
 }
 
 $(function() {
-    $('div#sakura').sakura();
+    // $('div#sakura').sakura();
+
     SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").addClass("bootstrap3-dialog").change(function() {
         window.SkillCore.SetLevel($(this).val());

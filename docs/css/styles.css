@@ -181,6 +181,13 @@ div.bganim {
     display: inline-block;
 }
 
+.fixed-bg {
+    top: 0px;
+    left: 0px;
+    z-index: -1000;
+    position: fixed;
+}
+
 .image-bg {
     background-color: rgb(17, 17, 17);
     background-image: url('../images/bg.jpg');
