@@ -1245,7 +1245,7 @@
             "Icon": "../skillicons/Icon_Ssword_Skill_SGPassive2.png",
             "Levels": {
                 "0": {
-                    "Description": "After every 20th combo hit, gain additional attack power for 10 seconds. Stacks up to 5 times.",
+                    "Description": "After every 20th combo hit, gain additional attack power for 10 seconds.\nStacks up to 5 times.",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
