@@ -740,12 +740,21 @@ function render() {
 
 var animating = true;
 
-function toggleAnimation(elm) {
+function toggleAnimation() {
     animating ^= true;
     if (animating) animate();
-    if (elm) {
-        elm.innerHTML = animating ? "Stop" : "Start";
-    }
+    return animating;
+}
+
+function playAnimation() {
+    if (animating) return;
+    animating = true;
+    animate();
+}
+
+function stopAnimation() {
+    if (!animating) return;
+    animating = false;
 }
 
 function stepAnimation() {
@@ -758,7 +767,13 @@ function animate() {
     timeInfo.delta = (curdate - timeInfo.prev) / 1000.0;
     timeInfo.prev = curdate;
 
-    if (animating) requestAnimationFrame(animate);
+    if (animating) {
+        /*
+        Limit fps to 60 (1 second = 1000 miliseconds)
+        1 second has 60 frames: total miliseconds / total frames = frame delay
+        */
+        window.setTimeout(animate, 1000 / 60);
+    }
     render();
 }
 
@@ -775,7 +790,7 @@ $(function() {
     var canvas = document.getElementById("sakura");
     try {
         makeCanvasFullScreen(canvas);
-        gl = canvas.getContext('experimental-webgl', { alpha: true, premultipliedAlpha: true });
+        gl = canvas.getContext('experimental-webgl');
     } catch (e) {
         alert("WebGL not supported." + e);
         console.error(e);
@@ -792,8 +807,3 @@ $(function() {
     timeInfo.prev = timeInfo.start;
     animate();
 });
-
-//set window.requestAnimationFrame
-(function(w, r) {
-    w['r' + r] = w['r' + r] || w['webkitR' + r] || w['mozR' + r] || w['msR' + r] || w['oR' + r] || function(c) { w.setTimeout(c, 1000 / 60); };
-})(window, 'requestAnimationFrame');
