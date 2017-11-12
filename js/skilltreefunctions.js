@@ -497,8 +497,12 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
 }
 
 $(function() {
-    // $('div#sakura').sakura();
-
+    $('div#sakura').sakura('start', {
+        fallSpeed: 1.2,
+        maxSize: 14, // Maximum petal size
+        minSize: 4, // Minimum petal size
+        newOn: 1500, // Interval after which a new petal is added
+    });
     SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").addClass("bootstrap3-dialog").change(function() {
         window.SkillCore.SetLevel($(this).val());
