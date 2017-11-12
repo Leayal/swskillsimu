@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../sakura/jquery-sakura.min.css" />
     <link rel="stylesheet" href="../css/bootstrap-dialog.min.css" />
     <link rel="stylesheet" href="../css/styles.css?v=3" />
     <link rel="stylesheet" href="../css/kr.css?v=3" />
+    <script src="../sakura/jquery-sakura.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/skilltreefunctions.js"></script>
     <script src="../js/skillinfos.js"></script>
@@ -51,13 +53,12 @@
 </head>
 
 <body>
-    <!--<div id="sakura" class="sakurabg1 image-bg"></div>-->
-    <canvas id="sakura" class="fixed-bg"></canvas>
+    <div id="sakura" class="fixed-bg image-bg"></div>
     <div class="minsize">
         <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
                 <span class="navbar-brand">
-                        <a class="dropdown-toggle" data-toggle="dropdown"><span id="charName"></span><strong class="caret"></strong></a>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><span id="charName"></span><strong class="caret"></strong></a>
                 <ul id="charList" class="dropdown-menu">
                     <li> <a href="../haru">Haru Estia</a> </li>
                     <li> <a href="../erwin">Erwin Arclight</a> </li>
@@ -109,9 +110,6 @@
         <br/>
         <pre class="tooltipcontent"></pre>
     </div>
-
-    <script src="../sakura/shader.js"></script>
-    <script type="text/javascript" src="../sakura/sakura-webgl.js"></script>
 </body>
 
 </html>
