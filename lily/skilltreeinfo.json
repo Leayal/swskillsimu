@@ -829,47 +829,9 @@
                 }
             }
         },
-        "FuryScythe": {
-            "Name": "Fury Scythe",
-            "ID": 25,
-            "Icon": "../skillicons/Icon_Mcythe_Skill_Furymach.png",
-            "Levels": {
-                "0": {
-                    "Description": "Joining the sickle and the scissors and do a lash rush in the front.\nIt attacks enemies and moves forward by operation.\n\n[1] Left click: Cuts forward enemies and makes short rush.\n\n[2] Right click: It moves quickly towards the front.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "Damage: 2000%\nSA Damage: 2130%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 375%\nSA Damage: 399%",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "Damage: 2200%\nSA Damage: 2236%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 412%\nSA Damage: 419%",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "Damage: 2464%\nSA Damage: 2438%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 462%\nSA Damage: 457%",
-                    "RequiredLevel": 58,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "Damage: 2808%\nSA Damage: 2730%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 526%\nSA Damage: 511%",
-                    "RequiredLevel": 59,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "Damage: 3314%\nSA Damage: 3140%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 621%\nSA Damage: 588%",
-                    "RequiredLevel": 60,
-                    "RequiredSP": 3
-                }
-            }
-        },
         "BloodyBlossom": {
             "Name": "Bloody Blossom",
-            "ID": 26,
+            "ID": 25,
             "Icon": "../skillicons/Icon_Mcythe_Skill_BloodyBlossom.png",
             "Levels": {
                 "0": {
@@ -900,6 +862,44 @@
                 },
                 "5": {
                     "Effect": "Damage: 1247%\nSA Damage: 708%\nSG Cost: 30\nCooldown: 28s",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "FuryScythe": {
+            "Name": "Fury Scythe",
+            "ID": 26,
+            "Icon": "../skillicons/Icon_Mcythe_Skill_Furymach.png",
+            "Levels": {
+                "0": {
+                    "Description": "Joining the sickle and the scissors and do a lash rush in the front.\nIt attacks enemies and moves forward by operation.\n\n[1] Left click: Cuts forward enemies and makes short rush.\n\n[2] Right click: It moves quickly towards the front.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 2000%\nSA Damage: 2130%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 375%\nSA Damage: 399%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 2200%\nSA Damage: 2236%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 412%\nSA Damage: 419%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 2464%\nSA Damage: 2438%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 462%\nSA Damage: 457%",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Damage: 2808%\nSA Damage: 2730%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 526%\nSA Damage: 511%",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Damage: 3314%\nSA Damage: 3140%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 621%\nSA Damage: 588%",
                     "RequiredLevel": 60,
                     "RequiredSP": 3
                 }
