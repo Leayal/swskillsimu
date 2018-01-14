@@ -803,23 +803,23 @@
             "Icon": "../skillicons/Icon_Ssword_Skill_SpinAttack_A.png",
             "Levels": {
                 "0": {
-                    "Description": "",
+                    "Description": "Chase enemies after the spin cutter.",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "",
+                    "Effect": "Damage: 267%\nSA Damage: 138%",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "",
+                    "Effect": "Damage: 294%\nSA Damage: 152%",
                     "RequiredLevel": 58,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "",
+                    "Effect": "Damage: 347%\nSA Damage: 179%",
                     "RequiredLevel": 60,
                     "RequiredSP": 2
                 }
@@ -832,23 +832,23 @@
             "Icon": "../skillicons/Icon_Ssword_Skill_FlashStep_A.png",
             "Levels": {
                 "0": {
-                    "Description": "",
+                    "Description": "Attach the small sword to the big one and then throw it.",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "",
+                    "Effect": "Damage: 702%\nSA Damage: 907%",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "",
+                    "Effect": "Damage: 770%\nSA Damage: 1000%",
                     "RequiredLevel": 59,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "",
+                    "Effect": "Damage: 912%\nSA Damage: 1180%",
                     "RequiredLevel": 60,
                     "RequiredSP": 2
                 }
@@ -860,33 +860,33 @@
             "Icon": "../skillicons/Icon_Ssword_Skill_Swordsfall.png",
             "Levels": {
                 "0": {
-                    "Description": "",
+                    "Description": "Immediately land then generate a small sword rain on the area around Haru.",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "",
+                    "Effect": "Damage: 1678%\nSA Damage: 1721%\nSG Cost: 75\nCooldown: 45 seconds",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "",
+                    "Effect": "Damage: 1761%\nSA Damage: 1808%\nSG Cost: 75\nCooldown: 45 seconds",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "",
+                    "Effect": "Damage: 1971%\nSA Damage: 2023%\nSG Cost: 75\nCooldown: 45 seconds",
                     "RequiredLevel": 58,
                     "RequiredSP": 2
                 },
                 "4": {
-                    "Effect": "",
+                    "Effect": "Damage: 2181%\nSA Damage: 2238%\nSG Cost: 75\nCooldown: 45 seconds",
                     "RequiredLevel": 59,
                     "RequiredSP": 2
                 },
                 "5": {
-                    "Effect": "",
+                    "Effect": "Damage: 2517%\nSA Damage: 2582%\nSG Cost: 75\nCooldown: 45 seconds",
                     "RequiredLevel": 60,
                     "RequiredSP": 3
                 }
@@ -898,33 +898,33 @@
             "Icon": "../skillicons/Icon_Ssword_Skill_Warfare.png",
             "Levels": {
                 "0": {
-                    "Description": "",
+                    "Description": "After rushing to make two swords cross and attacking rushing, add a rotational attack towards the back and draw enemies.",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "",
+                    "Effect": "Damage: 320%\nSA Damage: 300%\nSG Cost: 30\nCooldown: 20 seconds",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "",
+                    "Effect": "Damage: 330%\nSA Damage: 315%\nSG Cost: 30\nCooldown: 20 seconds",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "",
+                    "Effect": "Damage: 368%\nSA Damage: 345%\nSG Cost: 30\nCooldown: 20 seconds",
                     "RequiredLevel": 58,
                     "RequiredSP": 2
                 },
                 "4": {
-                    "Effect": "",
+                    "Effect": "Damage: 416%\nSA Damage: 390%\nSG Cost: 30\nCooldown: 20 seconds",
                     "RequiredLevel": 59,
                     "RequiredSP": 2
                 },
                 "5": {
-                    "Effect": "",
+                    "Effect": "Damage: 480%\nSA Damage: 450%\nSG Cost: 30\nCooldown: 20 seconds",
                     "RequiredLevel": 60,
                     "RequiredSP": 3
                 }

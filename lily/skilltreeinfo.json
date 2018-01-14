@@ -39,7 +39,10 @@
                     "RequiredLevel": 13,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "EvilSlash-Kusarigama"
+            ]
         },
         "SpinningDevil": {
             "Name": "Spinning Devil",
@@ -765,10 +768,140 @@
                 }
             }
         },
-
-
-
-
+        "EvilSlash-Kusarigama": {
+            "Visible": false,
+            "Name": "Sickle and Chain",
+            "ID": 23,
+            "Icon": "../skillicons/Icon_Mcythe_Skill_EvilSlash_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "\u938C\u306E\u4EE3\u308F\u308A\u306B\u9396\u938C\u3092\u5229\u7528\u3057\u3066\u3001\u3088\u308A\u5E83\u3044\u7BC4\u56F2\u306E\u6575\u3092\u653B\u6483\u3057\u307E\u3059\u3002",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 384%\nSA Damage: 304%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 423%\nSA Damage: 335%",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 498%\nSA Damage: 394%",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "DeathScythe-Afterimage": {
+            "Visible": false,
+            "Name": "Afterimage",
+            "ID": 24,
+            "Icon": "../skillicons/Icon_Mcythe_Skill_DeathScythe_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "The afterimage of the death god rushes towards the enemy and attacks according to the attack action of Lily.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 628%\nSA Damage: 1168%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 710%\nSA Damage: 1198%",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 880%\nSA Damage: 1484%",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "FuryScythe": {
+            "Name": "Fury Scythe",
+            "ID": 25,
+            "Icon": "../skillicons/Icon_Mcythe_Skill_Furymach.png",
+            "Levels": {
+                "0": {
+                    "Description": "Joining the sickle and the scissors and do a lash rush in the front.\nIt attacks enemies and moves forward by operation.\n\n[1] Left click: Cuts forward enemies and makes short rush.\n\n[2] Right click: It moves quickly towards the front.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 2000%\nSA Damage: 2130%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 375%\nSA Damage: 399%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 2200%\nSA Damage: 2236%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 412%\nSA Damage: 419%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 2464%\nSA Damage: 2438%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 462%\nSA Damage: 457%",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Damage: 2808%\nSA Damage: 2730%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 526%\nSA Damage: 511%",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Damage: 3314%\nSA Damage: 3140%\nSG Cost: 55\nCooldown: 30s\n\n[Additional Attack]\nDamage: 621%\nSA Damage: 588%",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "BloodyBlossom": {
+            "Name": "Bloody Blossom",
+            "ID": 26,
+            "Icon": "../skillicons/Icon_Mcythe_Skill_BloodyBlossom.png",
+            "Levels": {
+                "0": {
+                    "Description": "After attacking while swiftly rotating the scythe of both hands in the air, performing a powerful cross strike attack.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 752%\nSA Damage: 480%\nSG Cost: 30\nCooldown: 28s",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 828%\nSA Damage: 504%\nSG Cost: 30\nCooldown: 28s",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 927%\nSA Damage: 550%\nSG Cost: 30\nCooldown: 28s",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Damage: 1057%\nSA Damage: 616%\nSG Cost: 30\nCooldown: 28s",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Damage: 1247%\nSA Damage: 708%\nSG Cost: 30\nCooldown: 28s",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
 
 
 
@@ -1079,11 +1212,39 @@
                 }
             }
         },
+        "RampagingMadness": {
+            "Passive": true,
+            "Name": "Rampaging Madness",
+            "ID": 1013,
+            "Icon": "../skillicons/Icon_Mcythe_Skill_SGPassive2.png",
+            "Levels": {
+                "0": {
+                    "Description": "Every 1 minute while HP is under 50%, decrease SG consumption, increase critical attack power, increase defense penetration for 10 seconds.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "SG consumption decrease 10%.\nCritical attack power increase 800.\nDefense penetration increase 10%.",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "SG consumption decrease 20%.\nCritical attack power increase 1600.\nDefense penetration increase 20%.",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "SG consumption decrease 30%.\nCritical attack power increase 2500.\nDefense penetration increase 30%.",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                }
+            }
+        },
         "IntensifyingMadness": {
             "Passive": true,
             "Name": "Intensifying Madness",
             "ID": 1011,
-            "RowSpan": 2,
             "Icon": "../skillicons/LP1-2.png",
             "Levels": {
                 "0": {
