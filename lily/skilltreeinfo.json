@@ -416,7 +416,10 @@
                     "RequiredLevel": 30,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "DeathScythe-Afterimage"
+            ]
         },
         "CruelSlash": {
             "Name": "Cruel Slash",
