@@ -85,14 +85,18 @@ class GridInfo {
         }
     }
 
+    resetinfo() {
+        this.IsEmpty = true;
+        this.SkillInfo = null;
+    }
+
     SetSkill(skillinfo) {
         if (skillinfo) {
             this.IsEmpty = false;
             this.SkillInfo = skillinfo;
         }
         else {
-            this.IsEmpty = true;
-            this.SkillInfo = null;
+            this.resetinfo();
         }
         this.Redraw();
     }
@@ -113,6 +117,10 @@ class GridInfo {
                 }
             });
         });
+        if (!this.IsEmpty)
+            if ((get = this.SkillInfo.CurrentSkillLevel) === 0) {
+                this.resetinfo();
+            }
         if (!this.IsEmpty) {
             this.myDiv.append($("<img>").addClass("clickthrough").attr("src", (get = this.SkillInfo.IconURL)));
             this.myDiv.attr("title", "Skill: " + (get = this.SkillInfo.Name) + "\nClick the box to select skill");
