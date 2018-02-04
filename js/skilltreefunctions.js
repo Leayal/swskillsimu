@@ -587,7 +587,7 @@ $(function () {
             copyLink(link);
         }
     });
-    $("#copyURLshowassign").click(function () {
+    $("#copyURLshowassign").click(function (e) {
         e.preventDefault();
         var link = window.SkillCore.GenerateLink(true);
         if (link) {
