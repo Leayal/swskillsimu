@@ -487,7 +487,6 @@
             "Name": "Limit Break",
             "ID": 15,
             "Icon": "../skillicons/I1-7.png",
-            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Releases soul energy within the body to amplify the damage of the next attack",
@@ -664,6 +663,7 @@
             "Name": "Eternal Abyss",
             "ID": 20,
             "Icon": "../skillicons/I1-10.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "While in mid-air, throw a weapon towards the ground to create a black hole that pulls enemies",
