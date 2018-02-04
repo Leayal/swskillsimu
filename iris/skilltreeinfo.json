@@ -41,7 +41,8 @@
                 }
             },
             "Extensions": [
-                "HammerCrash-ContinuousExplosion", "HammerCrash-FullSwing"
+                "HammerCrash-ContinuousExplosion",
+                "HammerCrash-FullSwing"
             ]
         },
         "HammerCrash-ContinuousExplosion": {
@@ -180,7 +181,8 @@
                 }
             },
             "Extensions": [
-                "AssaultDive-Shatter", "AssaultDive-Emission"
+                "AssaultDive-Shatter",
+                "AssaultDive-Emission"
             ]
         },
         "AssaultDive-Shatter": {
@@ -419,7 +421,8 @@
                 }
             },
             "Extensions": [
-                "PulseFire-RapidShot", "PulseFire-PowerShot"
+                "PulseFire-RapidShot",
+                "PulseFire-PowerShot"
             ]
         },
         "PulseFire-RapidShot": {
@@ -484,6 +487,7 @@
             "Name": "Limit Break",
             "ID": 15,
             "Icon": "../skillicons/I1-7.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Releases soul energy within the body to amplify the damage of the next attack",
@@ -556,7 +560,8 @@
                 }
             },
             "Extensions": [
-                "BulletStorm-RangeIncrease", "BulletStorm-MeteorFall"
+                "BulletStorm-RangeIncrease",
+                "BulletStorm-MeteorFall"
             ]
         },
         "BulletStorm-RangeIncrease": {
@@ -731,7 +736,8 @@
                 }
             },
             "Extensions": [
-                "Earthquake-Volcano", "Earthquake-FirePillar"
+                "Earthquake-Volcano",
+                "Earthquake-FirePillar"
             ]
         },
         "Earthquake-Volcano": {
@@ -868,35 +874,6 @@
                 }
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",

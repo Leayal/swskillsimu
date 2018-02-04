@@ -1,4 +1,4 @@
-SkillTreeCore.prototype.ReadTree = function(loadedCallback) {
+SkillTreeCore.prototype.ReadTree = function (loadedCallback) {
     this.SkillList = {};
     this.ActiveSkillList = {};
     this.PassiveSkillList = {};
@@ -8,7 +8,7 @@ SkillTreeCore.prototype.ReadTree = function(loadedCallback) {
         cache: false,
         url: "skilltreeinfo.json",
         dataType: "json",
-        success: function(json) {
+        success: function (json) {
             if (json.CharacterName)
                 $("#charName").text(json.CharacterName);
             else
@@ -28,7 +28,7 @@ SkillTreeCore.prototype.ReadTree = function(loadedCallback) {
                     if (get = window.SkillCore.SkillList[ssk].IsPassive)
                         window.SkillCore.PassiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
                     else
-                        window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk]
+                        window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
                 };
             window.SkillCore.SkillCount = Object.keys(window.SkillCore.SkillList).length;
             window.SkillCore.RenderTree(loadedCallback);
@@ -36,11 +36,20 @@ SkillTreeCore.prototype.ReadTree = function(loadedCallback) {
     });
 }
 
-SkillTreeCore.prototype.GetSkill = function(id) {
+SkillTreeCore.prototype.GetSkill = function (id) {
     return this.SkillList[id];
 }
 
-SkillTreeCore.prototype.RenderTree = function(loadedCallback) {
+SkillTreeCore.prototype.GetSkillByShortID = function (shortID) {
+    for (var ssk in window.SkillCore.SkillList)
+        if (window.SkillCore.SkillList.hasOwnProperty(ssk)) {
+            if (window.SkillCore.SkillList[ssk].ShortID && (window.SkillCore.SkillList[ssk].ShortID == shortID))
+                return window.SkillCore.SkillList[ssk];
+        };
+    return null;
+}
+
+SkillTreeCore.prototype.RenderTree = function (loadedCallback) {
     var eTree = $("li#activeskill");
     if (eTree) {
         var activeRow = $("<ul>").addClass("tableactiveskill");
@@ -91,13 +100,13 @@ SkillTreeCore.prototype.RenderTree = function(loadedCallback) {
     }
 
     if (typeof loadedCallback === "function") {
-        $("#skilltree").imagesLoaded().always(function() {
+        $("#skilltree").imagesLoaded().always(function () {
             loadedCallback();
         });
     }
 }
 
-SkillInfo.prototype.GetSkillPanel = function(ex) {
+SkillInfo.prototype.GetSkillPanel = function (ex) {
     if (this.Panel) return this.Panel;
     if (ex) {
         var skillInfoPanel = $("<div>").addClass("skillExinfopanel").addClass("fadeinAppear");
@@ -110,7 +119,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         if (this._currentskilllevel === this._skillmaxlevel)
             mybutton.addClass("disabled");
         SetToolTipUp(mybutton);
-        skillInfoPanel.append(mybutton.click(function() {
+        skillInfoPanel.append(mybutton.click(function () {
             if (!$(this).hasClass("disabled")) {
                 window.SkillCore.GetSkill($(this).attr("insight")).SkillUp();
                 $(this).trigger("mouseover");
@@ -120,7 +129,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         if (this._currentskilllevel === this._defaultLevel)
             mybutton.addClass("disabled");
         SetToolTipDown(mybutton);
-        skillInfoPanel.append(mybutton.click(function() {
+        skillInfoPanel.append(mybutton.click(function () {
             if (!$(this).hasClass("disabled")) {
                 window.SkillCore.GetSkill($(this).attr("insight")).SkillDown();
                 $(this).trigger("mouseover");
@@ -146,7 +155,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         if (this._currentskilllevel === this._skillmaxlevel)
             mybutton.addClass("disabled");
         SetToolTipUp(mybutton);
-        skillInfoPanel.append(mybutton.click(function() {
+        skillInfoPanel.append(mybutton.click(function () {
             window.SkillCore.GetSkill($(this).attr("insight")).SkillUp();
             $(this).trigger("mouseover");
         }));
@@ -154,7 +163,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
         if (this._currentskilllevel === this._defaultLevel)
             mybutton.addClass("disabled");
         SetToolTipDown(mybutton);
-        skillInfoPanel.append(mybutton.click(function() {
+        skillInfoPanel.append(mybutton.click(function () {
             window.SkillCore.GetSkill($(this).attr("insight")).SkillDown();
             $(this).trigger("mouseover");
         }));
@@ -192,7 +201,7 @@ SkillInfo.prototype.GetSkillPanel = function(ex) {
     return this.Panel;
 }
 
-SkillInfo.prototype.Disabled = function(bool) {
+SkillInfo.prototype.Disabled = function (bool) {
     if (bool) {
         this.UnlearnSkill();
         var hohoho = this.GetSkillPanel();
@@ -211,7 +220,7 @@ SkillInfo.prototype.Disabled = function(bool) {
     }
 }
 
-SkillInfo.prototype.UpdateSkill = function() {
+SkillInfo.prototype.UpdateSkill = function () {
     if (!this.Panel) return;
     var panel = this.Panel;
     panel.children("p[insight=\"skilllevel\"]:first").text(this._currentskilllevel + "/" + this._skillmaxlevel);
@@ -252,7 +261,7 @@ SkillInfo.prototype.UpdateSkill = function() {
     }
 }
 
-SkillInfo.prototype.SkillUp = function() {
+SkillInfo.prototype.SkillUp = function () {
     var next = this.NextLevelInfo();
     if (next) {
         if ((get = next.RequiredLevel) > (get = window.SkillCore.CurrentLevel)) {
@@ -271,7 +280,7 @@ SkillInfo.prototype.SkillUp = function() {
     }
 }
 
-SkillInfo.prototype.SkillDown = function() {
+SkillInfo.prototype.SkillDown = function () {
     var prev = this.PreviousLevelInfo();
     if (prev) {
         if (this._defaultLevel === this._currentskilllevel) {
@@ -286,7 +295,7 @@ SkillInfo.prototype.SkillDown = function() {
     }
 }
 
-SkillInfo.prototype.SkillDownEx = function() {
+SkillInfo.prototype.SkillDownEx = function () {
     var prev = this.PreviousLevelInfo();
     if (prev) {
         window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
@@ -295,12 +304,12 @@ SkillInfo.prototype.SkillDownEx = function() {
     }
 }
 
-SkillTreeCore.prototype.InvestedSPIncrease = function(sp) {
+SkillTreeCore.prototype.InvestedSPIncrease = function (sp) {
     this._investedsp += sp;
     this.UpdateSP();
 }
 
-SkillTreeCore.prototype.InvestedSPDecrease = function(sp) {
+SkillTreeCore.prototype.InvestedSPDecrease = function (sp) {
     this._investedsp -= sp;
     this.UpdateSP();
 }

@@ -151,3 +151,60 @@ p.skillExLevel {
     top: 2px;
     margin-left: 2px;
 }
+
+.text-black {
+    color: black;
+}
+
+.slotskillimg img {
+    width: 40px;
+    height: 40px;
+}
+
+.slotskillimg {
+    background-color: rgba(0,0,0,0.4);
+    width: 40px;
+    height: 40px;
+}
+
+.liststyle-none {
+    list-style: none;
+}
+
+.width-max-fit {
+    width: 100%;
+}
+
+.ul-flexible {
+    list-style: none;
+}
+
+.ul-flexible li {
+    margin: 5px 0;
+}
+
+.ul-flexible .image {
+    width: 40px;
+    height: 40px;
+}
+
+.ul-flexible .name {
+    width: 300px;
+    height: 40px;
+}
+
+.ul-flexible .level {
+    width: 60px;
+    height: 40px;
+}
+
+.clickthrough {
+    pointer-events:none;
+}
+
+.skill-list-select {
+    max-height: 300px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: visible;
+}

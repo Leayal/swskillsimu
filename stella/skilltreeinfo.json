@@ -140,7 +140,8 @@
                 }
             },
             "Extensions": [
-                "TroublePass-RangeIncrease", "TroublePass-Strengthen"
+                "TroublePass-RangeIncrease",
+                "TroublePass-Strengthen"
             ]
         },
         "TroublePass-RangeIncrease": {
@@ -340,7 +341,8 @@
                 }
             },
             "Extensions": [
-                "BeadsPlay-Paralyze", "BeadsPlay-Strengthen"
+                "BeadsPlay-Paralyze",
+                "BeadsPlay-Strengthen"
             ]
         },
         "BeadsPlay-Paralyze": {
@@ -439,7 +441,8 @@
                 }
             },
             "Extensions": [
-                "DecadePulse-DurationIncrease", "DecadePulse-RadiusIncrease"
+                "DecadePulse-DurationIncrease",
+                "DecadePulse-RadiusIncrease"
             ]
         },
         "DecadePulse-DurationIncrease": {
@@ -607,6 +610,7 @@
             "ID": 19,
             "Name": "Beast Party",
             "Icon": "../skillicons/S1-10.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Summons a pack of ghosts that charge forward. Enemies that are hit by the ghosts will be pushed back.",
@@ -787,21 +791,6 @@
                 }
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",

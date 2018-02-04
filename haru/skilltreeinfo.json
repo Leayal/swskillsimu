@@ -113,7 +113,8 @@
                 }
             },
             "Extensions": [
-                "PierceStep-SpinningSlash", "PierceStep-RisingSlash"
+                "PierceStep-SpinningSlash",
+                "PierceStep-RisingSlash"
             ]
         },
         "PierceStep-SpinningSlash": {
@@ -422,7 +423,8 @@
                 }
             },
             "Extensions": [
-                "LeapAttack-ExtraAttack", "LeapAttack-RangeIncrease"
+                "LeapAttack-ExtraAttack",
+                "LeapAttack-RangeIncrease"
             ]
         },
         "LeapAttack-ExtraAttack": {
@@ -521,7 +523,8 @@
                 }
             },
             "Extensions": [
-                "ArenaRush-DurationIncrease", "ArenaRush-KnockOut"
+                "ArenaRush-DurationIncrease",
+                "ArenaRush-KnockOut"
             ]
         },
         "ArenaRush-DurationIncrease": {
@@ -627,6 +630,7 @@
             "Name": "Cross Strike",
             "ID": 19,
             "Icon": "../skillicons/H1-11.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Slash in a X pattern mid-air and fire strong sword energy. The sword energy will explode on the ground and deal additional damage.",
@@ -858,6 +862,7 @@
             "Name": "Sword Fall",
             "ID": 26,
             "Icon": "../skillicons/Icon_Ssword_Skill_Swordsfall.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Immediately land then generate a small sword rain on the area around Haru.",
@@ -930,32 +935,6 @@
                 }
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",

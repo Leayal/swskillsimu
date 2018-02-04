@@ -41,7 +41,8 @@
                 }
             },
             "Extensions": [
-                "GloryUpper-Knockdown", "GloryUpper-Upper"
+                "GloryUpper-Knockdown",
+                "GloryUpper-Upper"
             ]
         },
         "GloryUpper-Knockdown": {
@@ -217,9 +218,9 @@
                 }
             },
             "Extensions": [
-                "CounterAttack-KnockOut", "CounterAttack-SADestruction"
+                "CounterAttack-KnockOut",
+                "CounterAttack-SADestruction"
             ]
-
         },
         "CounterAttack-KnockOut": {
             "Name": "Knock Out",
@@ -455,7 +456,8 @@
                 }
             },
             "Extensions": [
-                "SpiritExplosion-ImpactBullets", "SpiritExplosion-RangeIncrease"
+                "SpiritExplosion-ImpactBullets",
+                "SpiritExplosion-RangeIncrease"
             ]
         },
         "SpiritExplosion-ImpactBullets": {
@@ -628,6 +630,7 @@
             "Name": "Heavy Drop",
             "ID": 19,
             "Icon": "../skillicons/J1-10.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Gather up tremendous power in the air to create a gigantic sphere. The sphere generates a big explosion when touching the ground , damaging all nearby enemies",
@@ -808,42 +811,6 @@
                 }
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",

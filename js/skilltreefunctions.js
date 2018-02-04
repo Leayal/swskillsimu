@@ -6,6 +6,7 @@ class SkillTreeCore {
         this._currentlevel = 0;
         this._investedsp = 0;
         this._spleft = 0;
+        this.slotassign = new SlotGrid();
     };
     get TotalSP() { return this._totalsp; }
     get CurrentLevel() { return this._currentlevel; }
@@ -137,14 +138,14 @@ class SkillTreeCore {
         }
     }
 
-    GenerateLink(isShortLink) {
+    GenerateLink() {
         var arrayString = [];
         if (this._currentlevel !== window.c_maxlevel)
             arrayString.push("lv=" + this._currentlevel);
         for (var skillid in this.SkillList) {
             var levelasd = (get = this.SkillList[skillid].CurrentSkillLevel);
             if (levelasd != (get = this.SkillList[skillid].GetDefaultLevel)) {
-                if (isShortLink && this.SkillList[skillid].ShortID) {
+                if (this.SkillList[skillid].ShortID) {
                     arrayString.push(this.SkillList[skillid].ShortID + "=" + levelasd);
                 } else {
                     arrayString.push(skillid + "=" + levelasd);
@@ -152,9 +153,21 @@ class SkillTreeCore {
             }
         }
         var link = location.protocol + '//' + location.host + location.pathname;
-        var param = "";
-        if (arrayString.length > 0)
+        var param = null;
+
+        var assignstring = this.slotassign.GenerateAssignment();
+        if (assignstring)
+            arrayString.push("s=" + assignstring);
+        if (this.slotassign.effect2nd !== "2_1")
+            arrayString.push("b1=" + this.slotassign.effect2nd);
+        if (this.slotassign.effect3rd !== "3_1")
+            arrayString.push("b2=" + this.slotassign.effect3rd);
+
+        if (arrayString.length > 1)
             param = arrayString.join("&");
+        else if (arrayString.length === 1)
+            param = arrayString[0];
+
         if (param)
             link = link + "?" + param;
         return link;
@@ -193,19 +206,35 @@ class SkillTreeCore {
 
         return result;
     }
+
+    ResetSlotAssignment() {
+        this.slotassign.ResetToEmpty();
+    }
+
+    SetSkillAssignment(columnIndex, rowIndex, skillinfo) {
+        this.slotassign.SetGridValue(columnIndex, rowIndex, skillinfo);
+    }
+
+    GetSkillAssignmentRender() {
+        return this.slotassign.GetRender();
+    }
+
+    ReadAssignment() {
+        this.slotassign.ReadAssignment();
+    }
 }
 
 var SkillCore = new SkillTreeCore();
 var mouseX;
 var mouseY;
 
-$(document).mousemove(function(e) {
+$(document).mousemove(function (e) {
     window.mouseX = e.pageX;
     window.mouseY = e.pageY;
 });
 
 function SetToolTip(obj) {
-    obj.mouseover(function() {
+    obj.mouseover(function () {
         var key = $(this).attr("insight");
         if (key) {
             var skillinfoooo = window.SkillCore.GetSkill(key);
@@ -249,7 +278,7 @@ function SetToolTip(obj) {
                 elem.stop(false, true).fadeIn('fast');
             }
         }
-    }).mousemove(function() {
+    }).mousemove(function () {
         var elem = $('div#tooltip');
         var cssstyle = {};
         var currentInt = window.mouseY + 10,
@@ -271,14 +300,14 @@ function SetToolTip(obj) {
         }
 
         elem.css(cssstyle);
-    }).mouseout(function() {
+    }).mouseout(function () {
         $('div#tooltip').stop(false, true).fadeOut('fast');
     });
     return obj;
 }
 
 function SetToolTipUp(obj) {
-    obj.mouseover(function() {
+    obj.mouseover(function () {
         var key = $(this).attr("insight");
         if (key) {
             var skillinfoooo = window.SkillCore.GetSkill(key);
@@ -325,7 +354,7 @@ function SetToolTipUp(obj) {
                 elem.stop(false, true).fadeIn('fast');
             }
         }
-    }).mousemove(function() {
+    }).mousemove(function () {
         var elem = $('div#tooltip');
         var cssstyle = {};
         var currentInt = window.mouseY + 10,
@@ -347,14 +376,14 @@ function SetToolTipUp(obj) {
         }
 
         elem.css(cssstyle);
-    }).mouseout(function() {
+    }).mouseout(function () {
         $('div#tooltip').stop(false, true).fadeOut('fast');
     });
     return obj;
 }
 
 function SetToolTipDown(obj) {
-    obj.mouseover(function() {
+    obj.mouseover(function () {
         var key = $(this).attr("insight");
         if (key) {
             var skillinfoooo = window.SkillCore.GetSkill(key);
@@ -400,7 +429,7 @@ function SetToolTipDown(obj) {
                 elem.stop(false, true).fadeIn('fast');
             }
         }
-    }).mousemove(function() {
+    }).mousemove(function () {
         var elem = $('div#tooltip');
         var cssstyle = {};
         var currentInt = window.mouseY + 10,
@@ -422,7 +451,7 @@ function SetToolTipDown(obj) {
         }
 
         elem.css(cssstyle);
-    }).mouseout(function() {
+    }).mouseout(function () {
         $('div#tooltip').stop(false, true).fadeOut('fast');
     });
     return obj;
@@ -430,14 +459,14 @@ function SetToolTipDown(obj) {
 
 function ShowDangerDialog(msg, yesCallback, noCallback) {
     BootstrapDialog.show({
-        label: BootstrapDialog.TYPE_WARNING,
+        type: BootstrapDialog.TYPE_WARNING,
         title: 'Warning',
         message: msg,
         cssClass: 'bootstrap3-dialog',
         buttons: [{
             label: 'Yes',
             cssClass: 'btn btn-warning',
-            action: function(dialogItself) {
+            action: function (dialogItself) {
                 dialogItself.close();
                 if (typeof yesCallback === "function")
                     yesCallback();
@@ -445,7 +474,7 @@ function ShowDangerDialog(msg, yesCallback, noCallback) {
         }, {
             label: 'No',
             cssClass: 'btn btn-primary',
-            action: function(dialogItself) {
+            action: function (dialogItself) {
                 dialogItself.close();
                 if (typeof noCallback === "function")
                     noCallback();
@@ -462,7 +491,7 @@ function ShowMessageDialog(jquery_format_msg, okayCallback) {
         buttons: [{
             label: 'OK',
             cssClass: 'btn btn-primary',
-            action: function(dialogItself) {
+            action: function (dialogItself) {
                 dialogItself.close();
                 if (typeof okayCallback === "function")
                     okayCallback();
@@ -479,7 +508,7 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
         buttons: [{
             label: 'Yes',
             cssClass: 'btn btn-primary',
-            action: function(dialogItself) {
+            action: function (dialogItself) {
                 dialogItself.close();
                 if (typeof yesCallback === "function")
                     yesCallback();
@@ -487,7 +516,7 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
         }, {
             label: 'No',
             cssClass: 'btn btn-default',
-            action: function(dialogItself) {
+            action: function (dialogItself) {
                 dialogItself.close();
                 if (typeof noCallback === "function")
                     noCallback();
@@ -496,7 +525,34 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
     });
 }
 
-$(function() {
+function ShowSkillAssignment(noCallback) {
+    if (!window.SkillCore) return;
+    BootstrapDialog.show({
+        type: BootstrapDialog.TYPE_SUCCESS,
+        title: 'Skill slot assignment',
+        draggable: true,
+        message: window.SkillCore.GetSkillAssignmentRender(),
+        buttons: [{
+            label: 'Reset',
+            cssClass: 'btn btn-warning',
+            action: function (dialogItself) {
+                ShowDangerDialog('Are you sure you want to reset all the slot assignments?', function () {
+                    window.SkillCore.ResetSlotAssignment();
+                });
+            }
+        }, {
+            label: 'Close',
+            cssClass: 'btn btn-default',
+            action: function (dialogItself) {
+                dialogItself.close();
+                if (typeof noCallback === "function")
+                    noCallback();
+            }
+        }]
+    });
+}
+
+$(function () {
     /*
     $('div#sakura').sakura('start', {
         fallSpeed: 1.2,
@@ -506,7 +562,7 @@ $(function() {
     });
     */
     SetLoading($("body"));
-    var selecting = $("<select id=\"selectLevelBox\">").addClass("bootstrap3-dialog").change(function() {
+    var selecting = $("<select id=\"selectLevelBox\">").change(function () {
         window.SkillCore.SetLevel($(this).val());
     });
     for (var i = 1; i <= window.c_maxlevel; i++)
@@ -522,19 +578,23 @@ $(function() {
     //window.SkillCore.SetLevelFromElement();
     $("#charList li a[href]")
     $('a[href^="../' + GetCurrentFolderUrl() + '"]').parent().closest('li').remove();
-    $("#copyURL").click(function() {
-        var link = window.SkillCore.GenerateLink(true);
+    $("#copyURL").click(function () {
+        var link = window.SkillCore.GenerateLink();
         if (link) {
             copyLink(link);
         }
     });
-    $("#resetAllSkill").click(function() {
-        ShowDangerDialog('Are you sure you want to unlearn all skills?', function() {
+    $("#resetAllSkill").click(function () {
+        ShowDangerDialog('Are you sure you want to unlearn all skills?', function () {
             window.SkillCore.UnlearnAllSkills();
         });
     });
+    $("#slotassignment").click(function () {
+        ShowSkillAssignment();
+    });
 
-    window.SkillCore.ReadTree(function() {
+    window.SkillCore.ReadTree(function () {
         RemoveLoading($("body"));
+        window.SkillCore.ReadAssignment();
     });
 });

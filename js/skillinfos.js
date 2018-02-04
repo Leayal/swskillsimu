@@ -10,6 +10,7 @@ class SkillInfo {
         this._parent = null;
         this._visible = true;
         this._spused = 0;
+        this.Assignable = true;
         this.readInfos(infos);
     }
 
@@ -29,6 +30,7 @@ class SkillInfo {
     get IconURL() { return this._iconURL; }
     get IsPassive() { return this._passive; }
     get GetDefaultLevel() { return this._defaultLevel; }
+    get IsAssignable() { return this.Assignable; }
     GetRowSpan() { return this._rowspan; }
     NextLevelInfo() {
         return this.Levels[this._currentskilllevel + 1];
@@ -75,6 +77,8 @@ class SkillInfo {
         if (ob.Passive)
             this._passive = ob.Passive;
         this._iconURL = ob.Icon;
+        if (ob.Assignable == false)
+            this.Assignable = ob.Assignable;
         if (ob.Visible == false)
             this._visible = ob.Visible;
         this._skillmaxlevel = this.Levels.length - 1;

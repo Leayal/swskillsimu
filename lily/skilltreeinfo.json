@@ -319,7 +319,8 @@
                 }
             },
             "Extensions": [
-                "DeathGrinder-SummonGrimReaper", "DeathGrinder-Whirlwind"
+                "DeathGrinder-SummonGrimReaper",
+                "DeathGrinder-Whirlwind"
             ]
         },
         "DeathGrinder-SummonGrimReaper": {
@@ -459,7 +460,8 @@
                 }
             },
             "Extensions": [
-                "CruelSlash-DefensePenetration", "CruelSlash-CriticalRateIncrease"
+                "CruelSlash-DefensePenetration",
+                "CruelSlash-CriticalRateIncrease"
             ]
         },
         "CruelSlash-DefensePenetration": {
@@ -524,6 +526,7 @@
             "Name": "Grim Reaper",
             "ID": 16,
             "Icon": "../skillicons/L1-9.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Only available in the air. Summons the Grim Reaper, launching the enemies in the air. It will attack the enemies in the air.",
@@ -634,7 +637,8 @@
                 }
             },
             "Extensions": [
-                "DeathTornado-Induction", "DeathTornado-AreaWidener"
+                "DeathTornado-Induction",
+                "DeathTornado-AreaWidener"
             ]
         },
         "DeathTornado-Induction": {
@@ -833,6 +837,7 @@
             "Name": "Bloody Blossom",
             "ID": 25,
             "Icon": "../skillicons/Icon_Mcythe_Skill_BloodyBlossom.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "After attacking while swiftly rotating the scythe of both hands in the air, performing a powerful cross strike attack.",
@@ -905,34 +910,6 @@
                 }
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",

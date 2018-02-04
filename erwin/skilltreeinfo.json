@@ -41,7 +41,8 @@
                 }
             },
             "Extensions": [
-                "SkyHigh-ImpactBullets", "SkyHigh-AerialShots"
+                "SkyHigh-ImpactBullets",
+                "SkyHigh-AerialShots"
             ]
         },
         "SkyHigh-ImpactBullets": {
@@ -240,7 +241,8 @@
                 }
             },
             "Extensions": [
-                "SlideStep-SmokeGrenade", "SlideStep-PoisonGasGrenade"
+                "SlideStep-SmokeGrenade",
+                "SlideStep-PoisonGasGrenade"
             ]
         },
         "SlideStep-SmokeGrenade": {
@@ -377,7 +379,8 @@
                 }
             },
             "Extensions": [
-                "FocusShot-ParalyzingShot", "FocusShot-BlackHole"
+                "FocusShot-ParalyzingShot",
+                "FocusShot-BlackHole"
             ]
         },
         "FocusShot-ParalyzingShot": {
@@ -588,6 +591,7 @@
             "Name": "Napalm Bomb",
             "ID": 18,
             "Icon": "../skillicons/E1-10.png",
+            "Assignable": false,
             "Levels": {
                 "0": {
                     "Description": "Fire many grenades by converting the guns into a grenade launcher in the air, dealing damage over a large area.",
@@ -768,31 +772,6 @@
                 }
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",
