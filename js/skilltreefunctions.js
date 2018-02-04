@@ -138,7 +138,7 @@ class SkillTreeCore {
         }
     }
 
-    GenerateLink() {
+    GenerateLink(showSkillAssignment) {
         var arrayString = [];
         if (this._currentlevel !== window.c_maxlevel)
             arrayString.push("lv=" + this._currentlevel);
@@ -162,6 +162,9 @@ class SkillTreeCore {
             arrayString.push("b1=" + this.slotassign.effect2nd);
         if (this.slotassign.effect3rd !== "3_1")
             arrayString.push("b2=" + this.slotassign.effect3rd);
+
+        if (showSkillAssignment === true)
+            arrayString.push("sa=1");
 
         if (arrayString.length > 1)
             param = arrayString.join("&");
@@ -584,6 +587,13 @@ $(function () {
             copyLink(link);
         }
     });
+    $("#copyURLshowassign").click(function () {
+        e.preventDefault();
+        var link = window.SkillCore.GenerateLink(true);
+        if (link) {
+            copyLink(link);
+        }
+    });
     $("#resetAllSkill").click(function () {
         ShowDangerDialog('Are you sure you want to unlearn all skills?', function () {
             window.SkillCore.UnlearnAllSkills();
@@ -593,8 +603,11 @@ $(function () {
         ShowSkillAssignment();
     });
 
+    var showassignment = GetUrlParam("sa", null);
     window.SkillCore.ReadTree(function () {
         RemoveLoading($("body"));
         window.SkillCore.ReadAssignment();
+        if (showassignment === "1")
+            $("#slotassignment").click();
     });
 });

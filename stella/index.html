@@ -127,7 +127,20 @@
                             <button id="resetAllSkill" class="btn btn-primary">Reset All Skills</button>
                         </li>
                         <li>
-                            <button id="copyURL" class="btn btn-success" data-clipboard-target="#copymagic">Copy Link to current build</button>
+                            <div class="btn-group">
+                                <button id="copyURL" type="button" class="btn btn-success" data-clipboard-target="#copymagic">Copy Link to current build</button>
+
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a id="copyURLshowassign" href="#">Copy Link to current build and show skill assignment on load</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
