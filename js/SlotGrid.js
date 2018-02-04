@@ -247,8 +247,12 @@ class SlotGrid {
             for (assignCount = 0; assignCount < assignmentvalue.length; assignCount++) {
                 currentsplit = assignmentvalue[assignCount].split("-");
                 var skillinfo = window.SkillCore.GetSkillByShortID(currentsplit[2]);
-                if (skillinfo)
+                if (!skillinfo) {
+                    skillinfo = window.SkillCore.GetSkill(currentsplit[2]);
+                }
+                if (skillinfo && !(get = skillinfo.IsPassive) && (get = skillinfo.Visible) && ((get = skillinfo.IsAssignable) === true) && ((get = skillinfo.CurrentSkillLevel) > 0)) {
                     this.Column[currentsplit[0]][currentsplit[1]].SetSkill(skillinfo);
+                }
             }
         }
 

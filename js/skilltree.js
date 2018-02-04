@@ -41,10 +41,10 @@ SkillTreeCore.prototype.GetSkill = function (id) {
 }
 
 SkillTreeCore.prototype.GetSkillByShortID = function (shortID) {
-    for (var ssk in window.SkillCore.SkillList)
-        if (window.SkillCore.SkillList.hasOwnProperty(ssk)) {
-            if (window.SkillCore.SkillList[ssk].ShortID && (window.SkillCore.SkillList[ssk].ShortID == shortID))
-                return window.SkillCore.SkillList[ssk];
+    for (var ssk in this.SkillList)
+        if (this.SkillList.hasOwnProperty(ssk)) {
+            if (this.SkillList[ssk].ShortID && (this.SkillList[ssk].ShortID == shortID))
+                return this.SkillList[ssk];
         };
     return null;
 }
