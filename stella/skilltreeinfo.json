@@ -833,7 +833,7 @@
             "Icon": "../skillicons/Icon_Howling_Skill_SoulScream_A.png",
             "Levels": {
                 "0": {
-                    "Description": "",
+                    "Description": "??",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -900,7 +900,7 @@
             "Icon": "../skillicons/Icon_Howling_Skill_recklessPrincess.png",
             "Levels": {
                 "0": {
-                    "Description": "",
+                    "Description": "??",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
