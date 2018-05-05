@@ -39,7 +39,10 @@
                     "RequiredLevel": 13,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "WhirlDance-PerformanceIncrease"
+            ]
         },
         "PhantomRelease": {
             "Name": "Phantom Release",
@@ -539,7 +542,10 @@
                     "RequiredLevel": 33,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "SoulScream-StarlightStage"
+            ]
         },
         "TwistPull": {
             "ID": 17,
@@ -787,6 +793,141 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 54,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "WhirlDance-PerformanceIncrease": {
+            "Visible": false,
+            "Name": "Performance Increase",
+            "ID": 24,
+            "Icon": "../skillicons/Icon_Howling_Skill_WhirlDance_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "Enables moving while performing Whirl Dance.\nIn addition, Stella will be in invulnerable state when a revolution attack is made. (Some special attacks are not covered)",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\n[Final Attack]Damage: ?%\nSA Damage: ?%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\n[Final Attack]Damage: ?%\nSA Damage: ?%",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 111%\nSA Damage: 50% \n[Final Attack]Damage: 558%\nSA Damage: 251%",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "SoulScream-StarlightStage": {
+            "Visible": false,
+            "Name": "Starlight Stage",
+            "ID": 25,
+            "Icon": "../skillicons/Icon_Howling_Skill_SoulScream_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "[Left click]\nDamage: ?%\nSA Damage: ?%\n[Right click]Damage: ?%\nSA Damage: ?%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "[Left click]\nDamage: ?%\nSA Damage: ?%\n[Right click]Damage: ?%\nSA Damage: ?%",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "[Left click]\nDamage: 695%\nSA Damage: 1737%\n[Right click]Damage: 347%\nSA Damage: 868%",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "Wolf'sShowtime": {
+            "Name": "Wolf's Showtime",
+            "ID": 26,
+            "Icon": "../skillicons/Icon_Howling_Skill_WolvesShowtime.png",
+            "Assignable": false,
+            "Levels": {
+                "0": {
+                    "Description": "Summons a Wolf knight.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 30\nCooldown: 35 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 30\nCooldown: 35 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 30\nCooldown: 35 seconds",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 30\nCooldown: 35 seconds",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Damage: 2602%\nSA Damage: 1130%\nSG Cost: 30\nCooldown: 35 seconds",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "RecklessPrincess": {
+            "Name": "Reckless Princess",
+            "ID": 27,
+            "Icon": "../skillicons/Icon_Howling_Skill_recklessPrincess.png",
+            "Levels": {
+                "0": {
+                    "Description": "",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 35\nCooldown: 30 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 35\nCooldown: 30 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 35\nCooldown: 30 seconds",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Damage: ?%\nSA Damage: ?%\nSG Cost: 35\nCooldown: 30 seconds",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Damage: 1094%\nSA Damage: 1160%\nSG Cost: 35\nCooldown: 30 seconds",
+                    "RequiredLevel": 60,
                     "RequiredSP": 3
                 }
             }
@@ -1073,11 +1214,39 @@
                 }
             }
         },
+        "BounceWave": {
+            "Passive": true,
+            "Name": "Bounce Wave",
+            "ID": 1013,
+            "Icon": "../skillicons/Icon_Howling_Skill_SGPassive2.png",
+            "Levels": {
+                "0": {
+                    "Description": "??",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Cooldown reduction: ?%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Cooldown reduction: ?%",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Cooldown reduction: 15%",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                }
+            }
+        },
         "SoundWave": {
             "Passive": true,
             "Name": "Sound Wave",
             "ID": 1011,
-            "RowSpan": 2,
             "Icon": "../skillicons/SP1-2.png",
             "Levels": {
                 "0": {

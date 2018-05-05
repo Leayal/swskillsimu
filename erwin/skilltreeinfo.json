@@ -477,7 +477,10 @@
                     "RequiredLevel": 30,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "CombatMaster-WesternFinish"
+            ]
         },
         "GuidedShot": {
             "Name": "Guided Shot",
@@ -585,7 +588,10 @@
                     "RequiredLevel": 37,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "ElectricShot-DropCapsule"
+            ]
         },
         "NapalmBomb": {
             "Name": "Napalm Bomb",
@@ -768,6 +774,141 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 54,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "CombatMaster-WesternFinish": {
+            "Visible": false,
+            "Name": "Western Finish",
+            "ID": 24,
+            "Icon": "../skillicons/Icon_Gjazz_Skill_CombatMaster_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "After attacking with combat master, performs an additional powerful attack.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 619%\nSA Damage: 339%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 692%\nSA Damage: 378%",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 765%\nSA Damage: 419%",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "ElectricShot-DropCapsule": {
+            "Visible": false,
+            "Name": "Drop Capsule",
+            "ID": 25,
+            "Icon": "../skillicons/Icon_Gjazz_Skill_ElectricShot_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "Fire a capsule, and summons a robot from the bombing site.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 1215%\nSA Damage: 303%\n[Final Attack]Damage and SA Damage increase to 200%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 1275%\nSA Damage: 318%\n[Final Attack]Damage and SA Damage increase to 300%",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 1426%\nSA Damage: 355%\n[Final Attack]Damage and SA Damage increase to 500%",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "BlazeHover": {
+            "Name": "Blaze Hover",
+            "ID": 26,
+            "Icon": "../skillicons/Icon_Gjazz_Skill_BlazeHover.png",
+            "Assignable": false,
+            "Levels": {
+                "0": {
+                    "Description": "Summons a hoverboard in the air, and bombards while moving forward.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 220%\nSA Damage: 112%\nSG Cost: 3\nCooldown: 25 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 231%\nSA Damage: 118%\nSG Cost: 3\nCooldown: 25 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 258%\nSA Damage: 132%\nSG Cost: 3\nCooldown: 25 seconds",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Damage: 286%\nSA Damage: 145%\nSG Cost: 3\nCooldown: 25 seconds",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Damage: 330%\nSA Damage: 168%\nSG Cost: 3\nCooldown: 25 seconds",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "MissonCall": {
+            "Name": "Misson Call",
+            "ID": 27,
+            "Icon": "../skillicons/Icon_Gjazz_Skill_MissionCall.png",
+            "Levels": {
+                "0": {
+                    "Description": "Attack the specified area with a laser.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Damage: 944%\nSA Damage: 1065%\nSG Cost: 4\nCooldown: 30 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Damage: 991%\nSA Damage: 1118%\nSG Cost: 4\nCooldown: 30 seconds",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Damage: 1109%\nSA Damage: 1251%\nSG Cost: 4\nCooldown: 30 seconds",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "Damage: 1226%\nSA Damage: 1383%\nSG Cost: 4\nCooldown: 30 seconds",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "Damage: 1415%\nSA Damage: 1596%\nSG Cost: 4\nCooldown: 30 seconds",
+                    "RequiredLevel": 60,
                     "RequiredSP": 3
                 }
             }
@@ -1054,11 +1195,39 @@
                 }
             }
         },
+        "WinningBreak": {
+            "Passive": true,
+            "Name": "Winning Break",
+            "ID": 1013,
+            "Icon": "../skillicons/Icon_Gjazz_Skill_SGPassive2.png",
+            "Levels": {
+                "0": {
+                    "Description": "When a skill that consumes 3 souls (beads) is used, attack power and defense penetration increase for a definite period of time.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Attack Power: +200\nDefense Penetration: +4%",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Attack Power: +400\nDefense Penetration: +7%",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Attack Power: +600\nDefense Penetration: +10%",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                }
+            }
+        },
         "UnexpectedLuck": {
             "Passive": true,
             "Name": "Unexpected Luck",
             "ID": 1011,
-            "RowSpan": 2,
             "Icon": "../skillicons/EP1-2.png",
             "Levels": {
                 "0": {
