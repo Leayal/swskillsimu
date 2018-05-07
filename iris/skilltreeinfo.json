@@ -1,6 +1,10 @@
 {
     "CharacterName": "Iris Yuma",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Iris_Yuma",
+    "Cover": {
+        "URL": "../images/bg-iris.png",
+        "Position": "side-left"
+    },
     "Skills": {
         "HammerCrash": {
             "Name": "Hammer Crash",

@@ -461,98 +461,66 @@ function SetToolTipDown(obj) {
 }
 
 function ShowDangerDialog(msg, yesCallback, noCallback) {
-    BootstrapDialog.show({
-        type: BootstrapDialog.TYPE_WARNING,
-        title: 'Warning',
-        message: msg,
-        cssClass: 'bootstrap3-dialog',
-        buttons: [{
-            label: 'Yes',
-            cssClass: 'btn btn-warning',
-            action: function (dialogItself) {
-                dialogItself.close();
-                if (typeof yesCallback === "function")
-                    yesCallback();
-            }
-        }, {
-            label: 'No',
-            cssClass: 'btn btn-primary',
-            action: function (dialogItself) {
-                dialogItself.close();
-                if (typeof noCallback === "function")
-                    noCallback();
-            }
-        }]
+    var dialog = new Bootstrap4ModalDialog($("#dialogs"), msg, "Warning", Bootstrap4ModalDialog.ButtonsYesNoDanger);
+    dialog.RegisterCallback(function (sender, val) {
+        if (val) {
+            if (typeof yesCallback === "function")
+                yesCallback();
+        } else {
+            if (typeof noCallback === "function")
+                noCallback();
+        }
     });
+    dialog.Show();
 }
 
 function ShowMessageDialog(jquery_format_msg, okayCallback) {
-    BootstrapDialog.show({
-        title: 'Notice',
-        message: jquery_format_msg,
-        cssClass: 'bootstrap3-dialog',
-        buttons: [{
-            label: 'OK',
-            cssClass: 'btn btn-primary',
-            action: function (dialogItself) {
-                dialogItself.close();
-                if (typeof okayCallback === "function")
-                    okayCallback();
-            }
-        }]
+    var dialog = new Bootstrap4ModalDialog($("#dialogs"), jquery_format_msg, "Notice");
+    dialog.RegisterCallback(function (sender, val) {
+        if (val && (typeof okayCallback === "function"))
+            okayCallback();
     });
+    dialog.Show();
 }
 
 function ShowConfirmDialog(msg, yesCallback, noCallback) {
-    BootstrapDialog.show({
-        title: 'Double confirm',
-        message: msg,
-        cssClass: 'bootstrap3-dialog',
-        buttons: [{
-            label: 'Yes',
-            cssClass: 'btn btn-primary',
-            action: function (dialogItself) {
-                dialogItself.close();
-                if (typeof yesCallback === "function")
-                    yesCallback();
-            }
-        }, {
-            label: 'No',
-            cssClass: 'btn btn-default',
-            action: function (dialogItself) {
-                dialogItself.close();
-                if (typeof noCallback === "function")
-                    noCallback();
-            }
-        }]
+    var dialog = new Bootstrap4ModalDialog($("#dialogs"), msg, "Double confirmation", Bootstrap4ModalDialog.ButtonsYesNo);
+    dialog.RegisterCallback(function (sender, val) {
+        if (val) {
+            if (typeof yesCallback === "function")
+                yesCallback();
+        } else {
+            if (typeof noCallback === "function")
+                noCallback();
+        }
     });
+    dialog.Show();
 }
 
 function ShowSkillAssignment(noCallback) {
     if (!window.SkillCore) return;
-    BootstrapDialog.show({
-        type: BootstrapDialog.TYPE_SUCCESS,
-        title: 'Skill slot assignment',
-        draggable: true,
-        message: window.SkillCore.GetSkillAssignmentRender(),
-        buttons: [{
-            label: 'Reset',
-            cssClass: 'btn btn-warning',
-            action: function (dialogItself) {
-                ShowDangerDialog('Are you sure you want to reset all the slot assignments?', function () {
+
+    var dialog = new Bootstrap4ModalDialog($("#dialogs"), window.SkillCore.GetSkillAssignmentRender(), "Skill slot assignment", [
+        {
+            label: "Reset",
+            cssClass: "btn btn-warning",
+            action: function (dialogitself) {
+                window.ShowDangerDialog('Are you sure you want to reset all the slot assignments?', function () {
                     window.SkillCore.ResetSlotAssignment();
                 });
             }
-        }, {
-            label: 'Close',
-            cssClass: 'btn btn-default',
-            action: function (dialogItself) {
-                dialogItself.close();
+        },
+        {
+            label: "Close",
+            cssClass: "btn btn-default",
+            action: function (dialogitself) {
+                dialogitself.Hide();
                 if (typeof noCallback === "function")
                     noCallback();
             }
-        }]
-    });
+        }
+    ]);
+    dialog.Show();
 }
 
 $(function () {
@@ -564,6 +532,16 @@ $(function () {
         newOn: 1500, // Interval after which a new petal is added
     });
     */
+    $("#dialogs").hide().click(function (e) {
+        e.preventDefault();
+        window.DialogManager.CloseForegroundDialog();
+    });
+    window.DialogManager.OnModalChanged(function (val) {
+        if (val)
+            $("#dialogs").show();
+        else
+            $("#dialogs").hide();
+    });
     SetLoading($("body"));
     var selecting = $("<select id=\"selectLevelBox\">").change(function () {
         window.SkillCore.SetLevel($(this).val());
@@ -579,9 +557,9 @@ $(function () {
     selecting.val(clevel);
     selecting.trigger("change");
     //window.SkillCore.SetLevelFromElement();
-    $("#charList li a[href]")
-    $('a[href^="../' + GetCurrentFolderUrl() + '"]').parent().closest('li').remove();
-    $("#copyURL").click(function () {
+    $('#charList a[href^="../' + GetCurrentFolderUrl() + '"]').remove();
+    $("#copyURL").click(function (e) {
+        e.preventDefault();
         var link = window.SkillCore.GenerateLink();
         if (link) {
             copyLink(link);
@@ -604,7 +582,25 @@ $(function () {
     });
 
     var showassignment = GetUrlParam("sa", null);
-    window.SkillCore.ReadTree(function () {
+    window.SkillCore.ReadTree(function (data) {
+        if (data.Cover) {
+            if (data.Cover.URL) {
+                var pos;
+                if (data.Cover.Position) {
+                    pos = data.Cover.Position;
+                } else {
+                    pos = "side-right";
+                }
+                $("#forbackground").append(
+                    $("<img>").addClass(["image-bg-character", pos]).attr("src", data.Cover.URL).imagesLoaded().always(function (instance) {
+                        instance.elements.forEach(function (element, index, arr) {
+                            $(element).addClass("animated fadeIn").show();
+                        });
+                    }).hide()
+                );
+            }
+        }
+    }, function () {
         RemoveLoading($("body"));
         window.SkillCore.ReadAssignment();
         if (showassignment === "1")

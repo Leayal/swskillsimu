@@ -1,6 +1,9 @@
 {
     "CharacterName": "Jin Seipatsu",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Jin_Seipatsu",
+    "Cover": {
+        "URL": "../images/bg-jin.png"
+    },
     "Skills": {
         "GloryUpper": {
             "Name": "Glory Upper",

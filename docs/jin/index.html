@@ -5,21 +5,21 @@
         <meta charset="utf-8" />
         <title>Skill simulator</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="../css/animate.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        <link rel="stylesheet" href="../css/bootstrap4.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/solid.css" integrity="sha384-VxweGom9fDoUf7YfLTHgO0r70LVNHP5+Oi8dcR4hbEjS8UnpRtrwTx7LpHq/MWLI"
             crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css" integrity="sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf"
             crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../sakura/jquery-sakura.min.css" />
-        <link rel="stylesheet" href="../css/bootstrap-dialog.min.css" />
+        <!--<link rel="stylesheet" href="../sakura/jquery-sakura.min.css" />-->
         <link rel="stylesheet" href="../css/styles.css?v=3" />
         <link rel="stylesheet" href="../css/kr.css?v=3" />
         <script src="../js/imagesLoaded.js"></script>
         <script src="../js/bootstrap-notify.min.js"></script>
-        <script src="../js/bootstrap-dialog.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/bootstrap-dialogex.js"></script>
         <script src="../js/clipboard.min.js"></script>
         <script src="../js/SlotGrid.js"></script>
         <script src="../js/common.js"></script>
@@ -56,111 +56,115 @@
     </head>
 
     <body>
-        <div id="sakura" class="fixed-bg image-bg"></div>
-        <div class="minsize">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <span class="navbar-brand">
-                        <a class="dropdown-toggle" data-toggle="dropdown">
-                            <span id="charName"></span>
-                            <strong class="caret"></strong>
-                        </a>
-                        <ul id="charList" class="dropdown-menu">
-                            <li>
-                                <a href="../haru">Haru Estia</a>
-                            </li>
-                            <li>
-                                <a href="../erwin">Erwin Arclight</a>
-                            </li>
-                            <li>
-                                <a href="../lily">Lily Bloomerchen</a>
-                            </li>
-                            <li>
-                                <a href="../stella">Stella Unibell</a>
-                            </li>
-                            <li>
-                                <a href="../jin">Jin Seipatsu</a>
-                            </li>
-                            <li>
-                                <a href="../iris">Iris Yuma</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a id="morecharacterinfo">More info</a>
-                            </li>
-                            <li>
-                                <a id="morecharacterinfo">More info</a>
-                            </li>
-                            <li>
-                                <a href="..">Home</a>
-                            </li>
-                        </ul>
-                    </span>
+        <div id="forbackground" class="fixed-bg image-bg"></div>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span id="charName"></span>
+                    <strong class="caret"></strong>
+                </a>
+                <div id="charList" class="dropdown-menu">
+                    <a class="dropdown-item" href="../haru">Haru Estia</a>
+                    <a class="dropdown-item" href="../erwin">Erwin Arclight</a>
+                    <a class="dropdown-item" href="../lily">Lily Bloomerchen</a>
+                    <a class="dropdown-item" href="../stella">Stella Unibell</a>
+                    <a class="dropdown-item" href="../jin">Jin Seipatsu</a>
+                    <a class="dropdown-item" href="../iris">Iris Yuma</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" id="morecharacterinfo">More info</a>
+                    <a class="dropdown-item" href="..">Home</a>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a id="levelBoxtd" class="levellable">Level:</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a id="levelBoxtd" class="nav-link levellable">Level:</a>
                         </li>
-                        <li>
-                            <a class="dropdown-toggle" data-toggle="dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span id="e_investedSP">Invested: </span>
                                 <strong class="caret"></strong>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a>
-                                        <p id="spusageinfo"></p>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <p id="spusageinfo"></p>
+                                </a>
+                            </div>
                         </li>
-                        <li>
-                            <a id="e_remainingSP">Remaining: </a>
+                        <li class="nav-item">
+                            <a id="e_remainingSP" class="nav-link">Remaining: </a>
                         </li>
-                        <li>
-                            <button id="slotassignment" class="btn btn-info">Slot assignment</button>
+                        <li class="nav-item">
+                            <button id="slotassignment" class="btn btn-info mr-sm-2">Slot assignment</button>
                         </li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <button id="resetAllSkill" class="btn btn-primary">Reset All Skills</button>
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <button id="resetAllSkill" class="btn btn-primary mr-sm-2">Reset All Skills</button>
                         </li>
-                        <li>
-                            <div class="btn-group">
+                        <li class="nav-item">
+                            <div class="btn-group mr-sm-2">
                                 <button id="copyURL" type="button" class="btn btn-success" data-clipboard-target="#copymagic">Copy Link to current build</button>
-
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                                     <span class="caret"></span>
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a id="copyURLshowassign" href="#">Copy Link to current build and show skill assignment on load</a>
-                                    </li>
-                                </ul>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <a class="dropdown-item" id="copyURLshowassign" href="#">Copy Link to current build and show skill assignment on load</a>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <div class="scrollable">
-                <div class="overjumbotron skilltreeclass">
-                    <div class="" id="skilltree">
+        </header>
+        <main role="main">
+            <div class="container-fluid body-content">
+                <div class="container">
+                    <div id="skilltree">
                         <ul>
                             <li id="activeskill" class="activeskill"></li>
                             <li id="passiveskill" class="passiveskill"></li>
                         </ul>
                     </div>
                 </div>
+                <!--<div class="minsize"><div class="scrollable"><div class="overjumbotron skilltreeclass"></div></div></div>-->
             </div>
-        </div>
+        </main>
         <div id="tooltip">
             <pre class="tooltipcontent"></pre>
             <br/>
             <pre class="tooltipcontent"></pre>
         </div>
+        <footer>
+            <nav class="navbar navbar-expand-md fixed-bottom navbar-dark bg-dark">
+                <a class="navbar-brand" aria-expanded="false">
+                    <span>SoulWorker Skill Simulator</span>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarbottomCollapse" aria-controls="navbarCollapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarbottomCollapse">
+                    <ul class="navbar-nav mr-auto"> </ul>
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/issues" data-icon="octicon-issue-opened" data-size="large"
+                                aria-label="Issue Leayal/swskillsimu on GitHub">Report Issue</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </footer>
+        <div id="dialogs"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <script async defer src="../js/buttons.min.js"></script>
     </body>
 
 </html>

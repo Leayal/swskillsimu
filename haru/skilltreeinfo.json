@@ -1,7 +1,9 @@
 {
     "CharacterName": "Haru Estia",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Haru_Estia",
-    "Class": "Soulum Sword",
+    "Cover": {
+        "URL": "../images/bg-haru.png"
+    },
     "Skills": {
         "FirstStrike": {
             "Name": "First Strike",

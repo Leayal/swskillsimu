@@ -34,6 +34,21 @@ body {
     background-position: center center
 }
 
+.image-bg-character {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    bottom: 0px;
+}
+
+.side-right {
+    right: 0px;
+}
+
+.side-left {
+    left: 0px;
+}
+
 .minsize {
     display: inline-block;
     min-width: 780px !important;

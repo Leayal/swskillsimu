@@ -4,9 +4,9 @@ function ShowSkillSelection(showRemove, okCallback, cancelCallback) {
         label: 'Select',
         cssClass: 'btn btn-success',
         action: function (dialogItself) {
-            dialogItself.close();
+            dialogItself.Hide();
             if (typeof okCallback === "function")
-                okCallback(dialogItself.getData("selectedskillid"));
+                okCallback(dialogItself.GetData("selectedskillid"));
         }
     }];
     if (showRemove) {
@@ -14,7 +14,7 @@ function ShowSkillSelection(showRemove, okCallback, cancelCallback) {
             label: 'Remove',
             cssClass: 'btn btn-danger',
             action: function (dialogItself) {
-                dialogItself.close();
+                dialogItself.Hide();
                 if (typeof okCallback === "function")
                     okCallback(null);
             }
@@ -24,46 +24,44 @@ function ShowSkillSelection(showRemove, okCallback, cancelCallback) {
         label: 'Cancel',
         cssClass: 'btn btn-default',
         action: function (dialogItself) {
-            dialogItself.close();
+            dialogItself.Hide();
             if (typeof noCallback === "function")
                 noCallback();
         }
     });
-    BootstrapDialog.show({
-        type: BootstrapDialog.TYPE_INFO,
-        title: "Select skill to assign",
-        draggable: true,
-        message: function (dialogItself) {
-            var myul = $("<ul>").addClass(["liststyle-none", "width-max-fit"]);
-            for (var ssk in window.SkillCore.ActiveSkillList)
-                if (window.SkillCore.ActiveSkillList.hasOwnProperty(ssk) && (get = window.SkillCore.ActiveSkillList[ssk].Visible) && (get = window.SkillCore.ActiveSkillList[ssk].IsAssignable) && ((get = window.SkillCore.ActiveSkillList[ssk].CurrentSkillLevel) > 0)) {
-                    // window.SkillCore.ActiveSkillList[ssk]
-                    myul.append(
-                        $("<li>").append(
-                            $("<button>").attr("type", "button").addClass(["btn", "btn-primary", "btn-xs"]).append(
-                                $("<ul>").addClass(["clickthrough", "list-inline", "ul-flexible", "text-noselect"]).append([
-                                    $("<li>").addClass("image").append($("<img>").attr("src", get = window.SkillCore.ActiveSkillList[ssk].IconURL)),
-                                    $("<li>").addClass("name").text(get = window.SkillCore.ActiveSkillList[ssk].Name),
-                                    $("<li>").addClass("level").text("Lv: " + (get = window.SkillCore.ActiveSkillList[ssk].CurrentSkillLevel) + "/" + (get = window.SkillCore.ActiveSkillList[ssk].MaxLevel))
+
+    var dialog = new Bootstrap4ModalDialog($("#dialogs"), function (dialogItself) {
+        var skilllistUl = $("<div>").addClass("container");
+        for (var ssk in window.SkillCore.ActiveSkillList)
+            if (window.SkillCore.ActiveSkillList.hasOwnProperty(ssk) && (get = window.SkillCore.ActiveSkillList[ssk].Visible) && (get = window.SkillCore.ActiveSkillList[ssk].IsAssignable) && ((get = window.SkillCore.ActiveSkillList[ssk].CurrentSkillLevel) > 0)) {
+                // window.SkillCore.ActiveSkillList[ssk]
+                skilllistUl.append(
+                    $("<div>").addClass("row").append(
+                        $("<div>").addClass("col").append(
+                            $("<button>").attr("type", "button").addClass("btn btn-primary btn-block").append(
+                                $("<div>").addClass(["clickthrough", "row", "text-noselect"]).append([
+                                    $("<div>").addClass("col-md-auto").append($("<img>").attr("src", get = window.SkillCore.ActiveSkillList[ssk].IconURL)),
+                                    $("<div>").addClass("col").text(get = window.SkillCore.ActiveSkillList[ssk].Name),
+                                    $("<div>").addClass("col col-lg-2").text("Lv: " + (get = window.SkillCore.ActiveSkillList[ssk].CurrentSkillLevel) + "/" + (get = window.SkillCore.ActiveSkillList[ssk].MaxLevel))
                                 ])
                             )
-                        ).click(function (e) {
-                            e.preventDefault();
-                            myul.find("button.active").removeClass(["btn-success", "active"]).addClass("btn-primary");
-                            $(this).find("button").removeClass("btn-primary").addClass(["active", "btn-success"]);
-                            dialogItself.setData("selectedskillid", $(this).attr("skillid"));
-                        }).dblclick(function (e) {
-                            e.preventDefault();
-                            dialogItself.close();
-                            if (typeof okCallback === "function")
-                                okCallback($(this).attr("skillid"));
-                        }).attr("skillid", ssk)
-                    );
-                };
-            return $("<div>").addClass(["skill-list-select", "text-black"]).append(myul);
-        },
-        buttons: buttonslist
-    });
+                        )
+                    ).click(function (e) {
+                        e.stopPropagation();
+                        skilllistUl.find("button.active").removeClass(["btn-success", "active"]).addClass("btn-primary");
+                        $(this).find("button").removeClass("btn-primary").addClass("active btn-success");
+                        dialogItself.SetData("selectedskillid", $(this).attr("skillid"));
+                    }).dblclick(function (e) {
+                        e.stopPropagation();
+                        dialogItself.Hide();
+                        if (typeof okCallback === "function")
+                            okCallback($(this).attr("skillid"));
+                    }).attr("skillid", ssk)
+                );
+            };
+        return $("<div>").addClass("skill-list-select").append(skilllistUl);
+    }, "Select skill to assign", buttonslist);
+    dialog.Show();
 }
 
 class GridInfo {
@@ -193,7 +191,7 @@ class SlotGrid {
     printfloor(floorData) {
         var output = [];
         for (var i = 0; i < floorData.length; i++)
-            output.push($("<li>").append(floorData[i]));
+            output.push($("<div>").addClass("col").append(floorData[i]));
         return output;
     }
 
@@ -210,12 +208,12 @@ class SlotGrid {
     GetRender() {
         var floor = this.generatefloor();
         var myself = this;
-        return $("<div>").addClass("text-black").append(
+        return $("<div>").append(
             $("<ul>").addClass("liststyle-none").append([
                 $("<li>").append(
-                    $("<ul>").addClass(["liststyle-none", "list-inline"]).append(this.printfloor(floor[0]))
+                    $("<div>").addClass("row").append(this.printfloor(floor[0]))
                 ),
-                $("<li>").append($("<span>").addClass(["glyphicon", "glyphicon-arrow-up"])),
+                $("<li>").append($("<i>").addClass("fas fa-arrow-up")),
                 $("<li>").append(
                     $("<span>").text("Step-3 Bonus: "),
                     $("<select>").attr("id", "select3rdchaineffect").append(
@@ -224,11 +222,13 @@ class SlotGrid {
                         myself.effect3rd = $(this).val();
                     })
                 ),
-                $("<li>").append($("<span>").addClass(["glyphicon", "glyphicon-arrow-up"])),
+                //<i class="fas fa-arrow-up"></i>
+                $("<li>").append($("<i>").addClass("fas fa-arrow-up")),
                 $("<li>").append(
-                    $("<ul>").addClass(["liststyle-none", "list-inline"]).append(this.printfloor(floor[1]))
+                    $("<div>").addClass("row").append(this.printfloor(floor[1]))
+                    // $("<ul>").addClass(["liststyle-none", "list-inline"]).append(this.printfloor(floor[1]))
                 ),
-                $("<li>").append($("<span>").addClass(["glyphicon", "glyphicon-arrow-up"])),
+                $("<li>").append($("<i>").addClass("fas fa-arrow-up")),
                 $("<li>").append(
                     $("<span>").text("Step-2 Bonus: "),
                     $("<select>").attr("id", "select2ndchaineffect").append(
@@ -237,9 +237,10 @@ class SlotGrid {
                         myself.effect2nd = $(this).val();
                     })
                 ),
-                $("<li>").append($("<span>").addClass(["glyphicon", "glyphicon-arrow-up"])),
+                $("<li>").append($("<i>").addClass("fas fa-arrow-up")),
                 $("<li>").append(
-                    $("<ul>").addClass(["liststyle-none", "list-inline"]).append(this.printfloor(floor[2]))
+                    $("<div>").addClass("row").append(this.printfloor(floor[2]))
+                    // $("<ul>").addClass(["liststyle-none", "list-inline"]).append(this.printfloor(floor[2]))
                 ),
                 $("<li>").append($("<span>").text("(Click the boxes to assign skill)")),
             ])

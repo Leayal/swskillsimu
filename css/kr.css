@@ -1,3 +1,26 @@
+#dialogs {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.foreground-white {
+    color: white
+}
+
+.container-fluid {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
 li.titletablelike {
     float: left;
     display: block;
@@ -17,7 +40,7 @@ div.skillinfopanel {
     border: 1px solid black;
     width: 155px;
     height: 92px;
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: rgba(0, 0, 0, 0.4)
     /*display: inline-block;
     margin-right: 20px;
     margin-bottom: 20px;//*/
@@ -172,7 +195,7 @@ p.skillExLevel {
 }
 
 .width-max-fit {
-    width: 100%;
+    width: auto;
 }
 
 .ul-flexible {
@@ -183,17 +206,17 @@ p.skillExLevel {
     margin: 5px 0;
 }
 
-.ul-flexible .image {
+.list-inline-item .image {
     width: 40px;
     height: 40px;
 }
 
-.ul-flexible .name {
+.list-inline-item .name {
     width: 300px;
     height: 40px;
 }
 
-.ul-flexible .level {
+.list-inline-item .level {
     width: 60px;
     height: 40px;
 }
@@ -204,7 +227,6 @@ p.skillExLevel {
 
 .skill-list-select {
     max-height: 300px;
-    scroll-behavior: smooth;
     overflow-y: scroll;
-    overflow-x: visible;
+    overflow-x: hidden;
 }

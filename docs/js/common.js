@@ -38,7 +38,7 @@ function copyLink(_url) {
     } else {
         var divthingie = $("<div>");
         divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
-        divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(_url).click(function() { $(this).select(); }));
+        divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(_url).click(function () { $(this).select(); }));
         window.ShowMessageDialog(divthingie);
         return false;
     }
@@ -74,7 +74,7 @@ function RemoveLoading(target) {
     target.children("div[metroloading]").remove();
 };
 
-String.prototype.ctrim = function(charlist) {
+String.prototype.ctrim = function (charlist) {
     if (charlist === undefined)
         charlist = "\s";
     return this.replace(new RegExp("^[" + charlist + "]+"), "").replace(new RegExp("[" + charlist + "]+$"), "");
@@ -97,18 +97,18 @@ function removefilename(str) {
     }
 }
 
-$(function() {
+$(function () {
     try {
-        if (Clipboard.isSupported()) {
-            var clipboard = new Clipboard(".btncopymagicclass");
+        if (ClipboardJS.isSupported()) {
+            var clipboard = new ClipboardJS(".btncopymagicclass");
             window.clipboardsupport = true;
-            clipboard.on('success', function(e) {
+            clipboard.on('success', function (e) {
                 window.shownotify("The link to this skill tree has been copied to clipboard.", 'success');
             });
-            clipboard.on('error', function(e) {
+            clipboard.on('error', function (e) {
                 var divthingie = $("<div>");
                 divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
-                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(e.text).click(function() { $(this).select(); }));
+                divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(e.text).click(function () { $(this).select(); }));
                 window.ShowMessageDialog(divthingie);
             });
         } else {

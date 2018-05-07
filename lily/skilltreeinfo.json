@@ -1,6 +1,9 @@
 {
     "CharacterName": "Lily Bloomerchen",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Lily_Bloomerchen",
+    "Cover": {
+        "URL": "../images/bg-lily.png"
+    },
     "Skills": {
         "EvilSlash": {
             "Name": "Evil Slash",

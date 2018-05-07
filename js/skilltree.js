@@ -1,4 +1,4 @@
-SkillTreeCore.prototype.ReadTree = function (loadedCallback) {
+SkillTreeCore.prototype.ReadTree = function (loadingCallback, loadedCallback) {
     this.SkillList = {};
     this.ActiveSkillList = {};
     this.PassiveSkillList = {};
@@ -31,6 +31,8 @@ SkillTreeCore.prototype.ReadTree = function (loadedCallback) {
                         window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
                 };
             window.SkillCore.SkillCount = Object.keys(window.SkillCore.SkillList).length;
+            if (typeof (loadingCallback) === "function")
+                loadingCallback(json);
             window.SkillCore.RenderTree(loadedCallback);
         }
     });

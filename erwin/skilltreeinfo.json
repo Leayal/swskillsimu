@@ -1,6 +1,9 @@
 {
     "CharacterName": "Erwin Arclight",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Erwin_Arclight",
+    "Cover": {
+        "URL": "../images/bg-erwin.png"
+    },
     "Skills": {
         "SkyHigh": {
             "Name": "Sky High",

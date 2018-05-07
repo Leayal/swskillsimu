@@ -1,6 +1,9 @@
 {
     "CharacterName": "Stella Unibell",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Stella_Unibell",
+    "Cover": {
+        "URL": "../images/bg-stella.png"
+    },
     "Skills": {
         "WhirlDance": {
             "Name": "Whirl Dance",
