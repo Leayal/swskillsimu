@@ -7,15 +7,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="../css/animate.min.css">
+        <link rel="stylesheet" href="../css/animate.min.css?v=1">
         <link rel="stylesheet" href="../css/bootstrap4.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/solid.css" integrity="sha384-VxweGom9fDoUf7YfLTHgO0r70LVNHP5+Oi8dcR4hbEjS8UnpRtrwTx7LpHq/MWLI"
             crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css" integrity="sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf"
             crossorigin="anonymous">
         <!--<link rel="stylesheet" href="../sakura/jquery-sakura.min.css" />-->
-        <link rel="stylesheet" href="../css/styles.css?v=3" />
-        <link rel="stylesheet" href="../css/kr.css?v=3" />
+        <link rel="stylesheet" href="../css/styles.css?v=4" />
+        <link rel="stylesheet" href="../css/kr.css?v=4" />
         <script src="../js/imagesLoaded.js"></script>
         <script src="../js/bootstrap-notify.min.js"></script>
         <script src="../js/jquery-ui.min.js"></script>
@@ -58,7 +58,7 @@
     <body>
         <div id="forbackground" class="fixed-bg image-bg"></div>
         <header>
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-fade">
                 <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <span id="charName"></span>
                     <strong class="caret"></strong>
@@ -134,13 +134,8 @@
                 <!--<div class="minsize"><div class="scrollable"><div class="overjumbotron skilltreeclass"></div></div></div>-->
             </div>
         </main>
-        <div id="tooltip">
-            <pre class="tooltipcontent"></pre>
-            <br/>
-            <pre class="tooltipcontent"></pre>
-        </div>
         <footer>
-            <nav class="navbar navbar-expand-md fixed-bottom navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-md fixed-bottom navbar-dark bg-dark-fade">
                 <a class="navbar-brand" aria-expanded="false">
                     <span>SoulWorker Skill Simulator</span>
                 </a>
@@ -149,23 +144,29 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarbottomCollapse">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <span>Content is available under
-                                <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike</a> unless stated. Official Art, Game
-                                Content and Screenshots are trademarks and copyrights of Lion Games and Hangame.
+                                <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike</a> unless stated.
+                                <br/>Official Art, Game Content and Screenshots are trademarks and copyrights of
+                                <a href="http://www.liongames.co.kr/Front/" target="_blank">Lion Games</a> and the game's publishers.
                             </span>
                         </li>
                     </ul>
                     <ul class="navbar-nav navbar-right">
                         <li class="nav-item">
                             <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/issues" data-icon="octicon-issue-opened" data-size="large"
-                                aria-label="Issue Leayal/swskillsimu on GitHub">Report Issue</a>
+                                aria-label="Issue Leayal/swskillsimu on GitHub">Report Bug/Issue</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </footer>
+        <div id="tooltip">
+            <pre class="tooltipcontent"></pre>
+            <br/>
+            <pre class="tooltipcontent"></pre>
+        </div>
         <div id="dialogs"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>

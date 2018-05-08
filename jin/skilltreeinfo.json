@@ -859,26 +859,26 @@
             "DefaultLevel": 1,
             "ID": 1001,
             "Name": "Special Ability Mastery",
-            "Icon": "../skillicons/Sh-2h.png",
+            "Icon": "../skillicons/Sh-2j.png",
             "Levels": {
                 "0": {
-                    "Description": "Use your power to lift the enemies up to the air.\n(Air) Quickly descend by landing and attacking with your feet.",
+                    "Description": "[Ground]\nSmash the ground with your foot, inflict status effect to nearby enemies.\n[Air]\nSwing the fist towards the ground.",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "",
+                    "Effect": "[Ground]\nDamage: 168%\nSA Damage: 75%\nStatus effect: 'Stun' in 2s\nCooldown: 10s\n[Air]\nDamage: 269%\nSA Damage: 119%\nCooldown: 10s",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
                 },
                 "2": {
-                    "Effect": "",
+                    "Effect": "[Ground]\nDamage: 177%\nSA Damage: 78%\nStatus effect: 'Stun' in 2.5s\nCooldown: 10s\nSG Gain: +20%\n[Air]\nDamage: 282%\nSA Damage: 125%\nCooldown: 10s\nSG Gain: +20%",
                     "RequiredLevel": 15,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "",
+                    "Effect": "[Ground]\nDamage: 198%\nSA Damage: 88%\nStatus effect: 'Stun' in 3s\nCooldown: 10s\nSG Gain: +70%\n[Air]\nDamage: 316%\nSA Damage: 140%\nCooldown: 10s\nSG Gain: +70%",
                     "RequiredLevel": 30,
                     "RequiredSP": 2
                 }

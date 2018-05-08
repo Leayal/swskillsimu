@@ -25,6 +25,10 @@ body {
     position: fixed;
 }
 
+.bg-dark-fade {
+    background-color: rgba(17, 17, 17, 0.8) !important;
+}
+
 .image-bg {
     background-color: rgb(17, 17, 17);
     background-image: url("../images/bg.jpg?v=2");
