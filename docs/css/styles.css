@@ -40,7 +40,10 @@ body {
 
 .image-bg-character {
     position: absolute;
-    max-height: 100%;
+    border: 2px solid rgb(0,0,0);
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    max-height: 75%;
     max-width: 100%;
     bottom: 0px;
 }

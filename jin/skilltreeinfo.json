@@ -2,7 +2,7 @@
     "CharacterName": "Jin Seipatsu",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Jin_Seipatsu",
     "Cover": {
-        "URL": "../images/bg-jin.png"
+        "URL": "../images/bg-jin2.png"
     },
     "Skills": {
         "GloryUpper": {
@@ -142,7 +142,10 @@
                     "RequiredLevel": 17,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "PerfectCombination-RisingUpper"
+            ]
         },
         "HammerKick": {
             "Name": "Hammer Kick",
@@ -557,7 +560,10 @@
                     "RequiredLevel": 33,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "SpiritShooter-RecoilBound"
+            ]
         },
         "QuadraBlow": {
             "Name": "Quadra Blow",
@@ -810,6 +816,141 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 54,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "PerfectCombination-RisingUpper": {
+            "Visible": false,
+            "Name": "Rising Upper",
+            "ID": 24,
+            "Icon": "../skillicons/Icon_Sprit_Skill_PerfectCombination_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "The final blow changes to an Upper(cut), with the Boost Shield hitting the vicinity. When right-clicking halfway of the Upper(cut), Jin supplements it with a thrust down to the ground.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "SpiritShooter-RecoilBound": {
+            "Visible": false,
+            "Name": "Recoil Bound",
+            "ID": 25,
+            "Icon": "../skillicons/Icon_Sprit_Skill_SpiritShooter_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "Debuffs the enemies with a Defense Reduction effect, then rise backwards in mid-air.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "DrasticLanding": {
+            "Name": "Drastic Landing",
+            "ID": 26,
+            "Icon": "../skillicons/Icon_Sprit_Skill_DrasticLanding.png",
+            "Assignable": false,
+            "Levels": {
+                "0": {
+                    "Description": "In mid-air, deploys the Boost Shield in front, then attacks with the shockwaves caused upon swinging it down to the ground.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "CounterStream": {
+            "Name": "Counter Stream",
+            "ID": 27,
+            "Icon": "../skillicons/Icon_Sprit_Skill_CounterStream.png",
+            "Levels": {
+                "0": {
+                    "Description": "Takes a stance, and use a maximum of 3 counter attacks. When counterattacking, Jin will deal more damage depending on the number of times that counter is activated.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
                     "RequiredSP": 3
                 }
             }
@@ -1096,11 +1237,39 @@
                 }
             }
         },
+        "Offense-DefenseUnitedBody": {
+            "Passive": true,
+            "Name": "Offense-Defense United Body",
+            "ID": 1013,
+            "Icon": "../skillicons/Icon_Sprit_Skill_SGPassive2.png",
+            "Levels": {
+                "0": {
+                    "Description": "If Jin or his allies defeats 5 enemies in succession within 5 seconds, received damage will decrease and attack will increase for 10 seconds.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                }
+            }
+        },
         "StrongBody": {
             "Passive": true,
             "Name": "Strong Body",
             "ID": 1011,
-            "RowSpan": 2,
             "Icon": "../skillicons/JP1-2.png",
             "Levels": {
                 "0": {
