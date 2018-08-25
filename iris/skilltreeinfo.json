@@ -1313,17 +1313,17 @@
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "Duration: 3s",
+                    "Effect": "Duration: 3s\nCooldown: 60 seconds",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "Duration: 4s",
+                    "Effect": "Duration: 4s\nCooldown: 60 seconds",
                     "RequiredLevel": 58,
                     "RequiredSP": 1
                 },
                 "3": {
-                    "Effect": "Duration: 5s",
+                    "Effect": "Duration: 5s\nCooldown: 60 seconds",
                     "RequiredLevel": 59,
                     "RequiredSP": 2
                 }
