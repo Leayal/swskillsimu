@@ -2,7 +2,7 @@
     "CharacterName": "Iris Yuma",
     "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Iris_Yuma",
     "Cover": {
-        "URL": "../images/bg-iris.png"
+        "URL": "../images/bg-iris2.png"
     },
     "Skills": {
         "HammerCrash": {
@@ -877,6 +877,141 @@
                 }
             }
         },
+        "CamelSpin-BladeWings": {
+            "Visible": false,
+            "Name": "Blade Wings",
+            "ID": 26,
+            "Icon": "../skillicons/Icon_HamerStoll_Skill_CamelSpin_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "???",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "FullBurst-Rend": {
+            "Visible": false,
+            "Name": "Rend",
+            "ID": 27,
+            "Icon": "../skillicons/Icon_HamerStoll_Skill_FullBurst_A.png",
+            "Levels": {
+                "0": {
+                    "Description": "???",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 2
+                }
+            }
+        },
+        "PulverizerHeadbutt": {
+            "Name": "Pulverizer Headbutt",
+            "ID": 28,
+            "Icon": "../skillicons/Icon_HamerStoll_Skill_RhinoHeadButt.png",
+            "Assignable": false,
+            "Levels": {
+                "0": {
+                    "Description": "???",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
+        "OperationAsh": {
+            "Name": "Operation Ash",
+            "ID": 29,
+            "Icon": "../skillicons/Icon_HamerStoll_Skill_CombatFalcons.png",
+            "Levels": {
+                "0": {
+                    "Description": "???",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 2
+                },
+                "4": {
+                    "Effect": "",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                },
+                "5": {
+                    "Effect": "",
+                    "RequiredLevel": 60,
+                    "RequiredSP": 3
+                }
+            }
+        },
         "BasicAttackMastery": {
             "Passive": true,
             "Name": "Basic Attack Mastery",
@@ -1159,11 +1294,39 @@
                 }
             }
         },
+        "ExtremeRush": {
+            "Passive": true,
+            "Name": "Extreme Rush",
+            "ID": 1013,
+            "Icon": "../skillicons/Icon_HamerStoll_Skill_SGPassive2.png",
+            "Levels": {
+                "0": {
+                    "Description": "Provides the ability to gain invulnerable state when using special attack.",
+                    "Effect": "",
+                    "RequiredLevel": 0,
+                    "RequiredSP": 0
+                },
+                "1": {
+                    "Effect": "Duration: ?s",
+                    "RequiredLevel": 57,
+                    "RequiredSP": 1
+                },
+                "2": {
+                    "Effect": "Duration: ?s",
+                    "RequiredLevel": 58,
+                    "RequiredSP": 1
+                },
+                "3": {
+                    "Effect": "Duration: 5s",
+                    "RequiredLevel": 59,
+                    "RequiredSP": 2
+                }
+            }
+        },
         "RapidAttack": {
             "Passive": true,
             "Name": "Rapid Attack",
             "ID": 1011,
-            "RowSpan": 2,
             "Icon": "../skillicons/IP1-2.png",
             "Levels": {
                 "0": {

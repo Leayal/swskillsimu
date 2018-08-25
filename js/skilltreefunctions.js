@@ -237,6 +237,7 @@ $(document).mousemove(function (e) {
 });
 
 function SetToolTip(obj) {
+    var navbarBottomHeight;
     obj.mouseover(function () {
         var key = $(this).attr("insight");
         if (key) {
@@ -245,217 +246,246 @@ function SetToolTip(obj) {
             if (ddddddd) {
                 var desc = get = ddddddd.SkillDescription;
                 var eff = get = ddddddd.SkillEffect;
-                var elem = $('div#tooltip');
-                if (!desc && !eff) {
-                    elem.stop(false, true).fadeOut('fast');
-                    return;
+                var elem = $("div#tooltip");
+                // StringBuilder in the nutshell
+                var stringresult = [];
+                if (desc) {
+                    stringresult.push("[Description]\n");
+                    stringresult.push(desc);
                 }
-                if (desc)
-                    $('div#tooltip pre:first').text((get = skillinfoooo.Name) + "\n[Description]\n" + desc);
+                if (eff) {
+                    if (stringresult.length !== 0) {
+                        stringresult.push("\n\n");
+                    }
+                    stringresult.push("[Effect]\n");
+                    stringresult.push(eff);
+                }
+                $("div#tooltip .tooltipheader").text((get = skillinfoooo.Name));
+                if (stringresult !== 0)
+                    $("div#tooltip pre").text(stringresult.join("")).show();
                 else
-                    $('div#tooltip pre:first').empty();
-                if (eff)
-                    $('div#tooltip pre:last').text("[Effect]\n" + eff);
-                else
-                    $('div#tooltip pre:last').empty();
+                    $("div#tooltip pre").empty().hide();
                 var cssstyle = {};
+                navbarBottomHeight = $(".navbar.fixed-bottom").outerHeight(true);
                 var currentInt = window.mouseY + 10,
                     positionY;
-                if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
-                    cssstyle['bottom'] = 0;
-                    cssstyle['top'] = "";
+                if ((currentInt + elem.outerHeight(true)) > ($(document).height() - navbarBottomHeight)) {
+                    cssstyle["bottom"] = navbarBottomHeight;
+                    cssstyle["top"] = "";
                 } else {
-                    cssstyle['bottom'] = "";
-                    cssstyle['top'] = currentInt;
+                    cssstyle["bottom"] = "";
+                    cssstyle["top"] = currentInt;
                 }
                 currentInt = window.mouseX + 5;
                 if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
-                    cssstyle['left'] = "";
-                    cssstyle['right'] = 0;
+                    cssstyle["left"] = "";
+                    cssstyle["right"] = 0;
                 } else {
-                    cssstyle['right'] = "";
-                    cssstyle['left'] = currentInt;
+                    cssstyle["right"] = "";
+                    cssstyle["left"] = currentInt;
                 }
 
                 elem.css(cssstyle);
-                elem.stop(false, true).fadeIn('fast');
+                elem.stop(false, true).fadeIn("fast");
             }
         }
     }).mousemove(function () {
-        var elem = $('div#tooltip');
+        var elem = $("div#tooltip");
         var cssstyle = {};
         var currentInt = window.mouseY + 10,
             positionY;
-        if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
-            cssstyle['bottom'] = 0;
-            cssstyle['top'] = "";
+        if ((currentInt + elem.outerHeight(true)) > ($(document).height() - navbarBottomHeight)) {
+            cssstyle["bottom"] = navbarBottomHeight;
+            cssstyle["top"] = "";
         } else {
-            cssstyle['bottom'] = "";
-            cssstyle['top'] = currentInt;
+            cssstyle["bottom"] = "";
+            cssstyle["top"] = currentInt;
         }
         currentInt = window.mouseX + 5;
         if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
-            cssstyle['left'] = "";
-            cssstyle['right'] = 0;
+            cssstyle["left"] = "";
+            cssstyle["right"] = 0;
         } else {
-            cssstyle['right'] = "";
-            cssstyle['left'] = currentInt;
+            cssstyle["right"] = "";
+            cssstyle["left"] = currentInt;
         }
 
         elem.css(cssstyle);
     }).mouseout(function () {
-        $('div#tooltip').stop(false, true).fadeOut('fast');
+        $("div#tooltip").stop(false, true).fadeOut("fast");
     });
     return obj;
 }
 
 function SetToolTipUp(obj) {
+    var navbarBottomHeight;
     obj.mouseover(function () {
         var key = $(this).attr("insight");
         if (key) {
             var skillinfoooo = window.SkillCore.GetSkill(key);
             var ddddddd = skillinfoooo.CurrentLevelInfo();
             var fffffff = skillinfoooo.NextLevelInfo();
-            var elem = $('div#tooltip');
+            var elem = $("div#tooltip");
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
                 var eff = "";
                 if (fffffff)
                     eff = get = fffffff.SkillEffect;
                 if (!desc && !eff) {
-                    elem.stop(false, true).fadeOut('fast');
+                    elem.stop(false, true).fadeOut("fast");
                     return;
                 }
-                if (desc)
-                    $('div#tooltip pre:first').text("[Current]\n" + desc);
+                // In the nutshell
+                var stringbuilder = [];
+                if (desc) {
+                    stringbuilder.push("[Current]\n");
+                    stringbuilder.push(desc);
+                }
+                if (eff) {
+                    if (stringbuilder.length !== 0) {
+                        stringbuilder.push("\n\n");
+                    }
+                    stringbuilder.push("[After]\n");
+                    stringbuilder.push(eff);
+                }
+                if (stringbuilder.length !== 0)
+                    $("div#tooltip pre").text(stringbuilder.join("")).show();
                 else
-                    $('div#tooltip pre:first').empty();
-                if (eff)
-                    $('div#tooltip pre:last').text("[After]\n" + eff);
-                else
-                    $('div#tooltip pre:last').empty();
+                    $("div#tooltip pre").empty().hide();
                 var cssstyle = {};
+                navbarBottomHeight = $(".navbar.fixed-bottom").outerHeight(true);
                 var currentInt = window.mouseY + 10,
                     positionY;
-                if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
-                    cssstyle['bottom'] = 0;
-                    cssstyle['top'] = "";
+                if ((currentInt + elem.outerHeight(true)) > ($(document).height() - navbarBottomHeight)) {
+                    cssstyle["bottom"] = navbarBottomHeight;
+                    cssstyle["top"] = "";
                 } else {
-                    cssstyle['bottom'] = "";
-                    cssstyle['top'] = currentInt;
+                    cssstyle["bottom"] = "";
+                    cssstyle["top"] = currentInt;
                 }
                 currentInt = window.mouseX + 5;
                 if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
-                    cssstyle['left'] = "";
-                    cssstyle['right'] = 0;
+                    cssstyle["left"] = "";
+                    cssstyle["right"] = 0;
                 } else {
-                    cssstyle['right'] = "";
-                    cssstyle['left'] = currentInt;
+                    cssstyle["right"] = "";
+                    cssstyle["left"] = currentInt;
                 }
 
                 elem.css(cssstyle);
-                elem.stop(false, true).fadeIn('fast');
+                elem.stop(false, true).fadeIn("fast");
             }
         }
     }).mousemove(function () {
-        var elem = $('div#tooltip');
+        var elem = $("div#tooltip");
         var cssstyle = {};
         var currentInt = window.mouseY + 10,
             positionY;
-        if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
-            cssstyle['bottom'] = 0;
-            cssstyle['top'] = "";
+        if ((currentInt + elem.outerHeight(true)) > ($(document).height() - navbarBottomHeight)) {
+            cssstyle["bottom"] = navbarBottomHeight;
+            cssstyle["top"] = "";
         } else {
-            cssstyle['bottom'] = "";
-            cssstyle['top'] = currentInt;
+            cssstyle["bottom"] = "";
+            cssstyle["top"] = currentInt;
         }
         currentInt = window.mouseX + 5;
         if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
-            cssstyle['left'] = "";
-            cssstyle['right'] = 0;
+            cssstyle["left"] = "";
+            cssstyle["right"] = 0;
         } else {
-            cssstyle['right'] = "";
-            cssstyle['left'] = currentInt;
+            cssstyle["right"] = "";
+            cssstyle["left"] = currentInt;
         }
 
         elem.css(cssstyle);
     }).mouseout(function () {
-        $('div#tooltip').stop(false, true).fadeOut('fast');
+        $("div#tooltip").stop(false, true).fadeOut("fast");
     });
     return obj;
 }
 
 function SetToolTipDown(obj) {
+    var navbarBottomHeight;
     obj.mouseover(function () {
         var key = $(this).attr("insight");
         if (key) {
             var skillinfoooo = window.SkillCore.GetSkill(key);
             var ddddddd = skillinfoooo.CurrentLevelInfo();
             var fffffff = skillinfoooo.PreviousLevelInfo();
-            var elem = $('div#tooltip');
+            var elem = $("div#tooltip");
             if (ddddddd || fffffff) {
                 var desc = get = ddddddd.SkillEffect;
                 var eff = "";
                 if (fffffff) eff = get = fffffff.SkillEffect;
                 if (!desc && !eff) {
-                    elem.stop(false, true).fadeOut('fast');
+                    elem.stop(false, true).fadeOut("fast");
                     return;
                 }
-                if (desc)
-                    $('div#tooltip pre:first').text("[Current]\n" + desc);
+                var stringbuilder = [];
+                if (desc) {
+                    stringbuilder.push("[Current]\n");
+                    stringbuilder.push(desc);
+                }
+                if (eff) {
+                    if (stringbuilder.length !== 0) {
+                        stringbuilder.push("\n\n");
+                    }
+                    stringbuilder.push("[After]\n");
+                    stringbuilder.push(eff);
+                }
+                if (stringbuilder.length !== 0)
+                    $("div#tooltip pre").text(stringbuilder.join("")).show();
                 else
-                    $('div#tooltip pre:first').empty();
-                if (eff)
-                    $('div#tooltip pre:last').text("[After]\n" + eff);
-                else
-                    $('div#tooltip pre:last').text("[After]\nNone.");
+                    $("div#tooltip pre").empty().hide();
+
                 var cssstyle = {};
+                navbarBottomHeight = $(".navbar.fixed-bottom").outerHeight(true);
                 var currentInt = window.mouseY + 10,
                     positionY;
-                if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
-                    cssstyle['bottom'] = 0;
-                    cssstyle['top'] = "";
+                if ((currentInt + elem.outerHeight(true)) > ($(document).height() - navbarBottomHeight)) {
+                    cssstyle["bottom"] = navbarBottomHeight;
+                    cssstyle["top"] = "";
                 } else {
-                    cssstyle['bottom'] = "";
-                    cssstyle['top'] = currentInt;
+                    cssstyle["bottom"] = "";
+                    cssstyle["top"] = currentInt;
                 }
                 currentInt = window.mouseX + 5;
                 if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
-                    cssstyle['left'] = "";
-                    cssstyle['right'] = 0;
+                    cssstyle["left"] = "";
+                    cssstyle["right"] = 0;
                 } else {
-                    cssstyle['right'] = "";
-                    cssstyle['left'] = currentInt;
+                    cssstyle["right"] = "";
+                    cssstyle["left"] = currentInt;
                 }
 
                 elem.css(cssstyle);
-                elem.stop(false, true).fadeIn('fast');
+                elem.stop(false, true).fadeIn("fast");
             }
         }
     }).mousemove(function () {
-        var elem = $('div#tooltip');
+        var elem = $("div#tooltip");
         var cssstyle = {};
         var currentInt = window.mouseY + 10,
             positionY;
-        if ((currentInt + elem.outerHeight(true)) > $(document).height()) {
-            cssstyle['bottom'] = 0;
-            cssstyle['top'] = "";
+        if ((currentInt + elem.outerHeight(true)) > ($(document).height() - navbarBottomHeight)) {
+            cssstyle["bottom"] = navbarBottomHeight;
+            cssstyle["top"] = "";
         } else {
-            cssstyle['bottom'] = "";
-            cssstyle['top'] = currentInt;
+            cssstyle["bottom"] = "";
+            cssstyle["top"] = currentInt;
         }
         currentInt = window.mouseX + 5;
         if ((currentInt + elem.outerWidth(true)) > $(document).width()) {
-            cssstyle['left'] = "";
-            cssstyle['right'] = 0;
+            cssstyle["left"] = "";
+            cssstyle["right"] = 0;
         } else {
-            cssstyle['right'] = "";
-            cssstyle['left'] = currentInt;
+            cssstyle["right"] = "";
+            cssstyle["left"] = currentInt;
         }
 
         elem.css(cssstyle);
     }).mouseout(function () {
-        $('div#tooltip').stop(false, true).fadeOut('fast');
+        $("div#tooltip").stop(false, true).fadeOut("fast");
     });
     return obj;
 }
@@ -505,7 +535,7 @@ function ShowSkillAssignment(noCallback) {
             label: "Reset",
             cssClass: "btn btn-warning",
             action: function (dialogitself) {
-                window.ShowDangerDialog('Are you sure you want to reset all the slot assignments?', function () {
+                window.ShowDangerDialog("Are you sure you want to reset all the slot assignments?", function () {
                     window.SkillCore.ResetSlotAssignment();
                 });
             }

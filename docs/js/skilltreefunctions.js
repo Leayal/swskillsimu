@@ -246,14 +246,10 @@ function SetToolTip(obj) {
                 var desc = get = ddddddd.SkillDescription;
                 var eff = get = ddddddd.SkillEffect;
                 var elem = $('div#tooltip');
-                if (!desc && !eff) {
-                    elem.stop(false, true).fadeOut('fast');
-                    return;
-                }
                 if (desc)
                     $('div#tooltip pre:first').text((get = skillinfoooo.Name) + "\n[Description]\n" + desc);
                 else
-                    $('div#tooltip pre:first').empty();
+                    $('div#tooltip pre:first').text(((get = skillinfoooo.Name)));
                 if (eff)
                     $('div#tooltip pre:last').text("[Effect]\n" + eff);
                 else
