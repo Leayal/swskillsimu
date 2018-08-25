@@ -143,7 +143,10 @@
                     "RequiredLevel": 21,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "CamelSpin-BladeWings"
+            ]
         },
         "AssaultDive": {
             "Name": "Assault Dive",
@@ -660,7 +663,10 @@
                     "RequiredLevel": 37,
                     "RequiredSP": 3
                 }
-            }
+            },
+            "Extensions": [
+                "FullBurst-Rend"
+            ]
         },
         "EternalAbyss": {
             "Name": "Eternal Abyss",
