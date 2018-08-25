@@ -1313,12 +1313,12 @@
                     "RequiredSP": 0
                 },
                 "1": {
-                    "Effect": "Duration: ?s",
+                    "Effect": "Duration: 3s",
                     "RequiredLevel": 57,
                     "RequiredSP": 1
                 },
                 "2": {
-                    "Effect": "Duration: ?s",
+                    "Effect": "Duration: 4s",
                     "RequiredLevel": 58,
                     "RequiredSP": 1
                 },
