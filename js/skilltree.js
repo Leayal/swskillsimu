@@ -25,7 +25,7 @@ SkillTreeCore.prototype.ReadTree = function (loadingCallback, loadedCallback) {
             for (var ssk in json.Skills)
                 if (json.Skills.hasOwnProperty(ssk)) {
                     window.SkillCore.SkillList[ssk] = new SkillInfo(ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);
-                    if (get = window.SkillCore.SkillList[ssk].IsPassive)
+                    if (window.SkillCore.SkillList[ssk].IsPassive())
                         window.SkillCore.PassiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
                     else
                         window.SkillCore.ActiveSkillList[ssk] = window.SkillCore.SkillList[ssk];
@@ -58,7 +58,7 @@ SkillTreeCore.prototype.RenderTree = function (loadedCallback) {
         eTree.empty();
         var activeCount = 0;
         for (var sl in this.ActiveSkillList) {
-            if (get = this.ActiveSkillList[sl].Visible) {
+            if (this.ActiveSkillList[sl].IsVisible()) {
                 if (this.ActiveSkillList[sl].GetRowSpan() > 1) {
                     activeCount += this.ActiveSkillList[sl].GetRowSpan();
                 } else
@@ -82,7 +82,7 @@ SkillTreeCore.prototype.RenderTree = function (loadedCallback) {
         eTree.empty();
         var passiveCount = 0;
         for (var sl in this.PassiveSkillList) {
-            if (get = this.PassiveSkillList[sl].Visible) {
+            if (this.PassiveSkillList[sl].IsVisible()) {
                 if (this.PassiveSkillList[sl].GetRowSpan() > 1) {
                     passiveCount += this.PassiveSkillList[sl].GetRowSpan();
                 } else
@@ -114,7 +114,7 @@ SkillInfo.prototype.GetSkillPanel = function (ex) {
         var skillInfoPanel = $("<div>").addClass("skillExinfopanel").addClass("fadeinAppear");
         skillInfoPanel.attr("insight", this._id);
         skillInfoPanel.css({ 'top': '' });
-        var img = $("<img>").addClass("skillExIcon").attr("insight", this._id).attr("src", get = this.IconURL);
+        var img = $("<img>").addClass("skillExIcon").attr("insight", this._id).attr("src", this.GetIconURL());
         skillInfoPanel.append(img);
         SetToolTip(img);
         var mybutton = $("<button type=\"button\" class=\"btn-success skillexup\" insight=\"" + this._id + "\">").attr("skillup", "1");
@@ -138,7 +138,7 @@ SkillInfo.prototype.GetSkillPanel = function (ex) {
             }
         }));
         skillInfoPanel.append($("<p insight=\"skilllexevel\">").addClass("skillExLevel").text(this._currentskilllevel + "" + this._skillmaxlevel));
-        var exts = get = this.Extensions;
+        var exts = this.GetExtensions();
         if (exts !== undefined && Object.keys(exts).length > 0) {
             var extItem;
             for (var sle in exts) {
@@ -150,7 +150,7 @@ SkillInfo.prototype.GetSkillPanel = function (ex) {
     } else {
         var skillInfoPanel = $("<div>").addClass("skillinfopanel").addClass("fadeinAppear");
         skillInfoPanel.attr("insight", this._id);
-        var img = $("<img>").addClass("skillIcon").attr("insight", this._id).attr("src", get = this.IconURL);
+        var img = $("<img>").addClass("skillIcon").attr("insight", this._id).attr("src", this.GetIconURL());
         skillInfoPanel.append(img);
         SetToolTip(img);
         var mybutton = $("<button type=\"button\" class=\"btn btn-success skillup\" insight=\"" + this._id + "\">").attr("skillup", "1");
@@ -170,10 +170,10 @@ SkillInfo.prototype.GetSkillPanel = function (ex) {
             $(this).trigger("mouseover");
         }));
         skillInfoPanel.append($("<p insight=\"skilllevel\">").addClass("skillLevel").text(this._currentskilllevel + "/" + this._skillmaxlevel));
-        //skillInfoPanel.append($("<p>").addClass("skillName").text(get = this.Name));
+        //skillInfoPanel.append($("<p>").addClass("skillName").text(this.GetName()));
 
         //Set Skill Extensions
-        var exts = get = this.Extensions;
+        var exts = this.GetExtensions();
         if (exts !== undefined && Object.keys(exts).length > 0) {
             var extItem, foundExt = false,
                 extIndex = 0;
@@ -185,7 +185,7 @@ SkillInfo.prototype.GetSkillPanel = function (ex) {
                 if (this._currentskilllevel < this._skillmaxlevel)
                     extItem.Disabled(true);
                 else {
-                    if ((get = extItem.CurrentSkillLevel) > 0) {
+                    if ((extItem.GetCurrentSkillLevel()) > 0) {
                         extItem.Disabled(false);
                         foundExt = true;
                     } else
@@ -230,48 +230,56 @@ SkillInfo.prototype.UpdateSkill = function () {
     if (this._currentskilllevel <= this._defaultLevel) {
         panel.children("button[skilldown]:first").addClass("disabled");
         var pa = this._parent;
-        if (pa && !(pa.NextLevelInfo()))
-            for (var ske in pa.Extensions)
-                pa.Extensions[ske].Disabled(false);
+        if (pa && !(pa.GetNextLevelInfo())) {
+            var skillextensions = pa.GetExtensions();
+            for (var ske in skillextensions)
+                skillextensions[ske].Disabled(false);
+        }
     } else if (this._currentskilllevel == this._skillmaxlevel) {
         panel.children("button[skillup]:first").addClass("disabled");
         var pa = this._parent;
+        var skillextensions;
         if (pa) {
             var asdsss;
-            for (var ske in pa.Extensions) {
-                asdsss = pa.Extensions[ske];
-                if ((get = asdsss.ID) !== this._id)
+            skillextensions = pa.GetExtensions();
+            for (var ske in skillextensions) {
+                asdsss = skillextensions[ske];
+                if ((asdsss.GetID()) !== this._id)
                     asdsss.Disabled(true);
             }
         }
-        for (var ske in this.Extensions)
-            this.Extensions[ske].Disabled(false);
+        skillextensions = this.GetExtensions();
+        for (var ske in skillextensions)
+            skillextensions[ske].Disabled(false);
     } else {
         panel.children("button.disabled[skilldown]:first").removeClass("disabled");
         panel.children("button.disabled[skillup]:first").removeClass("disabled");
         var pa = this._parent;
+        var skillextensions;
         if (pa) {
             var asdsss;
-            for (var ske in pa.Extensions) {
-                asdsss = pa.Extensions[ske];
-                if ((get = asdsss.ID) !== this._id)
+            var skillextensions = pa.GetExtensions();
+            for (var ske in skillextensions) {
+                asdsss = skillextensions[ske];
+                if ((asdsss.GetID()) !== this._id)
                     asdsss.Disabled(true);
             }
         }
-        for (var ske in this.Extensions)
-            this.Extensions[ske].Disabled(true);
+        skillextensions = this.GetExtensions();
+        for (var ske in skillextensions)
+            skillextensions[ske].Disabled(true);
     }
 }
 
 SkillInfo.prototype.SkillUp = function () {
-    var next = this.NextLevelInfo();
+    var next = this.GetNextLevelInfo();
     if (next) {
-        if ((get = next.RequiredLevel) > (get = window.SkillCore.CurrentLevel)) {
+        if (next.RequiredLevel > (window.SkillCore.GetCurrentLevel())) {
             shownotify("Character level is not enough to learn further.", 'info');
             return;
         }
-        var reqSP = get = next.RequiredSP;
-        if ((get = window.SkillCore.SPLeft) < reqSP) {
+        var reqSP = next.RequiredSP;
+        if ((window.SkillCore.GetSPLeft()) < reqSP) {
             shownotify("Insufficient skill point.", 'info');
             return;
         }
@@ -283,13 +291,13 @@ SkillInfo.prototype.SkillUp = function () {
 }
 
 SkillInfo.prototype.SkillDown = function () {
-    var prev = this.PreviousLevelInfo();
+    var prev = this.GetPreviousLevelInfo();
     if (prev) {
         if (this._defaultLevel === this._currentskilllevel) {
             shownotify("Can not go lower than skill's default level.", 'warning');
             return;
         }
-        var reqSP = get = this.CurrentLevelInfo().RequiredSP;
+        var reqSP = this.GetCurrentLevelInfo().RequiredSP;
         this._spused -= reqSP;
         window.SkillCore.InvestedSPDecrease(reqSP);
         this._currentskilllevel--;
@@ -298,9 +306,9 @@ SkillInfo.prototype.SkillDown = function () {
 }
 
 SkillInfo.prototype.SkillDownEx = function () {
-    var prev = this.PreviousLevelInfo();
+    var prev = this.GetPreviousLevelInfo();
     if (prev) {
-        window.SkillCore.InvestedSPDecrease(get = this.CurrentLevelInfo().RequiredSP);
+        window.SkillCore.InvestedSPDecrease(this.GetCurrentLevelInfo().RequiredSP);
         this._currentskilllevel--;
         this.UpdateSkill();
     }
