@@ -356,7 +356,7 @@ function ReRenderTree(characterclassinfo) {
                 }).hide()
             );
         }
-    });
+    }, true);
 }
 
 function copyLink(_url) {

@@ -182,8 +182,16 @@ SkillInfo.prototype.IsClassAvailable = function (_classIndex) {
     return true;
 }
 
-SkillInfo.prototype.GetSkillPanel = function (ex) {
-    if (this.Panel) return this.Panel;
+SkillInfo.prototype.GetSkillPanel = function (ex, forceCreate) {
+    if (this.Panel) {
+        if (forceCreate) {
+            if (this.Panel)
+                this.Panel.remove();
+            this.Panel = null;
+        } else {
+            return this.Panel;
+        }
+    }
     if (ex) {
         var skillInfoPanel = $("<div>").addClass("skillExinfopanel").addClass("fadeinAppear");
         skillInfoPanel.attr("insight", this._id);
@@ -252,20 +260,22 @@ SkillInfo.prototype.GetSkillPanel = function (ex) {
             var extItem, foundExt = false,
                 extIndex = 0;
             for (var sle in exts) {
-                extIndex++;
-                var extensionPanel = $('<div>').addClass("extension" + extIndex + "infopanel");
                 extItem = window.SkillCore.GetSkill(sle);
-                extItem.GetSkillPanel(true).appendTo(extensionPanel);
-                if (this._currentskilllevel < this._skillmaxlevel)
-                    extItem.Disabled(true);
-                else {
-                    if ((extItem.GetCurrentSkillLevel()) > 0) {
-                        extItem.Disabled(false);
-                        foundExt = true;
-                    } else
+                if (!extItem.IsVisible() && extItem.IsClassAvailable(window.SkillCore.GetSelectedClassIndex())) {
+                    extIndex++;
+                    var extensionPanel = $('<div>').addClass("extension" + extIndex + "infopanel");
+                    extItem.GetSkillPanel(true).appendTo(extensionPanel);
+                    if (this._currentskilllevel < this._skillmaxlevel)
                         extItem.Disabled(true);
+                    else {
+                        if ((extItem.GetCurrentSkillLevel()) > 0) {
+                            extItem.Disabled(false);
+                            foundExt = true;
+                        } else
+                            extItem.Disabled(true);
+                    }
+                    extensionPanel.appendTo(skillInfoPanel);
                 }
-                extensionPanel.appendTo(skillInfoPanel);
                 //extItem.GetSkillPanel(true).children().addClass("disabled");
             }
             if (!foundExt && (this._currentskilllevel == this._skillmaxlevel))

@@ -380,12 +380,11 @@ SkillTreeCore.prototype.ReadTree = function (loadingCallback, loadedCallback) {
     });
 }
 
-SkillTreeCore.prototype.RenderTree = function (loadedCallback) {
+SkillTreeCore.prototype.RenderTree = function (loadedCallback, forceCreate) {
     var eTree = $("li#activeskill");
     if (eTree) {
         var activeRow = $("<ul>").addClass("tableactiveskill");
-        eTree.children().detach();
-        //eTree.empty();
+        eTree.empty();
         var activeCount = 0;
         for (var sl in this.ActiveSkillList) {
             if (this.ActiveSkillList.hasOwnProperty(sl)) {
@@ -395,7 +394,7 @@ SkillTreeCore.prototype.RenderTree = function (loadedCallback) {
                         activeCount += spanvalue;
                     } else
                         activeCount++;
-                    activeRow.append($("<li>").addClass("tablelike").append(this.ActiveSkillList[sl].GetSkillPanel()));
+                    activeRow.append($("<li>").addClass("tablelike").append(this.ActiveSkillList[sl].GetSkillPanel(false, forceCreate)));
                     if (activeCount >= 3) {
                         if (activeRow)
                             eTree.append(activeRow);
@@ -412,8 +411,7 @@ SkillTreeCore.prototype.RenderTree = function (loadedCallback) {
     eTree = $("li#passiveskill");
     if (eTree) {
         var passiveRow = $("<ul>").addClass("tablepassiveskill");
-        eTree.children().detach();
-        // eTree.empty();
+        eTree.empty();
         var passiveCount = 0;
         for (var sl in this.PassiveSkillList) {
             if (this.PassiveSkillList.hasOwnProperty(sl)) {
@@ -423,7 +421,7 @@ SkillTreeCore.prototype.RenderTree = function (loadedCallback) {
                         passiveCount += spanvalue;
                     } else
                         passiveCount++;
-                    passiveRow.append($("<li>").addClass("tablelike").addClass("passiveskilltree").append(this.PassiveSkillList[sl].GetSkillPanel()));
+                    passiveRow.append($("<li>").addClass("tablelike").addClass("passiveskilltree").append(this.PassiveSkillList[sl].GetSkillPanel(false, forceCreate)));
                     if (passiveCount >= 2) {
                         if (passiveRow)
                             eTree.append(passiveRow);
