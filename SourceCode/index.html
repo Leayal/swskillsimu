@@ -25,8 +25,7 @@
         <meta property="og:title" content="SoulWorker Skill Simulator" />
         <meta property="og:description" content="SoulWorker Skill Simulator" />
         <meta property="og:image" content="http://github.com/Leayal/swskillsimu/raw/master/images/og-meta-preview.png" />
-        <meta property="og:image:secure_url" content="https://github.com/Leayal/swskillsimu/raw/master/images/og-meta-preview.png"
-        />
+        <meta property="og:image:secure_url" content="https://github.com/Leayal/swskillsimu/raw/master/images/og-meta-preview.png" />
         <meta property="og:type" content="article" />
         <meta property="og:author" content="Dramiel Leayal" />
         <meta name="robots" content="index">
@@ -50,11 +49,13 @@
         <div class="container-fluid">
             <div class="container bg-dark-fade">
                 <h1 class="text-center">SoulWorker Skill Simulator</h1>
-                <span>This skill simulator require javascript turned on.<br/>The skill simulator should work on most of browsers,
-                    and even on Internet Explorer 11. However, it should be noted that there might be visual bug(s) on old
+                <span>This skill simulator require javascript turned on.<br />The skill simulator should work on most
+                    of browsers,
+                    and even on Internet Explorer 11. However, it should be noted that there might be visual bug(s) on
+                    old
                     browsers. I just tested on: Firefox v56, Chrome v68, IE11, Edge.
                 </span>
-                <br/><br/>
+                <br /><br />
                 <span>Special thanks to all those who were contributed/help me maintain the skill tree:</span>
                 <ul>
                     <li>Discord User: Asai「朝顔」#3254 (UserID: &lt;@165738921886482433&gt;)</li>
@@ -68,8 +69,8 @@
                     <li>Many others</li>
                 </ul>
                 <nav class="navbar navbar-expand-md navbar-dark text-center">
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarCollapse"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -78,8 +79,9 @@
                                 <span>Content is available under
                                     <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative
                                         Commons Attribution-NonCommercial-ShareAlike</a> unless stated.
-                                    <br/>Official Art, Game Content and Screenshots are trademarks and copyrights of
-                                    <a href="http://www.liongames.co.kr/Front/" target="_blank">Lion Games</a> and the game's
+                                    <br />Official Art, Game Content and Screenshots are trademarks and copyrights of
+                                    <a href="http://www.liongames.co.kr/Front/" target="_blank">Lion Games</a> and the
+                                    game's
                                     publishers.
                                 </span>
                             </li>
@@ -87,18 +89,20 @@
                     </div>
                 </nav>
                 <nav class="navbar navbar-expand-md navbar-dark text-center">
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarCollapse"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent2">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/fork" data-size="large" aria-label="Fork Leayal/swskillsimu on GitHub">Fork</a>
-                                <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/issues" data-icon="octicon-issue-opened" data-size="large"
-                                    aria-label="Issue Leayal/swskillsimu on GitHub">Report Issue</a>
-                                <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/archive/master.zip" data-icon="octicon-cloud-download"
-                                    data-size="large" aria-label="Download Leayal/swskillsimu on GitHub">Download
+                                <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/fork"
+                                    data-size="large" aria-label="Fork Leayal/swskillsimu on GitHub">Fork</a>
+                                <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/issues"
+                                    data-icon="octicon-issue-opened" data-size="large" aria-label="Issue Leayal/swskillsimu on GitHub">Report
+                                    Issue</a>
+                                <a class="nav-link github-button" href="https://github.com/Leayal/swskillsimu/archive/master.zip"
+                                    data-icon="octicon-cloud-download" data-size="large" aria-label="Download Leayal/swskillsimu on GitHub">Download
                                     Source
                                 </a>
                             </li>
@@ -144,10 +148,12 @@
         </div>
         <script>
             $(function () {
-                $('div#sakura').sakura();
                 $("[character]").each(function (index) {
                     $(this).attr("href", $(this).attr("character"))
                 });
+                let thelet_yep_totally_let = $("#sakura")
+                if (typeof (thelet_yep_totally_let.sakura === "function"))
+                    thelet_yep_totally_let.sakura();
             });
         </script>
         <script async defer src="js/buttons.min.js"></script>
