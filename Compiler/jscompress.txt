@@ -1,4 +1,4 @@
 java	C:\Program Files\Java\jre1.8.0_181\bin\java.exe
 bin	Compiler\closure-compiler-v20180805.jar
-files	in:SourceCode\js\imagesLoaded.js	in:SourceCode\js\common.js	in:sakura\jquery-sakura.min.js	out:SourceCode\js\App.Home.js	out:docs\js\App.Home.js
+files	in:SourceCode\js\imagesLoaded.js	in:SourceCode\js\common.js	in:SourceCode\sakura\jquery-sakura.min.js	out:docs\js\App.Home.js
 files	in:SourceCode\js\imagesLoaded.js	in:SourceCode\js\bootstrap-notify.min.js	in:SourceCode\js\jquery-ui.min.js	in:SourceCode\js\bootstrap-dialogex.js	in:SourceCode\js\clipboard.min.js	in:SourceCode\js\common.js	in:SourceCode\js\SlotGrid.js	in:SourceCode\js\skilltreefunctions.js	in:SourceCode\js\skillinfos.js	in:SourceCode\js\skilltree.js	out:docs\js\App.SkillTree.js
