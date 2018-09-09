@@ -264,7 +264,7 @@ SkillInfo.prototype.GetSkillPanel = function (ex, forceCreate) {
                 if (!extItem.IsVisible() && extItem.IsClassAvailable(window.SkillCore.GetSelectedClassIndex())) {
                     extIndex++;
                     var extensionPanel = $('<div>').addClass("extension" + extIndex + "infopanel");
-                    extItem.GetSkillPanel(true).appendTo(extensionPanel);
+                    extItem.GetSkillPanel(true, true).appendTo(extensionPanel);
                     if (this._currentskilllevel < this._skillmaxlevel)
                         extItem.Disabled(true);
                     else {
