@@ -1,0 +1,242 @@
+#dialogs {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-bg-character {
+    position: absolute;
+    border: 2px solid rgb(0,0,0);
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-height: 75%;
+    max-width: 100%;
+    bottom: 0px;
+}
+
+.foreground-white {
+    color: white
+}
+
+.container-fluid {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+li.titletablelike {
+    float: left;
+    display: block;
+    margin: 7px;
+}
+
+li.tablelike {
+    float: left;
+    display: block;
+    width: 155px;
+    height: 88px;
+    margin: 7px;
+}
+
+div.skillinfopanel {
+    position: relative;
+    border: 1px solid black;
+    width: 155px;
+    height: 92px;
+    background-color: rgba(0, 0, 0, 0.4)
+    /*display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;//*/
+}
+
+img.skillIcon {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%);
+}
+
+button.skillup {
+    cursor: default;
+    position: absolute;
+    height: 15px;
+    width: 10px;
+    top: 5px;
+    left: 100px;
+    margin: 0;
+}
+
+li.activeskill {
+    float: left;
+    display: block;
+    width: 570px;
+}
+
+ul.tableactiveskill {
+    width: 570px;
+    list-style: none outside none;
+}
+
+li.passiveskill {
+    float: left;
+    display: block;
+    width: 390px;
+}
+
+ul.tablepassiveskill {
+    float: right;
+    width: 390px;
+    list-style: none outside none;
+}
+
+button.skilldown {
+    cursor: default;
+    position: absolute;
+    height: 15px;
+    width: 10px;
+    top: 20px;
+    left: 100px;
+    margin: 0;
+}
+
+p.skillLevel {
+    font-size: 13px;
+    position: absolute;
+    left: 50%;
+    top: 56px;
+    transform: translateX(-50%);
+}
+
+p.skillName {
+    font-size: 13px;
+    position: absolute;
+    left: 1px;
+    top: 56px;
+}
+
+div.extension1infopanel {
+    position: absolute;
+    width: 54px;
+    height: auto;
+    left: -1px;
+    top: 60px;
+}
+
+div.extension2infopanel {
+    position: absolute;
+    width: 54px;
+    height: auto;
+    left: 89px;
+    top: 60px;
+}
+
+div.skillExinfopanel {
+    position: relative;
+    border: 1px solid black;
+    width: 54px;
+    height: 31px;
+    /*left: 65px;
+    top: -1px;*/
+}
+
+img.skillExIcon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+button.skillexup {
+    position: absolute;
+    height: 15px;
+    width: 6px;
+    top: -1px;
+    left: 45px;
+    margin: 0;
+}
+
+button.skillexdown {
+    position: absolute;
+    height: 15px;
+    width: 6px;
+    top: 14px;
+    left: 45px;
+    margin: 0;
+}
+
+p.skillExLevel {
+    word-wrap: break-word;
+    height: auto;
+    width: 1px;
+    font-size: 9px;
+    position: absolute;
+    left: 31px;
+    top: 2px;
+    margin-left: 2px;
+}
+
+.text-black {
+    color: black;
+}
+
+.slotskillimg img {
+    width: 40px;
+    height: 40px;
+}
+
+.slotskillimg {
+    background-color: rgba(0,0,0,0.4);
+    width: 40px;
+    height: 40px;
+}
+
+.liststyle-none {
+    list-style: none;
+}
+
+.width-max-fit {
+    width: auto;
+}
+
+.ul-flexible {
+    list-style: none;
+}
+
+.ul-flexible li {
+    margin: 5px 0;
+}
+
+.list-inline-item .image {
+    width: 40px;
+    height: 40px;
+}
+
+.list-inline-item .name {
+    width: 300px;
+    height: 40px;
+}
+
+.list-inline-item .level {
+    width: 60px;
+    height: 40px;
+}
+
+.clickthrough {
+    pointer-events:none;
+}
+
+.skill-list-select {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

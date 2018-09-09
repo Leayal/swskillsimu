@@ -8,6 +8,16 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.image-bg-character {
+    position: absolute;
+    border: 2px solid rgb(0,0,0);
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-height: 75%;
+    max-width: 100%;
+    bottom: 0px;
+}
+
 .foreground-white {
     color: white
 }

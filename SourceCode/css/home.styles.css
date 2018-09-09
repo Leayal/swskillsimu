@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(17, 17, 17);
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    background-position: center center
+}
+
+a:hover {
+    cursor: default;
+}
+
+.whitetext {
+    color: white;
+}
+
+.bg-dark-fade {
+    background-color: rgba(17, 17, 17, 0.8) !important;
+}
+
+.characterimage:hover {
+    opacity: 1 !important;
+    transform: scale(1.1) translateY(-5%) !important;
+}
+
+.characterimage {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.7;
+    transition: all .2s ease-in-out;
+}
+
+.hideaway {
+    display: none;
+    width: 0px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    transform: translate(-100%, -100%);
+}

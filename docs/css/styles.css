@@ -31,21 +31,11 @@ body {
 
 .image-bg {
     background-color: rgb(17, 17, 17);
-    background-image: url("../images/bg.jpg?v=2");
+    background-image: url("../images/bg.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: scroll;
     background-position: center center
-}
-
-.image-bg-character {
-    position: absolute;
-    border: 2px solid rgb(0,0,0);
-    border-bottom: none;
-    background-color: rgba(0, 0, 0, 0.6);
-    max-height: 75%;
-    max-width: 100%;
-    bottom: 0px;
 }
 
 .side-right {
@@ -209,6 +199,10 @@ li.passiveskilltree {
 }
 
 button:hover {
+    cursor: default;
+}
+
+.no-mouse-change {
     cursor: default;
 }
 
