@@ -212,30 +212,6 @@ function SkillTreeToolTipFramework(target, selector) {
             transformX: transformX
         });
         //*/
-
-        /*
-        if (false) {
-            let cssstyle,
-                currentInt = myself.mouseY + 10;
-            if ((offsetX + myself._tooltipHeight) > (Math.min(viewportWindow.height(), documentWindow.height()) - this._boundBottom)) {
-                cssstyle["bottom"] = this._boundBottom;
-                cssstyle["top"] = "";
-            } else {
-                cssstyle["bottom"] = "";
-                cssstyle["top"] = currentInt;
-            }
-            currentInt = myself.mouseX + 5;
-            if ((currentInt + myself._tooltipWidth) > (Math.min(viewportWindow.width(), documentWindow.height()) - this._boundRight)) {
-                cssstyle["left"] = "";
-                cssstyle["right"] = 0;
-            } else {
-                cssstyle["right"] = "";
-                cssstyle["left"] = currentInt;
-            }
-            myself._target.css(cssstyle);
-        }
-        */
-
         myself._target.css({
             "transform": "translate(" + transformX + "px," + transformY + "px)"
         });
