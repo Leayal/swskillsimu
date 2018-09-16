@@ -20,6 +20,7 @@ const SupportedCodec = {
     }
 }
 justSomeTemp1 = null;
+const isPromiseSupported = (typeof (Promise) !== "undefined");
 
 const previewOptions = {
     "No preview": 0,
@@ -358,10 +359,19 @@ $(document).ready(function () {
     tooltippreviewPanel_video.on("error", function () {
         tooltippreviewPanel.hide();
     }).on("canplay", function (event) {
-        event.target.play().then(onPreviewPlaySuccessfully, function () {
-            tooltippreviewPanel.hide();
-            toolTipFramework.UpdateTooltipSize();
-        });
+        if (isPromiseSupported) {
+            let objPromise = event.target.play();
+            var thisIsMyPromise = objPromise.then || null;
+            if (thisIsMyPromise) {
+                thisIsMyPromise.apply([
+                    onPreviewPlaySuccessfully,
+                    function () {
+                        tooltippreviewPanel.hide();
+                        toolTipFramework.UpdateTooltipSize();
+                    }
+                ]);
+            }
+        }
     });
 
     toolTipFramework.OnMouseEnter.Register(function (event) {
@@ -388,7 +398,7 @@ $(document).ready(function () {
             toolTipFramework.SetBound(0, 0, 0, navBarBottom.outerHeight(true) || 0);
             tooltippreviewPanel.hide();
 
-            if ((window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
+            if (isPromiseSupported && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
                 let hasVP9 = (typeof (previewinfo.Video.vp9) === "string"),
                     hasH264 = (typeof (previewinfo.Video.h264) === "string");
 
@@ -413,10 +423,14 @@ $(document).ready(function () {
                     if (typeof (_attributes.src) === "string") {
                         tooltippreviewPanel_video.attr(_attributes);
                         tooltippreviewPanel_video.trigger("load");
-                        tooltippreviewPanel_video[0].play().then(onPreviewPlaySuccessfully, function () {
-                            // Wait for "CanPlay" event above and start to play the video (way way above).
-                            // This is mainly because the load() above is still loading the video.
-                        });
+                        let myPromiseAgain = tooltippreviewPanel_video[0].play();
+                        let myPromiseCallbacks = myPromiseAgain.then || null;
+                        if (myPromiseCallbacks) {
+                            myPromiseCallbacks.apply([onPreviewPlaySuccessfully, function () {
+                                // Wait for "CanPlay" event above and start to play the video (way way above).
+                                // This is mainly because the load() above is still loading the video.
+                            }]);
+                        }
                     } else {
                         tooltippreviewPanel.hide();
                     }
