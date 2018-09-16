@@ -24,7 +24,10 @@
                     "Description": "Perform a series of slashes while advancing forward. An additional strike can be used [Right-click] at the end of the skill.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/B_Skill_FirstBlade.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "{Basic Attack}\nDamage: 361%\nSA Damage: 194%\n{Final Slash}\nDamage: 225%\nSA Damage: 121%\nSG Cost: 55\nCooldown: 15 seconds",
@@ -66,7 +69,10 @@
                     "Description": "The Extension strike radius becomes bigger.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_First Blade_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -95,7 +101,10 @@
                     "Description": "Perform a series of slashes while advancing forward. An additional strike can be used with an additional input.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Pierce Step.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 83%\nSA Damage: 330%\nSG Cost: 30\nCooldown: 8 seconds",
@@ -138,7 +147,10 @@
                     "Description": "Push away the enemies with a spinning slash after Pierce Step.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Pierce Step_Attack01.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "{Base Attack}\nDamage: +92%\nSA Damage: -381%\n{Spin Attack}\nDamage: 65%\nSA Damage: 35%\nMaximum Spin Attack: 1",
@@ -148,7 +160,10 @@
                 "2": {
                     "Effect": "{Base Attack}\nDamage: +92%\nSA Damage: -381%\n{Spin Attack}\nDamage: 216%\nSA Damage: 114%\nMaximum Spin Attack: 2",
                     "RequiredLevel": 26,
-                    "RequiredSP": 1
+                    "RequiredSP": 1,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Pierce Step_Attack02.{{auto}}"
+                    }
                 }
             }
         },
@@ -162,7 +177,10 @@
                     "Description": "Launch the enemies to the air after Pierce Step with a rising slash.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Pierce Step_Attack_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 200%\nSA Damage: 280%",
@@ -180,7 +198,10 @@
                 "0": {
                     "Description": "Push enemies away by performing a spinning slash.",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Spin Cutter.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 178%\nSA Damage: 92%\nSG Cost: 35\nCooldown: 5 seconds",
@@ -221,7 +242,10 @@
                     "Description": "Use your special power to enhance your SG acquisition rate. All attacks that hit will be able to give additional SG.\nThe amount of SG gained will increase with monster grade/rank and the effect is applicable on up to 5 hits.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Blow Up.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Buff effect: 1.0% SG per hit\nBuff Duration: 20 seconds\nSG Cost: 80\nCooldown: 45 seconds",
@@ -259,7 +283,10 @@
                     "Description": "Push the sword through the ground, summoning multiple swords to deal damage.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Blade Quake.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 212%\nSA Damage:444%\nSG Cost: 45\nCooldown: 16 seconds",
@@ -301,7 +328,10 @@
                     "Description": "All enemies hit by the skill will be stunned.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Blade Quake_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stun Duration: 3 Seconds",
@@ -329,7 +359,10 @@
                     "Description": "Summoned swords will damage enemies and pull them towards the player.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Blade Wall.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 149%\nSA Damage: 310%\nSG Cost: 40\nCooldown: 12 seconds",
@@ -367,7 +400,10 @@
                     "Description": "Slashes frontward with great power.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Power Slash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 455%\nSA Damage: 262%\nSG Cost: 60\nCooldown: 15 seconds",
@@ -405,7 +441,10 @@
                     "Description": "Leap forward and slam the ground, launching the enemies into the air. Hold the skill button to charge the skill and leap further.",
                     "Effect": "",
                     "RequiredLevel": 13,
-                    "RequiredSP": 1
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Leap Attack.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 392%\nSA Damage: 629%\nSG Cost: 50\nCooldown: 20 seconds",
@@ -448,7 +487,10 @@
                     "Description": "There will be more attacks, increasing hitcount.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Leap Attack_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 102%\nSA Damage: 172%",
@@ -477,7 +519,10 @@
                     "Description": "Attack range is increased. Slam impact attack range increased.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Leap Attack_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "[Additional Effect]\nAttack range is increased",
@@ -505,7 +550,10 @@
                     "Description": "Create an enhancing field in a set radius. All party members within the area will have increased damage.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Arena Rush.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 100%\nSA Damage: 100%\n[Buff Area]\nBuff Effect: Attack Increase by 7%\nBuff Duration: 20 seconds\nBuff Area Duration: 10 seconds\nSG Cost: 50\nCooldown: 45 seconds",
@@ -577,7 +625,10 @@
                     "Description": "All hit enemies will be stunned for a brief moment.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/B_Skill_ArenaRush_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stun Duration: 1 second",
@@ -605,7 +656,10 @@
                     "Description": "Swiftly leap backwards, summoning a sword imbued with supernatural powers and firing it frontward.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Flash Step.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 468%\nSA Damage: 605%\nSG Cost: 35\nCooldown: 20 seconds",
@@ -647,7 +701,10 @@
                     "Description": "Slash in a X pattern mid-air and fire strong sword energy. The sword energy will explode on the ground and deal additional damage.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Cross Strike.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage per slash: 98%\nSA Damage per slash: 74%\nSG Cost: 45\nCooldown: 30 seconds",
@@ -689,7 +746,10 @@
                     "Description": "A burning zone will appear when the sword energy explodes on the ground.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Cross Strike_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "[Increased Damage]\nDamage: -28%\nSA Damage: -21%\n{Burning Zone}\nDamage: 45%\nSA Damage: 34%",
@@ -717,7 +777,10 @@
                     "Description": "Charge your sword with energy behind your back , then release it. The sword energy flies in a straight line while penetrating enemies.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Wind Break.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 466%\nSA Damage: 444%\nSG Cost: 50\nCooldown: 35 seconds",
@@ -759,7 +822,10 @@
                     "Description": "Fires multiple charged energy waves. Fires 2 waves with 0.7x the power of an original slash.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Wind Break_Attack_02.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Maximum Waves: 2",
@@ -769,7 +835,10 @@
                 "2": {
                     "Effect": "Maximum Waves: 3",
                     "RequiredLevel": 55,
-                    "RequiredSP": 1
+                    "RequiredSP": 1,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Wind Break_Attack_03.{{auto}}"
+                    }
                 }
             }
         },
@@ -782,7 +851,10 @@
                     "Description": "Throw your sword upwards, summoning a torrential rain of energy swords. Very large AoE.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Blade Shower.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 1678%\nSA Damage: 1721%\nSG Cost: 75\nCooldown: 45 seconds",
@@ -825,7 +897,10 @@
                     "Description": "Chase enemies after the spin cutter.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Spin Cutter_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 267%\nSA Damage: 138%",
@@ -858,7 +933,10 @@
                     "Description": "Attach the small sword to the big one and then throw it.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Flash Step_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 702%\nSA Damage: 907%",
@@ -891,7 +969,10 @@
                     "Description": "Immediately land then generate a small sword rain on the area around Haru.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_SwardFall.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 1678%\nSA Damage: 1721%\nSG Cost: 75\nCooldown: 45 seconds",
@@ -933,7 +1014,10 @@
                     "Description": "After rushing to make two swords cross and attacking rushing, add a rotational attack towards the back and draw enemies.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Skill_Slashing Warfare.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 320%\nSA Damage: 300%\nSG Cost: 30\nCooldown: 20 seconds",
@@ -973,7 +1057,10 @@
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Attack_01.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "SG Gain +20%.\nUnlock alternative attack “A”",
@@ -983,22 +1070,34 @@
                 "2": {
                     "Effect": "SG Gain +70%.\nUnlock additional basic attack",
                     "RequiredLevel": 5,
-                    "RequiredSP": 1
+                    "RequiredSP": 1,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Attack_02.{{auto}}"
+                    }
                 },
                 "3": {
                     "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
                     "RequiredLevel": 10,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Attack_03.{{auto}}"
+                    }
                 },
                 "4": {
                     "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
                     "RequiredLevel": 15,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Attack_04.{{auto}}"
+                    }
                 },
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 20,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/B_Attack_05.{{auto}}"
+                    }
                 }
             }
         },
@@ -1013,7 +1112,10 @@
                     "Description": "Use your power to lift the enemies up to the air.\n(Air) Quickly descend by landing and attacking with your feet.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_S_Attack_N.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -1043,7 +1145,10 @@
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 20",
@@ -1063,7 +1168,10 @@
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Rise_Attack.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 25",
@@ -1093,7 +1201,10 @@
                     "Description": "Swiftly dash forward",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/B_Run_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -1118,7 +1229,10 @@
                     "Description": "While downed, get up while damaging surrounding enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Rise_Attack.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
@@ -1148,7 +1262,10 @@
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/B_N_Attack_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 115%\nSA Damage: 38%",
@@ -1167,7 +1284,10 @@
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_B_Special_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 40\nCooldown: 60 seconds",
@@ -1196,7 +1316,10 @@
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/haru/PC_A_S_Attack_N_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 206%\nSA Damage: 92%\nCooldown: 5 seconds",

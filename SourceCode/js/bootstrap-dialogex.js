@@ -4,7 +4,7 @@ function Bootstrap4ModalDialogManager() {
 }
 
 Bootstrap4ModalDialogManager.prototype.Unregister = function (dialog) {
-    var index = this.modals.indexOf(dialog);
+    let index = this.modals.indexOf(dialog);
     if (index === -1) return;
     this.modals.splice(index, 1);
     // this.modals = this.modals.filter(function (item) { return item !== dialog });
@@ -15,7 +15,7 @@ Bootstrap4ModalDialogManager.prototype.Unregister = function (dialog) {
 }
 
 Bootstrap4ModalDialogManager.prototype.Register = function (dialog) {
-    var index = this.modals.indexOf(dialog);
+    let index = this.modals.indexOf(dialog);
     if (index !== -1) return;
     if (this.modals.length === 0)
         this.callbacks.forEach(function (currentValue, index, arr) {
@@ -26,7 +26,7 @@ Bootstrap4ModalDialogManager.prototype.Register = function (dialog) {
 
 Bootstrap4ModalDialogManager.prototype.CloseForegroundDialog = function () {
     if (this.modals.length === 0) return;
-    var dialog = this.modals[this.modals.length - 1];
+    let dialog = this.modals[this.modals.length - 1];
     dialog.Hide();
 }
 
@@ -51,6 +51,7 @@ function Bootstrap4ModalDialog(parent, content, title, buttons, type) {
     this.objState = {};
     this.parent = parent;
     var contentType = typeof (content);
+
     if (contentType === "string")
         this.dialogContent = $("<div>").addClass("modal-body").text(content);
     else if (contentType === "function")

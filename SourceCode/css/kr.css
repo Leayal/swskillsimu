@@ -8,6 +8,157 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.clearly-visible {
+    opacity: 1 !important;
+}
+
+@keyframes fadeincustom {
+    0%   { opacity: 0; }
+    100% { opacity: 0.85; }
+}
+@-webkit-keyframes fadeincustom {
+    0%   { opacity: 0; }
+    100% { opacity: 0.85; }
+}
+@-moz-keyframes fadeincustom {
+    0%   { opacity: 0; }
+    100% { opacity: 0.85; }
+}
+@-o-keyframes fadeincustom {
+    0%   { opacity: 0; }
+    100% { opacity: 0.85; }
+}
+
+@keyframes fadeoutcustom {
+    0%   { opacity: 0.85; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes fadeoutcustom {
+    0%   { opacity: 0.85; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes fadeoutcustom {
+    0%   { opacity: 0.85; }
+    100% { opacity: 0; }
+}
+@-o-keyframes fadeoutcustom {
+    0%   { opacity: 0.85; }
+    100% { opacity: 0; }
+}
+
+@keyframes glowing-red {
+    0% { box-shadow: 0 0 -10px red; }
+    40% { box-shadow: 0 0 20px red; }
+    60% { box-shadow: 0 0 20px red; }
+    100% { box-shadow: 0 0 -10px red; }
+}
+@-webkit-keyframes glowing-red {
+    0% { box-shadow: 0 0 -10px red; }
+    40% { box-shadow: 0 0 20px red; }
+    60% { box-shadow: 0 0 20px red; }
+    100% { box-shadow: 0 0 -10px red; }
+}
+@-moz-keyframes glowing-red {
+    0% { box-shadow: 0 0 -10px red; }
+    40% { box-shadow: 0 0 20px red; }
+    60% { box-shadow: 0 0 20px red; }
+    100% { box-shadow: 0 0 -10px red; }
+}
+@-o-keyframes glowing-red {
+    0% { box-shadow: 0 0 -10px red; }
+    40% { box-shadow: 0 0 20px red; }
+    60% { box-shadow: 0 0 20px red; }
+    100% { box-shadow: 0 0 -10px red; }
+}
+
+.highlight-red {
+    /*
+    -webkit-animation: 1500ms ease 0s infinite normal none running glowing-red;
+    -moz-animation: 1500ms ease 0s infinite normal none running glowing-red;
+    -o-animation: 1500ms ease 0s infinite normal none running glowing-red;
+    animation: 1500ms ease 0s infinite normal none running glowing-red;
+    */
+    -webkit-animation: whiteSonarEffect 1s alternate 75ms infinite ;
+    -moz-animation: whiteSonarEffect 1s alternate 75ms infinite;
+    -o-animation: whiteSonarEffect 1s alternate 75ms infinite;
+    animation: whiteSonarEffect 1s alternate 75ms infinite;
+}
+
+.animated.fadeout-custom {
+    -webkit-animation: fadeoutcustom 750ms forwards;
+    -moz-animation: fadeoutcustom 750ms forwards;
+    -o-animation: fadeoutcustom 750ms forwards;
+    animation: fadeoutcustom 750ms forwards;
+}
+
+.animated.fadein-custom {
+    -webkit-animation: fadeincustom 500ms;
+    -moz-animation: fadeincustom 500ms;
+    -o-animation: fadeincustom 500ms;
+    animation: fadeincustom 500ms;
+}
+
+@-webkit-keyframes whiteSonarEffect {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 0 2px red, 0 0 10px 10px red, 0 0 0 10px red;
+    }
+    40% {
+        opacity: 0.7;
+        box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+@-moz-keyframes whiteSonarEffect {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 0 2px red, 0 0 10px 10px red, 0 0 0 10px red;
+    }
+    40% {
+        opacity: 0.7;
+        box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+@-o-keyframes whiteSonarEffect {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 0 2px red, 0 0 10px 10px red, 0 0 0 10px red;
+    }
+    40% {
+        opacity: 0.7;
+        box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+@keyframes whiteSonarEffect {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 0 2px red, 0 0 10px 10px red, 0 0 0 10px red;
+    }
+    40% {
+        opacity: 0.7;
+        box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+
 .image-bg-character {
     position: absolute;
     border: 2px solid rgb(0,0,0);

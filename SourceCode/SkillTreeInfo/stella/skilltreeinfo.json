@@ -24,7 +24,14 @@
                     "Description": "Possess the guitar with ghosts, and swing it around to deal damage. The final slam launches enemies to the air.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": {
+                            "vp9": "../skillpreviews/stella/B_Skill_WheelDance.webm",
+                            "h264": "../skillpreviews/stella/B_Skill_WheelDance.mp4"
+                        },
+                        "Image": ""
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 164%\nSA Damage: 231%\nSG Cost: 15\nCooldown: 8s",

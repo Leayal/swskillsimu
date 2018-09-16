@@ -76,7 +76,7 @@ div#tooltip {
     max-width: 300px;
     width: auto;
     height: auto;
-    position: absolute;
+    position: fixed;
     display: none;
     border: 1px solid black;
     background: black;

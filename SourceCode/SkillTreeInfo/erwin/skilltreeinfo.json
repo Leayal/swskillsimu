@@ -24,7 +24,10 @@
                     "Description": "Kick the enemies ahead of you, launching them to the air.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_SkyHigh.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -67,7 +70,10 @@
                     "Description": "Shoot a powerful energy bullet that attacks the enemies in front.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_SkyHigh_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -86,7 +92,10 @@
                     "Description": "Shoot continuously at enemies knocked into the air.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_SkyHigh_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -115,7 +124,10 @@
                     "Description": "Quickly fire with both guns. Can move while using this skill.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_RapidFire.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -154,7 +166,10 @@
                     "Description": "Approach the enemies with great speed, and then fire at enemies close range.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_GunCombination.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -196,7 +211,10 @@
                     "Description": "Attacks done by the guns go through enemies.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_GunCombination_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -224,7 +242,10 @@
                     "Description": "Rapidly slide back and avoid incoming attacks.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_SlidingStep.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -267,7 +288,10 @@
                     "Description": "Throws a smoke screen in an area. Enemies in the smoke will be slowed.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_SlidingStep_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -296,7 +320,10 @@
                     "Description": "Throws a poisonous gas grenade in an area. Enemies in the smoke will be poisoned.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_SlidingStep_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -324,7 +351,10 @@
                     "Description": "Improve concentration to aim at the enemy's weak points.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_TakeAim.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -362,7 +392,10 @@
                     "Description": "Convert the guns into a machine gun, firing rapidly at enemies. The fire duration increases as the skill level increases.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_FocusShot.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -405,7 +438,10 @@
                     "Description": "Fires a powerful energy at the end of the attack. Inflicts paralysis at the affected area.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_FocusShot_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -434,7 +470,10 @@
                     "Description": "Fires a powerful energy at the end of the attack. Enemies will be pulled to the center of the affected area.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_FocusShot_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -462,7 +501,10 @@
                     "Description": "Fastly move forward and fire at enemies close range.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_CombatMaster.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -503,7 +545,10 @@
                     "Description": "Convert the guns into a sniper rifle, shooting a powerful shot that penetrates through enemies in a straight line.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_GuidedShot.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -545,7 +590,10 @@
                     "Description": "Attacks done to the enemy ignore enemy's defense.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_GuidedShot_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -573,7 +621,10 @@
                     "Description": "Convert the guns into a grenade launcher, which fires a powerful grenade that explodes and deal damage to the enemies.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_ElectricShot.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -615,7 +666,10 @@
                     "Description": "Fire many grenades by converting the guns into a grenade launcher in the air, dealing damage over a large area.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_NapalmBomb.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -653,7 +707,10 @@
                     "Description": "Fire a bullet in the air that temporarily increases movement speed of all party members.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_Sprinter.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -695,7 +752,10 @@
                     "Description": "Gives a buff that recovers allies SG.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_Sprinter_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -714,7 +774,7 @@
                 }
             }
         },
-        "Hide&Seek": {
+        "HideAndSeek": {
             "Name": "Hide & Seek",
             "ID": 21,
             "Icon": "../skillicons/E1-12.png",
@@ -723,7 +783,10 @@
                     "Description": "Charge up a barrier, while charging you are invincible. After the barrier actives, you will gain Super Armor and all damage will be avoided.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_HideAndSeek.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -761,7 +824,10 @@
                     "Description": "By turning guns into grenade launchers, fire a barrage of artillery up to 10 meters. Hit enemies will be pushed back.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_SoulLauncher.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -804,7 +870,10 @@
                     "Description": "After attacking with combat master, performs an additional powerful attack.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_CombatMaster_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 619%\nSA Damage: 339%",
@@ -837,7 +906,10 @@
                     "Description": "Fire a capsule, and summons a robot from the bombing site.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_ElectricShot_A_01.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 1215%\nSA Damage: 303%\n[Final Attack]\nDamage and SA Damage increase to 200%",
@@ -847,12 +919,18 @@
                 "2": {
                     "Effect": "Damage: 1275%\nSA Damage: 318%\n[Final Attack]\nDamage and SA Damage increase to 300%",
                     "RequiredLevel": 59,
-                    "RequiredSP": 1
+                    "RequiredSP": 1,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_ElectricShot_A_02.{{auto}}"
+                    }
                 },
                 "3": {
                     "Effect": "Damage: 1426%\nSA Damage: 355%\n[Final Attack]\nDamage and SA Damage increase to 500%",
                     "RequiredLevel": 60,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_ElectricShot_A_03.{{auto}}"
+                    }
                 }
             }
         },
@@ -870,7 +948,10 @@
                     "Description": "Summons a hoverboard in the air, and bombards while moving forward.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_BlazeHover.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 220%\nSA Damage: 112%\nSG Cost: 3\nCooldown: 25 seconds",
@@ -912,7 +993,10 @@
                     "Description": "Attack the specified area with a laser.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Skill_MissionCall.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 944%\nSA Damage: 1065%\nSG Cost: 4\nCooldown: 30 seconds",
@@ -949,7 +1033,7 @@
             "Icon": "../skillicons/Sh-1.png",
             "Levels": {
                 "0": {
-                    "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
+                    "Description": "Attack with your weapon.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
                     "Effect": "",
                     "RequiredLevel": 0,
                     "RequiredSP": 0
@@ -957,27 +1041,45 @@
                 "1": {
                     "Effect": "SG Gain +20%.\nUnlock alternative attack “A”",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Attack_01.{{auto}}"
+                    }
                 },
                 "2": {
                     "Effect": "SG Gain +70%.\nUnlock additional basic attack",
                     "RequiredLevel": 5,
-                    "RequiredSP": 1
+                    "RequiredSP": 1,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Attack_02.{{auto}}"
+                    }
                 },
                 "3": {
                     "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
                     "RequiredLevel": 10,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Attack_03.{{auto}}"
+                    }
                 },
                 "4": {
                     "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
                     "RequiredLevel": 15,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Attack_04.{{auto}}"
+                    }
                 },
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 20,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": {
+                            "vp9": "../skillpreviews/erwin/B_Attack_05.webm",
+                            "h264": "../skillpreviews/erwin/B_Attack_05.mp4"
+                        }
+                    }
                 }
             }
         },
@@ -992,7 +1094,10 @@
                     "Description": "[Ground]\nThrow a slowing trap forward.\n[Air]\nShoot an electric wave at the ground to inflict paralysis. Two mines can be placed. Gain SG on hit. SG gain varies by monster-type.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_S_Attack_N.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "[Ground]\nDamage: 172%\nSA Damage: 76%\nDebuff effect: Movement speed -60% in 5s\nCooldown: 5s\n[Air]\nDamage: 274%\nSA Damage: 122%\nDebuff effect: Paralysis in 3s\nCooldown: 5s",
@@ -1022,7 +1127,10 @@
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 20",
@@ -1042,7 +1150,10 @@
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Roll_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 25",
@@ -1072,7 +1183,10 @@
                     "Description": "Swiftly dash forward",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Run_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -1097,7 +1211,10 @@
                     "Description": "While downed, get up while damaging surrounding enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Rise_Attack.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
@@ -1127,7 +1244,10 @@
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_N_Attack_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 115%\nSA Damage: 38%",
@@ -1146,7 +1266,10 @@
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_Special_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 40\nCooldown: 60 seconds",
@@ -1175,7 +1298,10 @@
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/erwin/B_S_Attack_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 206%\nSA Damage: 92%\nCooldown: 5 seconds",

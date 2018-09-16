@@ -136,9 +136,28 @@
         </main>
         <footer>
             <nav class="navbar navbar-expand-md fixed-bottom navbar-dark bg-dark-fade">
-                <a class="navbar-brand" aria-expanded="false">
-                    <span>SoulWorker Skill Simulator</span>
-                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="btn-group dropup">
+                            <button id="skillsimulatoroption" type="button" class="btn btn-outline-success dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Options
+                            </button>
+                            <div class="dropdown-menu keep-open">
+                                <a class="dropdown-item" id="option_skillpreview">
+                                    Skill preview:
+                                    <select> </select>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item">
+                                    <button class="btn btn-primary btn-lg btn-block btn-sm" id="saveSettingToBrowser">
+                                        Save the setting to browser
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarbottomCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -170,11 +189,14 @@
         </footer>
         <div id="tooltip">
             <h5 class="tooltipheader"></h5>
+            <div class="container clearly-visible">
+                <div id="skillpreview" class="row justify-content-center">
+                </div>
+            </div>
             <pre class="tooltipcontent"></pre>
         </div>
         <div id="dialogs"></div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
         <script async defer src="../js/buttons.min.js"></script>
