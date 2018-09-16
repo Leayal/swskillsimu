@@ -4,15 +4,19 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequ
 // Set up fallback for cancelAnimationFrame function.
 window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame || function (callback) { clearTimeout(callback); };
 
-const v_PreviewHeight = "170px";
+const v_PreviewHeight = "170px",
+    mediaType = {
+        webm_vp9: "video/webm; codecs=\"vp9\"",
+        mp4_h264: "video/mp4; codecs=\"avc1.64001E\""
+    };
 // type="video/mp4; codecs=\"avc1.64001E\""
 let justSomeTemp1 = document.createElement("video");
 const SupportedCodec = {
     webm: {
-        vp9: (justSomeTemp1.canPlayType("video/webm; codecs=\"vp9\"") === "probably")
+        vp9: (justSomeTemp1.canPlayType(mediaType.webm_vp9) === "probably")
     },
     mp4: {
-        h264_highProfile: (justSomeTemp1.canPlayType("video/mp4; codecs=\"avc1.64001E\"") === "probably")
+        h264_highProfile: (justSomeTemp1.canPlayType(mediaType.mp4_h264) === "probably")
     }
 }
 justSomeTemp1 = null;
@@ -339,10 +343,27 @@ $(document).ready(function () {
     var tooltipObj = $("#tooltip"),
         tooltipHeader = $("#tooltip .tooltipheader"),
         tooltippreviewPanel = $("#tooltip #skillpreview").css("height", v_PreviewHeight),
+        tooltippreviewPanel_video = $("#tooltip #skillpreview video")
+            .css({ height: v_PreviewHeight }),
         tooltipText = $("#tooltip pre"),
         navBarBottom = $(".navbar.fixed-bottom"),
         toolTipFramework = new SkillTreeToolTipFramework(tooltipObj, "[tooltipframework][insight]");
     tooltipObj.detach();
+
+    var onPreviewPlaySuccessfully = function () {
+        tooltippreviewPanel.show();
+        toolTipFramework.UpdateTooltipSize();
+    };
+
+    tooltippreviewPanel_video.on("error", function () {
+        tooltippreviewPanel.hide();
+    }).on("canplay", function (event) {
+        event.target.play().then(onPreviewPlaySuccessfully, function () {
+            tooltippreviewPanel.hide();
+            toolTipFramework.UpdateTooltipSize();
+        });
+    });
+
     toolTipFramework.OnMouseEnter.Register(function (event) {
         let key = $(event.target).attr("insight");
         if (key) {
@@ -365,7 +386,7 @@ $(document).ready(function () {
             let previewinfo = currentEffect.PreviewInfo;
 
             toolTipFramework.SetBound(0, 0, 0, navBarBottom.outerHeight(true) || 0);
-            tooltippreviewPanel.empty().show();
+            tooltippreviewPanel.hide();
 
             if ((window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
                 let hasVP9 = (typeof (previewinfo.Video.vp9) === "string"),
@@ -373,36 +394,29 @@ $(document).ready(function () {
 
                 if (hasVP9 || hasH264) {
                     // Show preview video if it has one
-                    let _attributes = { height: v_PreviewHeight, preload: "auto" },
-                        _prop = { controls: false, loop: true, muted: true, playsinline: true },
-                        isReallyH264 = false;
+                    let _attributes = {
+                        src: null
+                    },
+                        srcString = null,
+                        type = false;
 
                     if ((window.SkillTreeSetting.skilltree_skillpreview === previewOptions["Show video (Beta)"]) && hasVP9 && SupportedCodec.webm.vp9) {
                         // Main feed: a WebM container with VP9 codec with 420p pixel format
                         _attributes.src = previewinfo.Video.vp9;
+                        _attributes.type = mediaType.webm_vp9;
                     } else if (hasH264 && SupportedCodec.mp4.h264_highProfile) {
                         // Provide fallback to MP4 container with codec H264 with 420p pixel format
                         _attributes.src = previewinfo.Video.h264;
-                        isReallyH264 = true;
+                        _attributes.type = mediaType.mp4_h264;
                     }
 
                     if (typeof (_attributes.src) === "string") {
-                        let myVideoElement = $("<video>").prop(_prop).attr(_attributes);
-                        myVideoElement.one("error", function () {
-                            myVideoElement.remove();
-                            tooltippreviewPanel.hide();
+                        tooltippreviewPanel_video.attr(_attributes);
+                        tooltippreviewPanel_video.trigger("load");
+                        tooltippreviewPanel_video[0].play().then(onPreviewPlaySuccessfully, function () {
+                            // Wait for "CanPlay" event above and start to play the video (way way above).
+                            // This is mainly because the load() above is still loading the video.
                         });
-
-                        let myfunc = function (event) {
-                            myVideoElement.appendTo(tooltippreviewPanel);
-                            myVideoElement.trigger("play");
-                        };
-
-                        if (isReallyH264) {
-                            myVideoElement.one("canplay", myfunc);
-                        } else {
-                            myVideoElement.one("canplaythrough", myfunc);
-                        }
                     } else {
                         tooltippreviewPanel.hide();
                     }
@@ -498,7 +512,6 @@ $(document).ready(function () {
     // toolTipFramework.OnMouseLeave.Register(function (event) { });
     toolTipFramework.OnTooltipHidden.Register(function (targetDOM) {
         tooltipObj.detach();
-        tooltippreviewPanel.empty();
     });
     toolTipFramework.StartListen();
 

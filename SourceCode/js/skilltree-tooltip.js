@@ -59,6 +59,7 @@ function SkillTreeToolTipFramework(target, selector) {
     this.cancelID;
     this._target = target;
     this._useAnimation = true;
+    this.refreshOnClick = true;
 
     target.addClass("animated");
 
@@ -66,6 +67,8 @@ function SkillTreeToolTipFramework(target, selector) {
     this.OnMouseEnter = new EventHandler();
     this.OnMouseLeave = new EventHandler();
     this.OnTooltipHidden = new EventHandler();
+
+    var lastKnownMouseCapturedElement = null;
 
     // Currently we don't need this
     // this.OnMouseMove = new EventHandler();
@@ -75,8 +78,17 @@ function SkillTreeToolTipFramework(target, selector) {
         myself.mouseY = event.clientY;
     };
 
+    this.mouseClick = function (event) {
+        if (myself.refreshOnClick) {
+            lastKnownMouseCapturedElement = null;
+        }
+    };
+
     this.mouseOn = function (event) {
+        if ((event.target === lastKnownMouseCapturedElement) && (myself.isRendering === true))
+            return;
         myself.isRendering = true;
+        lastKnownMouseCapturedElement = event.target;
 
         myself.basemouseX = myself.mouseX;
         myself.basemouseY = myself.mouseY;
@@ -89,10 +101,7 @@ function SkillTreeToolTipFramework(target, selector) {
             return;
         }
 
-        myself.lastRendermouseX = undefined;
-        myself.lastRendermouseY = undefined;
-        myself._tooltipHeight = myself._target.outerHeight(true);
-        myself._tooltipWidth = myself._target.outerWidth(true);
+        myself.UpdateTooltipSize();
 
         myself.onRender();
 
@@ -237,6 +246,14 @@ function SkillTreeToolTipFramework(target, selector) {
 
 }
 
+SkillTreeToolTipFramework.prototype.UpdateTooltipSize = function () {
+    this._tooltipHeight = this._target.outerHeight(true);
+    this._tooltipWidth = this._target.outerWidth(true);
+    // Set this to "undefined" to cause invalidate paint
+    this.lastRendermouseX = undefined;
+    this.lastRendermouseY = undefined;
+}
+
 SkillTreeToolTipFramework.prototype.SetBound = function (top, left, right, bottom) {
     if (typeof (top) === "number") {
         this._boundTop = top;
@@ -269,6 +286,7 @@ SkillTreeToolTipFramework.prototype.StartListen = function () {
     $(document.body).on("mouseover", this._selector, this.mouseOn);
     $(document.body).on("mousemove", this._selector, this.listenFunc);
     $(document.body).on("mouseout", this._selector, this.mouseOff);
+    $(document.body).on("click", this._selector, this.mouseClick);
 
     this._target[0].addEventListener(whichTransitionEvent(), this.onAnimationCompleted);
 }
@@ -280,6 +298,7 @@ SkillTreeToolTipFramework.prototype.StopListen = function () {
     $(document.body).off("mouseover", this._selector, this.mouseOn);
     $(document.body).off("mousemove", this._selector, this.listenFunc);
     $(document.body).off("mouseout", this._selector, this.mouseOff);
+    $(document.body).off("click", this._selector, this.mouseClick);
 
     this._target[0].removeEventListener(whichTransitionEvent(), this.onAnimationCompleted);
 
