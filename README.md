@@ -1,6 +1,10 @@
 # SoulWorker Skill Simulator
 This is the skill tree simulator for SoulWorker game which is developed by Lion Games.
 
+# Disclaimer
+Content is available under [Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/3.0/) unless stated.
+Official Art, Game Content and Screenshots are trademarks and copyrights of [Lion Games](http://www.liongames.co.kr/Front/) and the game's publishers.
+
 # Credits:
 Special thanks to people who helped me on this simulator. [See details](https://leayal.github.io/swskillsimu/).
 
