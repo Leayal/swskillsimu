@@ -24,7 +24,10 @@
                     "Description": "Approach and knock-up enemies with an upper attack. Afterwards, launches additional consecutive attacks. When this skill is strengthen , it increases the performance by 1.5x",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_GloryUpper.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -67,7 +70,10 @@
                     "Description": "Activated after Glory Upper's additional attack. Follow up with a powerful blow on the enemy",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_GloryUpper_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -96,7 +102,10 @@
                     "Description": "Activated after Glory Upper's additional attack. Attacks facing enemies with tremendous power",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_GloryUpper_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -124,7 +133,10 @@
                 "0": {
                     "Description": "Quickly rush and tackle the enemy. Afterwards, launches additional consecutive attacks",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_PerfectCombination.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -166,7 +178,10 @@
                     "Description": " After jumping forwards, spin your body in the air and launch a kick. Attack enemies are knocked up. When this skill is strengthen increases the performance by 1.5x",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_HammerKick.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -204,7 +219,10 @@
                     "Description": "Can only counter short-ranged attacks, if it's successful, a part of the skill will be strengthened for 5 seconds",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_CounterAttack.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -246,7 +264,10 @@
                 "0": {
                     "Description": "Stuns attacked enemies",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_CounterAttack_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -302,7 +323,10 @@
                 "0": {
                     "Description": "After releasing tremendous power, intimidate enemies while protecting allies",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_SpiritSurge.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -344,7 +368,10 @@
                     "Description": "Taunted enemies become excited causing their evasion to decrease",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_SpiritSurge_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -372,7 +399,10 @@
                     "Description": "Unleash tremendous power before the enemy. When the skill is strengthen increases the pulling range performance by 1.5x",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_GravityTwister.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -414,7 +444,10 @@
                     "Description": "Existing skill is changed into a multi-hit shock wave",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_GravityTwister_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -442,7 +475,10 @@
                     "Description": "Store energy in the gauntlet, unleash a powerful blow forwards. While charging , it increases the performance by 1.4x, up to 2.0x.\nWhen the skill is strengthen , a 3-stage charge attack will be unleashed immediately without charging",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -485,7 +521,10 @@
                     "Description": "Removes existing skill effect , charges energy and fires it forwards",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -514,7 +553,10 @@
                     "Description": "Charge energy to create a big wave to attack the enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -542,7 +584,10 @@
                     "Description": " Generates a shockwave that instantly paralyzes enemies. Retreats using the recoil",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_SpiritShooter.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -583,7 +628,10 @@
                     "Description": "Fire a powerful sphere at the enemy. The fired sphere explodes , damaging its surroundings. When the skill is strengthen, it increases the performance by 1.5x",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_QuadraBlow.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -625,7 +673,10 @@
                     "Description": "Fires additional tiny spheres",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_QuadraBlow_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -654,7 +705,10 @@
                     "Description": "Gather up tremendous power in the air to create a gigantic sphere. The sphere generates a big explosion when touching the ground , damaging all nearby enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_HeavyDrop.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -693,10 +747,13 @@
             "Icon": "../skillicons/J1-10A.png",
             "Levels": {
                 "0": {
-                    "Description": "Sphere speed will decrease , becomes continuous attack , grants debuff",
+                    "Description": "Sphere speed will decrease, becomes continuous attack, grants debuff",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_HeavyDrop_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -724,7 +781,10 @@
                     "Description": "Collect Soul Energy to grant a barrier to allies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_FusionArmor.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -762,7 +822,10 @@
                     "Description": "Pushes the Gauntlets to their maximum output power to strike with the fists left and right alternatively. Afterwards adds a powerful finishing attack at any time",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_RapidPuncher.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -800,7 +863,10 @@
                     "Description": "Pushes the Gauntlets to their maximum output power to hit the ground. Causes a wide explosion every time it hits the ground",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_FinalFist.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -843,7 +909,10 @@
                     "Description": "The final blow changes to an Upper(cut), with the Boost Shield hitting the vicinity. When right-clicking halfway of the Upper(cut), Jin supplements it with a thrust down to the ground.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_PerfectCombination_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -876,7 +945,10 @@
                     "Description": "Debuffs the enemies with a Defense Reduction effect, then rise backwards in mid-air.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_SpiritShooter_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -909,7 +981,10 @@
                     "Description": "In mid-air, deploys the Boost Shield in front, then attacks with the shockwaves caused upon swinging it down to the ground.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_DrasticLanding.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -951,7 +1026,10 @@
                     "Description": "Takes a stance, and use a maximum of 3 counter attacks. When counterattacking, Jin will deal more damage depending on the number of times that counter is activated.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Skill_CounterStream.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -991,7 +1069,10 @@
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Attack_01.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "SG Gain +20%.\nUnlock alternative attack “A”",
@@ -1001,22 +1082,34 @@
                 "2": {
                     "Effect": "SG Gain +70%.\nUnlock additional basic attack",
                     "RequiredLevel": 5,
-                    "RequiredSP": 1
+                    "RequiredSP": 1,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Attack_02.{{auto}}"
+                    }
                 },
                 "3": {
                     "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
                     "RequiredLevel": 10,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Attack_03.{{auto}}"
+                    }
                 },
                 "4": {
                     "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
                     "RequiredLevel": 15,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Attack_04.{{auto}}"
+                    }
                 },
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 20,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Attack_05.{{auto}}"
+                    }
                 }
             }
         },
@@ -1031,7 +1124,10 @@
                     "Description": "[Ground]\nSmash the ground with your foot, inflict status effect to nearby enemies.\n[Air]\nSwing the fist towards the ground.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_S_Attack_N.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "[Ground]\nDamage: 168%\nSA Damage: 75%\nStatus effect: 'Stun' in 2s\nCooldown: 10s\n[Air]\nDamage: 269%\nSA Damage: 119%\nCooldown: 10s",
@@ -1061,7 +1157,10 @@
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 20",
@@ -1081,7 +1180,10 @@
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Roll_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 25",
@@ -1111,7 +1213,10 @@
                     "Description": "Swiftly dash forward",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Run_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -1136,7 +1241,10 @@
                     "Description": "While downed, get up while damaging surrounding enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Rise_Attack.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
@@ -1166,7 +1274,10 @@
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_N_Attack_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 115%\nSA Damage: 38%",
@@ -1185,7 +1296,10 @@
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_Special_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 40\nCooldown: 60 seconds",
@@ -1214,7 +1328,10 @@
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/jin/B_S_Attack_N_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 206%\nSA Damage: 92%\nCooldown: 5 seconds",

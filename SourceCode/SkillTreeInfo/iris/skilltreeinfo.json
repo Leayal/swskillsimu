@@ -24,7 +24,10 @@
                     "Description": "Swings the hammer to attack",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -67,7 +70,10 @@
                     "Description": "Adds an additional explosion on the ground",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -96,7 +102,10 @@
                     "Description": "Launch an additional attack after the last attack",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -125,7 +134,10 @@
                     "Description": "Take a short leap forward and then strike with a 360° rotation",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_CamelSpin.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -167,7 +179,10 @@
                     "Description": "Quickly leap forward and push with your weapon, 2 additional rapid-fire explosion attacks",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -210,7 +225,10 @@
                     "Description": "Replaces the additional attack with an additional consecutive attack",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -239,7 +257,10 @@
                     "Description": "Increases the range of the last attack",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -267,7 +288,10 @@
                     "Description": "Fires towards the ground and does a backwards somersault, quickly retreating using the recoil from the rotation",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_FireSomersault.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -309,7 +333,10 @@
                     "Description": "Adds attack zones in front of the base one",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_FireSomersault_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -337,7 +364,10 @@
                     "Description": "Projects a drill which continuously attacks at gun point. Shock waves are released at the end",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_SpiralPierce.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -379,7 +409,10 @@
                     "Description": "A whirlwind with a pulling effect is added",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_SpiralPierce_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -407,7 +440,10 @@
                     "Description": "Take a firing stance and launch very powerful energy spheres for a fixed amount of time or attacks",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_PulseFire.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -450,7 +486,10 @@
                     "Description": "Increases the number of shots",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_PulseFire_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -479,7 +518,10 @@
                     "Description": "Fire long-range bullets",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_PulseFire_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -507,7 +549,10 @@
                     "Description": "Releases soul energy within the body to amplify the damage of the next attack",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_LimitBrake.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -545,7 +590,10 @@
                     "Description": "Shoots a powerful shell upwards. The fired shells separates mid-air into several small shells that will explode when reaching the ground",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -588,7 +636,10 @@
                     "Description": "Extends the attack range",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -617,7 +668,10 @@
                     "Description": "Attack with series of exploding meteorites . Deals continuous damage in the area",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -645,7 +699,10 @@
                     "Description": "Hold the weapon with both hands and swing it like a laser beam sword and attack the enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_FullBurst.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -687,7 +744,10 @@
                     "Description": "While in mid-air, throw a weapon towards the ground to create a black hole that pulls enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_EternalAbyss.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -725,7 +785,10 @@
                     "Description": "Insert the weapon into the ground then shoot towards the ground to create several shock waves",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_Earthquake.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -768,7 +831,10 @@
                     "Description": "Generates a volcano after the last attack",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_Earthquake_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -797,7 +863,10 @@
                     "Description": "Generates a volcano after the last attack",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_Earthquake_B.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -825,7 +894,10 @@
                     "Description": "Make the weapons float and ride on it facing forwards. Afterwards, fire a laser beam forwards. Can move while the skill is in use",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_ElectricCannon.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -863,7 +935,10 @@
                     "Description": "Disassemble the soul weapon and absorbs it in your hand. Afterwards, countless energy portals appear firing powerful energy simultaneously",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_ExceedDriver.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -906,7 +981,10 @@
                     "Description": "???",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_CamelSpin_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -939,7 +1017,10 @@
                     "Description": "???",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_FullBurst_A.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -972,7 +1053,10 @@
                     "Description": "???",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_PulverizeHeadButt.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -1014,7 +1098,10 @@
                     "Description": "???",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Skill_Operation Ashes.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -1054,7 +1141,10 @@
                     "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Attack_01.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "SG Gain +20%.\nUnlock alternative attack “A”",
@@ -1064,12 +1154,18 @@
                 "2": {
                     "Effect": "SG Gain +70%.\nUnlock additional basic attack",
                     "RequiredLevel": 5,
-                    "RequiredSP": 1
+                    "RequiredSP": 1,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Attack_02.{{auto}}"
+                    }
                 },
                 "3": {
                     "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
                     "RequiredLevel": 10,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Attack_04_02.{{auto}}"
+                    }
                 },
                 "4": {
                     "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
@@ -1079,7 +1175,10 @@
                 "5": {
                     "Effect": "",
                     "RequiredLevel": 20,
-                    "RequiredSP": 2
+                    "RequiredSP": 2,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Attack_05.{{auto}}"
+                    }
                 }
             }
         },
@@ -1094,7 +1193,10 @@
                     "Description": "[Ground]\nInstantly recovers SG and acquire a fire buff.\n[Air]\nHit the hammer on the ground. Gain SG on hit. SG gain varies on attack and monster-type.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_S_Attack_N.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "[Ground]\nSG Recovery: 15%\nBuff effect: 'Fire' in 5s\nCooldown: 15s\n[Air]\nDamage: 382%\nSA Damage: 197%\nCooldown: 10s",
@@ -1124,7 +1226,10 @@
                     "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 20",
@@ -1144,7 +1249,10 @@
                     "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Roll_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 25",
@@ -1174,7 +1282,10 @@
                     "Description": "Swiftly dash forward",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Run_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "",
@@ -1199,7 +1310,10 @@
                     "Description": "While downed, get up while damaging surrounding enemies",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Rise_Attack.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
@@ -1229,7 +1343,10 @@
                     "Description": "Perform an attack while dashing. Different character does different attacks. ",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_N_Attack_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 115%\nSA Damage: 38%",
@@ -1248,7 +1365,10 @@
                     "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_Special_Evade_F.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Stamina Cost: 40\nCooldown: 60 seconds",
@@ -1277,7 +1397,10 @@
                     "Description": "Performs a special attack while dashing. Different characters do different special attacks",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/B_S_Attack_N_Dash.{{auto}}"
+                    }
                 },
                 "1": {
                     "Effect": "Damage: 206%\nSA Damage: 92%\nCooldown: 5 seconds",
