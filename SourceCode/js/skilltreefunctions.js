@@ -377,8 +377,10 @@ $(document).ready(function () {
             }
         });
     } else {
-        tooltippreviewPanel_video.remove();
-        tooltippreviewPanel_video = null;
+        if (tooltippreviewPanel_video) {
+            tooltippreviewPanel_video.remove();
+            tooltippreviewPanel_video = null;
+        }
     }
 
     toolTipFramework.OnMouseEnter.Register(function (event) {
@@ -405,7 +407,7 @@ $(document).ready(function () {
             toolTipFramework.SetBound(0, 0, 0, navBarBottom.outerHeight(true) || 0);
             tooltippreviewPanel.hide();
 
-            if (isPromiseSupported && (tooltippreviewPanel_video != null) && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
+            if (isPromiseSupported && tooltippreviewPanel_video && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
                 let hasVP9 = (typeof (previewinfo.Video.vp9) === "string"),
                     hasH264 = (typeof (previewinfo.Video.h264) === "string");
 
@@ -440,8 +442,10 @@ $(document).ready(function () {
                     // Show preview image if it has one
                     $("<img>").attr({ width: "240", height: "auto", src: previewinfo.Image }).appendTo(tooltippreviewPanel);
                 } else {
-                    if (!tooltippreviewPanel_video[0].paused) {
-                        tooltippreviewPanel_video.trigger("pause");
+                    if (tooltippreviewPanel_video) {
+                        if (!tooltippreviewPanel_video[0].paused) {
+                            tooltippreviewPanel_video.trigger("pause");
+                        }
                     }
                     tooltippreviewPanel.hide();
                 }
