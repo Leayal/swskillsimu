@@ -1,1 +1,0 @@
-ffmpeg -i "B_Skill_WheelDance_A.avi" -an -vcodec libvpx-vp9 -deadline best -vf "setsar=1,format=yuv420p,minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:me_mode=bidir:fps=60'" -crf 42 -b:v 0 "B_Skill_WheelDance_A.webm"

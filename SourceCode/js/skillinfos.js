@@ -50,16 +50,16 @@ SkillInfo.prototype.readInfos = function (ob) {
             lastDescription = tmp.Description;
         if (tmp.Preview) {
             if (typeof (tmp.Preview.Video) === "string") {
-                let autoExtension = IsExtension(tmp.Preview.Video, ".{{auto}}"),
+                let autoExtension = tmp.Preview.Video.includes("{{auto}}"), //IsExtension(tmp.Preview.Video, "{{auto}}")
                     result = {};
                 result.Video = {};
                 if (autoExtension) {
-                    result.Video.vp9 = ChangeFileExtension(tmp.Preview.Video, ".{{auto}}", ".webm");
-                    result.Video.h264 = ChangeFileExtension(tmp.Preview.Video, ".{{auto}}", ".mp4");
+                    result.Video.vp9 = tmp.Preview.Video.replace("{{auto}}.", "vp9."); // ChangeFileExtension(tmp.Preview.Video, "_{{auto}}", "_vp9");
+                    result.Video.h264 = tmp.Preview.Video.replace("{{auto}}.", "h264."); //ChangeFileExtension(tmp.Preview.Video, "_{{auto}}", "_h264");
                 } else {
-                    if (IsExtension(tmp.Preview.Video, ".webm")) {
+                    if (IsExtension(tmp.Preview.Video, "_vp9.mp4")) {
                         result.Video.vp9 = tmp.Preview.Video;
-                    } else if (IsExtension(tmp.Preview.Video, ".mp4")) {
+                    } else if (IsExtension(tmp.Preview.Video, "_h264.mp4")) {
                         result.Video.h264 = tmp.Preview.Video;
                     }
                 }

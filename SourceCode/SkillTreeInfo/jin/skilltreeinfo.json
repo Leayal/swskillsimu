@@ -1,1470 +1,1470 @@
 {
-    "CharacterName": "Jin Seipatsu",
-    "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Jin_Seipatsu",
-    "MaxLevel": 60,
-    "AvailableClass": {
+  "CharacterName": "Jin Seipatsu",
+  "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Jin_Seipatsu",
+  "MaxLevel": 60,
+  "AvailableClass": {
+    "0": {
+      "Name": "Base",
+      "Cover": "../images/bg-jin1.png"
+    },
+    "1": {
+      "Name": "Upgraded",
+      "Cover": "../images/bg-jin2.png",
+      "RequiredLevel": 57
+    }
+  },
+  "Skills": {
+    "GloryUpper": {
+      "Name": "Glory Upper",
+      "DefaultLevel": 1,
+      "ID": 1,
+      "Icon": "../skillicons/J1-1.png",
+      "Levels": {
         "0": {
-            "Name": "Base",
-            "Cover": "../images/bg-jin1.png"
+          "Description": "Approach and knock-up enemies with an upper attack. Afterwards, launches additional consecutive attacks. When this skill is strengthen , it increases the performance by 1.5x",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_GloryUpper_{{auto}}.mp4"
+          }
         },
         "1": {
-            "Name": "Upgraded",
-            "Cover": "../images/bg-jin2.png",
-            "RequiredLevel": 57
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 4,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 7,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 10,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 13,
+          "RequiredSP": 3
         }
+      },
+      "Extensions": [
+        "GloryUpper-Knockdown",
+        "GloryUpper-Upper"
+      ]
     },
-    "Skills": {
-        "GloryUpper": {
-            "Name": "Glory Upper",
-            "DefaultLevel": 1,
-            "ID": 1,
-            "Icon": "../skillicons/J1-1.png",
-            "Levels": {
-                "0": {
-                    "Description": "Approach and knock-up enemies with an upper attack. Afterwards, launches additional consecutive attacks. When this skill is strengthen , it increases the performance by 1.5x",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_GloryUpper.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 4,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 7,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 10,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 13,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "GloryUpper-Knockdown",
-                "GloryUpper-Upper"
-            ]
+    "GloryUpper-Knockdown": {
+      "Visible": false,
+      "Name": "Knockdown",
+      "ID": 2,
+      "Icon": "../skillicons/J1-1A.png",
+      "Levels": {
+        "0": {
+          "Description": "Activated after Glory Upper's additional attack. Follow up with a powerful blow on the enemy",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_GloryUpper_A_{{auto}}.mp4"
+          }
         },
-        "GloryUpper-Knockdown": {
-            "Visible": false,
-            "Name": "Knockdown",
-            "ID": 2,
-            "Icon": "../skillicons/J1-1A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Activated after Glory Upper's additional attack. Follow up with a powerful blow on the enemy",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_GloryUpper_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 13,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 18,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 23,
-                    "RequiredSP": 2
-                }
-            }
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 13,
+          "RequiredSP": 1
         },
-        "GloryUpper-Upper": {
-            "Visible": false,
-            "Name": "Upper",
-            "ID": 3,
-            "Icon": "../skillicons/J1-1B.png",
-            "Levels": {
-                "0": {
-                    "Description": "Activated after Glory Upper's additional attack. Attacks facing enemies with tremendous power",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_GloryUpper_B.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 13,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 18,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 23,
-                    "RequiredSP": 2
-                }
-            }
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 18,
+          "RequiredSP": 1
         },
-        "PerfectCombination": {
-            "Name": "Perfect Combination",
-            "DefaultLevel": 1,
-            "ID": 4,
-            "Icon": "../skillicons/J1-2.png",
-            "Levels": {
-                "0": {
-                    "Description": "Quickly rush and tackle the enemy. Afterwards, launches additional consecutive attacks",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_PerfectCombination.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 5,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 9,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 13,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 17,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "PerfectCombination-RisingUpper"
-            ]
-        },
-        "HammerKick": {
-            "Name": "Hammer Kick",
-            "DefaultLevel": 1,
-            "ID": 5,
-            "Icon": "../skillicons/J1-3.png",
-            "Levels": {
-                "0": {
-                    "Description": " After jumping forwards, spin your body in the air and launch a kick. Attack enemies are knocked up. When this skill is strengthen increases the performance by 1.5x",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_HammerKick.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 6,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 11,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 16,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 21,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "CounterAttack": {
-            "Name": "Counter Attack",
-            "ID": 6,
-            "Icon": "../skillicons/J1-4.png",
-            "Levels": {
-                "0": {
-                    "Description": "Can only counter short-ranged attacks, if it's successful, a part of the skill will be strengthened for 5 seconds",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_CounterAttack.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 4,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 8,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 12,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 16,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "CounterAttack-KnockOut",
-                "CounterAttack-SADestruction"
-            ]
-        },
-        "CounterAttack-KnockOut": {
-            "Name": "Knock Out",
-            "ID": 7,
-            "Visible": false,
-            "Icon": "../skillicons/J1-4A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Stuns attacked enemies",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_CounterAttack_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 25,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "CounterAttack-SADestruction": {
-            "Visible": false,
-            "Name": "SA Destruction",
-            "ID": 8,
-            "Icon": "../skillicons/J1-4B.png",
-            "Levels": {
-                "0": {
-                    "Description": "Increases SA Destruction",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 25,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "SpiritSurge": {
-            "Name": "Spirit Surge",
-            "ID": 9,
-            "Icon": "../skillicons/J1-5.png",
-            "Levels": {
-                "0": {
-                    "Description": "After releasing tremendous power, intimidate enemies while protecting allies",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_SpiritSurge.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 6,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 10,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 14,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 18,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 22,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "SpiritSurge-Strengthen"
-            ]
-        },
-        "SpiritSurge-Strengthen": {
-            "Name": "Strengthen",
-            "ID": 10,
-            "Visible": false,
-            "Icon": "../skillicons/J1-5A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Taunted enemies become excited causing their evasion to decrease",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_SpiritSurge_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 22,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 27,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 32,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "GravityTwister": {
-            "Name": "Gravity Twister",
-            "ID": 11,
-            "Icon": "../skillicons/J1-6.png",
-            "Levels": {
-                "0": {
-                    "Description": "Unleash tremendous power before the enemy. When the skill is strengthen increases the pulling range performance by 1.5x",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_GravityTwister.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 8,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 12,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 16,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 24,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "GravityTwister-ShockWaves"
-            ]
-        },
-        "GravityTwister-ShockWaves": {
-            "Visible": false,
-            "Name": "Shock Waves",
-            "ID": 12,
-            "Icon": "../skillicons/J1-6A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Existing skill is changed into a multi-hit shock wave",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_GravityTwister_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 24,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 29,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 34,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "SpiritExplosion": {
-            "Name": "Spirit Explosion",
-            "ID": 13,
-            "Icon": "../skillicons/J1-7.png",
-            "Levels": {
-                "0": {
-                    "Description": "Store energy in the gauntlet, unleash a powerful blow forwards. While charging , it increases the performance by 1.4x, up to 2.0x.\nWhen the skill is strengthen , a 3-stage charge attack will be unleashed immediately without charging",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 10,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 15,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 25,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "SpiritExplosion-ImpactBullets",
-                "SpiritExplosion-RangeIncrease"
-            ]
-        },
-        "SpiritExplosion-ImpactBullets": {
-            "Visible": false,
-            "Name": "Impact Bullets",
-            "ID": 14,
-            "Icon": "../skillicons/J1-7A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Removes existing skill effect , charges energy and fires it forwards",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 35,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 40,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "SpiritExplosion-RangeIncrease": {
-            "Visible": false,
-            "Name": "Range Increase",
-            "ID": 15,
-            "Icon": "../skillicons/J1-7B.png",
-            "Levels": {
-                "0": {
-                    "Description": "Charge energy to create a big wave to attack the enemies",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion_B.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 35,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 40,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "SpiritShooter": {
-            "Name": "Spirit Shooter",
-            "ID": 16,
-            "Icon": "../skillicons/J1-8.png",
-            "Levels": {
-                "0": {
-                    "Description": " Generates a shockwave that instantly paralyzes enemies. Retreats using the recoil",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_SpiritShooter.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 13,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 18,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 23,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 28,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 33,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "SpiritShooter-RecoilBound"
-            ]
-        },
-        "QuadraBlow": {
-            "Name": "Quadra Blow",
-            "ID": 17,
-            "Icon": "../skillicons/J1-9.png",
-            "Levels": {
-                "0": {
-                    "Description": "Fire a powerful sphere at the enemy. The fired sphere explodes , damaging its surroundings. When the skill is strengthen, it increases the performance by 1.5x",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_QuadraBlow.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 17,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 22,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 27,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 32,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 37,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "QuadraBlow-QuantityIncrease"
-            ]
-        },
-        "QuadraBlow-QuantityIncrease": {
-            "Visible": false,
-            "Name": "Quantity Increase",
-            "ID": 18,
-            "Icon": "../skillicons/J1-9A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Fires additional tiny spheres",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_QuadraBlow_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 37,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 42,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 47,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "HeavyDrop": {
-            "Name": "Heavy Drop",
-            "ID": 19,
-            "Icon": "../skillicons/J1-10.png",
-            "Assignable": false,
-            "Levels": {
-                "0": {
-                    "Description": "Gather up tremendous power in the air to create a gigantic sphere. The sphere generates a big explosion when touching the ground , damaging all nearby enemies",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_HeavyDrop.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 21,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 26,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 31,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 36,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 41,
-                    "RequiredSP": 3
-                }
-            },
-            "Extensions": [
-                "HeavyDrop-ExtraAttack"
-            ]
-        },
-        "HeavyDrop-ExtraAttack": {
-            "Visible": false,
-            "Name": "Extra Attack",
-            "ID": 20,
-            "Icon": "../skillicons/J1-10A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Sphere speed will decrease, becomes continuous attack, grants debuff",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_HeavyDrop_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 41,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 46,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 51,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "FusionArmor": {
-            "Name": "Fusion Armor",
-            "ID": 21,
-            "Icon": "../skillicons/J1-11.png",
-            "Levels": {
-                "0": {
-                    "Description": "Collect Soul Energy to grant a barrier to allies",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_FusionArmor.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 28,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 32,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 38,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 42,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 48,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "RapidPuncher": {
-            "Name": "Rapid Puncher",
-            "ID": 22,
-            "Icon": "../skillicons/J1-12.png",
-            "Levels": {
-                "0": {
-                    "Description": "Pushes the Gauntlets to their maximum output power to strike with the fists left and right alternatively. Afterwards adds a powerful finishing attack at any time",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_RapidPuncher.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 34,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 39,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 44,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 49,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 54,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "FinalFist": {
-            "Name": "Final Fist",
-            "ID": 23,
-            "Icon": "../skillicons/J1-13.png",
-            "Levels": {
-                "0": {
-                    "Description": "Pushes the Gauntlets to their maximum output power to hit the ground. Causes a wide explosion every time it hits the ground",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_FinalFist.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 42,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 45,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 48,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 51,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 54,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "PerfectCombination-RisingUpper": {
-            "Visible": false,
-            "Name": "Rising Upper",
-            "ID": 24,
-            "RequireClass": {
-                "CompareType": "atleast",
-                "ClassIndex": 1
-            },
-            "Icon": "../skillicons/Icon_Sprit_Skill_PerfectCombination_A.png",
-            "Levels": {
-                "0": {
-                    "Description": "The final blow changes to an Upper(cut), with the Boost Shield hitting the vicinity. When right-clicking halfway of the Upper(cut), Jin supplements it with a thrust down to the ground.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_PerfectCombination_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 58,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 60,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "SpiritShooter-RecoilBound": {
-            "Visible": false,
-            "Name": "Recoil Bound",
-            "ID": 25,
-            "RequireClass": {
-                "CompareType": "atleast",
-                "ClassIndex": 1
-            },
-            "Icon": "../skillicons/Icon_Sprit_Skill_SpiritShooter_A.png",
-            "Levels": {
-                "0": {
-                    "Description": "Debuffs the enemies with a Defense Reduction effect, then rise backwards in mid-air.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_SpiritShooter_A.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 59,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 60,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "DrasticLanding": {
-            "Name": "Drastic Landing",
-            "ID": 26,
-            "RequireClass": {
-                "CompareType": "atleast",
-                "ClassIndex": 1
-            },
-            "Icon": "../skillicons/Icon_Sprit_Skill_DrasticLanding.png",
-            "Assignable": false,
-            "Levels": {
-                "0": {
-                    "Description": "In mid-air, deploys the Boost Shield in front, then attacks with the shockwaves caused upon swinging it down to the ground.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_DrasticLanding.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 58,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 59,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 60,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "CounterStream": {
-            "Name": "Counter Stream",
-            "ID": 27,
-            "RequireClass": {
-                "CompareType": "atleast",
-                "ClassIndex": 1
-            },
-            "Icon": "../skillicons/Icon_Sprit_Skill_CounterStream.png",
-            "Levels": {
-                "0": {
-                    "Description": "Takes a stance, and use a maximum of 3 counter attacks. When counterattacking, Jin will deal more damage depending on the number of times that counter is activated.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Skill_CounterStream.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 58,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "",
-                    "RequiredLevel": 59,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 60,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "BasicAttackMastery": {
-            "Passive": true,
-            "Name": "Basic Attack Mastery",
-            "ID": 1002,
-            "DefaultLevel": 1,
-            "Icon": "../skillicons/Sh-1.png",
-            "Levels": {
-                "0": {
-                    "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Attack_01.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "SG Gain +20%.\nUnlock alternative attack “A”",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "SG Gain +70%.\nUnlock additional basic attack",
-                    "RequiredLevel": 5,
-                    "RequiredSP": 1,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Attack_02.{{auto}}"
-                    }
-                },
-                "3": {
-                    "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
-                    "RequiredLevel": 10,
-                    "RequiredSP": 2,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Attack_03.{{auto}}"
-                    }
-                },
-                "4": {
-                    "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
-                    "RequiredLevel": 15,
-                    "RequiredSP": 2,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Attack_04.{{auto}}"
-                    }
-                },
-                "5": {
-                    "Effect": "",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 2,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Attack_05.{{auto}}"
-                    }
-                }
-            }
-        },
-        "SpecialAbilityMastery": {
-            "Passive": true,
-            "DefaultLevel": 1,
-            "ID": 1001,
-            "Name": "Special Ability Mastery",
-            "Icon": "../skillicons/Sh-2j.png",
-            "Levels": {
-                "0": {
-                    "Description": "[Ground]\nSmash the ground with your foot, inflict status effect to nearby enemies.\n[Air]\nSwing the fist towards the ground.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_S_Attack_N.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "[Ground]\nDamage: 168%\nSA Damage: 75%\nStatus effect: 'Stun' in 2s\nCooldown: 10s\n[Air]\nDamage: 269%\nSA Damage: 119%\nCooldown: 10s",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "[Ground]\nDamage: 177%\nSA Damage: 78%\nStatus effect: 'Stun' in 2.5s\nCooldown: 10s\nSG Gain: +20%\n[Air]\nDamage: 282%\nSA Damage: 125%\nCooldown: 10s\nSG Gain: +20%",
-                    "RequiredLevel": 15,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "[Ground]\nDamage: 198%\nSA Damage: 88%\nStatus effect: 'Stun' in 3s\nCooldown: 10s\nSG Gain: +70%\n[Air]\nDamage: 316%\nSA Damage: 140%\nCooldown: 10s\nSG Gain: +70%",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "EmergencyDodge": {
-            "Passive": true,
-            "Name": "Emergency Dodge",
-            "ID": 1004,
-            "DefaultLevel": 1,
-            "Icon": "../skillicons/Sh-3.png",
-            "Levels": {
-                "0": {
-                    "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Evade_F.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "Stamina Cost: 20",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                }
-            }
-        },
-        "RisingRoll": {
-            "Passive": true,
-            "Name": "Rising Roll",
-            "ID": 1003,
-            "DefaultLevel": 1,
-            "Icon": "../skillicons/Sh-4.png",
-            "Levels": {
-                "0": {
-                    "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Roll_F.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "Stamina Cost: 25",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "Stamina Cost: 15",
-                    "RequiredLevel": 17,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "Stamina Cost: 15\nFaster Rolling Speed",
-                    "RequiredLevel": 34,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "Dash": {
-            "Passive": true,
-            "Name": "Dash",
-            "DefaultLevel": 1,
-            "ID": 1006,
-            "Icon": "../skillicons/Sh-5.png",
-            "Levels": {
-                "0": {
-                    "Description": "Swiftly dash forward",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Run_F.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "Faster Dashing Speed",
-                    "RequiredLevel": 25,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "RisingAttack": {
-            "Passive": true,
-            "Name": "Rising Attack",
-            "ID": 1005,
-            "DefaultLevel": 1,
-            "Icon": "../skillicons/Sh-6.png",
-            "Levels": {
-                "0": {
-                    "Description": "While downed, get up while damaging surrounding enemies",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Rise_Attack.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "2": {
-                    "Effect": "Stamina Cost: 20\nInvincibility Duration: 1 seconds",
-                    "RequiredLevel": 18,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "Stamina Cost: 20\nInvincibility Duration: 3 seconds",
-                    "RequiredLevel": 36,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "DashAttack": {
-            "Passive": true,
-            "Name": "Dash Attack",
-            "DefaultLevel": 1,
-            "ID": 1008,
-            "Icon": "../skillicons/Sh-7.png",
-            "Levels": {
-                "0": {
-                    "Description": "Perform an attack while dashing. Different character does different attacks. ",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_N_Attack_Dash.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "Damage: 115%\nSA Damage: 38%",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                }
-            }
-        },
-        "SpecialDodge": {
-            "Passive": true,
-            "Name": "Special Dodge",
-            "ID": 1007,
-            "Icon": "../skillicons/Sh-8.png",
-            "Levels": {
-                "0": {
-                    "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_Special_Evade_F.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "Stamina Cost: 40\nCooldown: 60 seconds",
-                    "RequiredLevel": 4,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "Stamina Cost: 40\nCooldown: 50 seconds",
-                    "RequiredLevel": 21,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "Stamina Cost: 40\nCooldown: 40 seconds",
-                    "RequiredLevel": 38,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "SpecialDashAttack": {
-            "Passive": true,
-            "Name": "Special Dash Attack",
-            "ID": 1010,
-            "Icon": "../skillicons/Sh-9.png",
-            "Levels": {
-                "0": {
-                    "Description": "Performs a special attack while dashing. Different characters do different special attacks",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0,
-                    "Preview": {
-                        "Video": "../skillpreviews/jin/B_S_Attack_N_Dash.{{auto}}"
-                    }
-                },
-                "1": {
-                    "Effect": "Damage: 206%\nSA Damage: 92%\nCooldown: 5 seconds",
-                    "RequiredLevel": 13,
-                    "RequiredSP": 1
-                }
-            }
-        },
-        "StaminaMastery": {
-            "Passive": true,
-            "Name": "Stamina Mastery",
-            "ID": 1009,
-            "Icon": "../skillicons/Sh-10.png",
-            "Levels": {
-                "0": {
-                    "Description": "Increases stamina recovery rate",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "Stamina Recovery Rate: +10%",
-                    "RequiredLevel": 10,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "Stamina Recovery Rate: +20%",
-                    "RequiredLevel": 15,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "Stamina Recovery Rate: +30%",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 2
-                },
-                "4": {
-                    "Effect": "Stamina Recovery Rate: +40%",
-                    "RequiredLevel": 25,
-                    "RequiredSP": 2
-                },
-                "5": {
-                    "Effect": "Stamina Recovery Rate: +50%",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 3
-                }
-            }
-        },
-        "Offense-DefenseUnitedBody": {
-            "Passive": true,
-            "Name": "Offense-Defense United Body",
-            "ID": 1013,
-            "RequireClass": {
-                "CompareType": "atleast",
-                "ClassIndex": 1
-            },
-            "Icon": "../skillicons/Icon_Sprit_Skill_SGPassive2.png",
-            "Levels": {
-                "0": {
-                    "Description": "If Jin or his allies defeats 5 enemies in succession within 5 seconds, received damage will decrease and attack will increase for 10 seconds.",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 57,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "",
-                    "RequiredLevel": 58,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "",
-                    "RequiredLevel": 59,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "StrongBody": {
-            "Passive": true,
-            "Name": "Strong Body",
-            "ID": 1011,
-            "RowSpan": {
-                "0": 2,
-                "1": 1
-            },
-            "Icon": "../skillicons/JP1-2.png",
-            "Levels": {
-                "0": {
-                    "Description": "Reduces the damage taken by enemies",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "Damage taken: -10%",
-                    "RequiredLevel": 10,
-                    "RequiredSP": 1
-                },
-                "2": {
-                    "Effect": "Damage taken: -15%",
-                    "RequiredLevel": 20,
-                    "RequiredSP": 1
-                },
-                "3": {
-                    "Effect": "Damage taken: -20%",
-                    "RequiredLevel": 30,
-                    "RequiredSP": 2
-                }
-            }
-        },
-        "WillofPassion": {
-            "Passive": true,
-            "DefaultLevel": 1,
-            "ID": 1012,
-            "RowSpan": 2,
-            "Name": "Will of Passion",
-            "Icon": "../skillicons/SP1-1.png",
-            "Levels": {
-                "0": {
-                    "Description": "Recover SG on successful. Recover SG automatically while out of combat.\nRecover significantly more SG when out of combat for a longer time. On successful counter, recovers additional SG",
-                    "Effect": "",
-                    "RequiredLevel": 0,
-                    "RequiredSP": 0
-                },
-                "1": {
-                    "Effect": "",
-                    "RequiredLevel": 10,
-                    "RequiredSP": 0
-                }
-            }
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 23,
+          "RequiredSP": 2
         }
+      }
+    },
+    "GloryUpper-Upper": {
+      "Visible": false,
+      "Name": "Upper",
+      "ID": 3,
+      "Icon": "../skillicons/J1-1B.png",
+      "Levels": {
+        "0": {
+          "Description": "Activated after Glory Upper's additional attack. Attacks facing enemies with tremendous power",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_GloryUpper_B_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 13,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 18,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 23,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "PerfectCombination": {
+      "Name": "Perfect Combination",
+      "DefaultLevel": 1,
+      "ID": 4,
+      "Icon": "../skillicons/J1-2.png",
+      "Levels": {
+        "0": {
+          "Description": "Quickly rush and tackle the enemy. Afterwards, launches additional consecutive attacks",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_PerfectCombination_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 5,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 9,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 13,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 17,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "PerfectCombination-RisingUpper"
+      ]
+    },
+    "HammerKick": {
+      "Name": "Hammer Kick",
+      "DefaultLevel": 1,
+      "ID": 5,
+      "Icon": "../skillicons/J1-3.png",
+      "Levels": {
+        "0": {
+          "Description": " After jumping forwards, spin your body in the air and launch a kick. Attack enemies are knocked up. When this skill is strengthen increases the performance by 1.5x",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_HammerKick_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 6,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 11,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 16,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 21,
+          "RequiredSP": 3
+        }
+      }
+    },
+    "CounterAttack": {
+      "Name": "Counter Attack",
+      "ID": 6,
+      "Icon": "../skillicons/J1-4.png",
+      "Levels": {
+        "0": {
+          "Description": "Can only counter short-ranged attacks, if it's successful, a part of the skill will be strengthened for 5 seconds",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_CounterAttack_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 4,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 8,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 12,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 16,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 20,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "CounterAttack-KnockOut",
+        "CounterAttack-SADestruction"
+      ]
+    },
+    "CounterAttack-KnockOut": {
+      "Name": "Knock Out",
+      "ID": 7,
+      "Visible": false,
+      "Icon": "../skillicons/J1-4A.png",
+      "Levels": {
+        "0": {
+          "Description": "Stuns attacked enemies",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_CounterAttack_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 20,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 25,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 30,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "CounterAttack-SADestruction": {
+      "Visible": false,
+      "Name": "SA Destruction",
+      "ID": 8,
+      "Icon": "../skillicons/J1-4B.png",
+      "Levels": {
+        "0": {
+          "Description": "Increases SA Destruction",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 20,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 25,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 30,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "SpiritSurge": {
+      "Name": "Spirit Surge",
+      "ID": 9,
+      "Icon": "../skillicons/J1-5.png",
+      "Levels": {
+        "0": {
+          "Description": "After releasing tremendous power, intimidate enemies while protecting allies",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_SpiritSurge_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 6,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 10,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 14,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 18,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 22,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "SpiritSurge-Strengthen"
+      ]
+    },
+    "SpiritSurge-Strengthen": {
+      "Name": "Strengthen",
+      "ID": 10,
+      "Visible": false,
+      "Icon": "../skillicons/J1-5A.png",
+      "Levels": {
+        "0": {
+          "Description": "Taunted enemies become excited causing their evasion to decrease",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_SpiritSurge_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 22,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 27,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 32,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "GravityTwister": {
+      "Name": "Gravity Twister",
+      "ID": 11,
+      "Icon": "../skillicons/J1-6.png",
+      "Levels": {
+        "0": {
+          "Description": "Unleash tremendous power before the enemy. When the skill is strengthen increases the pulling range performance by 1.5x",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_GravityTwister_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 8,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 12,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 16,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 20,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 24,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "GravityTwister-ShockWaves"
+      ]
+    },
+    "GravityTwister-ShockWaves": {
+      "Visible": false,
+      "Name": "Shock Waves",
+      "ID": 12,
+      "Icon": "../skillicons/J1-6A.png",
+      "Levels": {
+        "0": {
+          "Description": "Existing skill is changed into a multi-hit shock wave",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_GravityTwister_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 24,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 29,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 34,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "SpiritExplosion": {
+      "Name": "Spirit Explosion",
+      "ID": 13,
+      "Icon": "../skillicons/J1-7.png",
+      "Levels": {
+        "0": {
+          "Description": "Store energy in the gauntlet, unleash a powerful blow forwards. While charging , it increases the performance by 1.4x, up to 2.0x.\nWhen the skill is strengthen , a 3-stage charge attack will be unleashed immediately without charging",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 10,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 15,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 20,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 25,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 30,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "SpiritExplosion-ImpactBullets",
+        "SpiritExplosion-RangeIncrease"
+      ]
+    },
+    "SpiritExplosion-ImpactBullets": {
+      "Visible": false,
+      "Name": "Impact Bullets",
+      "ID": 14,
+      "Icon": "../skillicons/J1-7A.png",
+      "Levels": {
+        "0": {
+          "Description": "Removes existing skill effect , charges energy and fires it forwards",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 30,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 35,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 40,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "SpiritExplosion-RangeIncrease": {
+      "Visible": false,
+      "Name": "Range Increase",
+      "ID": 15,
+      "Icon": "../skillicons/J1-7B.png",
+      "Levels": {
+        "0": {
+          "Description": "Charge energy to create a big wave to attack the enemies",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_SpiritExplosion_B_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 30,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 35,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 40,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "SpiritShooter": {
+      "Name": "Spirit Shooter",
+      "ID": 16,
+      "Icon": "../skillicons/J1-8.png",
+      "Levels": {
+        "0": {
+          "Description": " Generates a shockwave that instantly paralyzes enemies. Retreats using the recoil",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_SpiritShooter_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 13,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 18,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 23,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 28,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 33,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "SpiritShooter-RecoilBound"
+      ]
+    },
+    "QuadraBlow": {
+      "Name": "Quadra Blow",
+      "ID": 17,
+      "Icon": "../skillicons/J1-9.png",
+      "Levels": {
+        "0": {
+          "Description": "Fire a powerful sphere at the enemy. The fired sphere explodes , damaging its surroundings. When the skill is strengthen, it increases the performance by 1.5x",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_QuadraBlow_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 17,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 22,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 27,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 32,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 37,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "QuadraBlow-QuantityIncrease"
+      ]
+    },
+    "QuadraBlow-QuantityIncrease": {
+      "Visible": false,
+      "Name": "Quantity Increase",
+      "ID": 18,
+      "Icon": "../skillicons/J1-9A.png",
+      "Levels": {
+        "0": {
+          "Description": "Fires additional tiny spheres",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_QuadraBlow_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 37,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 42,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 47,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "HeavyDrop": {
+      "Name": "Heavy Drop",
+      "ID": 19,
+      "Icon": "../skillicons/J1-10.png",
+      "Assignable": false,
+      "Levels": {
+        "0": {
+          "Description": "Gather up tremendous power in the air to create a gigantic sphere. The sphere generates a big explosion when touching the ground , damaging all nearby enemies",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_HeavyDrop_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 21,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 26,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 31,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 36,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 41,
+          "RequiredSP": 3
+        }
+      },
+      "Extensions": [
+        "HeavyDrop-ExtraAttack"
+      ]
+    },
+    "HeavyDrop-ExtraAttack": {
+      "Visible": false,
+      "Name": "Extra Attack",
+      "ID": 20,
+      "Icon": "../skillicons/J1-10A.png",
+      "Levels": {
+        "0": {
+          "Description": "Sphere speed will decrease, becomes continuous attack, grants debuff",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_HeavyDrop_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 41,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 46,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 51,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "FusionArmor": {
+      "Name": "Fusion Armor",
+      "ID": 21,
+      "Icon": "../skillicons/J1-11.png",
+      "Levels": {
+        "0": {
+          "Description": "Collect Soul Energy to grant a barrier to allies",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_FusionArmor_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 28,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 32,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 38,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 42,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 48,
+          "RequiredSP": 3
+        }
+      }
+    },
+    "RapidPuncher": {
+      "Name": "Rapid Puncher",
+      "ID": 22,
+      "Icon": "../skillicons/J1-12.png",
+      "Levels": {
+        "0": {
+          "Description": "Pushes the Gauntlets to their maximum output power to strike with the fists left and right alternatively. Afterwards adds a powerful finishing attack at any time",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_RapidPuncher_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 34,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 39,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 44,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 49,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 54,
+          "RequiredSP": 3
+        }
+      }
+    },
+    "FinalFist": {
+      "Name": "Final Fist",
+      "ID": 23,
+      "Icon": "../skillicons/J1-13.png",
+      "Levels": {
+        "0": {
+          "Description": "Pushes the Gauntlets to their maximum output power to hit the ground. Causes a wide explosion every time it hits the ground",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_FinalFist_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 42,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 45,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 48,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 51,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 54,
+          "RequiredSP": 3
+        }
+      }
+    },
+    "PerfectCombination-RisingUpper": {
+      "Visible": false,
+      "Name": "Rising Upper",
+      "ID": 24,
+      "RequireClass": {
+        "CompareType": "atleast",
+        "ClassIndex": 1
+      },
+      "Icon": "../skillicons/Icon_Sprit_Skill_PerfectCombination_A.png",
+      "Levels": {
+        "0": {
+          "Description": "The final blow changes to an Upper(cut), with the Boost Shield hitting the vicinity. When right-clicking halfway of the Upper(cut), Jin supplements it with a thrust down to the ground.",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_PerfectCombination_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 57,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 58,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 60,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "SpiritShooter-RecoilBound": {
+      "Visible": false,
+      "Name": "Recoil Bound",
+      "ID": 25,
+      "RequireClass": {
+        "CompareType": "atleast",
+        "ClassIndex": 1
+      },
+      "Icon": "../skillicons/Icon_Sprit_Skill_SpiritShooter_A.png",
+      "Levels": {
+        "0": {
+          "Description": "Debuffs the enemies with a Defense Reduction effect, then rise backwards in mid-air.",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_SpiritShooter_A_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 57,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 59,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 60,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "DrasticLanding": {
+      "Name": "Drastic Landing",
+      "ID": 26,
+      "RequireClass": {
+        "CompareType": "atleast",
+        "ClassIndex": 1
+      },
+      "Icon": "../skillicons/Icon_Sprit_Skill_DrasticLanding.png",
+      "Assignable": false,
+      "Levels": {
+        "0": {
+          "Description": "In mid-air, deploys the Boost Shield in front, then attacks with the shockwaves caused upon swinging it down to the ground.",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_DrasticLanding_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 57,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 57,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 58,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 59,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 60,
+          "RequiredSP": 3
+        }
+      }
+    },
+    "CounterStream": {
+      "Name": "Counter Stream",
+      "ID": 27,
+      "RequireClass": {
+        "CompareType": "atleast",
+        "ClassIndex": 1
+      },
+      "Icon": "../skillicons/Icon_Sprit_Skill_CounterStream.png",
+      "Levels": {
+        "0": {
+          "Description": "Takes a stance, and use a maximum of 3 counter attacks. When counterattacking, Jin will deal more damage depending on the number of times that counter is activated.",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Skill_CounterStream_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 57,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 57,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 58,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "",
+          "RequiredLevel": 59,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 60,
+          "RequiredSP": 3
+        }
+      }
+    },
+    "BasicAttackMastery": {
+      "Passive": true,
+      "Name": "Basic Attack Mastery",
+      "ID": 1002,
+      "DefaultLevel": 1,
+      "Icon": "../skillicons/Sh-1.png",
+      "Levels": {
+        "0": {
+          "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Attack_01_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "SG Gain +20%.\nUnlock alternative attack “A”",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "SG Gain +70%.\nUnlock additional basic attack",
+          "RequiredLevel": 5,
+          "RequiredSP": 1,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Attack_02_{{auto}}.mp4"
+          }
+        },
+        "3": {
+          "Effect": "SG Gain +120%\nUnlock alternative attack “B”.\nUnlock alternative aerial attack",
+          "RequiredLevel": 10,
+          "RequiredSP": 2,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Attack_03_{{auto}}.mp4"
+          }
+        },
+        "4": {
+          "Effect": "SG Gain +200%\nUnlock alternative attack “C”",
+          "RequiredLevel": 15,
+          "RequiredSP": 2,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Attack_04_{{auto}}.mp4"
+          }
+        },
+        "5": {
+          "Effect": "",
+          "RequiredLevel": 20,
+          "RequiredSP": 2,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Attack_05_{{auto}}.mp4"
+          }
+        }
+      }
+    },
+    "SpecialAbilityMastery": {
+      "Passive": true,
+      "DefaultLevel": 1,
+      "ID": 1001,
+      "Name": "Special Ability Mastery",
+      "Icon": "../skillicons/Sh-2j.png",
+      "Levels": {
+        "0": {
+          "Description": "[Ground]\nSmash the ground with your foot, inflict status effect to nearby enemies.\n[Air]\nSwing the fist towards the ground.",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_S_Attack_N_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "[Ground]\nDamage: 168%\nSA Damage: 75%\nStatus effect: 'Stun' in 2s\nCooldown: 10s\n[Air]\nDamage: 269%\nSA Damage: 119%\nCooldown: 10s",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "[Ground]\nDamage: 177%\nSA Damage: 78%\nStatus effect: 'Stun' in 2.5s\nCooldown: 10s\nSG Gain: +20%\n[Air]\nDamage: 282%\nSA Damage: 125%\nCooldown: 10s\nSG Gain: +20%",
+          "RequiredLevel": 15,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "[Ground]\nDamage: 198%\nSA Damage: 88%\nStatus effect: 'Stun' in 3s\nCooldown: 10s\nSG Gain: +70%\n[Air]\nDamage: 316%\nSA Damage: 140%\nCooldown: 10s\nSG Gain: +70%",
+          "RequiredLevel": 30,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "EmergencyDodge": {
+      "Passive": true,
+      "Name": "Emergency Dodge",
+      "ID": 1004,
+      "DefaultLevel": 1,
+      "Icon": "../skillicons/Sh-3.png",
+      "Levels": {
+        "0": {
+          "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Evade_F_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "Stamina Cost: 20",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        }
+      }
+    },
+    "RisingRoll": {
+      "Passive": true,
+      "Name": "Rising Roll",
+      "ID": 1003,
+      "DefaultLevel": 1,
+      "Icon": "../skillicons/Sh-4.png",
+      "Levels": {
+        "0": {
+          "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Roll_F_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "Stamina Cost: 25",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "Stamina Cost: 15",
+          "RequiredLevel": 17,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "Stamina Cost: 15\nFaster Rolling Speed",
+          "RequiredLevel": 34,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "Dash": {
+      "Passive": true,
+      "Name": "Dash",
+      "DefaultLevel": 1,
+      "ID": 1006,
+      "Icon": "../skillicons/Sh-5.png",
+      "Levels": {
+        "0": {
+          "Description": "Swiftly dash forward",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Run_F_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "Faster Dashing Speed",
+          "RequiredLevel": 25,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "RisingAttack": {
+      "Passive": true,
+      "Name": "Rising Attack",
+      "ID": 1005,
+      "DefaultLevel": 1,
+      "Icon": "../skillicons/Sh-6.png",
+      "Levels": {
+        "0": {
+          "Description": "While downed, get up while damaging surrounding enemies",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Rise_Attack_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "Stamina Cost: 30\nInvincibility Duration: 1 seconds",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "2": {
+          "Effect": "Stamina Cost: 20\nInvincibility Duration: 1 seconds",
+          "RequiredLevel": 18,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "Stamina Cost: 20\nInvincibility Duration: 3 seconds",
+          "RequiredLevel": 36,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "DashAttack": {
+      "Passive": true,
+      "Name": "Dash Attack",
+      "DefaultLevel": 1,
+      "ID": 1008,
+      "Icon": "../skillicons/Sh-7.png",
+      "Levels": {
+        "0": {
+          "Description": "Perform an attack while dashing. Different character does different attacks. ",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_N_Attack_Dash_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "Damage: 115%\nSA Damage: 38%",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        }
+      }
+    },
+    "SpecialDodge": {
+      "Passive": true,
+      "Name": "Special Dodge",
+      "ID": 1007,
+      "Icon": "../skillicons/Sh-8.png",
+      "Levels": {
+        "0": {
+          "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_Special_Evade_F_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "Stamina Cost: 40\nCooldown: 60 seconds",
+          "RequiredLevel": 4,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "Stamina Cost: 40\nCooldown: 50 seconds",
+          "RequiredLevel": 21,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "Stamina Cost: 40\nCooldown: 40 seconds",
+          "RequiredLevel": 38,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "SpecialDashAttack": {
+      "Passive": true,
+      "Name": "Special Dash Attack",
+      "ID": 1010,
+      "Icon": "../skillicons/Sh-9.png",
+      "Levels": {
+        "0": {
+          "Description": "Performs a special attack while dashing. Different characters do different special attacks",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0,
+          "Preview": {
+            "Video": "../skillpreviews/jin/B_S_Attack_N_Dash_{{auto}}.mp4"
+          }
+        },
+        "1": {
+          "Effect": "Damage: 206%\nSA Damage: 92%\nCooldown: 5 seconds",
+          "RequiredLevel": 13,
+          "RequiredSP": 1
+        }
+      }
+    },
+    "StaminaMastery": {
+      "Passive": true,
+      "Name": "Stamina Mastery",
+      "ID": 1009,
+      "Icon": "../skillicons/Sh-10.png",
+      "Levels": {
+        "0": {
+          "Description": "Increases stamina recovery rate",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "1": {
+          "Effect": "Stamina Recovery Rate: +10%",
+          "RequiredLevel": 10,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "Stamina Recovery Rate: +20%",
+          "RequiredLevel": 15,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "Stamina Recovery Rate: +30%",
+          "RequiredLevel": 20,
+          "RequiredSP": 2
+        },
+        "4": {
+          "Effect": "Stamina Recovery Rate: +40%",
+          "RequiredLevel": 25,
+          "RequiredSP": 2
+        },
+        "5": {
+          "Effect": "Stamina Recovery Rate: +50%",
+          "RequiredLevel": 30,
+          "RequiredSP": 3
+        }
+      }
+    },
+    "Offense-DefenseUnitedBody": {
+      "Passive": true,
+      "Name": "Offense-Defense United Body",
+      "ID": 1013,
+      "RequireClass": {
+        "CompareType": "atleast",
+        "ClassIndex": 1
+      },
+      "Icon": "../skillicons/Icon_Sprit_Skill_SGPassive2.png",
+      "Levels": {
+        "0": {
+          "Description": "If Jin or his allies defeats 5 enemies in succession within 5 seconds, received damage will decrease and attack will increase for 10 seconds.",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 57,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "",
+          "RequiredLevel": 58,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "",
+          "RequiredLevel": 59,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "StrongBody": {
+      "Passive": true,
+      "Name": "Strong Body",
+      "ID": 1011,
+      "RowSpan": {
+        "0": 2,
+        "1": 1
+      },
+      "Icon": "../skillicons/JP1-2.png",
+      "Levels": {
+        "0": {
+          "Description": "Reduces the damage taken by enemies",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "1": {
+          "Effect": "Damage taken: -10%",
+          "RequiredLevel": 10,
+          "RequiredSP": 1
+        },
+        "2": {
+          "Effect": "Damage taken: -15%",
+          "RequiredLevel": 20,
+          "RequiredSP": 1
+        },
+        "3": {
+          "Effect": "Damage taken: -20%",
+          "RequiredLevel": 30,
+          "RequiredSP": 2
+        }
+      }
+    },
+    "WillofPassion": {
+      "Passive": true,
+      "DefaultLevel": 1,
+      "ID": 1012,
+      "RowSpan": 2,
+      "Name": "Will of Passion",
+      "Icon": "../skillicons/SP1-1.png",
+      "Levels": {
+        "0": {
+          "Description": "Recover SG on successful. Recover SG automatically while out of combat.\nRecover significantly more SG when out of combat for a longer time. On successful counter, recovers additional SG",
+          "Effect": "",
+          "RequiredLevel": 0,
+          "RequiredSP": 0
+        },
+        "1": {
+          "Effect": "",
+          "RequiredLevel": 10,
+          "RequiredSP": 0
+        }
+      }
     }
+  }
 }

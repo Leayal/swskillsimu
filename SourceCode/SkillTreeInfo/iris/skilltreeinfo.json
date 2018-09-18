@@ -26,7 +26,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -72,7 +72,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -104,7 +104,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash_B.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_HammerCrash_B_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -136,7 +136,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_CamelSpin.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_CamelSpin_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -181,7 +181,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -227,7 +227,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -259,7 +259,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive_B.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_AssaultDive_B_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -290,7 +290,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_FireSomersault.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_FireSomersault_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -335,7 +335,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_FireSomersault_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_FireSomersault_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -366,7 +366,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_SpiralPierce.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_SpiralPierce_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -411,7 +411,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_SpiralPierce_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_SpiralPierce_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -442,7 +442,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_PulseFire.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_PulseFire_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -488,7 +488,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_PulseFire_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_PulseFire_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -520,7 +520,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_PulseFire_B.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_PulseFire_B_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -551,7 +551,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_LimitBrake.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_LimitBrake_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -592,7 +592,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -638,7 +638,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -670,7 +670,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm_B.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_BulletStorm_B_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -701,7 +701,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_FullBurst.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_FullBurst_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -746,7 +746,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_EternalAbyss.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_EternalAbyss_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -787,7 +787,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_Earthquake.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_Earthquake_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -833,7 +833,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_Earthquake_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_Earthquake_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -865,7 +865,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_Earthquake_B.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_Earthquake_B_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -896,7 +896,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_ElectricCannon.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_ElectricCannon_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -937,7 +937,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_ExceedDriver.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_ExceedDriver_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -983,7 +983,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_CamelSpin_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_CamelSpin_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1019,7 +1019,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_FullBurst_A.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_FullBurst_A_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1055,7 +1055,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_PulverizeHeadButt.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_PulverizeHeadButt_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1100,7 +1100,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Skill_Operation Ashes.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Skill_Operation Ashes_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1143,7 +1143,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Attack_01.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Attack_01_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1156,7 +1156,7 @@
                     "RequiredLevel": 5,
                     "RequiredSP": 1,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Attack_02.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Attack_02_{{auto}}.mp4"
                     }
                 },
                 "3": {
@@ -1164,7 +1164,7 @@
                     "RequiredLevel": 10,
                     "RequiredSP": 2,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Attack_04_02.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Attack_04_02_{{auto}}.mp4"
                     }
                 },
                 "4": {
@@ -1177,7 +1177,7 @@
                     "RequiredLevel": 20,
                     "RequiredSP": 2,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Attack_05.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Attack_05_{{auto}}.mp4"
                     }
                 }
             }
@@ -1195,7 +1195,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_S_Attack_N.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_S_Attack_N_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1228,7 +1228,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Evade_F.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Evade_F_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1251,7 +1251,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Roll_F.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Roll_F_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1284,7 +1284,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Run_F.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Run_F_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1312,7 +1312,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Rise_Attack.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Rise_Attack_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1345,7 +1345,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_N_Attack_Dash.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_N_Attack_Dash_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1367,7 +1367,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_Special_Evade_F.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_Special_Evade_F_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1399,7 +1399,7 @@
                     "RequiredLevel": 0,
                     "RequiredSP": 0,
                     "Preview": {
-                        "Video": "../skillpreviews/iris/B_S_Attack_N_Dash.{{auto}}"
+                        "Video": "../skillpreviews/iris/B_S_Attack_N_Dash_{{auto}}.mp4"
                     }
                 },
                 "1": {
@@ -1462,7 +1462,10 @@
                     "Description": "Provides the ability to gain invulnerable state when using special attack.",
                     "Effect": "",
                     "RequiredLevel": 0,
-                    "RequiredSP": 0
+                    "RequiredSP": 0,
+                    "Preview": {
+                        "Video": "../skillpreviews/iris/Contributor_iris_ExtremeRush_{{auto}}.mp4"
+                    }
                 },
                 "1": {
                     "Effect": "Duration: 3s\nCooldown: 60 seconds",

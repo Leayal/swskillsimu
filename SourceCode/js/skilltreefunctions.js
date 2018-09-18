@@ -1,8 +1,14 @@
 // Set up fallback for requestAnimationFrame function.
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame ||
-    window.msRequestAnimationFrame || window.oRequestAnimationFrame || function(callback) { return setTimeout(callback, 1000 / 60); };
+    window.msRequestAnimationFrame || window.oRequestAnimationFrame || function (callback) { return setTimeout(callback, 1000 / 60); };
 // Set up fallback for cancelAnimationFrame function.
-window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame || function(callback) { clearTimeout(callback); };
+window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame || function (callback) { clearTimeout(callback); };
+
+if (typeof (String.includes) !== "function") {
+    String.prototype.includes = function (subStr) {
+        return (this.indexOf(subStr) !== -1);
+    }
+}
 
 const v_PreviewHeight = "170px",
     mediaType = {
@@ -30,14 +36,14 @@ const previewOptions = {
 
 const previewOptionExplains = {
     0: "Turn off preview",
-    1: "Show skill preview with 30FPS video MP4 container with video codec H.264 (Profile High). This container and the codec are widely supported in most of browsers you can find.",
-    2: "\"Show video (Beta)\" will use 30FPS video WebM container with video codec VP9 to achieve even higher compression. This means you will download less data (it happens only once anyway or until browser's cache is expired or cleaned, so you don't really save anything much) in exchange of higher compute power to decode and play the video. It may have some visual bugs, too, select \"Show video\" option if you can't stand the bug or the video can't be played."
+    1: "Show skill preview with MP4 container with video codec H.264 (Profile High). This container and the codec are widely supported in most of browsers you can find.",
+    2: "\"Show video (Beta)\" will use MP4 container with video codec VP9 to achieve even higher compression. This means you will download less data (it happens only once anyway or until browser's cache is expired or cleaned, so you don't really save anything much) in exchange of higher compute power to decode and play the video. It may have some visual bugs, too, select \"Show video\" option if you can't stand the bug or the video can't be played."
 };
 
 var mouseX;
 var mouseY;
 
-$(document).mousemove(function(e) {
+$(document).mousemove(function (e) {
     window.mouseX = e.pageX;
     window.mouseY = e.pageY;
 });
@@ -46,6 +52,8 @@ function SetToolTip(obj) {
     obj.attr("tooltipframework", "0");
     return obj;
 }
+
+// String.prototype.includes
 
 function SetToolTipUp(obj) {
     obj.attr("tooltipframework", "1");
@@ -81,7 +89,7 @@ function IsExtension(filename, extension) { return (filename.lastIndexOf(extensi
 
 function ShowDangerDialog(msg, yesCallback, noCallback) {
     let dialog = new Bootstrap4ModalDialog($("#dialogs"), msg, "Warning", Bootstrap4ModalDialog.Buttons.YesNoDanger, Bootstrap4ModalDialog.Type.Danger);
-    dialog.RegisterCallback(function(sender, val) {
+    dialog.RegisterCallback(function (sender, val) {
         if (val) {
             if (typeof yesCallback === "function")
                 yesCallback();
@@ -95,7 +103,7 @@ function ShowDangerDialog(msg, yesCallback, noCallback) {
 
 function ShowRetryDialog(jquery_format_msg, title, retryCallback) {
     let dialog = new Bootstrap4ModalDialog($("#dialogs"), jquery_format_msg, title, Bootstrap4ModalDialog.Buttons.Retry, Bootstrap4ModalDialog.Type.Warning);
-    dialog.RegisterCallback(function(sender, val) {
+    dialog.RegisterCallback(function (sender, val) {
         if (val && (typeof retryCallback === "function"))
             retryCallback();
     });
@@ -104,7 +112,7 @@ function ShowRetryDialog(jquery_format_msg, title, retryCallback) {
 
 function ShowMessageDialog(jquery_format_msg, okayCallback) {
     let dialog = new Bootstrap4ModalDialog($("#dialogs"), jquery_format_msg, "Notice", null, Bootstrap4ModalDialog.Type.Info);
-    dialog.RegisterCallback(function(sender, val) {
+    dialog.RegisterCallback(function (sender, val) {
         if (val && (typeof okayCallback === "function"))
             okayCallback();
     });
@@ -113,7 +121,7 @@ function ShowMessageDialog(jquery_format_msg, okayCallback) {
 
 function ShowConfirmDialog(msg, yesCallback, noCallback) {
     let dialog = new Bootstrap4ModalDialog($("#dialogs"), msg, "Double confirmation", Bootstrap4ModalDialog.Buttons.YesNo, Bootstrap4ModalDialog.Type.Primary);
-    dialog.RegisterCallback(function(sender, val) {
+    dialog.RegisterCallback(function (sender, val) {
         if (val) {
             if (typeof yesCallback === "function")
                 yesCallback();
@@ -132,8 +140,8 @@ function ShowSkillAssignment(noCallback) {
         {
             label: "Reset",
             cssClass: "btn btn-warning",
-            action: function(dialogitself) {
-                window.ShowDangerDialog("Are you sure you want to reset all the slot assignments?", function() {
+            action: function (dialogitself) {
+                window.ShowDangerDialog("Are you sure you want to reset all the slot assignments?", function () {
                     window.SkillCore.ResetSlotAssignment();
                 });
             }
@@ -141,7 +149,7 @@ function ShowSkillAssignment(noCallback) {
         {
             label: "Close",
             cssClass: "btn btn-default",
-            action: function(dialogitself) {
+            action: function (dialogitself) {
                 dialogitself.Hide();
                 if (typeof noCallback === "function")
                     noCallback();
@@ -155,7 +163,7 @@ function ReRenderTree(characterclassinfo) {
     if (typeof (window.SkillCore.RenderTree) !== "function") return;
     if (!characterclassinfo) throw "characterclassinfo is null";
 
-    window.SkillCore.RenderTree(function() {
+    window.SkillCore.RenderTree(function () {
         let target = $("img.image-bg-character");
         if (target)
             target.remove();
@@ -168,8 +176,8 @@ function ReRenderTree(characterclassinfo) {
                 pos = "side-right";
             }
             $("#forbackground").append(
-                $("<img>").addClass(["image-bg-character", pos]).attr("src", characterclassinfo.Cover).imagesLoaded().always(function(instance) {
-                    instance.elements.forEach(function(element, index, arr) {
+                $("<img>").addClass(["image-bg-character", pos]).attr("src", characterclassinfo.Cover).imagesLoaded().always(function (instance) {
+                    instance.elements.forEach(function (element, index, arr) {
                         $(element).addClass("animated fadeIn").show();
                     });
                 }).hide()
@@ -190,16 +198,16 @@ function copyLink(_url) {
     } else {
         var divthingie = $("<div>");
         divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
-        divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(_url).click(function() { $(this).select(); }));
+        divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(_url).click(function () { $(this).select(); }));
         window.ShowMessageDialog(divthingie);
         return false;
     }
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     // UI tricks
     var myBodeh = $(document.body);
-    myBodeh.on("click", ".dropdown-menu.keep-open", function(e) {
+    myBodeh.on("click", ".dropdown-menu.keep-open", function (e) {
         if (e)
             e.stopPropagation();
     });
@@ -231,7 +239,7 @@ $(document).ready(function() {
         });
 
     // Setting listeners
-    domtarget_skillpreview.change(function() {
+    domtarget_skillpreview.change(function () {
         window.SkillTreeSetting.skilltree_skillpreview = parseInt($(this).val());
         skillpreview_explain.text(previewOptionExplains[window.SkillTreeSetting.skilltree_skillpreview]);
         popover_skillpreview.popover("update");
@@ -249,21 +257,21 @@ $(document).ready(function() {
         domtarget_skillsimulatoroption.addClass("highlight-red");
         popover_saveSetting = domtarget_saveSetting.popover({ animation: true, placement: "right", trigger: "hover focus", content: "The option you changed here will not be remembered next time you visit the site. Save the setting to your browser will make your browser remember the setting forever, even when the browser is restarted." });
 
-        domtarget_skillsimulatoroption.one("mouseover", function() {
+        domtarget_skillsimulatoroption.one("mouseover", function () {
             domtarget_skillsimulatoroption.removeClass("highlight-red");
         });
     }
     domtarget_skillpreview.val(window.SkillTreeSetting.skilltree_skillpreview);
 
     // Save Setting
-    domtarget_saveSetting.click(function(e) {
+    domtarget_saveSetting.click(function (e) {
         e.preventDefault();
         let link_localStorage = "<a href=\"https://www.w3schools.com/html/html5_webstorage.asp\" target=\"_blank\">localStorage</a>",
             link_cookie = "<a href=\"https://www.w3schools.com/js/js_cookies.asp\" target=\"_blank\">cookie</a>";
 
         if (popover_saveSetting) {
             popover_saveSetting.popover("hide");
-            popover_saveSetting.on("hidden.bs.popover", function() {
+            popover_saveSetting.on("hidden.bs.popover", function () {
                 popover_saveSetting.popover("disable");
                 popover_saveSetting.popover("dispose");
                 popover_saveSetting = null;
@@ -282,7 +290,7 @@ $(document).ready(function() {
                 ShowDangerDialog($("<div>")
                     .append($("<span>").text("Error: " + ex))
                     .append($("<br/>"))
-                    .append($("<span>").text("Do you want to retry?")), function() {
+                    .append($("<span>").text("Do you want to retry?")), function () {
                         thisfunc();
                     });
             }
@@ -290,18 +298,18 @@ $(document).ready(function() {
         if (window.SkillTreeSetting.skilltree_firsttime === 0) {
             func_save();
         } else {
-            var myfunc = function(event) {
+            var myfunc = function (event) {
                 if (typeof (event.stopPropagation) === "function")
                     event.stopPropagation();
             },
                 dialogContent = $("<span>The setting will be saved to your web browser by using " + link_localStorage + " (Or fallback to " + link_cookie + " if your browser does not support " + link_localStorage + ").<br/><strong>Do you want to store the data on your computer?</strong></span>")
                     .on("click", "a", myfunc);
 
-            ShowConfirmDialog(dialogContent, function() {
+            ShowConfirmDialog(dialogContent, function () {
                 window.SkillTreeSetting.skilltree_firsttime = 0;
                 dialogContent.off("click", "a", myfunc);
                 func_save();
-            }, function() {
+            }, function () {
                 dialogContent.off("click", "a", myfunc);
             });
         }
@@ -311,13 +319,13 @@ $(document).ready(function() {
     if (ClipboardJS && ClipboardJS.isSupported()) {
         let clipboard = new ClipboardJS(".btncopymagicclass");
         window.clipboardsupport = true;
-        clipboard.on("success", function(e) {
+        clipboard.on("success", function (e) {
             window.shownotify("The link to this skill tree has been copied to clipboard.", 'success');
         });
-        clipboard.on("error", function(e) {
+        clipboard.on("error", function (e) {
             let divthingie = $("<div>");
             divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
-            divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(e.text).click(function() { $(this).select(); }));
+            divthingie.append($("<input>").attr("type", "text").css({ width: "100%" }).prop("readonly", true).val(e.text).click(function () { $(this).select(); }));
             window.ShowMessageDialog(divthingie);
         });
     }
@@ -327,11 +335,11 @@ $(document).ready(function() {
 
     // Dialog API init
     var dialogObject = $("#dialogs");
-    dialogObject.hide().click(function(e) {
+    dialogObject.hide().click(function (e) {
         e.preventDefault();
         window.DialogManager.CloseForegroundDialog();
     });
-    window.DialogManager.OnModalChanged(function(val) {
+    window.DialogManager.OnModalChanged(function (val) {
         if (val)
             dialogObject.show();
         else
@@ -352,17 +360,17 @@ $(document).ready(function() {
     tooltipObj.detach();
 
     if (isPromiseSupported) {
-        var onPreviewPlaySuccessfully = function() {
+        var onPreviewPlaySuccessfully = function () {
             tooltippreviewPanel.show();
             toolTipFramework.UpdateTooltipSize();
         };
 
-        tooltippreviewPanel_video.on("error", function() {
+        tooltippreviewPanel_video.on("error", function () {
             tooltippreviewPanel.hide();
-        }).on("canplay", function(event) {
+        }).on("canplay", function (event) {
             let objPromise = event.target.play();
             if (objPromise) {
-                objPromise.then(onPreviewPlaySuccessfully, function() {
+                objPromise.catch(function () {
                     tooltippreviewPanel.hide();
                     toolTipFramework.UpdateTooltipSize();
                 });
@@ -373,7 +381,7 @@ $(document).ready(function() {
         tooltippreviewPanel_video = null;
     }
 
-    toolTipFramework.OnMouseEnter.Register(function(event) {
+    toolTipFramework.OnMouseEnter.Register(function (event) {
         let key = $(event.target).attr("insight");
         if (key) {
             let tooltipInfoType = $(event.target).attr("tooltipframework");
@@ -397,7 +405,7 @@ $(document).ready(function() {
             toolTipFramework.SetBound(0, 0, 0, navBarBottom.outerHeight(true) || 0);
             tooltippreviewPanel.hide();
 
-            if (isPromiseSupported && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
+            if (isPromiseSupported && (tooltippreviewPanel_video != null) && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
                 let hasVP9 = (typeof (previewinfo.Video.vp9) === "string"),
                     hasH264 = (typeof (previewinfo.Video.h264) === "string");
 
@@ -421,14 +429,10 @@ $(document).ready(function() {
 
                     if (typeof (_attributes.src) === "string") {
                         tooltippreviewPanel_video.attr(_attributes);
+                        tooltippreviewPanel.show();
                         // tooltippreviewPanel_video.trigger("load");
-                        let myPromiseAgain = tooltippreviewPanel_video[0].play();
-                        if (myPromiseAgain) {
-                            myPromiseAgain.then(onPreviewPlaySuccessfully, function() {
-                                // Wait for "CanPlay" event above and start to play the video (way way above).
-                                // This is mainly because the load() above is still loading the video.
-                            });
-                        }
+                        // Trigger first time
+                        tooltippreviewPanel_video[0].play();
                     } else {
                         tooltippreviewPanel.hide();
                     }
@@ -436,9 +440,17 @@ $(document).ready(function() {
                     // Show preview image if it has one
                     $("<img>").attr({ width: "240", height: "auto", src: previewinfo.Image }).appendTo(tooltippreviewPanel);
                 } else {
+                    if (!tooltippreviewPanel_video[0].paused) {
+                        tooltippreviewPanel_video.trigger("pause");
+                    }
                     tooltippreviewPanel.hide();
                 }
             } else {
+                if (tooltippreviewPanel_video) {
+                    if (!tooltippreviewPanel_video[0].paused) {
+                        tooltippreviewPanel_video.trigger("pause");
+                    }
+                }
                 tooltippreviewPanel.hide();
             }
 
@@ -522,33 +534,33 @@ $(document).ready(function() {
         }
     });
     // toolTipFramework.OnMouseLeave.Register(function (event) { });
-    toolTipFramework.OnTooltipHidden.Register(function(targetDOM) {
+    toolTipFramework.OnTooltipHidden.Register(function (targetDOM) {
         tooltipObj.detach();
     });
     toolTipFramework.StartListen();
 
     // Skill tree init
     $('#charList a[href^="../' + GetCurrentFolderUrl() + '"]').remove();
-    $("#copyURL").click(function(e) {
+    $("#copyURL").click(function (e) {
         e.preventDefault();
         var link = window.SkillCore.GenerateLink();
         if (link) {
             copyLink(link);
         }
     });
-    $("#copyURLshowassign").click(function(e) {
+    $("#copyURLshowassign").click(function (e) {
         e.preventDefault();
         var link = window.SkillCore.GenerateLink(true);
         if (link) {
             copyLink(link);
         }
     });
-    $("#resetAllSkill").click(function() {
-        ShowDangerDialog("Are you sure you want to unlearn all skills?", function() {
+    $("#resetAllSkill").click(function () {
+        ShowDangerDialog("Are you sure you want to unlearn all skills?", function () {
             window.SkillCore.UnlearnAllSkills();
         });
     });
-    $("#slotassignment").click(function() {
+    $("#slotassignment").click(function () {
         ShowSkillAssignment();
     });
 
@@ -559,9 +571,9 @@ $(document).ready(function() {
     if (clevel == 60) clevel = GetUrlParam("level", 60);
     if (isNaN(clevel)) clevel = 60;
 
-    window.SkillCore.ReadTree(function(data) {
+    window.SkillCore.ReadTree(function (data) {
         param_selectedclass = Math.min(param_selectedclass, window.SkillCore.GetAvailableClassIndex());
-        let level_selecting = $("<select>").attr("id", "selectLevelBox").change(function() {
+        let level_selecting = $("<select>").attr("id", "selectLevelBox").change(function () {
             var selectedlevel = $(this).val();
             if (window.SkillCore.SetLevel(selectedlevel)) {
                 clevel = selectedlevel;
@@ -574,11 +586,11 @@ $(document).ready(function() {
         $("#levelBoxtd").append(level_selecting);
         level_selecting.val(clevel);
 
-        let class_selecting = $("<select>").attr("id", "selectClassBox").change(function() {
+        let class_selecting = $("<select>").attr("id", "selectClassBox").change(function () {
             var selectedclass = $(this).val();
             var changingclassinfo = window.SkillCore.GetClass(selectedclass);
             if (window.SkillCore.IsSelectiveClass(selectedclass)) {
-                ShowConfirmDialog($("<span><strong>Changing class will reset your skill tree.</strong><br/>Are you sure you want to change class?</span>"), function() {
+                ShowConfirmDialog($("<span><strong>Changing class will reset your skill tree.</strong><br/>Are you sure you want to change class?</span>"), function () {
                     window.SkillCore.UnlearnAllSkills();
                     if (window.SkillCore.SetSelectedClass(selectedclass)) {
                         param_selectedclass = selectedclass;
@@ -586,7 +598,7 @@ $(document).ready(function() {
                     } else {
                         $("#selectClassBox").val(param_selectedclass);
                     }
-                }, function() {
+                }, function () {
                     $("#selectClassBox").val(param_selectedclass);
                 });
             } else {
@@ -604,10 +616,10 @@ $(document).ready(function() {
             class_selecting.append($("<option>").val(0).text("Base"));
         }
         $("#classBoxtd").append(class_selecting);
-    }, function(isCompleted, statusText, errorThrown) {
+    }, function (isCompleted, statusText, errorThrown) {
         RemoveLoading(myBodeh);
         if (isCompleted === false) {
-            ShowRetryDialog($("<span>Unknown internet error occurred: " + errorThrown + "<br/>Do you want to retry?</span>"), function() {
+            ShowRetryDialog($("<span>Unknown internet error occurred: " + errorThrown + "<br/>Do you want to retry?</span>"), function () {
                 PageReload();
             });
         } else {
