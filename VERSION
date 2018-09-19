@@ -1,4 +1,4 @@
 ; ";" mean the line will be in comment.
 ; This is the version file for the compiler to read
 ; The output will be replace "{{version}}" with the string (which is not a comment line) found below.
-v1_0
+v1_1

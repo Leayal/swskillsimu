@@ -530,7 +530,7 @@ $(document).ready(function () {
                 tooltippreviewPanel_video.trigger("pause");
             }
         }
-        // tooltipObj.detach();
+        tooltipObj.detach();
     });
     toolTipFramework.StartListen();
 
