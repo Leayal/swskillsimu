@@ -8,41 +8,37 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.clearly-visible {
-    opacity: 1 !important;
-}
-
 @keyframes fadeincustom {
     0%   { opacity: 0; }
-    100% { opacity: 0.85; }
+    100% { opacity: 1; }
 }
 @-webkit-keyframes fadeincustom {
     0%   { opacity: 0; }
-    100% { opacity: 0.85; }
+    100% { opacity: 1; }
 }
 @-moz-keyframes fadeincustom {
     0%   { opacity: 0; }
-    100% { opacity: 0.85; }
+    100% { opacity: 1; }
 }
 @-o-keyframes fadeincustom {
     0%   { opacity: 0; }
-    100% { opacity: 0.85; }
+    100% { opacity: 1; }
 }
 
 @keyframes fadeoutcustom {
-    0%   { opacity: 0.85; }
+    0%   { opacity: 1; }
     100% { opacity: 0; }
 }
 @-webkit-keyframes fadeoutcustom {
-    0%   { opacity: 0.85; }
+    0%   { opacity: 1; }
     100% { opacity: 0; }
 }
 @-moz-keyframes fadeoutcustom {
-    0%   { opacity: 0.85; }
+    0%   { opacity: 1; }
     100% { opacity: 0; }
 }
 @-o-keyframes fadeoutcustom {
-    0%   { opacity: 0.85; }
+    0%   { opacity: 1; }
     100% { opacity: 0; }
 }
 

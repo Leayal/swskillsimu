@@ -67,6 +67,7 @@ function SkillTreeToolTipFramework(target, selector) {
     this.OnMouseEnter = new EventHandler();
     this.OnMouseLeave = new EventHandler();
     this.OnTooltipHidden = new EventHandler();
+    // this.OnTooltipShown = new EventHandler();
 
     var lastKnownMouseCapturedElement = null;
 
@@ -90,12 +91,16 @@ function SkillTreeToolTipFramework(target, selector) {
         myself.isRendering = true;
         lastKnownMouseCapturedElement = event.target;
 
-        myself.basemouseX = myself.mouseX;
-        myself.basemouseY = myself.mouseY;
+        let x = event.clientX, y = event.clientY;
+
+        myself.mouseX = x;
+        myself.mouseY = y;
+        myself.basemouseX = x;
+        myself.basemouseY = y;
 
         myself.OnMouseEnter.Trigger(event);
 
-        myself._target.css({ top: myself.mouseY + "px", left: myself.mouseX + "px" });
+        myself._target.css({ top: y + "px", left: x + "px" });
 
         if (event.cancel === true) {
             return;

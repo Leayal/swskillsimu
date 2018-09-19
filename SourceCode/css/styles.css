@@ -72,38 +72,37 @@ div.character {
     min-width: 350px;
 }
 
-div#tooltip {
+#tooltip {
     max-width: 300px;
     width: auto;
     height: auto;
     position: fixed;
     display: none;
-    border: 1px solid black;
-    background: black;
-    opacity: 0.85;
+    border: none;
+    background: rgba(17, 17, 17, 0.8);
     text-align: left;
     pointer-events: none;
 }
 
-.tooltipheader {
+#tooltip .tooltipheader {
     border-bottom: 1px black;
     letter-spacing: 0px;
     font-size: 21px;
     font-style: italic;
     font-weight: bold;
     color: white;
-    opacity: 1;
     margin: 4px;
     border: 0;
+    text-align: center;
     background-color: transparent;
 }
 
-pre.tooltipcontent {
+#tooltip .tooltipcontent {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
-    word-wrap: break-word;
+    word-wrap: normal;
     border-bottom: 1px black;
     letter-spacing: 0px;
     font-size: 13px;

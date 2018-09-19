@@ -26,7 +26,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_EvilSlash_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_EvilSlash.{{auto}}"
           }
         },
         "1": {
@@ -71,7 +71,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_SpinningDevil_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_SpinningDevil.{{auto}}"
           }
         },
         "1": {
@@ -112,7 +112,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_ScytheCuter_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_ScytheCuter.{{auto}}"
           }
         },
         "1": {
@@ -157,7 +157,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_ScytheCuter_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_ScytheCuter_A.{{auto}}"
           }
         },
         "1": {
@@ -177,7 +177,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_GrimCountdown_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_GrimCountdown.{{auto}}"
           }
         },
         "1": {
@@ -222,7 +222,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_GrimCountdown_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_GrimCountdown_A.{{auto}}"
           }
         },
         "1": {
@@ -252,7 +252,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_FearChain_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_FearChain_A.{{auto}}"
           }
         },
         "1": {
@@ -297,7 +297,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_FearChain_A_01_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_FearChain_A_01.{{auto}}"
           }
         },
         "1": {
@@ -310,7 +310,7 @@
           "RequiredLevel": 27,
           "RequiredSP": 1,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_FearChain_A_02_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_FearChain_A_02.{{auto}}"
           }
         },
         "3": {
@@ -318,7 +318,7 @@
           "RequiredLevel": 32,
           "RequiredSP": 2,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_FearChain_A_03_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_FearChain_A_03.{{auto}}"
           }
         }
       }
@@ -334,7 +334,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathGrinder_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathGrinder.{{auto}}"
           }
         },
         "1": {
@@ -380,7 +380,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathGrinder_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathGrinder_A.{{auto}}"
           }
         },
         "1": {
@@ -412,7 +412,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathGrinder_B_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathGrinder_B.{{auto}}"
           }
         },
         "1": {
@@ -443,7 +443,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathScythe_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathScythe.{{auto}}"
           }
         },
         "1": {
@@ -487,7 +487,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_CruelSlash_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_CruelSlash.{{auto}}"
           }
         },
         "1": {
@@ -533,7 +533,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_CruelSlash_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_CruelSlash_A.{{auto}}"
           }
         },
         "1": {
@@ -565,7 +565,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_CruelSlash_B_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_CruelSlash_B.{{auto}}"
           }
         },
         "1": {
@@ -597,7 +597,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_GrimReaper_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_GrimReaper.{{auto}}"
           }
         },
         "1": {
@@ -638,7 +638,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_ForceRegion_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_ForceRegion.{{auto}}"
           }
         },
         "1": {
@@ -679,7 +679,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathTornado_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathTornado.{{auto}}"
           }
         },
         "1": {
@@ -725,7 +725,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathTornado_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathTornado_A.{{auto}}"
           }
         },
         "1": {
@@ -757,7 +757,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathTornado_B_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathTornado_B.{{auto}}"
           }
         },
         "1": {
@@ -788,7 +788,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_EvilTrinity_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_EvilTrinity.{{auto}}"
           }
         },
         "1": {
@@ -829,7 +829,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathGuillotine_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathGuillotine.{{auto}}"
           }
         },
         "1": {
@@ -875,7 +875,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_EvilSlash_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_EvilSlash_A.{{auto}}"
           }
         },
         "1": {
@@ -911,7 +911,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_DeathScythe_A_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_DeathScythe_A.{{auto}}"
           }
         },
         "1": {
@@ -947,7 +947,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_FallingPetals_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_FallingPetals.{{auto}}"
           }
         },
         "1": {
@@ -992,7 +992,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Skill_FuryMach_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Skill_FuryMach.{{auto}}"
           }
         },
         "1": {
@@ -1035,7 +1035,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Attack_01_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Attack_01.{{auto}}"
           }
         },
         "1": {
@@ -1048,7 +1048,7 @@
           "RequiredLevel": 5,
           "RequiredSP": 1,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Attack_02_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Attack_02.{{auto}}"
           }
         },
         "3": {
@@ -1056,7 +1056,7 @@
           "RequiredLevel": 10,
           "RequiredSP": 2,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Attack_04_02_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Attack_04_02.{{auto}}"
           }
         },
         "4": {
@@ -1069,7 +1069,7 @@
           "RequiredLevel": 20,
           "RequiredSP": 2,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Attack_05_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Attack_05.{{auto}}"
           }
         }
       }
@@ -1087,7 +1087,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_S_Attack_N_01_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_S_Attack_N_01.{{auto}}"
           }
         },
         "1": {
@@ -1120,7 +1120,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Evade_F_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Evade_F.{{auto}}"
           }
         },
         "1": {
@@ -1143,7 +1143,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Roll_F_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Roll_F.{{auto}}"
           }
         },
         "1": {
@@ -1176,7 +1176,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Run_F_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Run_F.{{auto}}"
           }
         },
         "1": {
@@ -1204,7 +1204,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_Rise_Attack_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_Rise_Attack.{{auto}}"
           }
         },
         "1": {
@@ -1237,7 +1237,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_N_Attack_Dash_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_N_Attack_Dash.{{auto}}"
           }
         },
         "1": {
@@ -1259,7 +1259,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_S_Evade_F_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_S_Evade_F.{{auto}}"
           }
         },
         "1": {
@@ -1291,7 +1291,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/B_S_Attack_N_Dash_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/B_S_Attack_N_Dash.{{auto}}"
           }
         },
         "1": {
@@ -1356,7 +1356,7 @@
           "RequiredLevel": 0,
           "RequiredSP": 0,
           "Preview": {
-            "Video": "../skillpreviews/lily/Contributor_lily_RampagingMadness_{{auto}}.mp4"
+            "Video": "../skillpreviews/lily/Contributor_lily_RampagingMadness.{{auto}}"
           }
         },
         "1": {

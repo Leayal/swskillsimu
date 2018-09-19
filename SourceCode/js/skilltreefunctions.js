@@ -4,12 +4,6 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequ
 // Set up fallback for cancelAnimationFrame function.
 window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame || function (callback) { clearTimeout(callback); };
 
-if (typeof (String.includes) !== "function") {
-    String.prototype.includes = function (subStr) {
-        return (this.indexOf(subStr) !== -1);
-    }
-}
-
 const v_PreviewHeight = "170px",
     mediaType = {
         webm_vp9: "video/webm; codecs=\"vp9\"",
@@ -19,7 +13,7 @@ const v_PreviewHeight = "170px",
 let justSomeTemp1 = document.createElement("video");
 const SupportedCodec = {
     webm: {
-        vp9: (justSomeTemp1.canPlayType(mediaType.webm_vp9) === "probably")
+        vp9: (justSomeTemp1.canPlayType(mediaType.webm_vp9) === "probably"),
     },
     mp4: {
         h264_highProfile: (justSomeTemp1.canPlayType(mediaType.mp4_h264) === "probably")
@@ -37,7 +31,7 @@ const previewOptions = {
 const previewOptionExplains = {
     0: "Turn off preview",
     1: "Show skill preview with MP4 container with video codec H.264 (Profile High). This container and the codec are widely supported in most of browsers you can find.",
-    2: "\"Show video (Beta)\" will use MP4 container with video codec VP9 to achieve even higher compression. This means you will download less data (it happens only once anyway or until browser's cache is expired or cleaned, so you don't really save anything much) in exchange of higher compute power to decode and play the video. It may have some visual bugs, too, select \"Show video\" option if you can't stand the bug or the video can't be played."
+    2: "\"Show video (Beta)\" will use WebM container with video codec VP9 to achieve even higher compression. This means you will download less data (it happens only once anyway or until browser's cache is expired or cleaned, so you don't really save anything much) in exchange of higher compute power to decode and play the video. It may have some visual bugs, too, select \"Show video\" option if you can't stand the bug or the video can't be played."
 };
 
 var mouseX;
@@ -360,11 +354,6 @@ $(document).ready(function () {
     tooltipObj.detach();
 
     if (isPromiseSupported) {
-        var onPreviewPlaySuccessfully = function () {
-            tooltippreviewPanel.show();
-            toolTipFramework.UpdateTooltipSize();
-        };
-
         tooltippreviewPanel_video.on("error", function () {
             tooltippreviewPanel.hide();
         }).on("canplay", function (event) {
@@ -405,7 +394,7 @@ $(document).ready(function () {
             let previewinfo = currentEffect.PreviewInfo;
 
             toolTipFramework.SetBound(0, 0, 0, navBarBottom.outerHeight(true) || 0);
-            tooltippreviewPanel.hide();
+            // tooltippreviewPanel.hide();
 
             if (isPromiseSupported && tooltippreviewPanel_video && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
                 let hasVP9 = (typeof (previewinfo.Video.vp9) === "string"),
@@ -415,9 +404,7 @@ $(document).ready(function () {
                     // Show preview video if it has one
                     let _attributes = {
                         src: null
-                    },
-                        srcString = null,
-                        type = false;
+                    };
 
                     if ((window.SkillTreeSetting.skilltree_skillpreview === previewOptions["Show video (Beta)"]) && hasVP9 && SupportedCodec.webm.vp9) {
                         // Main feed: a WebM container with VP9 codec with 420p pixel format
@@ -438,9 +425,9 @@ $(document).ready(function () {
                     } else {
                         tooltippreviewPanel.hide();
                     }
-                } else if (typeof (previewinfo.Image) === "string") {
+                    // } else if (typeof (previewinfo.Image) === "string") {
                     // Show preview image if it has one
-                    $("<img>").attr({ width: "240", height: "auto", src: previewinfo.Image }).appendTo(tooltippreviewPanel);
+                    // $("<img>").attr({ width: "240", height: "auto", src: previewinfo.Image }).appendTo(tooltippreviewPanel);
                 } else {
                     if (tooltippreviewPanel_video) {
                         if (!tooltippreviewPanel_video[0].paused) {
@@ -537,9 +524,13 @@ $(document).ready(function () {
             tooltipObj.insertAfter(dialogObject);
         }
     });
-    // toolTipFramework.OnMouseLeave.Register(function (event) { });
     toolTipFramework.OnTooltipHidden.Register(function (targetDOM) {
-        tooltipObj.detach();
+        if (tooltippreviewPanel_video) {
+            if (!tooltippreviewPanel_video[0].paused) {
+                tooltippreviewPanel_video.trigger("pause");
+            }
+        }
+        // tooltipObj.detach();
     });
     toolTipFramework.StartListen();
 
