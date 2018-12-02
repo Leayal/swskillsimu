@@ -42,7 +42,7 @@
         "3": {
           "Effect": "Damage: 192%\nSA Damage: 271%\nSG Cost: 15\nCooldown: 8s",
           "RequiredLevel": 7,
-          "RequiredSP": 2
+          "RequiredSP": 1
         },
         "4": {
           "Effect": "Damage: 213%\nSA Damage: 300%\nSG Cost: 15\nCooldown: 8s",
