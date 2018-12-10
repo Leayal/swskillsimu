@@ -949,7 +949,7 @@
         "ClassIndex": 1
       },
       "Icon": "../skillicons/Icon_Howling_Skill_WolvesShowtime.png",
-      "Assignable": false,
+      "Assignable": true,
       "Levels": {
         "0": {
           "Description": "Summons a Wolf knight.",
@@ -995,6 +995,7 @@
         "ClassIndex": 1
       },
       "Icon": "../skillicons/Icon_Howling_Skill_recklessPrincess.png",
+      "Assignable": false,
       "Levels": {
         "0": {
           "Description": "??",
