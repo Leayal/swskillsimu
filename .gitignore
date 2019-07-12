@@ -1,6 +1,7 @@
 [Dd][Ii][Ss][Cc][Aa][Rr][Dd]/
 .[Vs][Ss][Cc][Oo][Dd][Ee]/
 .vscode/
+ignored/
 
 #################
 ## Eclipse
@@ -218,4 +219,3 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-*.bat
