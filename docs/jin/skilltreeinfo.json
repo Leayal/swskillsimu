@@ -1,7 +1,6 @@
 {
   "CharacterName": "Jin Seipatsu",
   "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Jin_Seipatsu",
-  "MaxLevel": 60,
   "AvailableClass": {
     "0": {
       "Name": "Base",

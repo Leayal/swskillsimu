@@ -1,7 +1,6 @@
 {
   "CharacterName": "Erwin Arclight",
   "CharacterWikiURL": "https://wiki.soulworkerhq.com/w/Erwin_Arclight",
-  "MaxLevel": 60,
   "AvailableClass": {
     "0": {
       "Name": "Base",
