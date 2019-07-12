@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(17, 17, 17);
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    background-position: center center
+}
+
+.text-feature-supported {
+    color: rgb(24, 145, 8);
+}
+
+.text-feature-missing {
+    color: rgb(161, 4, 4);
+}
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    overflow-y: hidden;
+
+    transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    /* IE 9 */
+    -webkit-transform: rotateX(180deg);
+    /* Safari and Chrome */
+}
+
+.scrolling-wrapper-flexbox .row {
+    min-width: 1280px;
+    flex-wrap: nowrap;
+}
+
+.scrolling-wrapper-flexbox>.content {
+    transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    /* IE 9 */
+    -webkit-transform: rotateX(180deg);
+    /* Safari and Chrome */
+}
+
+.whitetext {
+    color: white;
+}
+
+.bg-dark-fade {
+    background-color: rgba(17, 17, 17, 0.8) !important;
+}
+
+.characterimage:not(.disabled):hover {
+    opacity: 1 !important;
+    /* cursor: pointer; */
+}
+
+.characterimage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.characterimage:not(.disabled) {
+    opacity: 0.7;
+    transition: all .2s ease-in-out;
+}
+
+a.disabled {
+    cursor: default;
+}
+
+.characterimage.disabled {
+    opacity: 1;
+}
+
+.hideaway {
+    display: none;
+    width: 0px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    transform: translate(-100%, -100%);
+}
