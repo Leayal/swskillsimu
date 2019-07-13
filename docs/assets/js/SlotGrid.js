@@ -1,7 +1,7 @@
 function ShowSkillSelection(_skilltreeCore, showRemove, okCallback, cancelCallback) {
     if (!_skilltreeCore) return;
     var buttonslist = [{
-        label: 'Select',
+        label: window.SkillTreeData.Localization.General.ButtonSelect,
         cssClass: 'btn btn-success',
         action: function (dialogItself) {
             dialogItself.Hide();
@@ -11,7 +11,7 @@ function ShowSkillSelection(_skilltreeCore, showRemove, okCallback, cancelCallba
     }];
     if (showRemove) {
         buttonslist.push({
-            label: 'Remove',
+            label: window.SkillTreeData.Localization.General.ButtonRemove,
             cssClass: 'btn btn-danger',
             action: function (dialogItself) {
                 dialogItself.Hide();
@@ -21,7 +21,7 @@ function ShowSkillSelection(_skilltreeCore, showRemove, okCallback, cancelCallba
         });
     }
     buttonslist.push({
-        label: 'Cancel',
+        label: window.SkillTreeData.Localization.General.ButtonCancel,
         cssClass: 'btn btn-default',
         action: function (dialogItself) {
             dialogItself.Hide();
@@ -60,7 +60,7 @@ function ShowSkillSelection(_skilltreeCore, showRemove, okCallback, cancelCallba
                 );
             };
         return $("<div>").addClass("skill-list-select").append(skilllistUl);
-    }, "Select skill to assign", buttonslist);
+    }, window.SkillTreeData.Localization.SkillSlot.SkillSlotSelectionDialogHeader, buttonslist);
     dialog.Show();
 }
 
@@ -80,10 +80,10 @@ GridInfo.prototype.Redraw = function () {
     this.myDiv.empty();
     if (!this.IsEmpty) {
         this.myDiv.append($("<img>").addClass("clickthrough").attr("src", (this.SkillInfo.GetIconURL())));
-        this.myDiv.attr("title", "Skill: " + (this.SkillInfo.GetName()) + "\nClick the box to select skill");
+        this.myDiv.attr("title", "Skill: " + (this.SkillInfo.GetName()) + "\n" + window.SkillTreeData.Localization.SkillSlot.SmallGuideText_HowToSelectASkill);
     } else {
-        this.myDiv.append($("<img>").addClass("clickthrough").attr("src", "../skillicons/skillslot_empty_null.png"));
-        this.myDiv.attr("title", "Click the box to select skill");
+        this.myDiv.append($("<img>").addClass("clickthrough").attr("src", "../assets/skillicons/skillslot_empty_null.png"));
+        this.myDiv.attr("title", window.SkillTreeData.Localization.SkillSlot.SmallGuideText_HowToSelectASkill);
     }
 }
 
@@ -125,10 +125,10 @@ GridInfo.prototype.GetRender = function () {
         }
     if (!this.IsEmpty) {
         this.myDiv.append($("<img>").addClass("clickthrough").attr("src", this.SkillInfo.GetIconURL()));
-        this.myDiv.attr("title", "Skill: " + this.SkillInfo.GetName() + "\nClick the box to select skill");
+        this.myDiv.attr("title", "Skill: " + this.SkillInfo.GetName() + "\n" + window.SkillTreeData.Localization.SkillSlot.SmallGuideText_HowToSelectASkill);
     } else {
-        this.myDiv.append($("<img>").addClass("clickthrough").attr("src", "../skillicons/skillslot_empty_null.png"))
-        this.myDiv.attr("title", "Click the box to select skill");
+        this.myDiv.append($("<img>").addClass("clickthrough").attr("src", "../assets/skillicons/skillslot_empty_null.png"))
+        this.myDiv.attr("title", window.SkillTreeData.Localization.SkillSlot.SmallGuideText_HowToSelectASkill);
     }
     return this.myDiv;
 }
@@ -223,10 +223,12 @@ SlotGrid.prototype.GetRender = function () {
             ),
             $("<li>").append($("<i>").addClass("fas fa-arrow-up")),
             $("<li>").append(
-                $("<span>").text("Step-3 Bonus: "),
-                $("<select>").attr("id", "select3rdchaineffect").append(
-                    [this.getoption("3_1", "Damage +8%"), this.getoption("3_2", "Cooldown -15%"), this.getoption("3_3", "SG cost -25%")]
-                ).val(myself.effect3rd).change(function () {
+                $("<span>").text(window.SkillTreeData.Localization.SkillSlot.SkillChainEffectHeader_ThirdChain + " "),
+                $("<select>").attr("id", "select3rdchaineffect").append([
+                    this.getoption("3_1", window.SkillTreeData.Localization.SkillSlot.SkillChainEffect_DamageUp.fformat(window.SkillTreeData.Localization.SkillSlot.SkillChainEffect3rd_DamageValue)),
+                    this.getoption("3_2", window.SkillTreeData.Localization.SkillSlot.SkillChainEffect_CooldownReduce.fformat(window.SkillTreeData.Localization.SkillSlot.SkillChainEffect3rd_CooldownValue)),
+                    this.getoption("3_3", window.SkillTreeData.Localization.SkillSlot.SkillChainEffect_SGCostReduce.fformat(window.SkillTreeData.Localization.SkillSlot.SkillChainEffect3rd_SGCostValue))
+                ]).val(myself.effect3rd).change(function () {
                     myself.effect3rd = $(this).val();
                 })
             ),
@@ -238,10 +240,12 @@ SlotGrid.prototype.GetRender = function () {
             ),
             $("<li>").append($("<i>").addClass("fas fa-arrow-up")),
             $("<li>").append(
-                $("<span>").text("Step-2 Bonus: "),
-                $("<select>").attr("id", "select2ndchaineffect").append(
-                    [this.getoption("2_1", "Damage +4%"), this.getoption("2_2", "Cooldown -8%"), this.getoption("2_3", "SG cost -12%")]
-                ).val(myself.effect2nd).change(function () {
+                $("<span>").text(window.SkillTreeData.Localization.SkillSlot.SkillChainEffectHeader_SecondChain + " "),
+                $("<select>").attr("id", "select2ndchaineffect").append([
+                    this.getoption("2_1", window.SkillTreeData.Localization.SkillSlot.SkillChainEffect_DamageUp.fformat(window.SkillTreeData.Localization.SkillSlot.SkillChainEffect2nd_DamageValue)),
+                    this.getoption("2_2", window.SkillTreeData.Localization.SkillSlot.SkillChainEffect_CooldownReduce.fformat(window.SkillTreeData.Localization.SkillSlot.SkillChainEffect2nd_CooldownValue)),
+                    this.getoption("2_3", window.SkillTreeData.Localization.SkillSlot.SkillChainEffect_SGCostReduce.fformat(window.SkillTreeData.Localization.SkillSlot.SkillChainEffect2nd_SGCostValue))
+                ]).val(myself.effect2nd).change(function () {
                     myself.effect2nd = $(this).val();
                 })
             ),
@@ -250,7 +254,7 @@ SlotGrid.prototype.GetRender = function () {
                 $("<div>").addClass("row").append(this.printfloor(floor[2]))
                 // $("<ul>").addClass(["liststyle-none", "list-inline"]).append(this.printfloor(floor[2]))
             ),
-            $("<li>").append($("<span>").text("(Click the boxes to assign skill)")),
+            $("<li>").append($("<span>").text(window.SkillTreeData.Localization.SkillSlot.SmallGuideText_HowToAssignASkill)),
         ])
     );
 }

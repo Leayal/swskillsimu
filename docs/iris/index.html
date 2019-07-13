@@ -16,10 +16,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css"
             integrity="sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf" crossorigin="anonymous">
         <!--<link rel="stylesheet" href="../sakura/jquery-sakura.min.css" />-->
-        <link rel="stylesheet" href="../assets/css/styles.css?v=3" />
+        <link rel="stylesheet" href="../assets/css/styles.css?v=4" />
         <link rel="stylesheet" href="../assets/css/kr.css?v=3" />
 
+        <script src="../assets/js/common.js"></script>
         <script src="../assets/DefaultConfig.js"></script>
+        <script src="../assets/Localization.js"></script>
         <script src="../assets/js/js.cookie-2.2.0.min.js"></script>
         <script src="../assets/js/safe-storage.js"></script>
         <script src="../assets/js/event-handlers.js"></script>
@@ -29,7 +31,6 @@
         <script src="../assets/js/jquery-ui.min.js"></script>
         <script src="../assets/js/bootstrap-dialogex.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-        <script src="../assets/js/common.js"></script>
         <script src="../assets/js/SlotGrid.js"></script>
         <script src="../assets/js/skillinfos.js"></script>
         <script src="../assets/js/skilltree.js"></script>
@@ -67,7 +68,7 @@
 
     <body>
         <div id="forbackground" class="fixed-bg image-bg"></div>
-        <header>
+        <header class="require-js">
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-fade">
                 <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="false">
@@ -75,12 +76,12 @@
                     <strong class="caret"></strong>
                 </a>
                 <div id="charList" class="dropdown-menu">
-                    <a class="dropdown-item" href="../haru">Haru Estia</a>
+                    <!-- <a class="dropdown-item" href="../haru">Haru Estia</a>
                     <a class="dropdown-item" href="../erwin">Erwin Arclight</a>
                     <a class="dropdown-item" href="../lily">Lily Bloomerchen</a>
                     <a class="dropdown-item" href="../stella">Stella Unibell</a>
                     <a class="dropdown-item" href="../jin">Jin Seipatsu</a>
-                    <a class="dropdown-item" href="../iris">Iris Yuma</a>
+                    <a class="dropdown-item" href="../iris">Iris Yuma</a> -->
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" id="morecharacterinfo">More info</a>
                     <a class="dropdown-item" href="..">Home</a>
@@ -124,16 +125,14 @@
                         <li class="nav-item">
                             <div class="btn-group mr-sm-2">
                                 <button id="copyURL" type="button" class="btn btn-success"
-                                    data-clipboard-target="#copymagic">Copy
-                                    Link to current build</button>
+                                    data-clipboard-target="#copymagic">Copy Link to current build</button>
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                                     <span class="caret"></span>
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" role="menu">
                                     <a class="dropdown-item" id="copyURLshowassign" href="#">Copy Link to current build
-                                        and
-                                        show skill assignment on load</a>
+                                        and show skill assignment on load</a>
                                 </div>
                             </div>
                         </li>
@@ -141,7 +140,7 @@
                 </div>
             </nav>
         </header>
-        <main role="main">
+        <main class="require-js" role="main">
             <div class="container-fluid body-content">
                 <div class="container">
                     <div id="skilltree">
@@ -154,7 +153,7 @@
                 <!--<div class="minsize"><div class="scrollable"><div class="overjumbotron skilltreeclass"></div></div></div>-->
             </div>
         </main>
-        <footer>
+        <footer class="require-js">
             <nav class="navbar navbar-expand-md fixed-bottom navbar-dark bg-dark-fade">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -166,8 +165,8 @@
                             </button>
                             <div class="dropdown-menu keep-open">
                                 <a class="dropdown-item" id="option_skillpreview">
-                                    Skill preview:
-                                    <select> </select>
+                                    <span>Skill preview:</span>
+                                    <select></select>
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item">
@@ -189,9 +188,7 @@
                         <li class="nav-item">
                             <span>Content is available under
                                 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative
-                                    Commons
-                                    Attribution-NonCommercial-ShareAlike
-                                </a> unless stated.
+                                    Commons Attribution-NonCommercial-ShareAlike </a> unless stated.
                                 <br />Official Art, Game Content and Screenshots are trademarks and copyrights of
                                 <a href="http://www.liongames.co.kr/Front/" target="_blank">Lion Games</a> and the
                                 game's
@@ -208,7 +205,7 @@
                 </div>
             </nav>
         </footer>
-        <div id="tooltip">
+        <div id="tooltip" class="require-js">
             <h5 class="tooltipheader"></h5>
             <div class="container">
                 <div id="skillpreview" class="row justify-content-center">
@@ -217,7 +214,22 @@
             </div>
             <pre class="tooltipcontent"></pre>
         </div>
-        <div id="dialogs"></div>
+        <div id="dialogs" class="require-js"></div>
+        <noscript>
+            <div class="modal" style="display: block">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Javascript Required</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            Javascript is required to run simulator. Please enable javascript and reload this page.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </noscript>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">

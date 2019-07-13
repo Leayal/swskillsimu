@@ -47,7 +47,7 @@ SkillTreeCore.prototype.SetLevel = function (_level) {
         this.setlevelcore(_level);
         return true;
     } else {
-        shownotify("The class you selected requires the character to be at level " + classReqLevel, 'info');
+        shownotify(window.SkillTreeData.Localization.Notify.ClassRequireCharacterLevel.fformat(classReqLevel), 'info');
     }
     return false;
 }
@@ -64,24 +64,26 @@ SkillTreeCore.prototype.SetLevelFromElement = function () {
 
 SkillTreeCore.prototype.UpdateSP = function () {
     this._spleft = this._totalsp - this._investedsp;
+    let domRemainingSP = $("#e_remainingSP");
     if (this._spleft < 5)
-        $("#e_remainingSP").addClass("alertlow");
+        domRemainingSP.addClass("alertlow");
     else
-        $("#e_remainingSP").removeClass("alertlow");
-    $("#e_investedSP").text("Invested SP: " + this._investedsp + "/" + this._totalsp);
-    $("#e_remainingSP").text("Remaining SP: " + this._spleft + "/" + this._totalsp);
+        domRemainingSP.removeClass("alertlow");
+    $("#e_investedSP").text(window.SkillTreeData.Localization.SkillTree.InvestedSP + ": " + this._investedsp + "/" + this._totalsp);
+    domRemainingSP.text(window.SkillTreeData.Localization.SkillTree.RemainingSP + ": " + this._spleft + "/" + this._totalsp);
     $("#spusageinfo").html(this.GenerateUsageInfo());
 }
 
 SkillTreeCore.prototype.UpdateAllSPs = function () {
-    $("#e_investedSP").text("Invested SP: " + this._investedsp + "/" + this._totalsp);
+    $("#e_investedSP").text(window.SkillTreeData.Localization.SkillTree.InvestedSP + ": " + this._investedsp + "/" + this._totalsp);
     this._spleft = this._totalsp - this._investedsp;
-    $("#e_remainingSP").text("Remaining SP: " + this._spleft + "/" + this._totalsp);
+    let domRemainingSP = $("#e_remainingSP");
+    domRemainingSP.text(window.SkillTreeData.Localization.SkillTree.RemainingSP + ": " + this._spleft + "/" + this._totalsp);
     if (this.CheckAllSkills()) {
         if (this._spleft < 5)
-            $("#e_remainingSP").addClass("alertlow");
+            domRemainingSP.addClass("alertlow");
         else
-            $("#e_remainingSP").removeClass("alertlow");
+            domRemainingSP.removeClass("alertlow");
     }
 
     // Foward event here
@@ -127,6 +129,21 @@ SkillTreeCore.prototype.inner_gettotalsp = function (_level) {
 }
 
 SkillTreeCore.prototype.inner_gettotalspex = function (a) {
+    if (window.hasOwnProperty("SkillTreeData") && window.SkillTreeData.hasOwnProperty("SkillPointTable")) {
+        let sptable = window.SkillTreeData.SkillPointTable;
+
+        if (sptable.hasOwnProperty("Special") && sptable.Special.hasOwnProperty(a)) {
+            return sptable.Special[a];
+        }
+
+        if (typeof (sptable.DefaultSP) === "number") {
+            return sptable.DefaultSP;
+        } else {
+            return 2;
+        }
+    }
+
+    // Fallback code, actually if you don't mess anything up badly, this won't be used
     switch (a) {
         case 0:
         case 1:
@@ -282,7 +299,7 @@ SkillTreeCore.prototype.SetCharacterInfo = function (_level, classIndex) {
                 this.setlevelcore(_level);
                 return true;
             } else {
-                shownotify("The class you selected requires the character to be at least at level " + classReqLevel, 'info');
+                shownotify(window.SkillTreeData.Localization.Notify.ClassRequireCharacterLevel.fformat(classReqLevel), 'info');
             }
         }
     }
@@ -385,14 +402,15 @@ SkillTreeCore.prototype.ReadTree = function (loadingCallback, loadedCallback) {
             else
                 $("#charName").text(GetCurrentFolderUrl());
             if (json.CharacterWikiURL) {
-                if (json.CharacterName)
-                    $("#morecharacterinfo").attr("href", json.CharacterWikiURL).attr("target", "_blank").text("More info about " + json.CharacterName);
-                else
-                    $("#morecharacterinfo").attr("href", json.CharacterWikiURL).attr("target", "_blank").text("More info about " + GetCurrentFolderUrl());
+                if (json.CharacterName) {
+                    $("#morecharacterinfo").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(window.SkillTreeData.Localization.SkillTree.MenuItem_MoreInfoAboutCharacter.fformat(json.CharacterName));
+                } else {
+                    $("#morecharacterinfo").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(window.SkillTreeData.Localization.SkillTree.MenuItem_MoreInfoAboutCharacter.fformat(GetCurrentFolderUrl()));
+                }
             } else
                 $("#morecharacterinfo").remove();
             //$("li#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
-            window.document.title = "Skill Simulator - " + json.CharacterName;
+            window.document.title = window.SkillTreeData.Localization.General.WindowTitleWithCharacter.fformat(json.CharacterName);
             for (let ssk in json.Skills)
                 if (json.Skills.hasOwnProperty(ssk)) {
                     myself.SkillList[ssk] = new SkillInfo(myself, ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);

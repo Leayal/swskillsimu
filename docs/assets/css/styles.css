@@ -30,6 +30,10 @@ body {
     background-color: rgba(17, 17, 17, 0.8) !important;
 }
 
+.require-js {
+    display: none !important;
+}
+
 .image-bg {
     background-color: rgb(17, 17, 17);
     background-image: url("../images/bg.jpg");

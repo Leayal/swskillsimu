@@ -15,4 +15,11 @@
             }
         }
     });
+
+    let jsRequiredElements = d.querySelectorAll(".require-js");
+    if (jsRequiredElements && jsRequiredElements.length !== 0) {
+        jsRequiredElements.forEach(function (element) {
+            element.classList.remove("require-js");
+        });
+    }
 })(window, window.document);

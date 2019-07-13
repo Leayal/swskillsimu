@@ -8,16 +8,16 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAni
     clearTimeout(callback);
 };
 
-const v_PreviewHeight = "170px",
-    mediaType = {
-        webm_vp9: "video/webm; codecs=\"vp9\"",
-        mp4_h264: "video/mp4; codecs=\"avc1.64001E\""
-    };
+const mediaType = {
+    webm_vp9: "video/webm; codecs=\"vp9\"",
+    mp4_h264: "video/mp4; codecs=\"avc1.64001E\""
+};
 // type="video/mp4; codecs=\"avc1.64001E\""
 let justSomeTemp1 = document.createElement("video");
 const SupportedCodec = {
     webm: {
         vp9: (function () {
+            'use strict'
             if (typeof (window.appdata.use_vp9) === "boolean") {
                 return window.appdata.use_vp9;
             }
@@ -26,6 +26,7 @@ const SupportedCodec = {
     },
     mp4: {
         h264_highProfile: (function () {
+            'use strict'
             if (typeof (window.appdata.use_h264) === "boolean") {
                 return window.appdata.use_h264;
             }
@@ -36,22 +37,103 @@ const SupportedCodec = {
 justSomeTemp1 = null;
 const isPromiseSupported = (typeof (Promise) !== "undefined");
 
-const previewOptions = {
-    "No preview": 0,
-    "Show video": 1,
-    "Show video (Beta)": 2
-};
+const previewOptions = (function () {
+    'use strict'
+    var result = {};
+    result[window.SkillTreeData.Localization.Option.Selection_PreviewOff] = 0;
+    result[window.SkillTreeData.Localization.Option.Selection_PreviewOn] = 1;
+    result[window.SkillTreeData.Localization.Option.Selection_PreviewOn_Beta] = 2;
+    return Object.freeze(result);
+})();
 
-const previewOptionExplains = {
-    0: "Turn off preview",
-    1: "Show skill preview with MP4 container with video codec H.264 (Profile High). This container and the codec are widely supported in most of browsers you can find.",
-    2: "\"Show video (Beta)\" will use WebM container with video codec VP9 to achieve even higher compression. This means you will download less data (it happens only once anyway or until browser's cache is expired or cleaned, so you don't really save anything much) in exchange of higher compute power to decode and play the video. It may have some visual bugs, too, select \"Show video\" option if you can't stand the bug or the video can't be played."
-};
+const previewOptionExplains = (function () {
+    'use strict'
+    var result = {};
+    result[previewOptions[window.SkillTreeData.Localization.Option.Selection_PreviewOff]] = window.SkillTreeData.Localization.Option.SelectionDescription_PreviewOff;
+    result[previewOptions[window.SkillTreeData.Localization.Option.Selection_PreviewOn]] = window.SkillTreeData.Localization.Option.SelectionDescription_PreviewOn;
+    result[previewOptions[window.SkillTreeData.Localization.Option.Selection_PreviewOn_Beta]] = window.SkillTreeData.Localization.Option.SelectionDescription_PreviewOn_Beta;
+    return Object.freeze(result);
+})();
 
-var mouseX;
-var mouseY;
+(function (w, d) {
+    'use strict'
+    if (w.hasOwnProperty("SkillTreeData")) {
+        if (w.SkillTreeData.hasOwnProperty("Localization")) {
+            let myLocal = w.SkillTreeData.Localization;
+            if (myLocal.Option.Button_SaveSettingToBrowser) {
+                d.getElementById("saveSettingToBrowser").textContent = myLocal.Option.Button_SaveSettingToBrowser;
+            }
+            if (myLocal.Option.SkillPreviewHeader) {
+                d.querySelector("#option_skillpreview span").textContent = myLocal.Option.SkillPreviewHeader;
+            }
+            if (myLocal.SkillTree.Button_Options) {
+                d.getElementById("skillsimulatoroption").textContent = myLocal.SkillTree.Button_Options;
+            }
+            if (myLocal.SkillTree.Button_CopyLinkToCurrentSkillTree) {
+                d.getElementById("copyURL").textContent = myLocal.SkillTree.Button_CopyLinkToCurrentSkillTree;
+            }
+            if (myLocal.SkillTree.Button_CopyLinkToCurrentSkillTreeAndShowSkillAssignment) {
+                d.getElementById("copyURLshowassign").textContent = myLocal.SkillTree.Button_CopyLinkToCurrentSkillTreeAndShowSkillAssignment;
+            }
+            if (myLocal.SkillTree.Button_ResetAllSkills) {
+                d.getElementById("resetAllSkill").textContent = myLocal.SkillTree.Button_ResetAllSkills;
+            }
+            if (myLocal.SkillTree.Button_SlotAssignment) {
+                d.getElementById("slotassignment").textContent = myLocal.SkillTree.Button_SlotAssignment;
+            }
+            if (myLocal.SkillTree.RemainingSP) {
+                d.getElementById("e_remainingSP").textContent = myLocal.SkillTree.RemainingSP;
+            }
+            if (myLocal.SkillTree.InvestedSP) {
+                d.getElementById("e_investedSP").textContent = myLocal.SkillTree.InvestedSP;
+            }
+            if (myLocal.SkillTree.CharacterClass) {
+                d.getElementById("classBoxtd").textContent = myLocal.SkillTree.CharacterClass;
+            }
+            if (myLocal.SkillTree.CharacterLevel) {
+                d.getElementById("levelBoxtd").textContent = myLocal.SkillTree.CharacterLevel;
+            }
+            let e_morecharacterinfo = d.getElementById("morecharacterinfo");
+            if (myLocal.SkillTree.MenuItem_MoreInfo) {
+                e_morecharacterinfo.textContent = myLocal.SkillTree.MenuItem_MoreInfo;
+            }
+            if (myLocal.SkillTree.MenuItem_Home) {
+                e_morecharacterinfo.nextElementSibling.textContent = myLocal.SkillTree.MenuItem_Home;
+            }
+            if (myLocal.General.WindowTitle) {
+                d.title = myLocal.General.WindowTitle;
+            }
+        }
 
-$(document).mousemove(function (e) {
+        if (w.SkillTreeData.hasOwnProperty("CharacterTable")) {
+            let characterTable = w.SkillTreeData.CharacterTable,
+                characterSelectList = d.querySelector("#charList"),
+                characterSelectList_splitter = characterSelectList.querySelector("div.dropdown-divider");
+
+            let characterNames = Object.keys(characterTable);
+
+            for (let i = 0; i < characterNames.length; i++) {
+                let theType = typeof (characterTable[characterNames[i]]),
+                    elementHyperlink = d.createElement("a");
+                elementHyperlink.classList.add("dropdown-item");
+                elementHyperlink.textContent = characterNames[i];
+                if (theType === "string") {
+                    elementHyperlink.href = characterTable[characterNames[i]];
+                    characterSelectList.insertBefore(elementHyperlink, characterSelectList_splitter);
+                } else if (theType === "object") {
+                    if (characterTable[characterNames[i]].hasOwnProperty("url") && (!characterTable[characterNames[i]].hasOwnProperty("enabled") || characterTable[characterNames[i]].enabled)) {
+                        elementHyperlink.href = characterTable[characterNames[i]].url;
+                        characterSelectList.insertBefore(elementHyperlink, characterSelectList_splitter);
+                    }
+                }
+            }
+        }
+    }
+})(window, window.document);
+
+var mouseX, mouseY;
+
+jQuery(document).mousemove(function (e) {
     window.mouseX = e.pageX;
     window.mouseY = e.pageY;
 });
@@ -143,28 +225,6 @@ function ShowConfirmDialog(msg, yesCallback, noCallback) {
     dialog.Show();
 }
 
-function copyLink(_url) {
-    if (window.clipboardsupport) {
-        var asdDiv = $("<div>").addClass("hiddendiv");
-        var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", encodeURI(_url));
-        asdDiv.append(asdButton);
-        $(document.body).append(asdDiv);
-        asdButton.trigger("click");
-        asdDiv.remove();
-        return true;
-    } else {
-        var divthingie = $("<div>");
-        divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
-        divthingie.append($("<input>").attr("type", "text").css({
-            width: "100%"
-        }).prop("readonly", true).val(_url).click(function () {
-            $(this).select();
-        }));
-        window.ShowMessageDialog(divthingie);
-        return false;
-    }
-}
-
 jQuery(document).ready(function ($) {
     // UI tricks
     var myBodeh = $(document.body);
@@ -181,7 +241,8 @@ jQuery(document).ready(function ($) {
     var domtarget_skillsimulatoroption = $("#skillsimulatoroption"),
         domtarget_skillpreview = $("#option_skillpreview select"),
         domtarget_saveSetting = $("#saveSettingToBrowser"),
-        popover_saveSetting = null;
+        popover_saveSetting = null,
+        clipboardsupport = false;
 
     // Read setting
     let tmpSettingVal, defaultValue_SkillPreview = previewOptions["Show video (Beta)"];
@@ -223,7 +284,7 @@ jQuery(document).ready(function ($) {
             animation: true,
             placement: "right",
             trigger: "hover focus",
-            content: "The option you changed here will not be remembered next time you visit the site. Save the setting to your browser will make your browser remember the setting forever, even when the browser is restarted."
+            content: window.SkillTreeData.Localization.Option.Tooltip_SaveToBrowser
         });
 
         domtarget_skillsimulatoroption.one("mouseover", function () {
@@ -254,12 +315,12 @@ jQuery(document).ready(function ($) {
                         SafeStorage.SetData(key, window.SkillTreeSetting[key]);
                     }
                 }
-                shownotify("Your setting has been saved", "success");
+                shownotify(window.SkillTreeData.Localization.Option.OptionSavedToBrowser, "success");
             } catch (ex) {
                 ShowDangerDialog($("<div>")
                     .append($("<span>").text("Error: " + ex))
                     .append($("<br/>"))
-                    .append($("<span>").text("Do you want to retry?")),
+                    .append($("<span>").text(window.SkillTreeData.Localization.Option.SaveSettingToBrowserRetry)),
                     function () {
                         thisfunc();
                     });
@@ -272,7 +333,7 @@ jQuery(document).ready(function ($) {
                     if (typeof (event.stopPropagation) === "function")
                         event.stopPropagation();
                 },
-                dialogContent = $("<span>The setting will be saved to your web browser by using " + link_localStorage + " (Or fallback to " + link_cookie + " if your browser does not support " + link_localStorage + ").<br/><strong>Do you want to store the data on your computer?</strong></span>")
+                dialogContent = $("<p>" + window.SkillTreeData.Localization.Option.SaveSettingToBrowser.fformat(link_localStorage, link_cookie) + "</p>")
                 .on("click", "a", myfunc);
 
             ShowConfirmDialog(dialogContent, function () {
@@ -288,13 +349,13 @@ jQuery(document).ready(function ($) {
     // Clipboard API init
     if (ClipboardJS && ClipboardJS.isSupported()) {
         let clipboard = new ClipboardJS(".btncopymagicclass");
-        window.clipboardsupport = true;
+        clipboardsupport = true;
         clipboard.on("success", function (e) {
-            window.shownotify("The link to this skill tree has been copied to clipboard.", 'success');
+            window.shownotify(window.SkillTreeData.Localization.General.ClipboardSuccess, 'success');
         });
         clipboard.on("error", function (e) {
             let divthingie = $("<div>");
-            divthingie.append($("<p>").text("Clipboard access failed. Please copy the link below:"));
+            divthingie.append($("<p>").text(window.SkillTreeData.Localization.General.ClipboardAccessFailure + ":"));
             divthingie.append($("<input>").attr("type", "text").css({
                 width: "100%"
             }).prop("readonly", true).val(e.text).click(function () {
@@ -303,23 +364,45 @@ jQuery(document).ready(function ($) {
             window.ShowMessageDialog(divthingie);
         });
     } else {
-        window.clipboardsupport = false;
+        clipboardsupport = false;
+    }
+
+    let copyLink = function (_url) {
+        if (clipboardsupport) {
+            var asdDiv = $("<div>").addClass("hiddendiv");
+            var asdButton = $("<button>").addClass("btncopymagicclass").attr("data-clipboard-text", encodeURI(_url));
+            asdDiv.append(asdButton);
+            $(document.body).append(asdDiv);
+            asdButton.trigger("click");
+            asdDiv.remove();
+            return true;
+        } else {
+            var divthingie = $("<div>");
+            divthingie.append($("<p>").text(window.SkillTreeData.Localization.General.ClipboardAccessFailure + ":"));
+            divthingie.append($("<input>").attr("type", "text").css({
+                width: "100%"
+            }).prop("readonly", true).val(_url).click(function () {
+                $(this).select();
+            }));
+            window.ShowMessageDialog(divthingie);
+            return false;
+        }
     }
 
     let ShowSkillAssignment = function (closeCallback) {
         if (!____current_SkillCore) return;
 
-        let dialog = new Bootstrap4ModalDialog($("#dialogs"), ____current_SkillCore.GetSkillAssignmentRender(), "Skill slot assignment", [{
-                label: "Reset",
+        let dialog = new Bootstrap4ModalDialog($("#dialogs"), ____current_SkillCore.GetSkillAssignmentRender(), window.SkillTreeData.Localization.SkillSlot.SkillSlotAssignmentDialogHeader, [{
+                label: window.SkillTreeData.Localization.SkillSlot.ButtonResetAssignment,
                 cssClass: "btn btn-warning",
                 action: function (dialogitself) {
-                    window.ShowDangerDialog("Are you sure you want to reset all the slot assignments?", function () {
+                    window.ShowDangerDialog(window.SkillTreeData.Localization.SkillSlot.Prompt_ResetAssignment, function () {
                         ____current_SkillCore.ResetSlotAssignment();
                     });
                 }
             },
             {
-                label: "Close",
+                label: window.SkillTreeData.Localization.General.ButtonClose,
                 cssClass: "btn btn-default",
                 action: function (dialogitself) {
                     dialogitself.Hide();
@@ -429,7 +512,7 @@ jQuery(document).ready(function ($) {
             toolTipFramework.SetBound(0, 0, 0, navBarBottom.outerHeight(true) || 0);
             // tooltippreviewPanel.hide();
 
-            if (isPromiseSupported && tooltippreviewPanel_video && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions["No preview"]) && previewinfo) {
+            if (isPromiseSupported && tooltippreviewPanel_video && (window.SkillTreeSetting.skilltree_skillpreview !== previewOptions[window.SkillTreeData.Localization.Option.Selection_PreviewOff]) && previewinfo) {
                 let hasVP9 = (typeof (previewinfo.Video.vp9) === "string"),
                     hasH264 = (typeof (previewinfo.Video.h264) === "string");
 
@@ -439,7 +522,7 @@ jQuery(document).ready(function ($) {
                         src: null
                     };
 
-                    if ((window.SkillTreeSetting.skilltree_skillpreview === previewOptions["Show video (Beta)"]) && hasVP9 && SupportedCodec.webm.vp9) {
+                    if ((window.SkillTreeSetting.skilltree_skillpreview === previewOptions[window.SkillTreeData.Localization.Option.Selection_PreviewOn_Beta]) && hasVP9 && SupportedCodec.webm.vp9) {
                         // Main feed: a WebM container with VP9 codec with 420p pixel format
                         _attributes.src = previewinfo.Video.vp9;
                         _attributes.type = mediaType.webm_vp9;
@@ -487,19 +570,19 @@ jQuery(document).ready(function ($) {
                         let before = currentEffect.SkillEffect;
                         let after = "";
                         if (afterEffect) after = afterEffect.SkillEffect;
-                        stringbuilder.push("[Current]");
+                        stringbuilder.push("[" + window.SkillTreeData.Localization.ToolTip.CurrentHeader + "]");
                         if (before) {
                             stringbuilder.push("\n");
                             stringbuilder.push(before);
                         } else {
-                            stringbuilder.push("\n<No info available>");
+                            stringbuilder.push("\n<" + window.SkillTreeData.Localization.ToolTip.NoInfoAvailable + ">");
                         }
-                        stringbuilder.push("\n\n[After]");
+                        stringbuilder.push("\n\n[" + window.SkillTreeData.Localization.ToolTip.AfterHeader + "]");
                         if (after) {
                             stringbuilder.push("\n");
                             stringbuilder.push(after);
                         } else {
-                            stringbuilder.push("\n<No info available>");
+                            stringbuilder.push("\n<" + window.SkillTreeData.Localization.ToolTip.NoInfoAvailable + ">");
                         }
                     }
                     break;
@@ -509,14 +592,14 @@ jQuery(document).ready(function ($) {
                         let desc = currentEffect.SkillDescription;
                         let eff = currentEffect.SkillEffect;
                         if (desc) {
-                            stringbuilder.push("[Description]\n");
+                            stringbuilder.push("[" + window.SkillTreeData.Localization.ToolTip.SkillDescriptionHeader + "]\n");
                             stringbuilder.push(desc);
                         }
                         if (eff) {
                             if (stringbuilder.length !== 0) {
                                 stringbuilder.push("\n\n");
                             }
-                            stringbuilder.push("[Effect]\n");
+                            stringbuilder.push("[" + window.SkillTreeData.Localization.ToolTip.SkillEffectHeader + "]\n");
                             stringbuilder.push(eff);
                         }
                     }
@@ -528,19 +611,19 @@ jQuery(document).ready(function ($) {
                         let before = currentEffect.SkillEffect;
                         let after = "";
                         if (afterEffect) after = afterEffect.SkillEffect;
-                        stringbuilder.push("[Current]");
+                        stringbuilder.push("[" + window.SkillTreeData.Localization.ToolTip.CurrentHeader + "]");
                         if (before) {
                             stringbuilder.push("\n");
                             stringbuilder.push(before);
                         } else {
-                            stringbuilder.push("\n<No info available>");
+                            stringbuilder.push("\n<" + window.SkillTreeData.Localization.ToolTip.NoInfoAvailable + ">");
                         }
-                        stringbuilder.push("\n\n[After]");
+                        stringbuilder.push("\n\n[" + window.SkillTreeData.Localization.ToolTip.AfterHeader + "]");
                         if (after) {
                             stringbuilder.push("\n");
                             stringbuilder.push(after);
                         } else {
-                            stringbuilder.push("\n<No info available>");
+                            stringbuilder.push("\n<" + window.SkillTreeData.Localization.ToolTip.NoInfoAvailable + ">");
                         }
                     }
                     break;
@@ -568,7 +651,7 @@ jQuery(document).ready(function ($) {
     toolTipFramework.StartListen();
 
     // Skill tree init
-    $('#charList a[href^="../' + GetCurrentFolderUrl() + '"]').remove();
+    $('#charList a[href$="/' + GetCurrentFolderUrl() + '"]').remove();
     $("#copyURL").click(function (e) {
         e.preventDefault();
         var link = ____current_SkillCore.GenerateLink();
@@ -584,7 +667,7 @@ jQuery(document).ready(function ($) {
         }
     });
     $("#resetAllSkill").click(function () {
-        ShowDangerDialog("Are you sure you want to unlearn all skills?", function () {
+        ShowDangerDialog(window.SkillTreeData.Localization.Prompt.ResetSkill, function () {
             ____current_SkillCore.UnlearnAllSkills();
         });
     });
@@ -601,121 +684,110 @@ jQuery(document).ready(function ($) {
     }
 
     ____current_SkillCore.ReadTree(function (data) {
-        if (isNaN(clevel)) {
-            clevel = ____current_SkillCore.maxCharacterLevel;
-        } else {
-            clevel = Math.min(clevel, ____current_SkillCore.maxCharacterLevel);
-        }
-        param_selectedclass = Math.min(param_selectedclass, ____current_SkillCore.GetAvailableClassIndex());
-        let allClasses = ____current_SkillCore.GetClasses();
-        for (var classIndex in allClasses) {
-            if (!allClasses[classIndex].RequiredLevel || allClasses[classIndex].RequiredLevel <= clevel) {
-                param_selectedclass = classIndex;
+            if (isNaN(clevel)) {
+                clevel = ____current_SkillCore.maxCharacterLevel;
             } else {
-                break;
+                clevel = Math.min(clevel, ____current_SkillCore.maxCharacterLevel);
             }
-        }
-        if (isNaN(param_selectedclass)) {
-            param_selectedclass = 0;
-        }
-
-        let level_selecting = $("<select>").attr("id", "selectLevelBox").change(function () {
-            var selectedlevel = $(this).val();
-            if (____current_SkillCore.SetLevel(selectedlevel)) {
-                clevel = selectedlevel;
-            } else {
-                $(this).val(clevel);
+            param_selectedclass = Math.min(param_selectedclass, ____current_SkillCore.GetAvailableClassIndex());
+            let allClasses = ____current_SkillCore.GetClasses();
+            for (var classIndex in allClasses) {
+                if (!allClasses[classIndex].RequiredLevel || allClasses[classIndex].RequiredLevel <= clevel) {
+                    param_selectedclass = classIndex;
+                } else {
+                    break;
+                }
             }
-        });
-        for (let i = 1; i <= ____current_SkillCore.maxCharacterLevel; i++)
-            level_selecting.append($("<option>").val(i).text(i));
-        $("#levelBoxtd").append(level_selecting);
-        level_selecting.val(clevel);
+            if (isNaN(param_selectedclass)) {
+                param_selectedclass = 0;
+            }
 
-        let class_selecting = $("<select>").attr("id", "selectClassBox").change(function () {
-            var selectedclass = $(this).val();
-            let changingclassinfo = ____current_SkillCore.GetClass(selectedclass);
-            if (____current_SkillCore.IsSelectiveClass(selectedclass)) {
-                ShowConfirmDialog($("<span><strong>Changing class will reset your skill tree.</strong><br/>Are you sure you want to change class?</span>"), function () {
-                    ____current_SkillCore.UnlearnAllSkills();
-                    if (____current_SkillCore.SetSelectedClass(selectedclass)) {
-                        param_selectedclass = selectedclass;
-                        ReRenderTree(____current_SkillCore.GetSelectedClass());
-                    } else {
+            let level_selecting = $("<select>").attr("id", "selectLevelBox").change(function () {
+                var selectedlevel = $(this).val();
+                if (____current_SkillCore.SetLevel(selectedlevel)) {
+                    clevel = selectedlevel;
+                } else {
+                    $(this).val(clevel);
+                }
+            });
+            for (let i = 1; i <= ____current_SkillCore.maxCharacterLevel; i++)
+                level_selecting.append($("<option>").val(i).text(i));
+            $("#levelBoxtd").append(level_selecting);
+            level_selecting.val(clevel);
+
+            let class_selecting = $("<select>").attr("id", "selectClassBox").change(function () {
+                var selectedclass = $(this).val();
+                let changingclassinfo = ____current_SkillCore.GetClass(selectedclass);
+                if (____current_SkillCore.IsSelectiveClass(selectedclass)) {
+                    ShowConfirmDialog($("<p>" + window.SkillTreeData.Localization.Prompt.ChangeClass + "</p>"), function () {
+                        ____current_SkillCore.UnlearnAllSkills();
+                        if (____current_SkillCore.SetSelectedClass(selectedclass)) {
+                            param_selectedclass = selectedclass;
+                            ReRenderTree(____current_SkillCore.GetSelectedClass());
+                        } else {
+                            $("#selectClassBox").val(param_selectedclass);
+                        }
+                    }, function () {
                         $("#selectClassBox").val(param_selectedclass);
-                    }
-                }, function () {
+                    });
+                } else {
+                    shownotify(window.SkillTreeData.Localization.Notify.ClassRequireCharacterLevel.fformat(((changingclassinfo && changingclassinfo.RequiredLevel) ? changingclassinfo.RequiredLevel : "????")), 'info');
                     $("#selectClassBox").val(param_selectedclass);
+                }
+            });
+            if (data.hasOwnProperty("AvailableClass")) {
+                for (var item in data.AvailableClass) {
+                    if (data.AvailableClass.hasOwnProperty(item)) {
+                        class_selecting.append($("<option>").val(item).text(data.AvailableClass[item].Name || "Unknown"));
+                    }
+                }
+            } else {
+                class_selecting.append($("<option>").val(0).text(window.SkillTreeData.Localization.General.DefaultCharacterClassName));
+            }
+            $("#classBoxtd").append(class_selecting);
+        },
+        function (isCompleted, statusText, errorThrown) {
+            RemoveLoading(myBodeh);
+            if (isCompleted === false) {
+                ShowRetryDialog($("<span>Unknown internet error occurred: " + errorThrown + "<br/>Do you want to retry?</span>"), function () {
+                    PageReload();
                 });
             } else {
-                shownotify("The class you selected requires the character to be at least at level " + (function () {
-                    if (changingclassinfo && changingclassinfo.RequiredLevel) {
-                        return changingclassinfo.RequiredLevel;
-                    } else {
-                        return "????";
+                let classrequiredlv = ____current_SkillCore.GetClass(param_selectedclass).RequiredLevel || 0;
+                if (clevel < classrequiredlv) {
+                    shownotify(window.SkillTreeData.Localization.Notify.ClassRequireCharacterLevel.fformat(((changingclassinfo && changingclassinfo.RequiredLevel) ? changingclassinfo.RequiredLevel : "????")), 'info');
+                    clevel = classrequiredlv;
+                }
+                // Correct it again in case people messed it up
+                ____current_SkillCore.SetCharacterInfo(clevel, param_selectedclass);
+
+                let level_selecting = $("#selectLevelBox");
+                level_selecting.val(clevel);
+                let class_selecting = $("#selectClassBox");
+                class_selecting.val(param_selectedclass);
+                //class_selecting.trigger("change");
+
+                ReRenderTree(____current_SkillCore.GetClass(param_selectedclass));
+
+                // Read the info from URL string. This is for loading the shared link.
+                for (let skill_id_name in ____current_SkillCore.SkillList) {
+                    if (____current_SkillCore.SkillList.hasOwnProperty(skill_id_name)) {
+                        let tmpvalue = ____current_SkillCore.SkillList[skill_id_name];
+                        if (tmpvalue._availablelevel <= clevel && tmpvalue.IsClassAvailable(param_selectedclass)) {
+                            let paraminfo = readurlparam(tmpvalue.GetID(), cached_querstring);
+                            if (!paraminfo && tmpvalue.ShortID)
+                                paraminfo = readurlparam(tmpvalue.ShortID, cached_querstring);
+                            if (!paraminfo) paraminfo = tmpvalue.GetDefaultLevel();
+                            tmpvalue.SetCurrentSkillLevel(paraminfo);
+                        } else {
+                            tmpvalue.SetCurrentSkillLevel(0);
+                        }
                     }
-                })(), 'info');
-                $("#selectClassBox").val(param_selectedclass);
+                }
+
+                ____current_SkillCore.ReadAssignment();
+                if (showassignment === "1")
+                    $("#slotassignment").click();
             }
         });
-        if (data.hasOwnProperty("AvailableClass")) {
-            for (var item in data.AvailableClass) {
-                if (data.AvailableClass.hasOwnProperty(item)) {
-                    class_selecting.append($("<option>").val(item).text(data.AvailableClass[item].Name || "Unknown"));
-                }
-            }
-        } else {
-            class_selecting.append($("<option>").val(0).text("Base"));
-        }
-        $("#classBoxtd").append(class_selecting);
-    }, function (isCompleted, statusText, errorThrown) {
-        RemoveLoading(myBodeh);
-        if (isCompleted === false) {
-            ShowRetryDialog($("<span>Unknown internet error occurred: " + errorThrown + "<br/>Do you want to retry?</span>"), function () {
-                PageReload();
-            });
-        } else {
-            let classrequiredlv = ____current_SkillCore.GetClass(param_selectedclass).RequiredLevel || 0;
-            if (clevel < classrequiredlv) {
-                shownotify("The class you selected requires the character to be at least at level " + (function () {
-                    if (changingclassinfo && changingclassinfo.RequiredLevel) {
-                        return changingclassinfo.RequiredLevel;
-                    } else {
-                        return "????";
-                    }
-                })(), 'info');
-                clevel = classrequiredlv;
-            }
-            // Correct it again in case people messed it up
-            ____current_SkillCore.SetCharacterInfo(clevel, param_selectedclass);
-
-            let level_selecting = $("#selectLevelBox");
-            level_selecting.val(clevel);
-            let class_selecting = $("#selectClassBox");
-            class_selecting.val(param_selectedclass);
-            //class_selecting.trigger("change");
-
-            ReRenderTree(____current_SkillCore.GetClass(param_selectedclass));
-
-            // Read the info from URL string. This is for loading the shared link.
-            for (let skill_id_name in ____current_SkillCore.SkillList) {
-                if (____current_SkillCore.SkillList.hasOwnProperty(skill_id_name)) {
-                    let tmpvalue = ____current_SkillCore.SkillList[skill_id_name];
-                    if (tmpvalue._availablelevel <= clevel && tmpvalue.IsClassAvailable(param_selectedclass)) {
-                        let paraminfo = readurlparam(tmpvalue.GetID(), cached_querstring);
-                        if (!paraminfo && tmpvalue.ShortID)
-                            paraminfo = readurlparam(tmpvalue.ShortID, cached_querstring);
-                        if (!paraminfo) paraminfo = tmpvalue.GetDefaultLevel();
-                        tmpvalue.SetCurrentSkillLevel(paraminfo);
-                    } else {
-                        tmpvalue.SetCurrentSkillLevel(0);
-                    }
-                }
-            }
-
-            ____current_SkillCore.ReadAssignment();
-            if (showassignment === "1")
-                $("#slotassignment").click();
-        }
-    });
 });

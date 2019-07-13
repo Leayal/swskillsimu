@@ -441,12 +441,12 @@ SkillInfo.prototype.SkillUp = function () {
     var next = this.GetNextLevelInfo();
     if (next) {
         if (next.RequiredLevel > (this.SkillCore.GetCurrentLevel())) {
-            shownotify("Character level is not enough to learn further.", 'info');
+            shownotify(window.SkillTreeData.Localization.Notify.InsufficientCharacterLevel, 'info');
             return;
         }
         var reqSP = next.RequiredSP;
         if ((this.SkillCore.GetSPLeft()) < reqSP) {
-            shownotify("Insufficient skill point.", 'info');
+            shownotify(window.SkillTreeData.Localization.Notify.InsufficientSP, 'info');
             return;
         }
         this._currentskilllevel++;
@@ -460,7 +460,7 @@ SkillInfo.prototype.SkillDown = function () {
     let prev = this.GetPreviousLevelInfo();
     if (prev) {
         if (this._defaultLevel === this._currentskilllevel) {
-            shownotify("Can not go lower than skill's default level.", 'warning');
+            shownotify(window.SkillTreeData.Localization.Notify.UnableToUnlearnBelowDefaultSkillLevel, 'warning');
             return;
         }
         let reqSP = this.GetCurrentLevelInfo().RequiredSP;

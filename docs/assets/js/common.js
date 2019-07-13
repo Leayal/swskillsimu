@@ -1,5 +1,3 @@
-var clipboardsupport;
-
 function readurlparam(name, source) {
     source = source || location.search;
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(source) || [null, ''])[1].replace(/\+/g, '%20')) || null;
@@ -23,7 +21,9 @@ function PageReload() {
 }
 
 function shownotify(msg, _type) {
-    $.notify({ message: msg }, {
+    $.notify({
+        message: msg
+    }, {
         type: _type,
         placement: {
             from: "bottom",
@@ -62,6 +62,20 @@ function GetSvgUnavailable() {
         "</path></g></svg>";
 }
 
+// Public domain code. From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+function deepFreeze(object) {
+    // Retrieve the property names defined on object
+    var propNames = Object.getOwnPropertyNames(object);
+    // Freeze properties before freezing self
+    for (let name of propNames) {
+        let value = object[name];
+        if (value && typeof value === "object") {
+            object[name] = deepFreeze(value);
+        }
+    }
+    return Object.freeze(object);
+}
+
 function RemoveLoading(target) {
     target.children("div[metroloading]").remove();
 };
@@ -70,6 +84,13 @@ String.prototype.ctrim = function (charlist) {
     if (charlist === undefined)
         charlist = "\s";
     return this.replace(new RegExp("^[" + charlist + "]+"), "").replace(new RegExp("[" + charlist + "]+$"), "");
+};
+
+String.prototype.fformat = function () {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function (match, number) {
+        return ((typeof (args[number]) != 'undefined') ? args[number] : match);
+    });
 };
 
 function GetCurrentFolderUrl() {

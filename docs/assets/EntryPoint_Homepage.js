@@ -21,26 +21,52 @@
 
     d.getElementById("commit-link").href = "https://github.com/" + window.appdata["github-repo"] + "/commits/master";
 
-    d.querySelectorAll("a[character]").forEach(function (element, key, parent) {
-        let theAttrVal = element.getAttribute("character");
-        if (theAttrVal) {
-            element.href = theAttrVal;
-            let isEnabled = element.getAttribute("isEnabled");
-            if (isEnabled && isEnabled === "false") {
-                let reason = element.getAttribute("disable-reason");
-                if (reason) {
-                    element.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        alert(reason);
-                    });
-                } else {
-                    element.addEventListener("click", function (e) {
-                        e.preventDefault();
-                    });
+    if (w.SkillTreeData.hasOwnProperty("CharacterTable")) {
+        let characterTable = w.SkillTreeData.CharacterTable,
+            domCharacterList = d.getElementById("character_select");
+
+        let characterNames = Object.keys(characterTable);
+
+        for (let i = 0; i < characterNames.length; i++) {
+            let characterData = characterTable[characterNames[i]];
+            if (typeof (characterData) === "object" && characterData.hasOwnProperty("url")) {
+                let elementImg = d.createElement("img"),
+                    elementHyperlink = d.createElement("a");
+                elementImg.draggable = false;
+                elementImg.alt = characterNames[i];
+                elementImg.classList.add("center-block");
+                elementImg.classList.add("characterimage");
+                if (characterData.selectImage) {
+                    elementImg.src = characterData.selectImage;
                 }
+                elementHyperlink.appendChild(elementImg);
+
+                if (characterData.hasOwnProperty("enabled") && !characterData.enabled) {
+                    elementHyperlink.href = "javascript:void(0)";
+                    elementImg.classList.add("disabled");
+                    if (characterData.hasOwnProperty("reason") && typeof (characterData.reason) === "string") {
+                        elementHyperlink.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            alert(characterData.reason);
+                        }, true);
+                    } else {
+                        elementHyperlink.addEventListener("click", function (e) {
+                            e.preventDefault();
+                        }, true);
+                    }
+                } else {
+                    elementHyperlink.href = characterData.url;
+                }
+
+                let theDiv = d.createElement("div");
+                theDiv.classList.add("col-md-2");
+                theDiv.appendChild(elementHyperlink);
+                domCharacterList.appendChild(theDiv);
             }
         }
-    });
+    }
+
+    d.getElementById("jsEnabled").remove();
 })(window, document);
 
 $(function () {

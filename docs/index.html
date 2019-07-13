@@ -15,12 +15,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
             integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
         <link rel="stylesheet" href="assets/sakura/jquery-sakura.min.css" />
-        <link rel="stylesheet" href="assets/css/home.styles.css?v=2" />
+        <link rel="stylesheet" href="assets/css/home.styles.css?v=3" />
         <!--<script src="js/bootstrap-switch.min.js"></script>-->
+        <script src="assets/js/common.js"></script>
         <script src="assets/DefaultConfig.js"></script>
+        <script src="assets/Localization.js"></script>
         <script src="assets/js/imagesLoaded.js"></script>
         <script src="assets/sakura/jquery-sakura.min.js"></script>
-        <script src="assets/sakura/common.js"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
@@ -60,7 +61,10 @@
                     The skill simulator is made (mainly) based on the information from SoulWorker in Japan region.
                 </p>
                 <p>
-                    This skill simulator require javascript turned on.<br />The skill simulator should work on most
+                    This skill simulator require javascript turned on.
+                    <span id="jsEnabled" class="text-feature-missing"><br />Javascript is disabled.</span>
+                    <br />
+                    The skill simulator should work on most
                     of modern browsers. I just tested on: Firefox v62, Chrome v69, Edge.<br />
                     <br />
                     As of now, the simulator video has skill preview video (which require <a
@@ -117,55 +121,14 @@
             </div>
             <div class="clearfix py-5">
                 <h2 class="text-center">Please select the character</h2>
-                <h5 class="text-center">(Scroll to right for more characters)</h5>
+                <h5 class="text-center require-js">(Scroll to right for more characters)</h5>
+                <noscript>
+                    <h5 class="text-center">(You won't be able to see any character below because Javascript is
+                        disabled)</h5>
+                </noscript>
             </div>
-            <div class="scrolling-wrapper-flexbox">
-                <div class="content whitetext row">
-                    <div class="col-md-2">
-                        <a character="haru">
-                            <img draggable="false" alt="Haru Estia" src="assets/images/HaruSelect.png"
-                                class="center-block characterimage" />
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a character="erwin">
-                            <img draggable="false" alt="Erwin Arclight" src="assets/images/ErwinSelect.png"
-                                class="center-block characterimage" />
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a character="lily">
-                            <img draggable="false" alt="Lily Bloomerchen" src="assets/images/LilySelect.png"
-                                class="center-block characterimage" />
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a character="stella">
-                            <img draggable="false" alt="Stella Unibell" src="assets/images/StellaSelect.png"
-                                class="center-block characterimage" />
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a character="jin">
-                            <img draggable="false" alt="Jin Seipatsu" src="assets/images/JinSelect.png"
-                                class="center-block characterimage" />
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a character="iris">
-                            <img draggable="false" alt="Iris Yuma" src="assets/images/IrisSelect.png"
-                                class="center-block characterimage" />
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a character="someone" isEnabled="false" disable-reason="Your waifu is not here yet."
-                            href="javascript:void(0)">
-                            <!--I should use "aruel" instead of "chii"?-->
-                            <img draggable="false" alt="Someone" src="assets/images/SomeoneSelect.png"
-                                class="center-block characterimage disabled" />
-                        </a>
-                    </div>
-                </div>
+            <div class="scrolling-wrapper-flexbox require-js">
+                <div class="content whitetext row" id="character_select"></div>
             </div>
         </div>
         <script src="assets/EntryPoint.js"></script>
