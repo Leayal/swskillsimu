@@ -118,7 +118,7 @@ const previewOptionExplains = (function () {
                 elementHyperlink.classList.add("dropdown-item");
                 elementHyperlink.textContent = characterNames[i];
                 if (theType === "string") {
-                    elementHyperlink.href = characterTable[characterNames[i]];
+                    elementHyperlink.href = "../" + characterTable[characterNames[i]];
                     characterSelectList.insertBefore(elementHyperlink, characterSelectList_splitter);
                 } else if (theType === "object") {
                     if (characterTable[characterNames[i]].hasOwnProperty("url") && (!characterTable[characterNames[i]].hasOwnProperty("enabled") || characterTable[characterNames[i]].enabled)) {

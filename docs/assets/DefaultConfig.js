@@ -48,7 +48,7 @@
             The format is: `[string] Character Name: [object] character property`
             + Character Name: Full name prefered, but can be anything.
             + Character property object contains 4 properties: ("enabled" can be omitted, "reason" can be omitted)
-                                         url: The relative URL to the character.
+                                         url: The relative URL to the character's skill tree simulator page.
                                          selectImage: The big image of character selection on skill simulator's homepage.
                                                       Can be `null` to not use any image but doing so at your own risk
                                          enabled: Determine if the character is allowed to access or not. Default: true
@@ -56,32 +56,32 @@
                                          reason: The reason when not enabled
             */
             "Haru Estia": {
-                url: "/haru",
-                selectImage: "/assets/images/HaruSelect.png"
+                url: "haru",
+                selectImage: "assets/images/HaruSelect.png"
             },
             "Erwin Arclight": {
-                url: "/erwin",
-                selectImage: "/assets/images/ErwinSelect.png"
+                url: "erwin",
+                selectImage: "assets/images/ErwinSelect.png"
             },
             "Lily Bloomerchen": {
-                url: "/lily",
-                selectImage: "/assets/images/LilySelect.png"
+                url: "lily",
+                selectImage: "assets/images/LilySelect.png"
             },
             "Stella Unibell": {
-                url: "/stella",
-                selectImage: "/assets/images/StellaSelect.png"
+                url: "stella",
+                selectImage: "assets/images/StellaSelect.png"
             },
             "Jin Seipatsu": {
-                url: "/jin",
-                selectImage: "/assets/images/JinSelect.png"
+                url: "jin",
+                selectImage: "assets/images/JinSelect.png"
             },
             "Iris Yuma": {
-                url: "/iris",
-                selectImage: "/assets/images/IrisSelect.png"
+                url: "iris",
+                selectImage: "assets/images/IrisSelect.png"
             },
             "Someone": {
-                url: "/someone",
-                selectImage: "/assets/images/SomeoneSelect.png",
+                url: "someone",
+                selectImage: "assets/images/SomeoneSelect.png",
                 enabled: false,
                 reason: "Your waifu is not here"
             }
