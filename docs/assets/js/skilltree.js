@@ -164,55 +164,6 @@ SkillTreeCore.prototype.inner_gettotalspex = function (a) {
     }
 };
 
-SkillTreeCore.prototype.inner_gettotalspex = function (_level) {
-    switch (_level) {
-        case 0:
-            return 0;
-        case 1:
-            return 0;
-        case 2:
-            return 0;
-        case 3:
-            return 0;
-        case 4:
-            return 1;
-        case 5:
-            return 3;
-        case 6:
-            return 1;
-        case 7:
-            return 1;
-        case 8:
-            return 1;
-        case 9:
-            return 1;
-        case 10:
-            return 5;
-        case 15:
-            return 5;
-        case 20:
-            return 10;
-        case 25:
-            return 5;
-        case 30:
-            return 5;
-        case 35:
-            return 5;
-        case 40:
-            return 10;
-        case 45:
-            return 5;
-        case 50:
-            return 5;
-        case 55:
-            return 5;
-        case 60:
-            return 5;
-        default:
-            return 2;
-    }
-}
-
 SkillTreeCore.prototype.GenerateLink = function (showSkillAssignment) {
     var arrayString = [];
     if (this._currentlevel !== window.appdata.maxCharacterLevel)
