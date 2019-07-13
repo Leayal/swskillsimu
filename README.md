@@ -4,6 +4,16 @@ The tree is developped with information source mainly from SoulWorker in Japan r
 
 [Use the simulator released on Github Pages](https://leayal.github.io/swskillsimu/).
 
+# Customize
+- You can translate most of UI-related strings at [docs/assets/Localization.js](docs/assets/Localization.js).
+
+- You can configure the simulator at [docs/assets/DefaultConfig.js](docs/assets/DefaultConfig.js). For example:
+  - Add more character to the simulator: edit the `table_Character`, this will make your added character(s) appear on both homepage and others' skill tree page.
+  - Change max level: edit the `maxCharacterLevel`, this will set default max level if not specified in character's JSON data.
+  - Skill Point Table: edit the `table_SkillPoint`, configure the amount of SP gain for levels.
+
+(Read the comment in the JS files for more info)
+
 # Disclaimer
 Content is available under [Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/3.0/) unless stated.
 Official Art, Game Content and Screenshots are trademarks and copyrights of [Lion Games](http://www.liongames.co.kr/Front/) and the game's publishers.
