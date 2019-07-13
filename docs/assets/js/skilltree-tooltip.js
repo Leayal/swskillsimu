@@ -14,6 +14,7 @@ $(document).mousemove(function (e) {
 
 /* From Modernizr */
 var _transitiontype = null;
+
 function whichTransitionEvent() {
     if (_transitiontype)
         return _transitiontype;
@@ -64,15 +65,15 @@ function SkillTreeToolTipFramework(target, selector) {
     target.addClass("animated");
 
     // HAHAHA!!! C# maniac again.
-    this.OnMouseEnter = new EventHandler();
-    this.OnMouseLeave = new EventHandler();
-    this.OnTooltipHidden = new EventHandler();
-    // this.OnTooltipShown = new EventHandler();
+    this.OnMouseEnter = new EventHandler(this);
+    this.OnMouseLeave = new EventHandler(this);
+    this.OnTooltipHidden = new EventHandler(this);
+    // this.OnTooltipShown = new EventHandler(this);
 
     var lastKnownMouseCapturedElement = null;
 
     // Currently we don't need this
-    // this.OnMouseMove = new EventHandler();
+    // this.OnMouseMove = new EventHandler(this);
 
     this.listenFunc = function (event) {
         myself.mouseX = event.clientX;
@@ -91,7 +92,8 @@ function SkillTreeToolTipFramework(target, selector) {
         myself.isRendering = true;
         lastKnownMouseCapturedElement = event.target;
 
-        let x = event.clientX, y = event.clientY;
+        let x = event.clientX,
+            y = event.clientY;
 
         myself.mouseX = x;
         myself.mouseY = y;
@@ -100,7 +102,10 @@ function SkillTreeToolTipFramework(target, selector) {
 
         myself.OnMouseEnter.Trigger(event);
 
-        myself._target.css({ top: y + "px", left: x + "px" });
+        myself._target.css({
+            top: y + "px",
+            left: x + "px"
+        });
 
         if (event.cancel === true) {
             return;

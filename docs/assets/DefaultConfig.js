@@ -8,7 +8,8 @@
         // Debug purpose. Don't modify unless you know what're you doing
         debug_data = {
             use_h264: null, // False to force disable H264, true to force using H264, null to "use H264 if the web browser support it"
-            use_vp9: null // False to force disable VP9, true to force using VP9, null to "use VP9 if the web browser support it"
+            use_vp9: null, // False to force disable VP9, true to force using VP9, null to "use VP9 if the web browser support it"
+            videoPreviewPanelHeight: "170px" // The height of the panel which contains skill preview video
         };
 
     // Do not modify anything below this line

@@ -377,10 +377,10 @@ jQuery(document).ready(function ($) {
 
     var tooltipObj = $("#tooltip"),
         tooltipHeader = $("#tooltip .tooltipheader"),
-        tooltippreviewPanel = $("#tooltip #skillpreview").css("height", v_PreviewHeight),
-        tooltippreviewPanel_video = $("#tooltip #skillpreview video")
-        .css({
-            height: v_PreviewHeight
+        tooltippreviewPanel = $("#tooltip #skillpreview").css("height", window.appdata.videoPreviewPanelHeight),
+        tooltippreviewPanel_video_raw = document.querySelector("#tooltip #skillpreview video"),
+        tooltippreviewPanel_video = $(tooltippreviewPanel_video_raw).css({
+            height: window.appdata.videoPreviewPanelHeight
         }),
         tooltipText = $("#tooltip pre"),
         navBarBottom = $(".navbar.fixed-bottom"),
@@ -390,13 +390,12 @@ jQuery(document).ready(function ($) {
     if (isPromiseSupported) {
         tooltippreviewPanel_video.on("error", function () {
             tooltippreviewPanel.hide();
-        }).on("canplay", function (event) {
-            let objPromise = event.target.play();
-            if (objPromise) {
-                objPromise.catch(function () {
-                    tooltippreviewPanel.hide();
-                    toolTipFramework.UpdateTooltipSize();
-                });
+        }).on("canplay", async function (event) {
+            try {
+                await event.target.play();
+            } catch (err) {
+                tooltippreviewPanel.hide();
+                toolTipFramework.UpdateTooltipSize();
             }
         });
     } else {
@@ -451,11 +450,13 @@ jQuery(document).ready(function ($) {
                     }
 
                     if (typeof (_attributes.src) === "string") {
-                        tooltippreviewPanel_video.attr(_attributes);
-                        tooltippreviewPanel.show();
-                        // tooltippreviewPanel_video.trigger("load");
-                        // Trigger first time
-                        tooltippreviewPanel_video[0].play();
+                        if (_attributes.src !== tooltippreviewPanel_video_raw.currentSrc) {
+                            tooltippreviewPanel_video.attr(_attributes);
+                            tooltippreviewPanel.show();
+                            // tooltippreviewPanel_video.trigger("load");
+                            // Trigger first time
+                            tooltippreviewPanel_video_raw.play();
+                        }
                     } else {
                         tooltippreviewPanel.hide();
                     }
@@ -463,16 +464,14 @@ jQuery(document).ready(function ($) {
                     // Show preview image if it has one
                     // $("<img>").attr({ width: "240", height: "auto", src: previewinfo.Image }).appendTo(tooltippreviewPanel);
                 } else {
-                    if (tooltippreviewPanel_video) {
-                        if (!tooltippreviewPanel_video[0].paused) {
-                            tooltippreviewPanel_video.trigger("pause");
-                        }
+                    if (!tooltippreviewPanel_video_raw.paused) {
+                        tooltippreviewPanel_video.trigger("pause");
                     }
                     tooltippreviewPanel.hide();
                 }
             } else {
                 if (tooltippreviewPanel_video) {
-                    if (!tooltippreviewPanel_video[0].paused) {
+                    if (!tooltippreviewPanel_video_raw.paused) {
                         tooltippreviewPanel_video.trigger("pause");
                     }
                 }
@@ -560,7 +559,7 @@ jQuery(document).ready(function ($) {
     });
     toolTipFramework.OnTooltipHidden.Register(function (targetDOM) {
         if (tooltippreviewPanel_video) {
-            if (!tooltippreviewPanel_video[0].paused) {
+            if (!tooltippreviewPanel_video_raw.paused) {
                 tooltippreviewPanel_video.trigger("pause");
             }
         }
