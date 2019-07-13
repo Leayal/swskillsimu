@@ -126,6 +126,44 @@ SkillTreeCore.prototype.inner_gettotalsp = function (_level) {
     return tsp;
 }
 
+SkillTreeCore.prototype.inner_gettotalspex = function (a) {
+    switch (a) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+            return 0;
+        case 4:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 61:
+        case 62:
+        case 63:
+        case 64:
+            return 1;
+        case 5:
+        case 65:
+            return 3;
+        case 10:
+        case 15:
+        case 25:
+        case 30:
+        case 35:
+        case 45:
+        case 50:
+        case 55:
+        case 60:
+            return 5;
+        case 20:
+        case 40:
+            return 10;
+        default:
+            return 2;
+    }
+};
+
 SkillTreeCore.prototype.inner_gettotalspex = function (_level) {
     switch (_level) {
         case 0:
