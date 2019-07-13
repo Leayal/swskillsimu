@@ -113,18 +113,14 @@ const previewOptionExplains = (function () {
             let characterNames = Object.keys(characterTable);
 
             for (let i = 0; i < characterNames.length; i++) {
-                let theType = typeof (characterTable[characterNames[i]]),
-                    elementHyperlink = d.createElement("a");
-                elementHyperlink.classList.add("dropdown-item");
-                elementHyperlink.textContent = characterNames[i];
-                if (theType === "string") {
-                    elementHyperlink.href = "../" + characterTable[characterNames[i]];
+                let characterData = characterTable[characterNames[i]];
+                if (typeof (characterData) === "object" && (characterData.hasOwnProperty("url") && typeof (characterData.url) === "string" && characterData.url) && (!characterData.hasOwnProperty("enabled") || characterData.enabled)) {
+                    let elementHyperlink = d.createElement("a");
+                    elementHyperlink.classList.add("dropdown-item");
+                    elementHyperlink.textContent = characterNames[i];
+
+                    elementHyperlink.href = "../" + characterData.url;
                     characterSelectList.insertBefore(elementHyperlink, characterSelectList_splitter);
-                } else if (theType === "object") {
-                    if (characterTable[characterNames[i]].hasOwnProperty("url") && (!characterTable[characterNames[i]].hasOwnProperty("enabled") || characterTable[characterNames[i]].enabled)) {
-                        elementHyperlink.href = characterTable[characterNames[i]].url;
-                        characterSelectList.insertBefore(elementHyperlink, characterSelectList_splitter);
-                    }
                 }
             }
         }
