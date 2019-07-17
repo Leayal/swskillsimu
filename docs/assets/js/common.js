@@ -1,24 +1,106 @@
-function readurlparam(name, source) {
-    source = source || location.search;
-    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(source) || [null, ''])[1].replace(/\+/g, '%20')) || null;
-};
+(function (self) {
+    'use strict';
 
-function GetUrlParam(name, defaultvalue) {
-    var re = readurlparam(name);
-    if (re)
-        return re;
-    else
-        return defaultvalue;
-};
+    var myregex = {},
+        stringFormatRegex = /{(\d+)}/g;
 
-function PageReload() {
-    if (typeof window.location.reload === "function") {
-        window.location.reload();
-    } else {
-        let sumthing = window.location;
-        window.location = sumthing;
+    function getRegex(name) {
+        'use strict';
+        if (!myregex.hasOwnProperty(name)) {
+            myregex[name] = new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)');
+        }
+        return myregex[name];
     }
-}
+
+    Object.defineProperty(self, "GetUrlParam", {
+        value: function (name, defaultvalue) {
+            'use strict';
+            if (typeof (URLSearchParams) !== "undefined") {
+                let urlSearch;
+                if (arguments.length === 3) {
+                    if (!arguments[0]) {
+                        throw new URIError("URL or search param cannot be empty");
+                    }
+                    urlSearch = ((arguments[0] instanceof URL) ? arguments[0].searchParams : ((arguments[0] instanceof URLSearchParams) ? arguments[0] : ((typeof (arguments[0]) === "string") ? new URLSearchParams(arguments[0]) : new URLSearchParams())));
+                } else {
+                    urlSearch = new URLSearchParams(window.location.search);
+                }
+                return (urlSearch.get(name) || defaultvalue);
+            }
+            let source;
+            if (arguments.length === 3) {
+                source = arguments[0];
+            } else {
+                source = window.location.search;
+            }
+            return decodeURIComponent((getRegex(name).exec(source) || [null, ''])[1].replace(/\+/g, '%20')) || defaultvalue;
+        },
+        writable: false,
+        configurable: false,
+        enumerable: false
+    });
+
+    Object.defineProperty(self, "PageReload", {
+        value: function () {
+            'use strict';
+            if (typeof (window.location.reload) === "function") {
+                window.location.reload();
+            } else {
+                let sumthing = window.location;
+                window.location = sumthing;
+            }
+        },
+        writable: false,
+        configurable: false,
+        enumerable: false
+    });
+
+    String.prototype.fformat = function () {
+        let args = arguments;
+        return this.replace(stringFormatRegex, function (match, number) {
+            return ((typeof (args[number]) !== "undefined") ? args[number] : match);
+        });
+    };
+
+    String.prototype.ctrim = function (charlist) {
+        if (typeof (charlist) !== "string" || charlist === "")
+            charlist = "\s\t\n\r";
+        return this.replace(new RegExp("^[" + charlist + "]+"), "").replace(new RegExp("[" + charlist + "]+$"), "");
+    };
+
+    Object.defineProperty(self, "GetCurrentFolderUrl", {
+        value: function () {
+            var sas = location.pathname.split("/");
+            if (!sas[sas.length - 1])
+                sas.pop();
+            else if (sas[sas.length - 1].indexOf(".") !== -1)
+                sas.pop();
+            return sas[sas.length - 1];
+        },
+        writable: false,
+        configurable: false,
+        enumerable: false
+    });
+
+    // Public domain code. From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+    Object.defineProperty(self, "deepFreeze", {
+        value: function thisfunction(object) {
+            // Retrieve the property names defined on object
+            var propNames = Object.getOwnPropertyNames(object);
+            // Freeze properties before freezing self
+            for (let name of propNames) {
+                let value = object[name];
+                if (value && typeof value === "object") {
+                    object[name] = thisfunction(value);
+                }
+            }
+            return Object.freeze(object);
+        },
+        writable: false,
+        configurable: false,
+        enumerable: false
+    });
+})(typeof globalThis !== 'undefined' ? globalThis : (typeof window !== 'undefined' ? window : this));
 
 function shownotify(msg, _type) {
     $.notify({
@@ -40,18 +122,10 @@ function SetLoading(target) {
     var found = target.find($("div[metroloading]"));
     if (found && found.length > 0) return;
     //target.append($("<div metroloading class=\"midcenter\"><div class=\"windows8-loading\"><b></b><b></b><b></b><b></b><b></b></div></div>"));
-    var aaasdwaf = $("<div>").addClass("stretch").addClass("windows8-loading");
-    aaasdwaf.append($("<b>"));
-    aaasdwaf.append($("<b>"));
-    aaasdwaf.append($("<b>"));
-    aaasdwaf.append($("<b>"));
-    aaasdwaf.append($("<b>"));
-    var ddd = $("<div metroloading>").addClass("midcenter").append(aaasdwaf);
-    ($("<div metroloading>")
-        .addClass("fixedDiv")
-        .addClass("stretch")
-        .addClass("disabled")
-        .addClass("opacity50")).prependTo(target);
+    var ddd = $("<div metroloading>").addClass("midcenter").append($("<div>").addClass("stretch").addClass("windows8-loading").append($("<b>"), [
+        $("<b>"), $("<b>"), $("<b>"), $("<b>")
+    ]));
+    $("<div metroloading>").addClass("fixedDiv stretch disabled opacity50").prependTo(target);
     target.append(ddd);
 };
 
@@ -62,50 +136,6 @@ function GetSvgUnavailable() {
         "</path></g></svg>";
 }
 
-// Public domain code. From: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
-function deepFreeze(object) {
-    // Retrieve the property names defined on object
-    var propNames = Object.getOwnPropertyNames(object);
-    // Freeze properties before freezing self
-    for (let name of propNames) {
-        let value = object[name];
-        if (value && typeof value === "object") {
-            object[name] = deepFreeze(value);
-        }
-    }
-    return Object.freeze(object);
-}
-
 function RemoveLoading(target) {
     target.children("div[metroloading]").remove();
 };
-
-String.prototype.ctrim = function (charlist) {
-    if (charlist === undefined)
-        charlist = "\s";
-    return this.replace(new RegExp("^[" + charlist + "]+"), "").replace(new RegExp("[" + charlist + "]+$"), "");
-};
-
-String.prototype.fformat = function () {
-    var args = arguments;
-    return this.replace(/{(\d+)}/g, function (match, number) {
-        return ((typeof (args[number]) != 'undefined') ? args[number] : match);
-    });
-};
-
-function GetCurrentFolderUrl() {
-    var sas = location.pathname.split("/");
-    if (!sas[sas.length - 1])
-        sas.pop();
-    else if (sas[sas.length - 1].indexOf(".") != -1)
-        sas.pop();
-    return sas[sas.length - 1];
-}
-
-function removefilename(str) {
-    function RemoveLastDirectoryPartOf(the_url) {
-        var the_arr = the_url.split('/');
-        the_arr.pop();
-        return (the_arr.join('/'));
-    }
-}

@@ -17,7 +17,7 @@
       "Name": "Evil Slash",
       "DefaultLevel": 1,
       "ID": 1,
-      "Icon": "../assets/skillicons/L1-1.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_EvilSlash.png",
       "Levels": {
         "0": {
           "Description": "Quickly rotate the scythe, pushes out the enemy at the end of the blow.",
@@ -62,7 +62,7 @@
       "Name": "Spinning Devil",
       "DefaultLevel": 1,
       "ID": 2,
-      "Icon": "../assets/skillicons/L1-2.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_SpinningDevil.png",
       "Levels": {
         "0": {
           "Description": "Quickly dash forward, using the speed perform a spinning slash.",
@@ -104,7 +104,7 @@
       "Name": "Scythe Cutter",
       "DefaultLevel": 1,
       "ID": 3,
-      "Icon": "../assets/skillicons/L1-3.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_ScytheCutter.png",
       "Levels": {
         "0": {
           "Description": "Swiftly raise the scythe. Enemies will be launched in the air.",
@@ -148,7 +148,7 @@
       "Visible": false,
       "Name": "Charge Attack",
       "ID": 4,
-      "Icon": "../assets/skillicons/L1-3A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_ScytheCutter_A.PNG",
       "Levels": {
         "0": {
           "Description": "If charged, it launches the enemy higher.",
@@ -169,7 +169,7 @@
     "GrimCountdown": {
       "Name": "Grim Countdown",
       "ID": 5,
-      "Icon": "../assets/skillicons/L1-4.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_GrimCountDown.png",
       "Levels": {
         "0": {
           "Description": "After doing a rotation slash, cut the front enemies alongside the summoned Grim Reaper.",
@@ -213,7 +213,7 @@
       "Visible": false,
       "Name": "Lifesteal",
       "ID": 6,
-      "Icon": "../assets/skillicons/L1-4A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_GrimCountdown_A.PNG",
       "Levels": {
         "0": {
           "Description": "Steal HP from the afflicted enemies, and heals HP of oneself.",
@@ -244,7 +244,7 @@
     "FearChain": {
       "Name": "Fear Chain",
       "ID": 7,
-      "Icon": "../assets/skillicons/L1-5.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_FearChain.png",
       "Levels": {
         "0": {
           "Description": "Summons the Grim Reaper in front, the Grim Reaper connects the enemies with a chain, they are drawn towards the center of the attack range.",
@@ -288,7 +288,7 @@
       "Visible": false,
       "Name": "Range Increase",
       "ID": 8,
-      "Icon": "../assets/skillicons/L1-5A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_FearChain_A.PNG",
       "Levels": {
         "0": {
           "Description": "Increase the attack range.",
@@ -325,7 +325,7 @@
     "DeathGrinder": {
       "Name": "Death Grinder",
       "ID": 9,
-      "Icon": "../assets/skillicons/L1-6.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_DeathGrinder.png",
       "Levels": {
         "0": {
           "Description": "Attack by throwing the scythe like a boomerang. Attract the enemies attacked when the scythe comes back to the owner.",
@@ -371,7 +371,7 @@
       "Visible": false,
       "Name": "Summon Grim Reaper",
       "ID": 10,
-      "Icon": "../assets/skillicons/L1-6A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_DeathGrinder_A.PNG",
       "Levels": {
         "0": {
           "Description": "Throw the scythe and summon the Grim Reaper.",
@@ -403,7 +403,7 @@
       "Visible": false,
       "Name": "Whirlwind",
       "ID": 11,
-      "Icon": "../assets/skillicons/L1-6B.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_DeathGrinder_B.PNG",
       "Levels": {
         "0": {
           "Description": "Create a whirlwind by throwing the scythe forward. Scythe will stop at a point and damage the enemies at the place.",
@@ -434,7 +434,7 @@
     "DeathScythe": {
       "Name": "Death Scythe",
       "ID": 12,
-      "Icon": "../assets/skillicons/L1-7.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_DeathScythe.png",
       "Levels": {
         "0": {
           "Description": "Grim Reaper appears, it attracts the enemies around. After the Grim Reaper attacks, the last attack is changed by the next command.",
@@ -478,7 +478,7 @@
     "CruelSlash": {
       "Name": "Cruel Slash",
       "ID": 13,
-      "Icon": "../assets/skillicons/L1-8.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_CruelSlash.png",
       "Levels": {
         "0": {
           "Description": "Deform the sickle to the scimitar form to attack. LMB to quickly perform repeated attacks on the spot for a period of time.",
@@ -524,7 +524,7 @@
       "Visible": false,
       "Name": "Defense Penetration",
       "ID": 14,
-      "Icon": "../assets/skillicons/L1-8A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_CruelSlash_A.PNG",
       "Levels": {
         "0": {
           "Description": "Attacks done to the enemy ignore enemy's defense",
@@ -556,7 +556,7 @@
       "Visible": false,
       "Name": "Critical Rate Increase",
       "ID": 15,
-      "Icon": "../assets/skillicons/L1-8B.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_CruelSlash_B.PNG",
       "Levels": {
         "0": {
           "Description": "Increases Critical Rate",
@@ -587,7 +587,7 @@
     "GrimReaper": {
       "Name": "Grim Reaper",
       "ID": 16,
-      "Icon": "../assets/skillicons/L1-9.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_GrimReaper.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -629,7 +629,7 @@
     "ForceRegion": {
       "Name": "Force Region",
       "ID": 17,
-      "Icon": "../assets/skillicons/L1-10.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_ForceRegion.png",
       "Levels": {
         "0": {
           "Description": "The summoned Grim Reaper's roar will grant a buff that increases critical rate to the party members in range, including self.",
@@ -670,7 +670,7 @@
     "DeathTornado": {
       "Name": "Death Tornado",
       "ID": 18,
-      "Icon": "../assets/skillicons/L1-11.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_DeathTornado.png",
       "Levels": {
         "0": {
           "Description": "It creates a powerful tornado to attack the enemies in front.",
@@ -716,7 +716,7 @@
       "Visible": false,
       "Name": "Induction",
       "ID": 19,
-      "Icon": "../assets/skillicons/L1-11A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_DeathTornado_A.PNG",
       "Levels": {
         "0": {
           "Description": "Summons a tornado that moves towards the enemy",
@@ -748,7 +748,7 @@
       "Visible": false,
       "Name": "Area Widener",
       "ID": 20,
-      "Icon": "../assets/skillicons/L1-11B.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_DeathTornado_B.PNG",
       "Levels": {
         "0": {
           "Description": "Tornado moves towards the front.",
@@ -779,7 +779,7 @@
     "EvilTrinity": {
       "Name": "Evil Trinity",
       "ID": 21,
-      "Icon": "../assets/skillicons/L1-12.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_MCythe_Skill_EvilTrinity.png",
       "Levels": {
         "0": {
           "Description": "The Grim Reaper with two scythes appears, swinging them along with Lily. The ground smash creates three shock waves that will hit the enemies in the range.",
@@ -820,7 +820,7 @@
     "DeathGuillotine": {
       "Name": "Death Guillotine",
       "ID": 22,
-      "Icon": "../assets/skillicons/L1-13.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_DeathGuillotine.png",
       "Levels": {
         "0": {
           "Description": "Surrounds and restraints the enemies with chains, pushing them under a summoning gigantic guillotine.",
@@ -866,7 +866,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Mcythe_Skill_EvilSlash_A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_EvilSlash_A.png",
       "Levels": {
         "0": {
           "Description": "鎌の代わりに鎖鎌を利用して、より広い範囲の敵を攻撃します。",
@@ -902,7 +902,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Mcythe_Skill_DeathScythe_A.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_DeathScythe_A.png",
       "Levels": {
         "0": {
           "Description": "The afterimage of the death god rushes towards the enemy and attacks according to the attack action of Lily.",
@@ -937,7 +937,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Mcythe_Skill_BloodyBlossom.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_BloodyBlossom.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -983,7 +983,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Mcythe_Skill_Furymach.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_Furymach.png",
       "Levels": {
         "0": {
           "Description": "Joining the sickle and the scissors and do a lash rush in the front.\nIt attacks enemies and moves forward by operation.\n\n[1] Left click: Cuts forward enemies and makes short rush.\n\n[2] Right click: It moves quickly towards the front.",
@@ -1026,7 +1026,7 @@
       "Name": "Basic Attack Mastery",
       "ID": 1002,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DefaultAttack.png",
       "Levels": {
         "0": {
           "Description": "Attack with your sword.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -1078,7 +1078,7 @@
       "DefaultLevel": 1,
       "ID": 1001,
       "Name": "Special Ability Mastery",
-      "Icon": "../assets/skillicons/Sh-2l.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_OwnAbility.png",
       "Levels": {
         "0": {
           "Description": "[Ground]\nQuickly dash forward, enemies in the way are inflicted with debuff effect.\n[Air]\nPerformed a slashing rotation. On additional inputs, continue slashing.",
@@ -1111,7 +1111,7 @@
       "Name": "Emergency Dodge",
       "ID": 1004,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-3.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Evasion.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -1134,7 +1134,7 @@
       "Name": "Rising Roll",
       "ID": 1003,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-4.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Welter.png",
       "Levels": {
         "0": {
           "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -1167,7 +1167,7 @@
       "Name": "Dash",
       "DefaultLevel": 1,
       "ID": 1006,
-      "Icon": "../assets/skillicons/Sh-5.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Dash.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dash forward",
@@ -1195,7 +1195,7 @@
       "Name": "Rising Attack",
       "ID": 1005,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-6.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_RiseAttack.png",
       "Levels": {
         "0": {
           "Description": "While downed, get up while damaging surrounding enemies",
@@ -1228,7 +1228,7 @@
       "Name": "Dash Attack",
       "DefaultLevel": 1,
       "ID": 1008,
-      "Icon": "../assets/skillicons/Sh-7.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashAttack.png",
       "Levels": {
         "0": {
           "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -1250,7 +1250,7 @@
       "Passive": true,
       "Name": "Special Dodge",
       "ID": 1007,
-      "Icon": "../assets/skillicons/Sh-8.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_EvasionAttack.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -1282,7 +1282,7 @@
       "Passive": true,
       "Name": "Special Dash Attack",
       "ID": 1010,
-      "Icon": "../assets/skillicons/Sh-9.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashSmashAttack.png",
       "Levels": {
         "0": {
           "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1304,7 +1304,7 @@
       "Passive": true,
       "Name": "Stamina Mastery",
       "ID": 1009,
-      "Icon": "../assets/skillicons/Sh-10.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_StaminaMastery.png",
       "Levels": {
         "0": {
           "Description": "Increases stamina recovery rate",
@@ -1347,7 +1347,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Mcythe_Skill_SGPassive2.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_SGPassive2.png",
       "Levels": {
         "0": {
           "Description": "Every 1 minute while SG is above 70%, decrease SG consumption, increase critical attack power, increase defense penetration for 15 seconds.",
@@ -1383,7 +1383,7 @@
         "0": 2,
         "1": 1
       },
-      "Icon": "../assets/skillicons/LP1-2.png",
+      "Icon": "../assets/skillicons/Mistscythe/Icon_Mcythe_Skill_SGPassive.png",
       "Levels": {
         "0": {
           "Description": "Increase Critical Damage",
@@ -1414,7 +1414,7 @@
       "ID": 1012,
       "RowSpan": 2,
       "Name": "Mad Scythe",
-      "Icon": "../assets/skillicons/LP1-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_SoulMastery.png",
       "Levels": {
         "0": {
           "Description": "Gain SG when hitting an enemy. Passively gain SG in set intervals. Collecting a certain amount of SG will activate Madness Mode",

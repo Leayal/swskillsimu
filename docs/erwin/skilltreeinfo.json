@@ -17,7 +17,7 @@
       "Name": "Sky High",
       "DefaultLevel": 1,
       "ID": 1,
-      "Icon": "../assets/skillicons/E1-1.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SkyHigh.png",
       "Levels": {
         "0": {
           "Description": "Kick the enemies ahead of you, launching them to the air.",
@@ -63,7 +63,7 @@
       "Visible": false,
       "Name": "Impact Bullets",
       "ID": 2,
-      "Icon": "../assets/skillicons/E1-1A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SkyHigh_A.png",
       "Levels": {
         "0": {
           "Description": "Shoot a powerful energy bullet that attacks the enemies in front.",
@@ -85,7 +85,7 @@
       "Visible": false,
       "Name": "Aerial Shots",
       "ID": 3,
-      "Icon": "../assets/skillicons/E1-1B.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SkyHigh_B.png",
       "Levels": {
         "0": {
           "Description": "Shoot continuously at enemies knocked into the air.",
@@ -117,7 +117,7 @@
       "Name": "Rapid Fire",
       "DefaultLevel": 1,
       "ID": 4,
-      "Icon": "../assets/skillicons/E1-2.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_RapidFire.png",
       "Levels": {
         "0": {
           "Description": "Quickly fire with both guns. Can move while using this skill.",
@@ -159,7 +159,7 @@
       "Name": "Gun Combination",
       "DefaultLevel": 1,
       "ID": 5,
-      "Icon": "../assets/skillicons/E1-3.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_GunCombination.png",
       "Levels": {
         "0": {
           "Description": "Approach the enemies with great speed, and then fire at enemies close range.",
@@ -204,7 +204,7 @@
       "Visible": false,
       "Name": "Penetration",
       "ID": 6,
-      "Icon": "../assets/skillicons/E1-3A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_GunCombination_A.png",
       "Levels": {
         "0": {
           "Description": "Attacks done by the guns go through enemies.",
@@ -235,7 +235,7 @@
     "SlideStep": {
       "Name": "Slide Step",
       "ID": 7,
-      "Icon": "../assets/skillicons/E1-4.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SlideStep.png",
       "Levels": {
         "0": {
           "Description": "Rapidly slide back and avoid incoming attacks.",
@@ -281,7 +281,7 @@
       "Visible": false,
       "Name": "Smoke Grenade",
       "ID": 8,
-      "Icon": "../assets/skillicons/E1-4A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SlideStep_A.png",
       "Levels": {
         "0": {
           "Description": "Throws a smoke screen in an area. Enemies in the smoke will be slowed.",
@@ -313,7 +313,7 @@
       "Visible": false,
       "Name": "Poison Gas Grenade",
       "ID": 9,
-      "Icon": "../assets/skillicons/E1-4B.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SlideStep_B.png",
       "Levels": {
         "0": {
           "Description": "Throws a poisonous gas grenade in an area. Enemies in the smoke will be poisoned.",
@@ -344,7 +344,7 @@
     "TakeAim": {
       "Name": "Take Aim",
       "ID": 10,
-      "Icon": "../assets/skillicons/E1-5.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_TakeAim.png",
       "Levels": {
         "0": {
           "Description": "Improve concentration to aim at the enemy's weak points.",
@@ -385,7 +385,7 @@
     "FocusShot": {
       "Name": "Focus Shot",
       "ID": 11,
-      "Icon": "../assets/skillicons/E1-6.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_FocusShot.png",
       "Levels": {
         "0": {
           "Description": "Convert the guns into a machine gun, firing rapidly at enemies. The fire duration increases as the skill level increases.",
@@ -431,7 +431,7 @@
       "Visible": false,
       "Name": "Paralyzing Shot",
       "ID": 12,
-      "Icon": "../assets/skillicons/E1-6A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_FocusShot_A.png",
       "Levels": {
         "0": {
           "Description": "Fires a powerful energy at the end of the attack. Inflicts paralysis at the affected area.",
@@ -463,7 +463,7 @@
       "Visible": false,
       "Name": "Black Hole",
       "ID": 13,
-      "Icon": "../assets/skillicons/E1-6B.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_FocusShot_B.png",
       "Levels": {
         "0": {
           "Description": "Fires a powerful energy at the end of the attack. Enemies will be pulled to the center of the affected area.",
@@ -494,7 +494,7 @@
     "CombatMaster": {
       "Name": "Combat Master",
       "ID": 14,
-      "Icon": "../assets/skillicons/E1-7.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_CombatMaster.png",
       "Levels": {
         "0": {
           "Description": "Fastly move forward and fire at enemies close range.",
@@ -538,7 +538,7 @@
     "GuidedShot": {
       "Name": "Guided Shot",
       "ID": 15,
-      "Icon": "../assets/skillicons/E1-8.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_GuidedShot.png",
       "Levels": {
         "0": {
           "Description": "Convert the guns into a sniper rifle, shooting a powerful shot that penetrates through enemies in a straight line.",
@@ -583,7 +583,7 @@
       "Visible": false,
       "Name": "Defense Penetration",
       "ID": 16,
-      "Icon": "../assets/skillicons/E1-8A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_GuidedShot_A.png",
       "Levels": {
         "0": {
           "Description": "Attacks done to the enemy ignore enemy's defense.",
@@ -614,7 +614,7 @@
     "ElectricShot": {
       "Name": "Electric Shot",
       "ID": 17,
-      "Icon": "../assets/skillicons/E1-9.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_ElectricShot.png",
       "Levels": {
         "0": {
           "Description": "Convert the guns into a grenade launcher, which fires a powerful grenade that explodes and deal damage to the enemies.",
@@ -658,7 +658,7 @@
     "NapalmBomb": {
       "Name": "Napalm Bomb",
       "ID": 18,
-      "Icon": "../assets/skillicons/E1-10.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_NapalmBomb.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -700,7 +700,7 @@
     "Sprinter": {
       "Name": "Sprinter",
       "ID": 19,
-      "Icon": "../assets/skillicons/E1-11.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_Splinter.png",
       "Levels": {
         "0": {
           "Description": "Fire a bullet in the air that temporarily increases movement speed of all party members.",
@@ -745,7 +745,7 @@
       "Visible": false,
       "Name": "SG Recovery",
       "ID": 20,
-      "Icon": "../assets/skillicons/E1-11A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_Splinter_A.png",
       "Levels": {
         "0": {
           "Description": "Gives a buff that recovers allies SG.",
@@ -776,7 +776,7 @@
     "HideAndSeek": {
       "Name": "Hide & Seek",
       "ID": 21,
-      "Icon": "../assets/skillicons/E1-12.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_Hide.png",
       "Levels": {
         "0": {
           "Description": "Charge up a barrier, while charging you are invincible. After the barrier actives, you will gain Super Armor and all damage will be avoided.",
@@ -817,7 +817,7 @@
     "SoulLauncher": {
       "Name": "Soul Launcher",
       "ID": 22,
-      "Icon": "../assets/skillicons/E1-13.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SoulLauncher.png",
       "Levels": {
         "0": {
           "Description": "By turning guns into grenade launchers, fire a barrage of artillery up to 10 meters. Hit enemies will be pushed back.",
@@ -863,7 +863,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Gjazz_Skill_CombatMaster_A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_Gjazz_Skill_CombatMaster_A.png",
       "Levels": {
         "0": {
           "Description": "After attacking with combat master, performs an additional powerful attack.",
@@ -899,7 +899,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Gjazz_Skill_ElectricShot_A.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_Gjazz_Skill_ElectricShot_A.png",
       "Levels": {
         "0": {
           "Description": "Fire a capsule, and summons a robot from the bombing site.",
@@ -940,7 +940,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Gjazz_Skill_BlazeHover.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_Gjazz_Skill_BlazeHover.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -986,7 +986,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Gjazz_Skill_MissionCall.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_Gjazz_Skill_MissionCall.png",
       "Levels": {
         "0": {
           "Description": "Attack the specified area with a laser.",
@@ -1029,7 +1029,7 @@
       "Name": "Basic Attack Mastery",
       "ID": 1002,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DefaultAttack.png",
       "Levels": {
         "0": {
           "Description": "Attack with your weapon.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -1087,7 +1087,7 @@
       "DefaultLevel": 1,
       "ID": 1001,
       "Name": "Special Ability Mastery",
-      "Icon": "../assets/skillicons/Sh-2e.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_OwnAbility.png",
       "Levels": {
         "0": {
           "Description": "[Ground]\nThrow a slowing trap forward.\n[Air]\nShoot an electric wave at the ground to inflict paralysis. Two mines can be placed. Gain SG on hit. SG gain varies by monster-type.",
@@ -1120,7 +1120,7 @@
       "Name": "Emergency Dodge",
       "ID": 1004,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-3.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Evasion.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -1143,7 +1143,7 @@
       "Name": "Rising Roll",
       "ID": 1003,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-4.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Welter.png",
       "Levels": {
         "0": {
           "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -1176,7 +1176,7 @@
       "Name": "Dash",
       "DefaultLevel": 1,
       "ID": 1006,
-      "Icon": "../assets/skillicons/Sh-5.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Dash.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dash forward",
@@ -1204,7 +1204,7 @@
       "Name": "Rising Attack",
       "ID": 1005,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-6.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_RiseAttack.png",
       "Levels": {
         "0": {
           "Description": "While downed, get up while damaging surrounding enemies",
@@ -1237,7 +1237,7 @@
       "Name": "Dash Attack",
       "DefaultLevel": 1,
       "ID": 1008,
-      "Icon": "../assets/skillicons/Sh-7.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashAttack.png",
       "Levels": {
         "0": {
           "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -1259,7 +1259,7 @@
       "Passive": true,
       "Name": "Special Dodge",
       "ID": 1007,
-      "Icon": "../assets/skillicons/Sh-8.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_EvasionAttack.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -1291,7 +1291,7 @@
       "Passive": true,
       "Name": "Special Dash Attack",
       "ID": 1010,
-      "Icon": "../assets/skillicons/Sh-9.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashSmashAttack.png",
       "Levels": {
         "0": {
           "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1313,7 +1313,7 @@
       "Passive": true,
       "Name": "Stamina Mastery",
       "ID": 1009,
-      "Icon": "../assets/skillicons/Sh-10.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_StaminaMastery.png",
       "Levels": {
         "0": {
           "Description": "Increases stamina recovery rate",
@@ -1356,7 +1356,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Gjazz_Skill_SGPassive2.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_Gjazz_Skill_SGPassive2.png",
       "Levels": {
         "0": {
           "Description": "When a skill that consumes 3 souls (beads) is used, attack power and defense penetration increase for a definite period of time.",
@@ -1389,7 +1389,7 @@
         "0": 2,
         "1": 1
       },
-      "Icon": "../assets/skillicons/EP1-2.png",
+      "Icon": "../assets/skillicons/GunJazz/Icon_GJazz_Skill_SGPassive.png",
       "Levels": {
         "0": {
           "Description": "Increases your evasion",
@@ -1420,7 +1420,7 @@
       "ID": 1012,
       "RowSpan": 2,
       "Name": "Bullet of Pleasure",
-      "Icon": "../assets/skillicons/EP1-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_SoulMastery.png",
       "Levels": {
         "0": {
           "Description": "Gain SG when hitting an enemy. Passively gain SG in set intervals. Using a different skills within 5 seconds will grant 1 stack. Gain 3 SG upon reaching 3 stacks",

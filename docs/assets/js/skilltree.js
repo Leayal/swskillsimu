@@ -182,45 +182,41 @@ SkillTreeCore.prototype.inner_gettotalspex = function (a) {
 };
 
 SkillTreeCore.prototype.GenerateLink = function (showSkillAssignment) {
-    var arrayString = [];
+    var arrayString = new URLSearchParams();
     if (this._currentlevel !== window.appdata.maxCharacterLevel)
-        arrayString.push("lv=" + this._currentlevel);
+        arrayString.append("lv", this._currentlevel);
     for (var skillid in this.SkillList) {
         var levelasd = (this.SkillList[skillid].GetCurrentSkillLevel());
         if (levelasd != (this.SkillList[skillid].GetDefaultLevel())) {
             if (this.SkillList[skillid].ShortID) {
-                arrayString.push(this.SkillList[skillid].ShortID + "=" + levelasd);
+                arrayString.append(this.SkillList[skillid].ShortID, levelasd);
             } else {
-                arrayString.push(skillid + "=" + levelasd);
+                arrayString.append(skillid, levelasd);
             }
         }
     }
-    var link = location.protocol + '//' + location.host + location.pathname;
-    var param = null;
 
-    var assignstring = this.slotassign.GenerateAssignment();
+    var link = new URL(window.location.href),
+        assignstring = this.slotassign.GenerateAssignment();
+
     if (assignstring)
-        arrayString.push("s=" + assignstring);
+        arrayString.append("s", assignstring);
     if (this.slotassign.effect2nd !== "2_1")
-        arrayString.push("b1=" + this.slotassign.effect2nd);
+        arrayString.append("b1", this.slotassign.effect2nd);
     if (this.slotassign.effect3rd !== "3_1")
-        arrayString.push("b2=" + this.slotassign.effect3rd);
+        arrayString.append("b2", this.slotassign.effect3rd);
 
     if (showSkillAssignment === true)
-        arrayString.push("sa=1");
+        arrayString.append("sa", 1);
 
     var selectedclassindex = this.GetSelectedClassIndex();
     if (selectedclassindex !== this.GetAvailableClassIndex())
-        arrayString.push("c=" + selectedclassindex);
+        arrayString.append("c", selectedclassindex);
 
-    if (arrayString.length > 1)
-        param = arrayString.join("&");
-    else if (arrayString.length === 1)
-        param = arrayString[0];
-
-    if (param)
-        link = link + "?" + param;
-    return link;
+    if (!arrayString.keys().next().done) {
+        link.search = ("?" + arrayString.toString());
+    }
+    return link.href;
 }
 
 SkillTreeCore.prototype.GenerateUsageInfo = function () {
@@ -410,7 +406,9 @@ SkillTreeCore.prototype.ReadTree = function (loadingCallback, loadedCallback) {
             } else
                 $("#morecharacterinfo").remove();
             //$("li#charName").append($("<a>").attr("href", json.CharacterWikiURL).attr("target", "_blank").text(json.CharacterName));
-            window.document.title = window.SkillTreeData.Localization.General.WindowTitleWithCharacter.fformat(json.CharacterName);
+            if (json.CharacterName) {
+                window.document.title = window.SkillTreeData.Localization.General.WindowTitleWithCharacter.fformat(json.CharacterName);
+            }
             for (let ssk in json.Skills)
                 if (json.Skills.hasOwnProperty(ssk)) {
                     myself.SkillList[ssk] = new SkillInfo(myself, ssk, json.Skills[ssk]["Name"], json.Skills[ssk]);

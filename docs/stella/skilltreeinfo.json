@@ -17,7 +17,7 @@
       "Name": "Whirl Dance",
       "DefaultLevel": 1,
       "ID": 1,
-      "Icon": "../assets/skillicons/S1-1.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_WhirlDance.png",
       "Levels": {
         "0": {
           "Description": "Possess the guitar with ghosts, and swing it around to deal damage. The final slam launches enemies to the air.",
@@ -62,7 +62,7 @@
       "Name": "Phantom Release",
       "DefaultLevel": 1,
       "ID": 2,
-      "Icon": "../assets/skillicons/S1-2.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_PhantomRelease.png",
       "Levels": {
         "0": {
           "Description": "Release ghosts by playing the guitar at the current location.",
@@ -107,7 +107,7 @@
       "Visible": false,
       "ID": 3,
       "Name": "ExtraAttack",
-      "Icon": "../assets/skillicons/S1-2A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_PhantomRelease_A.png",
       "Levels": {
         "0": {
           "Description": "Number of attacks increase.",
@@ -129,7 +129,7 @@
       "Name": "Trouble Pass",
       "DefaultLevel": 1,
       "ID": 4,
-      "Icon": "../assets/skillicons/S1-3.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_TroublePass.png",
       "Levels": {
         "0": {
           "Description": "Release guiding-type ghosts to damage enemies. While in support mode, ghosts will heal allies.",
@@ -174,7 +174,7 @@
       "Visible": false,
       "ID": 5,
       "Name": "Range Increase",
-      "Icon": "../assets/skillicons/S1-3A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_TroublePass_A.png",
       "Levels": {
         "0": {
           "Description": "Increase the range of exploding ghosts.",
@@ -203,7 +203,7 @@
       "Visible": false,
       "ID": 6,
       "Name": "Strengthen",
-      "Icon": "../assets/skillicons/S1-3B.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_TroublePass_B.png",
       "Levels": {
         "0": {
           "Description": "Ghosts will grant a defense-boosting buff.",
@@ -231,7 +231,7 @@
     "HystericalShock": {
       "Name": "Hysterical Shock",
       "ID": 7,
-      "Icon": "../assets/skillicons/S1-4.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_HystericShock-.png",
       "Levels": {
         "0": {
           "Description": "Create cracks on the ground by playing the guitar, and then cause an explosion.",
@@ -275,7 +275,7 @@
       "Visible": false,
       "ID": 8,
       "Name": "Extra Attack",
-      "Icon": "../assets/skillicons/S1-4A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_HystericShock_A.png",
       "Levels": {
         "0": {
           "Description": "Number of attacks increase.",
@@ -301,7 +301,7 @@
     "BeastParade": {
       "ID": 9,
       "Name": "Beast Parade",
-      "Icon": "../assets/skillicons/S1-5.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BeastParade.png",
       "Levels": {
         "0": {
           "Description": "Summon the ghosts and charge forward by riding on their backs.",
@@ -341,7 +341,7 @@
     "BeadsPlay": {
       "ID": 10,
       "Name": "Beads Play",
-      "Icon": "../assets/skillicons/S1-6.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BeadsPlay.png",
       "Levels": {
         "0": {
           "Description": "Creates beads which will explode when hitting enemies. In support mode, the beads will restore HP and increase attack.\nCharging will increase number of beads. Push away enemies when charging completes.",
@@ -387,7 +387,7 @@
       "ID": 11,
       "Visible": false,
       "Name": "Paralyze",
-      "Icon": "../assets/skillicons/S1-6A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BeadsPlay_A.png",
       "Levels": {
         "0": {
           "Description": "Beads go through enemies and paralyze them.",
@@ -419,7 +419,7 @@
       "ID": 12,
       "Visible": false,
       "Name": "Strengthen",
-      "Icon": "../assets/skillicons/S1-6B.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BeadsPlay_B.png",
       "Levels": {
         "0": {
           "Description": "The beads effect is strengthened.",
@@ -450,7 +450,7 @@
     "DecadePulse": {
       "ID": 13,
       "Name": "Decade Pulse",
-      "Icon": "../assets/skillicons/S1-7.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_DecadePulse.png",
       "Levels": {
         "0": {
           "Description": "Using the guitar, you release a pulse that attacks enemies. When switching modes, it paralyzes enemies and steals HP.\nThe lifesteal effect(100% lifesteal) is applied to a maximum of 3 targets.",
@@ -496,7 +496,7 @@
       "ID": 14,
       "Visible": false,
       "Name": "Duration Increase",
-      "Icon": "../assets/skillicons/S1-7A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_DecadePulse_A.png",
       "Levels": {
         "0": {
           "Description": "Increases the duration of pulse.",
@@ -525,7 +525,7 @@
       "ID": 15,
       "Visible": false,
       "Name": "Radius Increase",
-      "Icon": "../assets/skillicons/S1-7B.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_DecadePulse_B.png",
       "Levels": {
         "0": {
           "Description": "Pulse range increase to allow more target to be hit.",
@@ -556,7 +556,7 @@
     "SoulScream": {
       "ID": 16,
       "Name": "Soul Scream",
-      "Icon": "../assets/skillicons/S1-8.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_SoulScream.png",
       "Levels": {
         "0": {
           "Description": "Make souls go rampant, creating a barrier around the caster. Invincibility will be granted on skill cast. The barrier will damage and paralyze all nearby enemies.",
@@ -600,7 +600,7 @@
     "TwistPull": {
       "ID": 17,
       "Name": "Twist Pull",
-      "Icon": "../assets/skillicons/S1-9.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_TwistPull.png",
       "Levels": {
         "0": {
           "Description": "Create a black hole formed by ghosts, which pulls in enemies and then explodes.",
@@ -645,7 +645,7 @@
       "ID": 18,
       "Visible": false,
       "Name": "Range Increase",
-      "Icon": "../assets/skillicons/S1-9A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_TwistPull_A.png",
       "Levels": {
         "0": {
           "Description": "Increases the Attack Range by ghosts.",
@@ -671,7 +671,7 @@
     "BeastParty": {
       "ID": 19,
       "Name": "Beast Party",
-      "Icon": "../assets/skillicons/S1-10.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BeastParty.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -713,7 +713,7 @@
     "BlackMorass": {
       "ID": 20,
       "Name": "Black Morass",
-      "Icon": "../assets/skillicons/S1-11.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BlackMorass.png",
       "Levels": {
         "0": {
           "Description": "Create a marsh of ghosts by playing the guitar. The final attack differs depending on which input is made at the end.\n( LMB = Pull enemies in the center / RMB = Launch the enemies in the air )",
@@ -758,7 +758,7 @@
       "ID": 21,
       "Visible": false,
       "Name": "Duration Increase",
-      "Icon": "../assets/skillicons/S1-11A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BlackMorass_A.png",
       "Levels": {
         "0": {
           "Description": " Increase the maximum attack duration.",
@@ -789,7 +789,7 @@
     "BestTempo": {
       "ID": 22,
       "Name": "Best Tempo",
-      "Icon": "../assets/skillicons/S1-12.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BestTempo.png",
       "Levels": {
         "0": {
           "Description": "Playing the guitar inspires your allies. In support mode, it restores the HP of allies instantly.",
@@ -830,7 +830,7 @@
     "BassAttack": {
       "ID": 23,
       "Name": "Bass Attack",
-      "Icon": "../assets/skillicons/S1-13.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_BassAttack.png",
       "Levels": {
         "0": {
           "Description": "Summon Stella's speakers and create a stage. Speakers violently shake to attack the enemies within its range.",
@@ -876,7 +876,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Howling_Skill_WhirlDance_A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_WhirlDance_A.png",
       "Levels": {
         "0": {
           "Description": "Enables moving while performing Whirl Dance.\nIn addition, Stella will be in invulnerable state when a revolution attack is made. (Some special attacks are not covered)",
@@ -912,7 +912,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Howling_Skill_SoulScream_A.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_SoulScream_A.png",
       "Levels": {
         "0": {
           "Description": "??",
@@ -940,7 +940,6 @@
         }
       }
     },
-
     "RecklessPrincess": {
       "Name": "Reckless Princess",
       "ID": 26,
@@ -948,7 +947,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Howling_Skill_recklessPrincess.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_recklessPrincess.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -994,7 +993,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Howling_Skill_WolvesShowtime.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_WolvesShowtime.png",
       "Levels": {
         "0": {
           "Description": "Summons a Wolf knight.",
@@ -1037,7 +1036,7 @@
       "Name": "Basic Attack Mastery",
       "ID": 1002,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DefaultAttack.png",
       "Levels": {
         "0": {
           "Description": "Attack with your weapons.\nAs this skill's level increases, you will be able to perform new combo attacks.\nYou will regain SG as you attack.\nSG gain will vary by enemy type",
@@ -1092,7 +1091,7 @@
       "DefaultLevel": 1,
       "ID": 1001,
       "Name": "Special Ability Mastery",
-      "Icon": "../assets/skillicons/Sh-2s.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_OwnAbility.png",
       "Levels": {
         "0": {
           "Description": "[Ground]\nChanges modes and the effects of your skills. Activates Sorrowful Note.\n[Air]\nDo a musical performance on your special guitar to change your mode. Using this skill in the air will make your ghost attack with a fist and pushes you backwards.",
@@ -1125,7 +1124,7 @@
       "Name": "Emergency Dodge",
       "ID": 1004,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-3.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Evasion.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge in a direction. Negate damage during an emergency dodge.",
@@ -1148,7 +1147,7 @@
       "Name": "Rising Roll",
       "ID": 1003,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-4.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Welter.png",
       "Levels": {
         "0": {
           "Description": "When downed, get up by rolling in a direction. During the roll, damage is negated",
@@ -1181,7 +1180,7 @@
       "Name": "Dash",
       "DefaultLevel": 1,
       "ID": 1006,
-      "Icon": "../assets/skillicons/Sh-5.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Dash.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dash forward",
@@ -1209,7 +1208,7 @@
       "Name": "Rising Attack",
       "ID": 1005,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-6.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_RiseAttack.png",
       "Levels": {
         "0": {
           "Description": "While downed, get up while damaging surrounding enemies",
@@ -1242,7 +1241,7 @@
       "Name": "Dash Attack",
       "DefaultLevel": 1,
       "ID": 1008,
-      "Icon": "../assets/skillicons/Sh-7.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashAttack.png",
       "Levels": {
         "0": {
           "Description": "Perform an attack while dashing. Different character does different attacks. ",
@@ -1264,7 +1263,7 @@
       "Passive": true,
       "Name": "Special Dodge",
       "ID": 1007,
-      "Icon": "../assets/skillicons/Sh-8.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_EvasionAttack.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge as an enemy attacks you. Negate Damage during the special dodge",
@@ -1296,7 +1295,7 @@
       "Passive": true,
       "Name": "Special Dash Attack",
       "ID": 1010,
-      "Icon": "../assets/skillicons/Sh-9.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashSmashAttack.png",
       "Levels": {
         "0": {
           "Description": "Performs a special attack while dashing. Different characters do different special attacks",
@@ -1318,7 +1317,7 @@
       "Passive": true,
       "Name": "Stamina Mastery",
       "ID": 1009,
-      "Icon": "../assets/skillicons/Sh-10.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_StaminaMastery.png",
       "Levels": {
         "0": {
           "Description": "Increases stamina recovery rate",
@@ -1361,7 +1360,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Howling_Skill_SGPassive2.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_SGPassive2.png",
       "Levels": {
         "0": {
           "Description": "??",
@@ -1394,7 +1393,7 @@
         "0": 2,
         "1": 1
       },
-      "Icon": "../assets/skillicons/SP1-2.png",
+      "Icon": "../assets/skillicons/Howling/Icon_Howling_Skill_SGPassive.png",
       "Levels": {
         "0": {
           "Description": "Maximum SG increase",
@@ -1425,7 +1424,7 @@
       "DefaultLevel": 1,
       "RowSpan": 2,
       "Name": "Sorrowful Note",
-      "Icon": "../assets/skillicons/SP1-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_SoulMastery.png",
       "Levels": {
         "0": {
           "Description": "Recover an amount of your max SG according to the level of skill [Special Ability Mastery]",

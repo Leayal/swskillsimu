@@ -17,7 +17,7 @@
       "Name": "First Strike",
       "DefaultLevel": 1,
       "ID": 1,
-      "Icon": "../assets/skillicons/H1-1.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_FirstBlade.png",
       "Levels": {
         "0": {
           "Description": "Perform a series of slashes while advancing forward. An additional strike can be used [Right-click] at the end of the skill.",
@@ -62,7 +62,7 @@
       "Visible": false,
       "Name": "Range Increase",
       "ID": 2,
-      "Icon": "../assets/skillicons/H1-1A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_FirstBlade_A.png",
       "Levels": {
         "0": {
           "Description": "The Extension strike radius becomes bigger.",
@@ -94,7 +94,7 @@
       "Name": "Pierce Step",
       "DefaultLevel": 1,
       "ID": 3,
-      "Icon": "../assets/skillicons/H1-2.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_PierceStep.png",
       "Levels": {
         "0": {
           "Description": "Perform a series of slashes while advancing forward. An additional strike can be used with an additional input.",
@@ -140,7 +140,7 @@
       "Visible": false,
       "Name": "Pierce Step - Spinning Slash",
       "ID": 4,
-      "Icon": "../assets/skillicons/H1-2A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_PierceStep_A.png",
       "Levels": {
         "0": {
           "Description": "Push away the enemies with a spinning slash after Pierce Step.",
@@ -170,7 +170,7 @@
       "Visible": false,
       "Name": "Pierce Step - Rising Slash",
       "ID": 5,
-      "Icon": "../assets/skillicons/H1-2B.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_PierceStep_B.png",
       "Levels": {
         "0": {
           "Description": "Launch the enemies to the air after Pierce Step with a rising slash.",
@@ -192,7 +192,7 @@
       "Name": "Spin Cutter",
       "DefaultLevel": 1,
       "ID": 6,
-      "Icon": "../assets/skillicons/H1-3.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_SpinCutter.png",
       "Levels": {
         "0": {
           "Description": "Push enemies away by performing a spinning slash.",
@@ -235,7 +235,7 @@
     "BlowUp": {
       "Name": "Blow Up",
       "ID": 7,
-      "Icon": "../assets/skillicons/H1-4.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_BlowUp.png",
       "Levels": {
         "0": {
           "Description": "Use your special power to enhance your SG acquisition rate. All attacks that hit will be able to give additional SG.\nThe amount of SG gained will increase with monster grade/rank and the effect is applicable on up to 5 hits.",
@@ -276,7 +276,7 @@
     "BladeQuake": {
       "Name": "Blade Quake",
       "ID": 8,
-      "Icon": "../assets/skillicons/H1-5.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_BladeQuake.png",
       "Levels": {
         "0": {
           "Description": "Push the sword through the ground, summoning multiple swords to deal damage.",
@@ -321,7 +321,7 @@
       "Visible": false,
       "Name": "Knock Out",
       "ID": 9,
-      "Icon": "../assets/skillicons/H1-5A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_BladeQuake_A.png",
       "Levels": {
         "0": {
           "Description": "All enemies hit by the skill will be stunned.",
@@ -352,7 +352,7 @@
     "BladeWall": {
       "Name": "Blade Wall",
       "ID": 10,
-      "Icon": "../assets/skillicons/H1-6.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_BladeWall.png",
       "Levels": {
         "0": {
           "Description": "Summoned swords will damage enemies and pull them towards the player.",
@@ -393,7 +393,7 @@
     "PowerSlash": {
       "Name": "Power Slash",
       "ID": 11,
-      "Icon": "../assets/skillicons/H1-7.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_PowerSlash.png",
       "Levels": {
         "0": {
           "Description": "Slashes frontward with great power.",
@@ -434,7 +434,7 @@
     "LeapAttack": {
       "Name": "Leap Attack",
       "ID": 12,
-      "Icon": "../assets/skillicons/H1-8.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_LeapAttack.png",
       "Levels": {
         "0": {
           "Description": "Leap forward and slam the ground, launching the enemies into the air. Hold the skill button to charge the skill and leap further.",
@@ -480,7 +480,7 @@
       "Visible": false,
       "Name": "Extra Attack",
       "ID": 13,
-      "Icon": "../assets/skillicons/H1-8A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_LeapAttack_A.png",
       "Levels": {
         "0": {
           "Description": "There will be more attacks, increasing hitcount.",
@@ -512,7 +512,7 @@
       "Visible": false,
       "Name": "Range Increase",
       "ID": 14,
-      "Icon": "../assets/skillicons/H1-8B.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_LeapAttack_B.png",
       "Levels": {
         "0": {
           "Description": "Attack range is increased. Slam impact attack range increased.",
@@ -543,7 +543,7 @@
     "ArenaRush": {
       "Name": "Arena Rush",
       "ID": 15,
-      "Icon": "../assets/skillicons/H1-9.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_ArenaRush.png",
       "Levels": {
         "0": {
           "Description": "Create an enhancing field in a set radius. All party members within the area will have increased damage.",
@@ -589,7 +589,7 @@
       "Visible": false,
       "Name": "Duration Increase",
       "ID": 16,
-      "Icon": "../assets/skillicons/H1-9A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_ArenaRush_A.png",
       "Levels": {
         "0": {
           "Description": "Area duration increased.",
@@ -618,7 +618,7 @@
       "Visible": false,
       "Name": "Knock Out",
       "ID": 17,
-      "Icon": "../assets/skillicons/H1-9B.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_ArenaRush_B.png",
       "Levels": {
         "0": {
           "Description": "All hit enemies will be stunned for a brief moment.",
@@ -649,7 +649,7 @@
     "FlashStep": {
       "Name": "Flash Step",
       "ID": 18,
-      "Icon": "../assets/skillicons/H1-10.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_FlashStep.png",
       "Levels": {
         "0": {
           "Description": "Swiftly leap backwards, summoning a sword imbued with supernatural powers and firing it frontward.",
@@ -693,7 +693,7 @@
     "CrossStrike": {
       "Name": "Cross Strike",
       "ID": 19,
-      "Icon": "../assets/skillicons/H1-11.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_CrossStrike.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -739,7 +739,7 @@
       "Visible": false,
       "Name": "Blaze",
       "ID": 20,
-      "Icon": "../assets/skillicons/H1-11A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_CrossStrike_A.png",
       "Levels": {
         "0": {
           "Description": "A burning zone will appear when the sword energy explodes on the ground.",
@@ -770,7 +770,7 @@
     "WindBreak": {
       "Name": "Wind Break",
       "ID": 21,
-      "Icon": "../assets/skillicons/H1-12.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_WindBreak.png",
       "Levels": {
         "0": {
           "Description": "Charge your sword with energy behind your back , then release it. The sword energy flies in a straight line while penetrating enemies.",
@@ -815,7 +815,7 @@
       "Visible": false,
       "Name": "Charge",
       "ID": 22,
-      "Icon": "../assets/skillicons/H1-12A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_WindBreak_A.png",
       "Levels": {
         "0": {
           "Description": "Fires multiple charged energy waves. Fires 2 waves with 0.7x the power of an original slash.",
@@ -844,7 +844,7 @@
     "BladeShower": {
       "Name": "Blade Shower",
       "ID": 23,
-      "Icon": "../assets/skillicons/H1-13.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_BladeShower.png",
       "Levels": {
         "0": {
           "Description": "Throw your sword upwards, summoning a torrential rain of energy swords. Very large AoE.",
@@ -890,7 +890,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Ssword_Skill_SpinAttack_A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_Ssword_Skill_SpinAttack_A.png",
       "Levels": {
         "0": {
           "Description": "Chase enemies after the spin cutter.",
@@ -926,7 +926,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Ssword_Skill_FlashStep_A.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_Ssword_Skill_FlashStep_A.png",
       "Levels": {
         "0": {
           "Description": "Attach the small sword to the big one and then throw it.",
@@ -961,7 +961,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Ssword_Skill_Swordsfall.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_Ssword_Skill_Swordsfall.png",
       "Assignable": false,
       "Levels": {
         "0": {
@@ -1007,7 +1007,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Ssword_Skill_Warfare.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_Ssword_Skill_Warfare.png",
       "Levels": {
         "0": {
           "Description": "After rushing to make two swords cross and attacking rushing, add a rotational attack towards the back and draw enemies.",
@@ -1050,7 +1050,7 @@
       "Name": "Basic Attack Mastery",
       "ID": 1002,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DefaultAttack.png",
       "Levels": {
         "0": {
           "Description": "Attack enemies with the sword.\nYou can unlock new combo attacks as the skill level increases.",
@@ -1105,7 +1105,7 @@
       "DefaultLevel": 1,
       "ID": 1001,
       "Name": "Special Ability Mastery",
-      "Icon": "../assets/skillicons/Sh-2h.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_OwnAbility.png",
       "Levels": {
         "0": {
           "Description": "Launch enemies within a certain range in midair.\nWhen used midair, unleash a fast dive kick.",
@@ -1138,7 +1138,7 @@
       "Name": "Evasion",
       "ID": 1004,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-3.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Evasion.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge to a specified direction.\nDamage is negated during evasion.",
@@ -1161,7 +1161,7 @@
       "Name": "Roll",
       "ID": 1003,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-4.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Welter.png",
       "Levels": {
         "0": {
           "Description": "When downed, get up by swiftly rolling in a specified direction.\nDamage is negated during roll.",
@@ -1194,7 +1194,7 @@
       "Name": "Dash",
       "DefaultLevel": 1,
       "ID": 1006,
-      "Icon": "../assets/skillicons/Sh-5.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_Dash.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dash forward.",
@@ -1222,7 +1222,7 @@
       "Name": "Rising Attack",
       "ID": 1005,
       "DefaultLevel": 1,
-      "Icon": "../assets/skillicons/Sh-6.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_RiseAttack.png",
       "Levels": {
         "0": {
           "Description": "When downed, get up while attacking nearby enemies.",
@@ -1255,7 +1255,7 @@
       "Name": "Dash Attack",
       "DefaultLevel": 1,
       "ID": 1008,
-      "Icon": "../assets/skillicons/Sh-7.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashAttack.png",
       "Levels": {
         "0": {
           "Description": "Push enemies back with a large swing while dashing.",
@@ -1277,7 +1277,7 @@
       "Passive": true,
       "Name": "Special Evasion",
       "ID": 1007,
-      "Icon": "../assets/skillicons/Sh-8.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_EvasionAttack.png",
       "Levels": {
         "0": {
           "Description": "Swiftly dodge to a specific direction while being attacked by an enemy.\nDamage is negated during special evasion.",
@@ -1309,7 +1309,7 @@
       "Passive": true,
       "Name": "Special Dash Attack",
       "ID": 1010,
-      "Icon": "../assets/skillicons/Sh-9.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_DashSmashAttack.png",
       "Levels": {
         "0": {
           "Description": "Do a spinning jump attack during dash.",
@@ -1331,7 +1331,7 @@
       "Passive": true,
       "Name": "Stamina Mastery",
       "ID": 1009,
-      "Icon": "../assets/skillicons/Sh-10.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_StaminaMastery.png",
       "Levels": {
         "0": {
           "Description": "Increases stamina recovery.",
@@ -1374,7 +1374,7 @@
         "CompareType": "atleast",
         "ClassIndex": 1
       },
-      "Icon": "../assets/skillicons/Icon_Ssword_Skill_SGPassive2.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_Ssword_Skill_SGPassive2.png",
       "Levels": {
         "0": {
           "Description": "For every 20th combo, increases Attack for 20 seconds.\n(Max Stack: 5)",
@@ -1407,7 +1407,7 @@
         "0": 2,
         "1": 1
       },
-      "Icon": "../assets/skillicons/HP1-2.png",
+      "Icon": "../assets/skillicons/SoulumSword/Icon_SSword_Skill_SGPassive.png",
       "Levels": {
         "0": {
           "Description": "Permanently increases Attack and Penetration.",
@@ -1438,7 +1438,7 @@
       "DefaultLevel": 1,
       "ID": 1012,
       "RowSpan": 2,
-      "Icon": "../assets/skillicons/EP1-1.png",
+      "Icon": "../assets/skillicons/Common/Icon_Common_Skill_SoulMastery.png",
       "Levels": {
         "0": {
           "Description": "Gain SG on hit using normal attacks.\nAutomatically gain SG on fixed intervals.",

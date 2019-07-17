@@ -8,13 +8,20 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAni
     clearTimeout(callback);
 };
 
-const mediaType = {
+const mediaType = Object.freeze({
     webm_vp9: "video/webm; codecs=\"vp9\"",
     mp4_h264: "video/mp4; codecs=\"avc1.64001E\""
-};
+});
 // type="video/mp4; codecs=\"avc1.64001E\""
-let justSomeTemp1 = document.createElement("video");
-const SupportedCodec = {
+let justSomeTemp1 = (function () {
+    var aaaaaa = document.getElementsByTagName("video");
+    if (aaaaaa.length !== 0) {
+        return aaaaaa.item(0);
+    } else {
+        return document.createElement("video");
+    }
+})();
+const SupportedCodec = deepFreeze({
     webm: {
         vp9: (function () {
             'use strict'
@@ -33,7 +40,7 @@ const SupportedCodec = {
             return (justSomeTemp1.canPlayType(mediaType.mp4_h264) === "probably");
         })()
     }
-}
+});
 justSomeTemp1 = null;
 const isPromiseSupported = (typeof (Promise) !== "undefined");
 
@@ -127,19 +134,10 @@ const previewOptionExplains = (function () {
     }
 })(window, window.document);
 
-var mouseX, mouseY;
-
-jQuery(document).mousemove(function (e) {
-    window.mouseX = e.pageX;
-    window.mouseY = e.pageY;
-});
-
 function SetToolTip(obj) {
     obj.attr("tooltipframework", "0");
     return obj;
 }
-
-// String.prototype.includes
 
 function SetToolTipUp(obj) {
     obj.attr("tooltipframework", "1");
@@ -670,14 +668,10 @@ jQuery(document).ready(function ($) {
     $("#slotassignment").click(function () {
         ShowSkillAssignment();
     });
-
-    var cached_querstring = window.location.search,
-        showassignment = GetUrlParam("sa", null),
-        clevel = GetUrlParam("lv", window.appdata.maxCharacterLevel),
-        param_selectedclass = GetUrlParam("c", ____current_SkillCore.GetAvailableClassIndex());
-    if (clevel == window.appdata.maxCharacterLevel) {
-        clevel = GetUrlParam("level", window.appdata.maxCharacterLevel);
-    }
+    var cached_querstring = new URLSearchParams(window.location.search),
+        showassignment = cached_querstring.get("sa"),
+        clevel = cached_querstring.get("lv") || cached_querstring.get("level") || window.appdata.maxCharacterLevel,
+        param_selectedclass = cached_querstring.get("c") || ____current_SkillCore.GetAvailableClassIndex();
 
     ____current_SkillCore.ReadTree(function (data) {
             if (isNaN(clevel)) {
@@ -770,9 +764,10 @@ jQuery(document).ready(function ($) {
                     if (____current_SkillCore.SkillList.hasOwnProperty(skill_id_name)) {
                         let tmpvalue = ____current_SkillCore.SkillList[skill_id_name];
                         if (tmpvalue._availablelevel <= clevel && tmpvalue.IsClassAvailable(param_selectedclass)) {
-                            let paraminfo = readurlparam(tmpvalue.GetID(), cached_querstring);
+                            cached_querstring.get(tmpvalue.GetID())
+                            let paraminfo = cached_querstring.get(tmpvalue.GetID());
                             if (!paraminfo && tmpvalue.ShortID)
-                                paraminfo = readurlparam(tmpvalue.ShortID, cached_querstring);
+                                paraminfo = cached_querstring.get(tmpvalue.ShortID);
                             if (!paraminfo) paraminfo = tmpvalue.GetDefaultLevel();
                             tmpvalue.SetCurrentSkillLevel(paraminfo);
                         } else {
