@@ -391,7 +391,12 @@ SkillInfo.prototype.UpdateSkill = function () {
     let panel = this.Panel,
         button_skillup = this.btn_skillup,
         button_skilldown = this.btn_skilldown;
-    panel.children("p[insight=\"skilllevel\"]:first").text(this._currentskilllevel + "/" + this._skillmaxlevel);
+    
+    if (this._parent != null || this._parent != undefined) {
+        panel.children("p[class=\"skillExLevel\"]:first").text(this._currentskilllevel + "" + this._skillmaxlevel);
+    } else {
+        panel.children("p[insight=\"skilllevel\"]:first").text(this._currentskilllevel + "/" + this._skillmaxlevel);
+    }
     // panel.children("p[insight=\"skilllexevel\"]:first").text(this._currentskilllevel + "" + this._skillmaxlevel);
     if (this._currentskilllevel <= this._defaultLevel) {
         button_skilldown.addClass("disabled");
