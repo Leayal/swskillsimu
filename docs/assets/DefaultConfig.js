@@ -79,7 +79,13 @@
                 url: "iris",
                 selectImage: "assets/images/IrisSelect.png"
             },
-            "Someone": {
+            "Chii Aruel": {
+                url: "someone",
+                selectImage: "assets/images/ChiiSelect.png",
+                enabled: false,
+                reason: "Your waifu is not here"
+            }
+            "Ephnel": {
                 url: "someone",
                 selectImage: "assets/images/SomeoneSelect.png",
                 enabled: false,

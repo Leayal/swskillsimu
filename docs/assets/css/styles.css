@@ -1,13 +1,3 @@
-@charset "UTF-8";
-
-body {
-    color: white;
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    text-align: center;
-}
-
 .text-noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
