@@ -2,7 +2,16 @@
 This is the skill tree simulator for SoulWorker game which is developed by Lion Games.
 The tree is developped with information source mainly from SoulWorker in Japan region. Feel free to fork and edit it (and redistribute/republish) for other regions.
 
-[Use the simulator released on Github Pages](https://leayal.github.io/swskillsimu/).
+# Notice
+This repo is not actively maintained anymore. There are others who actually keep the tree up-to-date with the server's contents.
+
+This repo is now mainly for archive purpose. Everyone can do whatever you want with this repo.
+
+For consumers, please check out the forked repos which is actually being updated (stated above): [Network of forked](https://github.com/Leayal/swskillsimu/network)
+
+The language stated in the releases below may not be meant for the publisher region, but the simulator's language|text:
+- [Use the skill simulator release (Japanese language)](https://pinkusagi.github.io/swskillsimu_jp/) (by [pinkusagi](https://github.com/PinkUsagi)).
+- [Use the skill simulator release (English language)](https://eden333.github.io/swskillsimu) (by [eden333](https://github.com/eden333)).
 
 # Customize
 - You can translate most of UI-related strings at [docs/assets/Localization.js](docs/assets/Localization.js).
