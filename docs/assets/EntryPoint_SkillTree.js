@@ -532,6 +532,7 @@ jQuery(document).ready(function ($) {
                             tooltippreviewPanel.show();
                             // tooltippreviewPanel_video.trigger("load");
                             // Trigger first time
+                            tooltippreviewPanel_video_raw.muted = true;
                             tooltippreviewPanel_video_raw.play();
                         }
                     } else {
