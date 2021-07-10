@@ -15,71 +15,71 @@
     */
     var localize = {
         General: {
-            WindowTitle: "Skill Simulator",
+            WindowTitle: "Soulworker スキルシミュレーター",
 
             // {0}: the character name
-            WindowTitleWithCharacter: "Skill Simulator - {0}",
+            WindowTitleWithCharacter: "Soulworker スキルシミュレーター - {0}",
 
-            ClipboardSuccess: "The link to this skill tree has been copied to clipboard.",
-            ClipboardAccessFailure: "Clipboard access failed. Please copy the link below",
-            ButtonClose: "Close",
-            ButtonCancel: "Cancel",
-            ButtonSelect: "Select",
-            ButtonRemove: "Remove",
+            ClipboardSuccess: "コピーに成功",
+            ClipboardAccessFailure: "コピーに失敗。 下記のリンクをコピーしてください。",
+            ButtonClose: "終了",
+            ButtonCancel: "キャンセル",
+            ButtonSelect: "選択",
+            ButtonRemove: "除去",
 
             // When a character's JSON data doesn't specify character classes, this string will be used as the initial class
-            DefaultCharacterClassName: "Base"
+            DefaultCharacterClassName: "オリジナル"
         },
         SkillTree: {
-            CharacterClass: "Class:",
-            CharacterLevel: "Level:",
-            InvestedSP: "Invested SP",
-            RemainingSP: "Remaining SP",
-            Button_ResetAllSkills: "Reset All Skills",
-            Button_SlotAssignment: "Slot assignment",
-            Button_Options: "Options",
-            Button_CopyLinkToCurrentSkillTree: "Copy Link to current build",
-            Button_CopyLinkToCurrentSkillTreeAndShowSkillAssignment: "Copy Link to current build and show skill assignment on load",
+            CharacterClass: "クラス：",
+            CharacterLevel: "Lv：",
+            InvestedSP: "使用済みSP：",
+            RemainingSP: "残りSP：",
+            Button_ResetAllSkills: "スキル全体初期化",
+            Button_SlotAssignment: "スキルプリセット",
+            Button_Options: "設定",
+            Button_CopyLinkToCurrentSkillTree: "URLをコピー",
+            Button_CopyLinkToCurrentSkillTreeAndShowSkillAssignment: "URLをコピーしてロード時にスキルプリセットを表示",
 
             // {0}: the character name
-            MenuItem_MoreInfoAboutCharacter: "More info about {0}",
+            MenuItem_MoreInfoAboutCharacter: "キャラクター Wiki",
 
-            MenuItem_MoreInfo: "More info",
-            MenuItem_Home: "Home"
+            MenuItem_MoreInfo: "詳細情報",
+            MenuItem_Home: "トップ"
         },
         Notify: {
             // {0}: the level
-            ClassRequireCharacterLevel: "The class you selected requires the character to be at least at level {0}",
-            UnableToUnlearnBelowDefaultSkillLevel: "Can not go lower than skill's default level.",
-            InsufficientSP: "Insufficient skill point.",
-            InsufficientCharacterLevel: "Character level is not enough to learn further."
+            ClassRequireCharacterLevel: "選択したクラスは、キャラクターのレベルが{0}以上である必要があります。",
+            UnableToUnlearnBelowDefaultSkillLevel: "スキルのデフォルトレベルより低くすることはできません。",
+            InsufficientSP: "SP不足",
+            InsufficientCharacterLevel: "キャラクターのレベルが足りず、それ以上は習得できません。"
         },
         Prompt: {
-            ResetSkill: "Are you sure you want to unlearn all skills?",
-            ChangeClass: "<b>Changing class will reset your skill tree.</b><br/>Are you sure you want to change class?",
+            ResetSkill: "本当に全スキルをリセットしても良いですか？",
+            ChangeClass: "<b>クラスを変更するとスキルツリーがリセットされます。</b><br/>クラスを変更しますか？",
         },
         ToolTip: {
-            CurrentHeader: "Current",
-            AfterHeader: "After",
-            NoInfoAvailable: "No info available",
-            SkillEffectHeader: "Effect",
-            SkillDescriptionHeader: "Description",
+            CurrentHeader: "現在のレベルの性能",
+            AfterHeader: "変化後のレベルの性能",
+            NoInfoAvailable: "存在しません。",
+            SkillEffectHeader: "情報",
+            SkillDescriptionHeader: "説明",
         },
         SkillSlot: {
-            SkillSlotAssignmentDialogHeader: "Skill slot assignment",
-            SkillSlotSelectionDialogHeader: "Select skill to assign",
-            ButtonResetAssignment: "Reset",
-            Prompt_ResetAssignment: "Are you sure you want to reset all the slot assignments?",
-            SmallGuideText_HowToAssignASkill: "(Click the boxes to assign skill)",
-            SmallGuideText_HowToSelectASkill: "Click the box to select skill",
+            SkillSlotAssignmentDialogHeader: "スキルプリセット",
+            SkillSlotSelectionDialogHeader: "割り当てるスキルを選択",
+            ButtonResetAssignment: "リセット",
+            Prompt_ResetAssignment: "スロットの割り当てを全部リセットしても良いですか？",
+            SmallGuideText_HowToAssignASkill: "（ボックスをクリックしてスキルを割り当てる）",
+            SmallGuideText_HowToSelectASkill: "ボックスをクリックしてスキルを選択します。",
 
-            SkillChainEffectHeader_SecondChain: "Step-2 Bonus:",
-            SkillChainEffectHeader_ThirdChain: "Step-3 Bonus:",
+            SkillChainEffectHeader_SecondChain: "2段階ボーナス",
+            SkillChainEffectHeader_ThirdChain: "3段階ボーナス",
 
             // {0}: the value of the effect. See effect value below
-            SkillChainEffect_DamageUp: "Damage +{0}",
-            SkillChainEffect_CooldownReduce: "Cooldown -{0}",
-            SkillChainEffect_SGCostReduce: "SG Cost -{0}",
+            SkillChainEffect_DamageUp: "ダメージ{0}増加",
+            SkillChainEffect_CooldownReduce: "ク一ル夕イム{0}減少",
+            SkillChainEffect_SGCostReduce: "SG消費量{0}減少",
 
             // Second skill chain effect value
             SkillChainEffect2nd_DamageValue: "4%",
@@ -92,25 +92,37 @@
             SkillChainEffect3rd_SGCostValue: "25%",
         },
         Option: {
-            Tooltip_SaveToBrowser: "The option you changed here will not be remembered next time you visit the site. Save the setting to your browser will make your browser remember the setting forever, even when the browser is restarted.",
-            OptionSavedToBrowser: "Your setting has been saved",
-            Button_SaveSettingToBrowser: "Save the setting to browser",
+            Tooltip_SaveToBrowser: "ここで変更したオプションは、次回のサイト訪問時には記憶されません。設定をブラウザに保存しておくと、ブラウザを再起動しても設定が記憶されます。",
+            OptionSavedToBrowser: "設定が保存されました。",
+            Button_SaveSettingToBrowser: "設定をブラウザに保存",
 
             // {0}: the "localStorage" hyperlink which refers to https://www.w3schools.com/html/html5_webstorage.asp
             // {1}: the "cookie" hyperlink which refers to https://www.w3schools.com/js/js_cookies.asp
-            SaveSettingToBrowser: "The setting will be saved to your web browser by using {0} (Or fallback to {1} if your browser does not support {0}).<br/><b>Do you want to store the data on your computer?</b>",
-            SaveSettingToBrowserRetry: "Do you want to retry?",
+            SaveSettingToBrowser: "設定は{0}でブラウザに保存されます（ブラウザが{0}に対応していない場合は{1}にフォールバックします）。に保存しますか？",
+            SaveSettingToBrowserRetry: "再挑戦しますか？",
 
-            SkillPreviewHeader: "Skill preview:",
-            Selection_PreviewOff: "No preview",
-            Selection_PreviewOn_Beta: "Show video (Beta)",
-            Selection_PreviewOn: "Show video",
-            SelectionDescription_PreviewOff: "Turn off preview",
-            SelectionDescription_PreviewOn_Beta: "\"Show video (Beta)\" will use WebM container with video codec VP9 to achieve even higher compression. This means you will download less data (it happens only once anyway or until browser's cache is expired or cleaned, so you don't really save anything much) in exchange of higher compute power to decode and play the video. It may have some visual bugs, too, select \"Show video\" option if you can't stand the bug or the video can't be played",
-            SelectionDescription_PreviewOn: "Show skill preview with MP4 container with video codec H.264 (Profile High). This container and the codec are widely supported in most of browsers you can find",
+            SkillPreviewHeader: "スキルプレビュー：",
+            Selection_PreviewOff: "プレビューなし",
+            Selection_PreviewOn_Beta: "ショービデオ(WebM) (BETA)",
+            Selection_PreviewOn: "ショービデオ(MP4)",
+            SelectionDescription_PreviewOff: "プレビューをオフにする。",
+            SelectionDescription_PreviewOn_Beta: "\"ショービデオ(WebM) (BETA)\" では、WebMコンテナにビデオコーデックVP9を使用し、さらなる高圧縮を実現します。これは、より少ないデータでダウンロード出来ることを意味します（一度だけ発生するか、ブラウザのキャッシュ期限切れ。またはクリーンアップされるまで、追加で保存する必要がありません）。ただしビデオをデコードして再生するためのより高い計算パワーと引き換えに、いくつかの視覚的なバグが発生する可能性があります。あなたがバグに遭遇したくなかったり、ビデオを再生出来ない場合は、\"ショービデオ(MP4)\" オプションを選択して下さい。",
+            SelectionDescription_PreviewOn: "ビデオコーデックH.264（ハイプロファイル）とMP4コンテナでスキルのプレビューを表示します。このコンテナとコーデックは、あなたが見つけることができるブラウザのほとんどで広くサポートされています。",
+        },
+        Confirmation: {
+            Warning: "警告",
+            Notice: "注意",
+			DoubleConfirm: "二重確認",
+        },
+        Others: {
+            CreativeCommon: "CCライセンス 表示 - 非営利 - 継承 3.0 非移植",
+            // {0}: the "Creative Commons Attribution-NonCommercial-ShareAlike" hyperlink which refers to https://creativecommons.org/licenses/by-nc-sa/3.0/
+            // {1}: the "Lion Games" hyperlink which refers to http://www.liongames.co.kr/Front/
+            CreativeCommonNote: "<span>コンテンツは明記されていない限り{0}の条件下でのみ利用可能です。<br />公式アート、ゲームコンテンツ、スクリーンショットは{1}およびゲームのパブリッシャーの商標および著作権です。</span>",
+            CreativeCommonNoteIndex: "<span>コンテンツは明記されていない限り{0}の条件下でのみ利用可能です。<br />公式アート、ゲームコンテンツ、スクリーンショットは{1}およびゲームのパブリッシャーの商標および著作権です。</span>"
         },
         Error: {
-            VideoAutoplayBlocked: "Your browser's video autoplay policy has blocked skill preview videos. Therefore, the preview video will show a blank space until you press or click on the page. If you want to see the preview without doing so, please change the policy to allow autoplay video (with or without audio doesn't matter)."
+            VideoAutoplayBlocked: "ブラウザのビデオ自動再生ポリシーにより、スキルプレビュービデオがブロックされています。 したがって、ページを押すかクリックするまで、プレビュービデオには空白が表示されます。 そうせずにプレビューを表示したい場合は、自動再生ビデオを許可するようにポリシーを変更してください（オーディオの有無は関係ありません）。"
         }
     };
 
