@@ -108,6 +108,9 @@
             SelectionDescription_PreviewOff: "Turn off preview",
             SelectionDescription_PreviewOn_Beta: "\"Show video (Beta)\" will use WebM container with video codec VP9 to achieve even higher compression. This means you will download less data (it happens only once anyway or until browser's cache is expired or cleaned, so you don't really save anything much) in exchange of higher compute power to decode and play the video. It may have some visual bugs, too, select \"Show video\" option if you can't stand the bug or the video can't be played",
             SelectionDescription_PreviewOn: "Show skill preview with MP4 container with video codec H.264 (Profile High). This container and the codec are widely supported in most of browsers you can find",
+        },
+        Error: {
+            VideoAutoplayBlocked: "Your browser's video autoplay policy has blocked skill preview videos. Therefore, the preview video will show a blank space until you press or click on the page. If you want to see the preview without doing so, please change the policy to allow autoplay video (with or without audio doesn't matter)."
         }
     };
 

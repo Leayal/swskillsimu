@@ -461,7 +461,8 @@ jQuery(document).ready(function ($) {
         }),
         tooltipText = $("#tooltip pre"),
         navBarBottom = $(".navbar.fixed-bottom"),
-        toolTipFramework = new SkillTreeToolTipFramework(tooltipObj, "[tooltipframework][insight]");
+        toolTipFramework = new SkillTreeToolTipFramework(tooltipObj, "[tooltipframework][insight]"),
+        videoAutoplayBlockedWarningShown = window.appdata.videoBlockedPolicyWarningCount;
     tooltipObj.detach();
 
     if (isPromiseSupported) {
@@ -469,6 +470,7 @@ jQuery(document).ready(function ($) {
             tooltippreviewPanel.hide();
         }).on("canplay", async function (event) {
             try {
+                event.target.muted = true;
                 await event.target.play();
             } catch (err) {
                 tooltippreviewPanel.hide();
@@ -533,7 +535,16 @@ jQuery(document).ready(function ($) {
                             // tooltippreviewPanel_video.trigger("load");
                             // Trigger first time
                             tooltippreviewPanel_video_raw.muted = true;
-                            tooltippreviewPanel_video_raw.play();
+                            tooltippreviewPanel_video_raw.play().catch(function (ex) {
+                                if (ex.message.includes("The play method is not allowed by the user agent or the platform in the current context, possibly because the user denied permission")) {
+                                    if (videoAutoplayBlockedWarningShown < 0) {
+                                        shownotify(window.SkillTreeData.Localization.Error.VideoAutoplayBlocked, "warning");
+                                    } else if (videoAutoplayBlockedWarningShown !== 0){
+                                        videoAutoplayBlockedWarningShown--;
+                                        shownotify(window.SkillTreeData.Localization.Error.VideoAutoplayBlocked, "warning");
+                                    }
+                                }
+                            });
                         }
                     } else {
                         tooltippreviewPanel.hide();

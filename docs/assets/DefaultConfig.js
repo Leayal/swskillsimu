@@ -3,7 +3,13 @@
     // modify the data here to your liking
     let app_data = {
             "github-repo": "Leayal/swskillsimu", // Set to null to let auto-detect from Github Page default URL, unreliable though
-            maxCharacterLevel: 65 // Default max level will be used if the value cannot be found in a character's JSON data
+            maxCharacterLevel: 65, // Default max level will be used if the value cannot be found in a character's JSON data
+
+            // How many times the warning notification will show to let user know that the skill preview videos are blocked by browser's autoplay policy.
+            // 0 will disable it
+            // Less than 0 will show the notification unlimited times
+            // More than 0 is the count.
+            videoBlockedPolicyWarningCount: 3
         },
         // SP table.
         table_SkillPoint = {
